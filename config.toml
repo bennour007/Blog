@@ -110,7 +110,7 @@ enableEmoji = true
   [[menu.header]]
     name = "Resume"
     title = "Resume"
-    url = "/files/resume.pdf"
+    url = "/static/files/resume.pdf"
     weight = 1
   [[menu.header]]
     name = "Blog"
