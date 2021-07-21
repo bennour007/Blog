@@ -1,0 +1,23 @@
+---
+## Configure page content in wide column
+title: "" # leave blank to exclude
+number_featured: 0 # pulling from mainSections in config.toml
+use_featured: false # if false, use most recent by date
+number_categories: 0 # set to zero to exclude
+show_intro: false
+intro: |
+  Apéro is a unique kind of casual get-together in French culture, when you gather with friends and get to know each other better over some apéritifs, snacks, and anything in between. A good apéro is one where you'd happily spend a few hours just hanging out.
+  
+  I hope this theme helps you create your own virtual apéro. A place where you and your site's visitors enjoy spending time, and one that helps folks get to know you better. 
+show_outro: false
+outro: |
+  <i class="fas fa-glass-cheers pr2"></i>Sincere thanks to [Maëlle Salmon](https://masalmon.eu/) for her help naming this Hugo theme!
+---
+
+## Who am I ?
+
+I am a researcher and an analyst, I have just graduated with a Master’s of Science from Tunis Business School, specializing in quantitative and statistical analysis of efficiency and productivity. Previously I have graduated from ISG Sousse with a Bachelor(3 years) degree in quantitative economics.
+
+Since early ages I got into computers and programming, I am now applying my skills in statistical analysis and modeling using the lovely R language in my research. I also use Python and Julia occasionally. I am an advocate for open source software and scientific research, and especially a Linux user.
+
+I believe that the most important skill I needed to learn and develop is writing, which is the purpose of this blog(among other things). This blog is a work in progress and most of the stuff written here need lots of tweaking and are the result of deep frustration back when I was trying to finish my master’s thesis or whenever I’m bored enough to play with random datasets as you can see in the projects section.

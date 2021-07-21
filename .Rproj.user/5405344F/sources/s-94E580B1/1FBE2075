@@ -1,0 +1,26 @@
+{
+    "id": "1FBE2075",
+    "path": "~/Blog/config.toml",
+    "project_path": "config.toml",
+    "type": "toml",
+    "hash": "1606555372",
+    "contents": "",
+    "dirty": false,
+    "created": 1626826916099.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "110,19",
+        "scrollLine": "102"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1626879276,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1626879276471,
+    "read_only": false,
+    "read_only_alternatives": []
+}
