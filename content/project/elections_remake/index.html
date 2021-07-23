@@ -1,0 +1,1398 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "2019 Elections remake"
+subtitle: "The method by which we elect our leaders is as important as the act of voting itself. This post is an open essay that I will keep updating regarding the amended election law set to be approved by the parliamen."
+summary: "Few lines on the new election law, data, plots, and a dashboard!"
+authors: []
+tags: ["politics", "election"]
+categories: []
+date: 2021-07-10T21:53:45+01:00
+lastmod: 2021-07-10T21:53:45+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "The County Election : 1854-George Caleb Bingham"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+
+
+<p>Few days ago, the parliamentary committee on elections and internal order approved few changes in the new electoral method probably in an anticipation for an early general elections given the chaotic political scene in Tunisia right now. In this regard I decided to create this post as a reminder to myself of one of my earliest projects as a novice R/Python programmer(still am btw), and discuss the changes in the electoral method, compare then to the previous method and the potential change in results. In order to do so I had to find the data in a usable format first which was tedious as the ISIE(the government body responsible on the elections) did not publish data in this regard as they usually do. The data I used was collected and treated by <a href="http://www.cahiersdelaliberte.org/">Cahiers de la Liberté</a> and published on their platform <a href="https://www.data4tunisia.org/">data4tunisia.org</a> which is one of their many projects promoting open data in Tunisia, Shout out to them for the great work.</p>
+<p>In this post we will be explaining the new changes in the electoral law, the reasons behind them, and what can they change in the upcoming election. If you think you need to catch up on how the current election method works check out <a href="https://bennour.tn/project/elections/">my previous post</a> about the 2014 elections.</p>
+<div id="whats-new-in-this-version-of-the-law" class="section level3">
+<h3>What’s new in this version of the law?</h3>
+<p>In the new version of this law, there will be a threshold of <em>5%</em> on the percentage that each list should obtain to qualify for seats in the parliament, in the current law, this threshold is null, but what deos it mean and what is it meant for?</p>
+<p>The threshold in this context is simply a qualification condition to be assigned a seat in the parliament, the logic behind it is that not matter how much vote a list obtains, if it doesn’t obtain X% of the total number of votes in its jurisdiction, it cannot have a seat in the parliament. Another reason for adopting a threshold is that the least reminder method does not usually provide a clear majority if left without such a requirement the elevates the barrier to entry to the parliament. To dive in more details you can check this
+amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post</a> from <a href="https://www.albawsala.com/en/">Bawsala</a> Association.</p>
+</div>
+<div id="what-can-this-threshold-change-in-the-upcoming-parliament" class="section level3">
+<h3>What can this threshold change in the upcoming parliament?</h3>
+<p>To answer this question we need first to look at the current parliament, and the polls of how an upcoming parliament should look like.</p>
+</div>
+<div id="the-current-parliament-of-2019-elections" class="section level2">
+<h2>The current parliament of 2019 elections:</h2>
+<p>As I mentioned above, I used data provided by <a href="http://www.cahiersdelaliberte.org/">Cahiers de la Liberté</a>, though I wrote my own code to simulate the current and amended electoral law, you can find all of that in <a href="https://github.com/bennour007/elections_2019/">this repo</a>.</p>
+<p>After cleaning and processing here’s the complete data of current parliament with a detailed table where we can pinpoint how much each party benefited from the largest remains system:</p>
+<div id="vrujpaitdh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#vrujpaitdh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#vrujpaitdh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#vrujpaitdh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#vrujpaitdh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#vrujpaitdh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#vrujpaitdh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#vrujpaitdh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#vrujpaitdh .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vrujpaitdh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vrujpaitdh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#vrujpaitdh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#vrujpaitdh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#vrujpaitdh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#vrujpaitdh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vrujpaitdh .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vrujpaitdh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#vrujpaitdh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#vrujpaitdh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vrujpaitdh .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#vrujpaitdh .gt_left {
+  text-align: left;
+}
+
+#vrujpaitdh .gt_center {
+  text-align: center;
+}
+
+#vrujpaitdh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#vrujpaitdh .gt_font_normal {
+  font-weight: normal;
+}
+
+#vrujpaitdh .gt_font_bold {
+  font-weight: bold;
+}
+
+#vrujpaitdh .gt_font_italic {
+  font-style: italic;
+}
+
+#vrujpaitdh .gt_super {
+  font-size: 65%;
+}
+
+#vrujpaitdh .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">party</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">q_seats</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">r_seats</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">total_seats</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop_qs</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_center">ennahdha</td>
+<td class="gt_row gt_right">28</td>
+<td class="gt_row gt_right">23</td>
+<td class="gt_row gt_right">51</td>
+<td class="gt_row gt_right">45.10</td></tr>
+    <tr><td class="gt_row gt_center">qalb_tounes</td>
+<td class="gt_row gt_right">17</td>
+<td class="gt_row gt_right">21</td>
+<td class="gt_row gt_right">38</td>
+<td class="gt_row gt_right">55.26</td></tr>
+    <tr><td class="gt_row gt_center">pdl</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">15</td>
+<td class="gt_row gt_right">18</td>
+<td class="gt_row gt_right">83.33</td></tr>
+    <tr><td class="gt_row gt_center">tayar</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">19</td>
+<td class="gt_row gt_right">22</td>
+<td class="gt_row gt_right">86.36</td></tr>
+    <tr><td class="gt_row gt_center">harakt_el_chaab</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">14</td>
+<td class="gt_row gt_right">15</td>
+<td class="gt_row gt_right">93.33</td></tr>
+    <tr><td class="gt_row gt_center">coalition_karama</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">20</td>
+<td class="gt_row gt_right">21</td>
+<td class="gt_row gt_right">95.24</td></tr>
+    <tr><td class="gt_row gt_center">afek_tounes</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">al_badil</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">amal_wa_3amal</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">machrou3_tounes</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">nidaa_tounes</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">outsider_1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">10</td>
+<td class="gt_row gt_right">10</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">outsider_2</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">parti_rahma</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">partie_front_populaire</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">psd</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">tahya_tounes</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">14</td>
+<td class="gt_row gt_right">14</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">tayar_ma7abba</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">uds</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">upr</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">x3ich_tounsi</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p>Before we dive into the the results with the threshold, Id like to pin point, that Outsider_1 and Outsider_2 are simply independent lists I didn’t have time to check the proper names for, but I trust the data collectors in this regard.</p>
+<p>Concerning the the table above however, the clearest observation is that the top 6 winning parties had at least 45% of their seats distributed by the largest remains system, while the rest of the lists obtained all of their seats distributed by the same system instead of direct votes(also referred to by quota seats).</p>
+<p>Given the notes above, the idea of the threshold is simply distributing the largest remains seats on less lists, which will relatively help declare a winner with clear majority(109 seats). Let’s dive into how the parliament will look like if a 5% threshold is established using the same data:</p>
+<pre><code>## 
+## ── Column specification ────────────────────────────────────────────────────────
+## cols(
+##   party = col_character(),
+##   q_seats = col_double(),
+##   r_seats = col_double(),
+##   total_seats = col_double()
+## )</code></pre>
+<div id="vvfcaphypu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#vvfcaphypu .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#vvfcaphypu .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#vvfcaphypu .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#vvfcaphypu .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#vvfcaphypu .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#vvfcaphypu .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#vvfcaphypu .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#vvfcaphypu .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vvfcaphypu .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vvfcaphypu .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#vvfcaphypu .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#vvfcaphypu .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#vvfcaphypu .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#vvfcaphypu .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vvfcaphypu .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vvfcaphypu .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#vvfcaphypu .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#vvfcaphypu .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vvfcaphypu .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#vvfcaphypu .gt_left {
+  text-align: left;
+}
+
+#vvfcaphypu .gt_center {
+  text-align: center;
+}
+
+#vvfcaphypu .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#vvfcaphypu .gt_font_normal {
+  font-weight: normal;
+}
+
+#vvfcaphypu .gt_font_bold {
+  font-weight: bold;
+}
+
+#vvfcaphypu .gt_font_italic {
+  font-style: italic;
+}
+
+#vvfcaphypu .gt_super {
+  font-size: 65%;
+}
+
+#vvfcaphypu .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">party</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">q_seats</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">r_seats</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">total_seats</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop_qs</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_center">ennahdha</td>
+<td class="gt_row gt_right">28</td>
+<td class="gt_row gt_right">44</td>
+<td class="gt_row gt_right">72</td>
+<td class="gt_row gt_right">61.11</td></tr>
+    <tr><td class="gt_row gt_center">qalb_tounes</td>
+<td class="gt_row gt_right">17</td>
+<td class="gt_row gt_right">32</td>
+<td class="gt_row gt_right">49</td>
+<td class="gt_row gt_right">65.31</td></tr>
+    <tr><td class="gt_row gt_center">pdl</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">17</td>
+<td class="gt_row gt_right">20</td>
+<td class="gt_row gt_right">85.00</td></tr>
+    <tr><td class="gt_row gt_center">tayar</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">17</td>
+<td class="gt_row gt_right">20</td>
+<td class="gt_row gt_right">85.00</td></tr>
+    <tr><td class="gt_row gt_center">harakt_el_chaab</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">11</td>
+<td class="gt_row gt_right">12</td>
+<td class="gt_row gt_right">91.67</td></tr>
+    <tr><td class="gt_row gt_center">coalition_karama</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">19</td>
+<td class="gt_row gt_right">20</td>
+<td class="gt_row gt_right">95.00</td></tr>
+    <tr><td class="gt_row gt_center">al_badil</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">amal_wa_3amal</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">nidaa_tounes</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">outsider_1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">6</td>
+<td class="gt_row gt_right">6</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">parti_rahma</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">partie_front_populaire</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">tahya_tounes</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">7</td>
+<td class="gt_row gt_right">7</td>
+<td class="gt_row gt_right">100.00</td></tr>
+    <tr><td class="gt_row gt_center">upr</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">100.00</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p>Looking at the table above its doesnt seem that we have a major change in the proportion of largest remains seats comparing to direct voting seats for the top 6 winners, however, the list of winners did shrink indeed by few parties(7 to be precise) counting for 33% of the previous list.</p>
+<div id="ephkgcieux" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#ephkgcieux .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ephkgcieux .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ephkgcieux .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ephkgcieux .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ephkgcieux .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ephkgcieux .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ephkgcieux .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ephkgcieux .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ephkgcieux .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ephkgcieux .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ephkgcieux .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ephkgcieux .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ephkgcieux .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#ephkgcieux .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ephkgcieux .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ephkgcieux .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ephkgcieux .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#ephkgcieux .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ephkgcieux .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#ephkgcieux .gt_left {
+  text-align: left;
+}
+
+#ephkgcieux .gt_center {
+  text-align: center;
+}
+
+#ephkgcieux .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ephkgcieux .gt_font_normal {
+  font-weight: normal;
+}
+
+#ephkgcieux .gt_font_bold {
+  font-weight: bold;
+}
+
+#ephkgcieux .gt_font_italic {
+  font-style: italic;
+}
+
+#ephkgcieux .gt_super {
+  font-size: 65%;
+}
+
+#ephkgcieux .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">party</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">seats at 0 %</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">seats at 5%</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">diff</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_center">ennahdha</td>
+<td class="gt_row gt_right">51</td>
+<td class="gt_row gt_right">72</td>
+<td class="gt_row gt_right">21</td></tr>
+    <tr><td class="gt_row gt_center">qalb_tounes</td>
+<td class="gt_row gt_right">38</td>
+<td class="gt_row gt_right">49</td>
+<td class="gt_row gt_right">11</td></tr>
+    <tr><td class="gt_row gt_center">pdl</td>
+<td class="gt_row gt_right">18</td>
+<td class="gt_row gt_right">20</td>
+<td class="gt_row gt_right">2</td></tr>
+    <tr><td class="gt_row gt_center">al_badil</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_center">partie_front_populaire</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td></tr>
+    <tr><td class="gt_row gt_center">afek_tounes</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">amal_wa_3amal</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">coalition_karama</td>
+<td class="gt_row gt_right">21</td>
+<td class="gt_row gt_right">20</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">parti_rahma</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">psd</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">tayar_ma7abba</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">uds</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">upr</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">2</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">x3ich_tounsi</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">-1</td></tr>
+    <tr><td class="gt_row gt_center">nidaa_tounes</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">-2</td></tr>
+    <tr><td class="gt_row gt_center">tayar</td>
+<td class="gt_row gt_right">22</td>
+<td class="gt_row gt_right">20</td>
+<td class="gt_row gt_right">-2</td></tr>
+    <tr><td class="gt_row gt_center">harakt_el_chaab</td>
+<td class="gt_row gt_right">15</td>
+<td class="gt_row gt_right">12</td>
+<td class="gt_row gt_right">-3</td></tr>
+    <tr><td class="gt_row gt_center">outsider_2</td>
+<td class="gt_row gt_right">3</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">-3</td></tr>
+    <tr><td class="gt_row gt_center">machrou3_tounes</td>
+<td class="gt_row gt_right">4</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right">-4</td></tr>
+    <tr><td class="gt_row gt_center">outsider_1</td>
+<td class="gt_row gt_right">10</td>
+<td class="gt_row gt_right">6</td>
+<td class="gt_row gt_right">-4</td></tr>
+    <tr><td class="gt_row gt_center">tahya_tounes</td>
+<td class="gt_row gt_right">14</td>
+<td class="gt_row gt_right">7</td>
+<td class="gt_row gt_right">-7</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+<p><em>In case you are more interested(or not, am not asking, you need to check this out) you can check this lovely dashboard I wrote to illustrate the potential changes in the elections results have we changed the threshold. Check it out in this <a href="https://bennour-med-hsin.shinyapps.io/e2019_dash/">link</a>.</em></p>
+<p><a href="https://bennour-med-hsin.shinyapps.io/e2019_dash/">here</a>.</p>
+<div>
+<iframe height="800" width="100%" margin-left="yes" frameborder="no" src="https://bennour-med-hsin.shinyapps.io/e2019_dash/">
+</iframe>
+</div>
+<p>You can check the code of the above dashboard in <a href="https://github.com/bennour007/e2019_dash">this repo</a></p>
+<div id="with-good-data-comes-great-visualizations" class="section level3">
+<h3>With good data comes great Visualizations</h3>
+<p>A friend of mine who provided me with great feedback on the dashboard linked above, also inspired me to use a different kind of recapitulative plots, it seems we can summarize the change in the seats number per party should the threshold itself change using a streamgraph, however, I think the bump-plot using <a href="https://github.com/davidsjoberg/ggbump">ggbump</a> is a bit better in this case. In any case, here’s how the threshold percentage change would have affected the last general election of 2019.</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>What we can conclude from this beautiful chart is that the only winners from changing the threshold are the Islamist party ENNAHDHA and its ally QALB TOUNES, everyone else will be extremely effected by such a change especially given that some of these parties have all of their seats from the largest remains TAHYA TOUNES as an example would not win any seats beyond the 7% threshold.</p>
+<p>Cheers!</p>
+</div>
+</div>

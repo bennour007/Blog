@@ -1,0 +1,116 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+title: "Tunisan primary schools: the data is on!"
+subtitle: ""
+summary: "Extracting and tidying data"
+authors: []
+tags: ["Tunisian stuff"]
+categories: []
+date: 2021-01-01T13:10:34+01:00
+lastmod: 2021-01-01T13:10:34+01:00
+featured: false
+draft: false
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+projects: []
+editor_options: 
+  chunk_output_type: console
+---
+
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<p>This post is intended to explain the data set I collected and tidyed using data from the Tunisian ministry of education.</p>
+<p>The Tunisian ministry of education releases yearly reports that include statistics and count tables describing various aspects of the primary, preparatory and secondary schools. You can find the reports in their <a href="http://www.education.gov.tn/?p=688">websites here</a>. I used the latest report, which is a pdf document, extracted the data from two specific tables in pages 24 and 40 respectively.</p>
+<p>Unfortunately for the community the reports are basically in Arabic with some annotation in French. I managed to translate the names of the columns to English. you can access the report that I used entitled: <a href="http://www.education.gov.tn/article_education/statistiques/stat2017_2018/Tunis1.pdf">“Statistics for schools 2018/1019”</a>.</p>
+<div id="brief-description" class="section level2">
+<h2>Brief description</h2>
+<p>The table in page 24 describes the evolution of the Tunisian primary schools characteristics and I cleaned it into the file primary_time_clean.csv. You can access that file in <a href="https://github.com/bennour007/education_data/tree/master/data_primary_schools">this repo</a>.</p>
+<p>The second data set describes the characteristics by state, this table can be found in the table in page 40, you can also find the tidy and clean version of this table in the primary_state_clean.csv file in the same repo <a href="https://github.com/bennour007/education_data/tree/master/data_primary_schools">here</a>. This table describes basically the same characteristics of the previous table, but on a regional basis state by state <strong>for the year 2019</strong>.</p>
+</div>
+<div id="lets-take-a-look-on-the-tidy-version-of-the-data" class="section level2">
+<h2>Let’s take a look on the tidy version of the data</h2>
+<p>Let’s start by the second data set: <strong>THE STATE-WISE DATA</strong> :</p>
+<pre class="r"><code>primary_state_clean &lt;- read_csv(&quot;https://raw.githubusercontent.com/bennour007/education_data/master/data_primary_schools/primary_state_clean.csv&quot;)
+
+primary_state_clean %&gt;%
+  glimpse()</code></pre>
+<pre><code>## Rows: 1,404
+## Columns: 9
+## $ state                 &lt;chr&gt; &quot;Tunis1&quot;, &quot;Tunis1&quot;, &quot;Tunis1&quot;, &quot;Tunis1&quot;, &quot;Tunis1…
+## $ ratios                &lt;chr&gt; &quot;pupil_to_teacher&quot;, &quot;pupil_to_teacher&quot;, &quot;pupil_…
+## $ ratios_value          &lt;dbl&gt; 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5, 18.5,…
+## $ schools_char          &lt;chr&gt; &quot;number_taught_classes&quot;, &quot;number_taught_classes…
+## $ char_count            &lt;dbl&gt; 1479, 1479, 1479, 1479, 1479, 1479, 1479, 1479,…
+## $ teachers_gender       &lt;chr&gt; &quot;teachers_female&quot;, &quot;teachers_female&quot;, &quot;teachers…
+## $ teachers_gender_count &lt;dbl&gt; 1685, 1685, 1685, 465, 465, 465, 2150, 2150, 21…
+## $ pupils_gender         &lt;chr&gt; &quot;pupils_female&quot;, &quot;pupils_all&quot;, &quot;pupils_male&quot;, &quot;…
+## $ pupils_gender_count   &lt;dbl&gt; 19362, 39865, 20503, 19362, 39865, 20503, 19362…</code></pre>
+<p>As we can see I tried to tidy up this data and the columns describe the following :</p>
+<ul>
+<li><p>state: There are 24 states in Tunisia, 2 of them are administratively decomposed into two region as they are heavily populated:</p>
+<ul>
+<li>Tunis : decomposed to Tunis1 and Tunis2.</li>
+<li>Sfax : decomposed to Sfax1 and Sfax2.</li>
+</ul></li>
+<li><p>ratio: Provides two ratio measures theses are :</p>
+<ul>
+<li>pupil_to_teacher: the number of pupils for each teacher(aggregated by average)</li>
+<li>pupil_to_classroom: the number of pupils in each classroom(aggregated by average)</li>
+</ul></li>
+<li><p>ratios_value: provides the value of each ratio.</p></li>
+<li><p>schools_char: provides the characteristics of schools:</p>
+<ul>
+<li>number_taught_classes: is the number of pupil classes</li>
+<li>number_classrooms: is the number of classrooms</li>
+<li>number_schools: is the number of schools</li>
+</ul></li>
+<li><p>char_count: the counts of the provided characteristics in schools_char</p></li>
+<li><p>teachers_gender : the gender of the teaching staff</p>
+<ul>
+<li>teachers_female: teachers who are females</li>
+<li>teachers_male: teachers who are male</li>
+<li>teachers_all: teachers from all genders</li>
+</ul></li>
+<li><p>teachers_gender_count: the counts of teacher_gender</p></li>
+<li><p>pupils_gender: the gender of the enrolled pupils</p>
+<ul>
+<li>pupils_female: pupils who are females</li>
+<li>pupils_male: pupils who are males</li>
+<li>pupils_all: pupils from all genders</li>
+</ul></li>
+<li><p>pupils_gender_count: the counts of pupils_gender</p></li>
+</ul>
+<p>The second data set <strong>THE TIME-WISE DATA</strong>, describes the change of the same variables from <strong>1985 to 2019</strong>, I organized it similarly to the previous data set as follows:</p>
+<pre class="r"><code>primary_time_clean &lt;- read_csv(&quot;https://raw.githubusercontent.com/bennour007/education_data/master/data_primary_schools/primary_time_clean.csv&quot;)
+
+primary_time_clean %&gt;% 
+  glimpse()</code></pre>
+<pre><code>## Rows: 594
+## Columns: 10
+## $ female_prop_per_calss &lt;dbl&gt; 44.1, 44.1, 44.1, 44.1, 44.1, 44.1, 44.1, 44.1,…
+## $ year                  &lt;dbl&gt; 1985, 1985, 1985, 1985, 1985, 1985, 1985, 1985,…
+## $ ratios                &lt;chr&gt; &quot;pupil_to_class&quot;, &quot;pupil_to_class&quot;, &quot;pupil_to_c…
+## $ ratios_value          &lt;dbl&gt; 32.9, 32.9, 32.9, 32.9, 32.9, 32.9, 32.9, 32.9,…
+## $ schools_char          &lt;chr&gt; &quot;taught_classes&quot;, &quot;taught_classes&quot;, &quot;taught_cla…
+## $ char_count            &lt;dbl&gt; 37705, 37705, 37705, 37705, 37705, 37705, 37705…
+## $ teachers_gender       &lt;chr&gt; &quot;teachers_female&quot;, &quot;teachers_female&quot;, &quot;teachers…
+## $ teachers_gender_count &lt;dbl&gt; 13150, 13150, 13150, 24262, 24262, 24262, 37412…
+## $ pupils_gender         &lt;chr&gt; &quot;pupils_female&quot;, &quot;pupils_male&quot;, &quot;pupils_all&quot;, &quot;…
+## $ pupils_gender_count   &lt;dbl&gt; 546089, 692879, 1238968, 546089, 692879, 123896…</code></pre>
+<p>As you can see the only difference is that we have a year by year dataset with one new variable which is the female_prop_per_class, which is the average female proportion per class of that year. To give you some context, the Tunisian government decided that it needs to promote more <strong>gender equality</strong> and in order to do that it needed to create the cultural basis of this move starting by primary education. Moreover, this proportion seemed to be an acceptable KPI to measure how well the government is achieving its goal.</p>
+</div>
+<div id="one-important-note" class="section level2">
+<h2>One important note</h2>
+<p><em>In the case of the state-wise dataset, the values concerns the year 2019 only, and are aggregated by average for each state. As for the time-wise(or time series) dataset, the values are aggregated nationally by average for each year.</em></p>
+</div>
+<div id="fianl-thoughts" class="section level2">
+<h2>Fianl thoughts</h2>
+<p>Of course this is a mere essay to tidy what I considered two important tables in that report. However a more useful data set would include all of the described columns in a panel table for each state and for consecutive years to establish consistent basis for comparison. If this dataset successfully make it to the <a href="%22https://github.com/rfordatascience/tidytuesday%22">TidyTuesday</a> project (I submitted an issue on github to propose it), the ministry may actually provides the community with the panel data that will allows researchers to conduct sophisticated empirical research, <em>and the community would enjoy a very interesting dataset on the Tunisian experience in promoting equity in education</em>.</p>
+<p>If you want to check the code I used you can access it in <a href="https://github.com/bennour007/education_data">the same repo</a>, your feedback is welcomed.</p>
+<p>thank you for stopping by.</p>
+</div>

@@ -1,0 +1,51 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "New goals?"
+subtitle: ""
+summary: "News, potential changes, and self validation"
+authors: []
+tags: []
+categories: []
+date: 2021-05-02T21:14:11+01:00
+lastmod: 2021-05-02T21:14:11+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+Somehow I got my shit together and decided to actually write something in this blog after months of frustration and decepointement to say the least. Frankly I think I'm only saying that because nothing exciting is happening in my life not even a bit. However, excitement should not be something that I wait for, I can simply pursue it and chase it, I think that's the new hot thing that got me to get back to my workstation and rethink my 24 hours, my diet, my behavior and my sociability. I think  I can do way better and all I might need is some self validation to build up the confidence I need to sustain the discipline that can get me to exciting spots. In simpler terms, next up is chasing Adrenaline after my 8 to 5!
+
+I've been thinking on what kind of new strategies that might get me out of where I am during this numb period, and the most important step of all was finding people who either went through the same process or undergoing a similar path as I am in terms of searching for the right career path or rather the right future they see themselves in, I did just that and will continue to. The fact that I'm writing now means that it might be working. 
+
+The new strategic shift that I think I should follow is basically stop thinking about the future and just embrace the present moment. This is critical because it is part of treating my chronic anxiety that's holding me back from my real potential in every critical situation I went through, and this ladies and gentlemen needs to stop now. So I figured what's better than finding excitement and just pursue it all the way when it's possible.
+
+Adrenaline might be the answer because hormonal reward might be what I really need to keep going and create the consistency and discipline needed for more important rewards and achievements.
+
+On another note, I'm also changing the way I  will be writing from now on. In fact I will stop the random personal opinion series, and shift directly to data based personal opinion series. I think this is an important decision and will make my content more credible for the reader and the community in general. 
+
+I also didn't forget about the Tidy Tuesday challenge, getting back to the data viz challenges on twitter will be beneficial and important to the whole process as well as to the strategic shift I intend to do.
+
+Finally I want to remind myself and the readers that life is super hard, and that sustaining one's self is very important and should not be disregarded, and if the price one would pay to be financially independent is 8 hours a day, so be it, assuming of course that one uses the remaining 16 hours efficiently. In my case, efficiency would mean exciting things, adrenaline rush, and pushing harder and harder my self to its limits.
+
+Cheers!
+
+
+
+
+
+

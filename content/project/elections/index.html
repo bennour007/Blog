@@ -1,0 +1,472 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+title: "Elections project"
+subtitle: ""
+summary: "I extract the general elections data of 2014 in Tunisia, and replicate the results."
+authors: []
+tags: []
+categories: []
+date: 2019-24-02T21:54:20+01:00
+lastmod: 2020-10-07T21:54:20+01:00
+featured: false
+draft: false
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "Do we really need politicians, wouldn't an AI take better decision and work more efficiently than thouse monkeys? -Monkey Parliament, 2009"
+  focal_point: ""
+  preview_only: false
+projects: []
+editor_options: 
+  chunk_output_type: console
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>As you may probably read in my blog, it’s been a while now since I decided to see how the elections work and how a change in the voting system in tunisia may yield a tremendous change.</p>
+<p>At first I wasn’t really overwhelmed by the process nor the work that needs to be done it self, however, the further I dive into some technical issues with my code, the more I realize <em>THIS SUCKS BIG TIME</em>.</p>
+<p>I mean honestly, most of the problems I ran into were related to low quality data. Anyways, crying over the incompetence of isie data mangers won’t change anything now.</p>
+<p>Basically what took me too long was the fact that I was really confused in this project with R, relearning python and cleaning the rust out of my memory was really time consuming, even though I still need to do lots of work in order to upgrade my coding skills and algorithmic thinking, in addition some tweaks may be needed to make the code not only functional the way it is now, but also, elegant and optimal.</p>
+<p>Now that I am more comfortable in the pythonic world of dynamism and ease, <em>THE COMMUNITY REALLY NEEDS TO FIND A WAY TO MIMIC RMD</em>. while this entire website is written in Rmd with Rstudio, I haven’t come cross any reporting tool as elegant, and pertinent as Rmd and the knitr package in R.</p>
+<p>In what follows we will discuss some functionalities, some methodology and define few concepts for the reader who has no experience in the given matter.</p>
+<p>I will not show all the code I used in this report however it will be <a href="https://github.com/bennour007/elections">here</a> in my rep, for those who are going to check it out please leave me a feedback.</p>
+<p>I will be dividing the work into phases, each phase will be focusing on a specific task over the data.</p>
+<div id="defining-the-files-directory-and-paths" class="section level3">
+<h3>Defining the files directory and paths</h3>
+<p>This is important for the Importing phase to loop on them when we need to access all the files and get all the names.</p>
+</div>
+<div id="phase-importation" class="section level3">
+<h3>Phase : Importation</h3>
+<p>Import the files with pandas in a dictionary to loop on in the analysis</p>
+<div id="we-can-also-think-about-importing-the-data-from-the-github-repo-further-preprocessing-is-needed-if-done." class="section level6">
+<h6>we can also think about importing the data from the github repo, further preprocessing is needed if done.</h6>
+</div>
+</div>
+<div id="phase-create-a-preperation-function" class="section level3">
+<h3>Phase : Create a preperation function</h3>
+<p>We Have to prepare the data in ‘dfs’ to get the total votes for each list,</p>
+<pre class="python"><code># this function takes the dataframe sums row wise for each candidate 
+# and return list name and the total votes
+def prep(df):
+    # act on the data frame and process it 
+    df_0 = pd.concat([pd.DataFrame({&#39;sumv&#39;:np.sum(df, axis=1)}), df[&#39;list&#39;]], axis = 1)
+    return df_0</code></pre>
+</div>
+<div id="phase-define-and-prepare-hare-quota-arguments" class="section level3">
+<h3>Phase: Define and prepare Hare quota arguments</h3>
+<p>Hare quota is the number of all votes in given city divided by the number of seats for that city.
+Based on the HQ we will create a table where we have:</p>
+<ul>
+<li>electoral quota for each list: Q = 1 means list gets 1 seat etc.</li>
+<li>seats collected fully by the votes quota, quota seats: QS.</li>
+<li>remains R from the quota: votes who didn’t got any seats to the list.</li>
+<li>percentage P of the votes of the list from all votes.</li>
+</ul>
+<pre class="python"><code>def hare(df, s):
+    #total votes:
+    ts = np.sum(df.sumv, axis = 0)
+    #hare quota:
+    hq = np.round(ts/s,decimals=3)
+    #hare quota per list
+    df[&#39;q&#39;] = df.sumv/hq
+    #quota seats
+    df[&#39;qseats&#39;] = np.fix(df.q)
+    #remains
+    df[&#39;r&#39;] = df.q - df.qseats
+    #percentage
+    df[&#39;p&#39;] = df.sumv/ts
+    #sort the values with the highest remains first
+    df = df.sort_values(&#39;r&#39;, ascending = False)
+    return df</code></pre>
+<p>This is the result in Sousse:</p>
+<pre class="r"><code>py$tmp %&gt;% kable</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">sumv</th>
+<th align="left">list</th>
+<th align="right">q</th>
+<th align="right">qseats</th>
+<th align="right">r</th>
+<th align="right">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>14</td>
+<td align="right">102604</td>
+<td align="left">قائمة حركة نداء تونس</td>
+<td align="right">4.9290930</td>
+<td align="right">4</td>
+<td align="right">0.9290930</td>
+<td align="right">0.4929093</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td align="right">12360</td>
+<td align="left">قائمة حزب آفاق تونس</td>
+<td align="right">0.5937740</td>
+<td align="right">0</td>
+<td align="right">0.5937740</td>
+<td align="right">0.0593774</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td align="right">50820</td>
+<td align="left">قائمة حزب حركة النهضة</td>
+<td align="right">2.4413912</td>
+<td align="right">2</td>
+<td align="right">0.4413912</td>
+<td align="right">0.2441391</td>
+</tr>
+<tr class="even">
+<td>41</td>
+<td align="right">8626</td>
+<td align="left">قائمة حزب المبادرة</td>
+<td align="right">0.4143928</td>
+<td align="right">0</td>
+<td align="right">0.4143928</td>
+<td align="right">0.0414393</td>
+</tr>
+<tr class="odd">
+<td>33</td>
+<td align="right">5502</td>
+<td align="left">قائمة الجبهة الشعبية</td>
+<td align="right">0.2643159</td>
+<td align="right">0</td>
+<td align="right">0.2643159</td>
+<td align="right">0.0264316</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="phase-prepare-and-perform-computations-for-seats-allocation" class="section level3">
+<h3>Phase : Prepare and perform computations for seats allocation</h3>
+<p>In this phase we will implement the largest remains allocation method for a given dataset. We will also give the opportunity to assign a minimum percentage of representation for lists to be accorded the remained seats.
+For each list sorted with regard to it’s remains, and satisfying the condition on the percentage, we add a seat, until all lists are given one, if more seats are still not allocated we iterate again with the same order until we have none, or until the first condition is met and we repeat.</p>
+<pre class="python"><code>def seats(df, s, p):
+    df = df[df.p &gt; p].reset_index()
+    rs = np.int32(s - np.sum(df.qseats))
+    for i in range(rs):
+        df.qseats[i] = df.qseats[i] + 1
+    return df[df.qseats &gt; 0]</code></pre>
+</div>
+<div id="phase-combine-all-processing-and-computations" class="section level3">
+<h3>Phase : Combine all processing and computations</h3>
+<p>For future ease of use, testing, and debugging, it is convenient to create a function that combine all of the above.
+Let’s call it results().</p>
+<pre class="python"><code>def results(df, s, p):
+    return seats(hare(prep(df), s), s, p)</code></pre>
+<p>here are the results in sousse</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">index</th>
+<th align="right">sumv</th>
+<th align="left">list</th>
+<th align="right">q</th>
+<th align="right">qseats</th>
+<th align="right">r</th>
+<th align="right">p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td align="right">14</td>
+<td align="right">102604</td>
+<td align="left">قائمة حركة نداء تونس</td>
+<td align="right">4.9290930</td>
+<td align="right">5</td>
+<td align="right">0.9290930</td>
+<td align="right">0.4929093</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td align="right">9</td>
+<td align="right">12360</td>
+<td align="left">قائمة حزب آفاق تونس</td>
+<td align="right">0.5937740</td>
+<td align="right">1</td>
+<td align="right">0.5937740</td>
+<td align="right">0.0593774</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td align="right">15</td>
+<td align="right">50820</td>
+<td align="left">قائمة حزب حركة النهضة</td>
+<td align="right">2.4413912</td>
+<td align="right">3</td>
+<td align="right">0.4413912</td>
+<td align="right">0.2441391</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td align="right">41</td>
+<td align="right">8626</td>
+<td align="left">قائمة حزب المبادرة</td>
+<td align="right">0.4143928</td>
+<td align="right">1</td>
+<td align="right">0.4143928</td>
+<td align="right">0.0414393</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="phase-get-data-on-seats-for-each-region" class="section level3">
+<h3>Phase : Get data on seats for each region</h3>
+<p>Using data from the wikipedia article on regional dispatching of parliamentary seats in Tunisia,</p>
+<p><a href="&#39;https://ar.wikipedia.org/wiki/%D9%82%D8%A7%D8%A6%D9%85%D8%A9_%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A6%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D9%8A%D8%A9_%D9%81%D9%8A_%D8%AA%D9%88%D9%86%D8%B3#%D8%A7%D9%84%D8%AF%D9%88%D8%A7%D8%A6%D8%B1_%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D9%8A%D8%A9_%D8%AF%D8%A7%D8%AE%D9%84_%D8%AA%D9%88%D9%86%D8%B3&#39;">link</a>.</p>
+<p>Ofcourse we will not be needing all the page, only the table, the region, and seats associated.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">الموقع</th>
+<th align="left">الدائرة الانتخابية</th>
+<th align="left">الأماكن</th>
+<th align="right">المقاعد</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">تونس (199 مقعد)</td>
+<td align="left">أريانة</td>
+<td align="left">ولاية أريانة</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">تونس (199 مقعد)</td>
+<td align="left">باجة</td>
+<td align="left">ولاية باجة</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="left">تونس (199 مقعد)</td>
+<td align="left">بن عروس</td>
+<td align="left">ولاية بن عروس</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="left">تونس (199 مقعد)</td>
+<td align="left">بنزرت</td>
+<td align="left">ولاية بنزرت</td>
+<td align="right">9</td>
+</tr>
+<tr class="odd">
+<td align="left">تونس (199 مقعد)</td>
+<td align="left">قابس</td>
+<td align="left">ولاية قابس</td>
+<td align="right">7</td>
+</tr>
+</tbody>
+</table>
+<p>Because of the confusion between arabic letters and latin letters python orders them in a different manner so we needed to reorder them again in a consistent manner between arabic and latin letters.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">seats</th>
+<th align="left">gov</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">8</td>
+<td align="left">ariana</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">beja</td>
+</tr>
+<tr class="odd">
+<td align="right">10</td>
+<td align="left">ben_arous</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="left">bizerte</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">gabes</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="left">gafsa</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="left">jendouba</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="left">kairouan</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="left">kasserine</td>
+</tr>
+<tr class="even">
+<td align="right">5</td>
+<td align="left">kebili</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">mannouba</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">kef</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="left">mahdia</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="left">mednine</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">monastir</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="left">nabeul1</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="left">nabeul2</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="left">sfax1</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">sfax2</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">sidibouzid</td>
+</tr>
+<tr class="odd">
+<td align="right">6</td>
+<td align="left">siliana</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">sousse</td>
+</tr>
+<tr class="odd">
+<td align="right">4</td>
+<td align="left">tataouine</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">tozeur</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">tunis1</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">tunis2</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">zaghouan</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="phase-constructing-the-results" class="section level3">
+<h3>Phase : Constructing the results</h3>
+<p>We will now use the table above, to loop for each region, it’s associated dataset in ‘dfs’, pass it to the functions one by one , using also the corresponding number of seats for each specified in the column seats.</p>
+<p>We will associate the results into a dictionary we will call it ‘fr’, for final results, each key will be looped on as the name of the data set, and each value will be resulted dataset from the results function of the looped upon dfs dictionary.</p>
+<p>In order to do this iteration, We will need to reorder the arrangement of names on which we created the ‘dfs’ dictionary, therefore, we need to reimport the data again in a proper manner.</p>
+</div>
+<div id="phase-cleaning-the-names-of-the-lists." class="section level3">
+<h3>Phase : Cleaning the names of the lists.</h3>
+<p>In this section I discovered That some names in arabic have been written in a terrible manner, this could create inconsistent results later on in the plotting, therefore we need to make the names of the lists that went to the parliament are clean.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">قائمة حركة نداء تونس</td>
+</tr>
+<tr class="even">
+<td align="left">قائمة حزب حركة النهضة</td>
+</tr>
+<tr class="odd">
+<td align="left">قائمة حزب الاتحاد الوطني الحر</td>
+</tr>
+<tr class="even">
+<td align="left">قائمة الجبهة الشعبية</td>
+</tr>
+<tr class="odd">
+<td align="left">قائمة حزب التيار الديمقراطي</td>
+</tr>
+<tr class="even">
+<td align="left">قائمة حزب التحالف</td>
+</tr>
+<tr class="odd">
+<td align="left">قائمة حزب المؤتمر من أجل الجمهورية</td>
+</tr>
+<tr class="even">
+<td align="left">القائمة المستقلة الإقلاع</td>
+</tr>
+<tr class="odd">
+<td align="left">قائمة حزب صوت الفلاحين</td>
+</tr>
+<tr class="even">
+<td align="left">قائمة تيار المحبة</td>
+</tr>
+<tr class="odd">
+<td align="left">قائمة حركة الشعب</td>
+</tr>
+<tr class="even">
+<td align="left">قائمة حزب آفاق تونس</td>
+</tr>
+<tr class="odd">
+<td align="left">قائمة الجبهة الوطنية للإنقاذ</td>
+</tr>
+<tr class="even">
+<td align="left">قائمة الوفاء لمشروع الشهيد</td>
+</tr>
+<tr class="odd">
+<td align="left">قائمة حزب المبادرة</td>
+</tr>
+<tr class="even">
+<td align="left">قائمة المجد الجريد</td>
+</tr>
+</tbody>
+</table>
+<p>We also needed to clean up some issues in the lists names like spaces, underscores, and more confusion because of arabic letters.</p>
+</div>
+<div id="the-results-a-simple-graphic" class="section level2">
+<h2>The results : a simple graphic</h2>
+<p><em>I only used mainland data here we haven’t integrated abroad citizens votes</em></p>
+<pre class="r"><code>tmp &lt;- py$win
+tmp %&gt;% 
+  mutate(list = fct_reorder(list, seats)) %&gt;%
+  ggplot(aes(x= seats, y = list)) +
+  geom_col(fill = &quot;sky blue&quot;) +
+  geom_text(aes(label = tmp$seats), hjust = -.2, color = &quot;grey&quot;) +
+  theme_light()</code></pre>
+<p><img src="/project/elections/index_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+</div>
+<div id="summary-and-conclusion" class="section level2">
+<h2>Summary and conclusion:</h2>
+<p>I have used both python and R in order to achieve this, technically using them both is the ideal. The technical issues I faced during this little project, which I will keep updating and improving, are mainly related to the bad data quality that the ISIE is sharing with the public, the problem is that this is official legal and approved-by-the-court public data, the least that (the institution with the biggest budget in the entire country) can do is provide data with quality and clear standards.
+Putting all of this aside, I will be developing a shiny app to further demonstrate the effect of the percentage quota on the results really shortly.
+This was fun, looking forward for your feedback.</p>
+<p>TO BE CONTINUED.</p>
+</div>

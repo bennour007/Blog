@@ -1,0 +1,61 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Cheesy Existence"
+subtitle: ""
+summary: "On the paradox of life and cheese"
+authors: []
+tags: []
+categories: []
+date: 2021-02-21T12:42:31+01:00
+lastmod: 2021-02-21T12:42:31+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "The nihilist- Paul Merwart"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+
+> "No one exists on purpose, no one belongs any where, we are all going to die" - Morty
+
+It was indeed a tiring month, my first in this new job. I am trying to recover and progress through rest and establishing consistent routines to be more productive, maybe I am just a control freak as well, who knows, ask my ex.
+
+Through this post I wanted originally to shed light on the cheesiness of some interventions I make during job meeting or while having conversations with people I don't know, but frankly my existentional crisis is way more complicated than I thought it was, and being cheesy is the least of my worries right now. 
+
+Indeed I am working on fulfilling my new year resolution of becoming less of a dick than I am, it feels like having another full-time job that needs constant attention and focus, most of all an utter self awareness that defies thousands of years of biological evolution and animalistic instincts. 
+
+There's no specific take from this post other than reminding my self of why I am fighting this world, because at some point I started forgetting all of this. Existence is pain by nature, and all we can do is basically minimize our suffering by making it only related to existence itself rather than because we are lazy, or because we didn't work hard enough or, for my case because I was a dick to someone. My idea about all of this is that I should eliminate the external factors to suffering, put my house in order and build from there.
+
+A famous argument in this regard is that my house is not in order because the world around me is crazy, and the only way to get my house in order is to fix the world in some way. But how would this be possible? How can a mediocre, heir of bad genes like me, or anyone else for the matter change the world in any sense? No one knows, not even those who actually put this argument out there. However, as much as I want to fight the world and its misery, at the end it doesn't matter since everything is prone to death, or simply a certain end. 
+
+I tend to get attached or rather used to people,things and situations, as I really like stability, apriori plans and thrive in such context. However, this behavior is contradictory to what I initially pointed to(not caring, not fighting, and being passive about the world is the rational thing to do). In contast I find myself trying to fight, and embrace my inner survival instincts in a modern way, and at the same time not finding enough reasons to actually do so. Meanwhile the nihilistic argument in this debate attracts me more than the conservative side. This gray area is triggering my anxiety and might be the reason I was a dick few times these couple of weeks. 
+
+Basically if we sum up the whole thing:
+
+  * I am working on my new year resolution to be less of a dick. 
+  
+  * I am putting my house(life and routines) into order in an essay to actually embrace my human instinct and just survive this world with the least pain and suffering. 
+  
+  * Making this progress is paradoxal to my initial nihilistic thoughts that I consider more rational given all the modern contexts. 
+  
+  * Realizing the paradoxal situation I am facing is triggering my anxiety since it renders my thoughts unstable, which is the reason for me to be a dick in the first place. 
+
+
+Thank you for stopping by.
+
+
+
+

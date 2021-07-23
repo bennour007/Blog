@@ -1,0 +1,42 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Breaking"
+subtitle: ""
+summary: "Breaking the constant worrying about the finiancial crisis, and other ugly things!"
+authors: []
+tags: []
+categories: []
+date: 2020-09-13T01:16:45+01:00
+lastmod: 2020-09-13T01:16:45+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "Walter white and Gus fing holding fing's body from the explosion"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+  I have been trying to figure few things at work, I got fed up and went down to the kitchen to grap a bite. While I was chewing on my last bite on an apple, the dark skin of a nerdy man with a ruthless look crossed my mind. It was Gustavo Fing, the meth lord from breaking bad. That was totally... unexpected. 
+  
+  I started thinking about why would I think about such a character. Is it my brain endorsing the ruthlessness of Fing that gets the job done? Is it me freaking out of the current situation in my country and realizing I should become a drug lord myself? I couldn't really tell what's going on. 
+  
+  I started writing this post right after that happened, but I really couldn't figure I should have wrote about. Until a heated conversation I had with my father this morning about the economy. He started adopting my fears(or rather my paranoia) from years before about a storming financial crisis in Tunisia, he also described some terrible, terrible pictures about the possible outcomes. Frankly I got a little uncomfortable, and maybe triggered. What's worse for a student than to graduate in the midst of a financial crisis. With this in mind I decided to write something about this conversation, like a wake up call or something, and I saw the little paragraph about Gus Fing. Then I realized I shouldn't really do such thing. 
+  
+  Life is simple(in its meaninglessness), its pure pain and suffering even at its most joyful and comfortable moments. It wouldn't really change much if you think about the coming financial crisis. My family survived through tough times before, and we will do it again if we have to. People will suffer and die, that's what always happens, that's what life is about, which renders caring much about the rest of the world(at least people beyond close friends and family), a very irrational thing to do. We don't need more misery than what we already got. So as Rick said to Morty after they buried themselves from another dimension : "Don't think about it".
+  
+  It is easier said than done though, especially when I quote a cartoon character to bring up a point. Still, the main idea here is that worrying about the uncertain, or the certain is irrational. Thinking about it, and preparing to minimize the amount of shit you take, is another matter. At the end of the day, the anxious monkey inside our heads, or at least mine, feeds from the constant worrying about things. The only way to starve him to death is to simply give in to the meaninglessness of the worst outcome possible, as you know he likes it when it matters. Bitch, nothing matters.
+  
+  Thank you for stopping by.
+  

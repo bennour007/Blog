@@ -1,0 +1,133 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "2019 Elections remake"
+subtitle: "The method by which we elect our leaders is as important as the act of voting itself. This post is an open essay that I will keep updating regarding the amended election law set to be approved by the parliamen."
+summary: "Few lines on the new election law, data, plots, and a dashboard!"
+authors: []
+tags: ["politics", "election"]
+categories: []
+date: 2021-07-10T21:53:45+01:00
+lastmod: 2021-07-10T21:53:45+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "The County Election : 1854-George Caleb Bingham"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+
+```{r message=TRUE, warning=TRUE, include=FALSE}
+source('resources.R')
+source('ggtheme.R')
+source('extentions.R')
+```
+
+Few days ago, the parliamentary committee on elections and internal order approved few changes in the new electoral method probably in an anticipation for an early general elections given the chaotic political scene in Tunisia right now. In this regard I decided to create this post as a reminder to myself of one of my earliest projects as a novice R/Python programmer(still am btw), and discuss the changes in the electoral method, compare then to the previous method and the potential change in results. In order to do so I had to find the data in a usable format first which was tedious as the ISIE(the government body responsible on the elections) did not publish data in this regard as they usually do. The data I used was collected and treated by [Cahiers de la Liberté](http://www.cahiersdelaliberte.org/) and published on their platform [data4tunisia.org](https://www.data4tunisia.org/) which is one of their many projects promoting open data in Tunisia, Shout out to them for the great work.
+
+In this post we will be explaining the new changes in the electoral law, the reasons behind them, and what can they change in the upcoming election. If you think you need to catch up on how the current election method works check out [my previous post](https://bennour.tn/project/elections/) about the 2014 elections.
+
+### What's new in this version of the law?
+
+In the new version of this law, there will be a threshold of *5%* on the percentage that each list should obtain to qualify for seats in the parliament, in the current law, this threshold is null, but what deos it mean and what is it meant for?
+
+The threshold in this context is simply a qualification condition to be assigned a seat in the parliament, the logic behind it is that not matter how much vote a list obtains, if it doesn't obtain X% of the total number of votes in its jurisdiction, it cannot have a seat in the parliament. Another reason for adopting a threshold is that the least reminder method does not usually provide a clear majority if left without such a requirement the elevates the barrier to entry to the parliament. To dive in more details you can check this 
+amazing [post](https://anc.majles.marsad.tn/fr/simulation_modes_scrutin) from [Bawsala](https://www.albawsala.com/en/) Association.
+
+
+### What can this threshold change in the upcoming parliament?
+
+To answer this question we need first to look at the current parliament, and the polls of how an upcoming parliament should look like. 
+
+## The current parliament of 2019 elections:
+
+As I mentioned above, I used data provided by [Cahiers de la Liberté](http://www.cahiersdelaliberte.org/), though I wrote my own code to simulate the current and amended electoral law, you can find all of that in [this repo](https://github.com/bennour007/elections_2019/). 
+
+After cleaning and processing here's the complete data of current parliament with a detailed table where we can pinpoint how much each party benefited from the largest remains system:
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+de00 <- read_csv('https://raw.githubusercontent.com/bennour007/elections_2019/master/data/de19t0_clean.csv') %>% 
+  mutate(prop_qs = (total_seats - q_seats)/total_seats * 100,
+         prop_qs = round(prop_qs, 2)) %>% 
+  mutate(party = fct_reorder(party, total_seats)) 
+
+```
+
+
+```{r echo=FALSE, message=TRUE, warning=TRUE}
+de00 %>% 
+  arrange(prop_qs) %>% 
+  gt()
+```
+
+Before we dive into the the results with the threshold, Id like to pin point, that Outsider_1 and Outsider_2 are simply independent lists I didn't have time to check the proper names for, but I trust the data collectors in this regard.
+
+Concerning the the table above however, the clearest observation is that the top 6 winning parties had at least 45% of their seats distributed by the largest remains system, while the rest of the lists obtained all of their seats distributed by the same system instead of direct votes(also referred to by quota seats).
+
+Given the notes above, the idea of the threshold is simply distributing the largest remains seats on less lists, which will relatively help declare a winner with clear majority(109 seats). Let's dive into how the parliament will look like if a 5% threshold is established using the same data:
+
+```{r echo=FALSE, message=TRUE, warning=TRUE}
+de05 <- read_csv('https://raw.githubusercontent.com/bennour007/elections_2019/master/data/de19t5_clean.csv') %>% 
+  mutate(prop_qs = (total_seats - q_seats)/total_seats * 100,
+         prop_qs = round(prop_qs, 2)) %>% 
+  mutate(party = fct_reorder(party, total_seats))
+
+de05 %>% 
+  arrange(prop_qs) %>% 
+  gt()
+```
+
+
+Looking at the table above its doesnt seem that we have a major change in the proportion of largest remains seats comparing to direct voting seats for the top 6 winners, however, the list of winners did shrink indeed by few parties(7 to be precise) counting for 33% of the previous list.
+
+```{r echo=FALSE, message=TRUE, warning=TRUE}
+de00 %>% 
+  left_join(de05, by = 'party') %>% 
+  select(party, total_seats.x, total_seats.y) %>% 
+  mutate(total_seats.y = replace_na(total_seats.y, 0),
+         diff = total_seats.y - total_seats.x) %>% 
+  arrange(-diff) %>% 
+  rename('seats at 0 %' = 'total_seats.x', 'seats at 5%' = 'total_seats.y') %>% 
+  gt()
+```
+
+*In case you are more interested(or not, am not asking, you need to check this out) you can check this lovely dashboard I wrote to illustrate the potential changes in the elections results have we changed the threshold. Check it out in this [link](https://bennour-med-hsin.shinyapps.io/e2019_dash/).*
+
+[here](https://bennour-med-hsin.shinyapps.io/e2019_dash/).
+
+<div>
+<iframe height="800" width="100%" margin-left=yes frameborder="no" src="https://bennour-med-hsin.shinyapps.io/e2019_dash/">
+</iframe>
+</div>
+
+You can check the code of the above dashboard in [this repo](https://github.com/bennour007/e2019_dash)
+
+### With good data comes great Visualizations
+
+A friend of mine who provided me with great feedback on the dashboard linked above, also inspired me to use a different kind of recapitulative plots, it seems we can summarize the change in the seats number per party should the threshold itself change using a streamgraph, however, I think the bump-plot using [ggbump](https://github.com/davidsjoberg/ggbump) is a bit better in this case. In any case, here's how the threshold percentage change would have affected the last general election of 2019. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+p1
+```
+
+What we can conclude from this beautiful chart is that the only winners from changing the threshold are the Islamist party ENNAHDHA and its ally QALB TOUNES, everyone else will be extremely effected by such a change especially given that some of these parties have all of their seats from the largest remains TAHYA TOUNES as an example would not win any seats beyond the 7% threshold.
+
+
+Cheers!
+
+
+
+
+

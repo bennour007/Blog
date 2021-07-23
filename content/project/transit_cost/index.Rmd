@@ -1,0 +1,411 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+title: "International transit costs"
+subtitle: ""
+summary: "TidyTuesday-Week2-2021"
+authors: []
+tags: ["TidyTuesday"]
+categories: ["TidyTuesday"]
+date: 2021-01-07T12:53:34+01:00
+lastmod: 2021-01-07T12:53:34+01:00
+featured: false
+draft: false
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "image from Quartz(qz.com)"
+  focal_point: ""
+  preview_only: false
+projects: []
+editor_options: 
+  chunk_output_type: console
+---
+
+A new data-set is up on the [TidyTuesday repository](https://github.com/rfordatascience/tidytuesday). This week's data is about the cost of transit across the world. In this post I will explore it, and put on some kick-ass data viz into action. I have been working and playing with data from the TidyTuesday project for 2 years now, but I have never done it on regular basis. This year I am going through with a weekly post for each data-set every Tuesday. So let's kick it off.
+
+## Import data and libraries.
+
+The folks in R4DS online learning community created a package that automatically loads the data into R with all the available information on the variables in question. I prefer the good old way using readr. As for the libraries to use I always start by loading Tidyverse, and since we have country-wise data, I will also load other packages such sf, ggspatial, and others(but we might not need to use them all) as you will see here: 
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(maps)
+library(sf)
+library(rnaturalearth)
+library(countrycode)
+library(ggspatial)
+library(patchwork)
+```
+
+```{r message=FALSE, warning=FALSE}
+transit_cost_raw <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-01-05/transit_cost.csv')
+
+```
+
+## Setting up the visuals
+
+Before I start exploring the data, I always like to first set up the ggplot2 theme. Setting the theme independently from the plotting script allows me to focus more on what the plots say rather than how it says it. In simpler terms this approach allows for complete focus on the content, and for a universal looks across all the plots.
+
+As for the theme schema, I really like the color palette of The Economist, you can find it [here](https://pattern-library.economist.com/color.html). Here's my main basic theme:
+
+```{r}
+ma_theme <- theme(text = element_text(family = "DejaVu Sans Mono",
+                                        color = "lightpink",
+                                        margin = margin(t = 10)),
+                    plot.title =  element_text(size = 11,
+                                               hjust = 0),
+                    plot.subtitle = element_text(size = 8,
+                                                 hjust = 0),
+                    plot.caption = element_text(size = 5,
+                                                hjust = 0.5),
+                    panel.grid.major.x  = element_line(size = 0.1, color = "grey"),
+                    panel.grid.major.y  = element_line(size = 0.1, color = "grey"),
+                    panel.grid.minor = element_blank(),
+                    strip.background = element_blank(),
+                    axis.text = element_text(color = "#9ae5de"),
+                    axis.ticks = element_blank(),
+                    strip.text.x = element_text(color = "#efe8d1"),
+                    strip.text.y = element_text(color = "#efe8d1"),
+                    plot.background = element_rect(fill = "#4a4a4a"),
+                    legend.background = element_rect(fill = "#4a4a4a"),
+                    legend.box.background = element_rect(fill = "#4a4a4a", colour = NA),
+                    panel.background = element_rect(fill= "#4a4a4a"))
+
+```
+
+Of course later on I can change it as I like, but for the time being, I'll just use it as it is.
+
+## Cleaning the data
+
+As you may or may not know, I have opened up the data before and made my mind on what to clean precisely, but I won't explain it in details here, I made sure the code is pretty readable so you can actually figure out what I did. The idea is basically to transform all date and numerical values from characters to numerical variables, trim the spaces at the beginning and end of each character string, remove any unnecessary special characters, and fix up some abbreviation(I'll use the countrycode package for that).
+
+
+
+```{r}
+transit_cost <- transit_cost_raw %>% 
+  mutate(country = if_else(country == "UK", "GB", country)) %>%
+  mutate(tunnel_per = str_remove(tunnel_per, "%")) %>%
+  mutate(country = countrycode(country, "iso2c", "country.name")) %>%
+  mutate_at(vars(start_year, end_year, tunnel_per, real_cost), str_trim) %>%
+  drop_na() %>%
+  mutate_at(vars(start_year, end_year, tunnel_per, real_cost), as.numeric) %>%
+  drop_na()
+```
+
+I used the drop_na function to remove the rows where NA is generated after calling as.numeric, end_year is set as "X" for the line 6 metro in Cairo, I did some research and found no official clue on the matter. So we can ignore the warning message in this case.
+
+Let's see if we still have any NAs anyway
+
+```{r}
+transit_cost %>%
+  filter_all(any_vars(is.na(.)))
+```
+
+Precisely, the filter function return a 0 row tibble, our filter is clean.
+
+## Exploring the data 
+
+First off, let's start by seeing how the data looks:
+
+```{r}
+transit_cost %>%
+  glimpse()
+```
+
+Well, there are some interesting information in this data-set, especially the cost per Km, and the length of the lines present in the data, I appreciate the use of the metric system as well. In any case, there are different angles from which we can see and analyze the importance of these variable, I am only presenting mine.
+
+First, I would like to tidy the data some more, I will add two variable as follows; for each country I will add the average length of transit lines, and for each city I will add the total number of lines.
+
+```{r}
+transit_cost <- transit_cost %>%
+  nest_by(city) %>%
+  mutate(number_lines = nrow(data)) %>%
+  unnest("data") %>%
+  ungroup() %>%
+  group_by(country) %>%
+  mutate(mean_length = mean(length)) %>%
+  ungroup()
+```
+
+So why I did this? Basically I would like to know how many transit lines each city have, which means that the variable I added must contain the same number for each city, the same goes for average line length for each country, the variable should contain the same value for each country. This is the tidy way to improve your data and get more interesting insights form it, using the tidyverse makes it easier especially later with the visualization with ggplot2 you will see how intuitive and flawless it is to visualize all of this. Also, note that I used the nest_by function, probably this is not the best way to use it but at the time of writing this it was good enough. I used to be a little skeptical with nested data but it turned out to be very useful in many cases. I mean, you can do this in other languages, but boy the tidyverse makes the entire process super smooth. I encourage you to take it into consideration.
+
+You can see the usefulness of what I did here, for example let's see how the data looks for China:
+
+```{r}
+transit_cost %>%
+  filter(country == "China") %>%
+  select(country, city, number_lines, mean_length, length) 
+```
+
+Let's see if our code did what we want, i.e does the column mean_length gives us the average length of the transit lines in all of china? we simply need to compare to the manually typed mean if we filter the countries by China, here's how its done: 
+
+```{r}
+transit_cost %>%
+  filter(country == "China") %>%
+  select(country, city, number_lines, mean_length, length)%>%
+  pull(length) %>% mean
+```
+
+Yup, we are on the right track its the same value(rounded) for all the rows of China.
+
+## Getting to the juice
+
+We augmented and improved in a tidy way the data in hand, Now what? (or rather : WAT?)
+
+Well, [David Robinson](http://varianceexplained.org/), who is one of the maintainers of the tidyverse, hosts a screen cast every week where he plays with the TidyTuesday data, and I noticed that he asks more questions than he actually answers, since I haven't really developed a way by which I approach data, I will be your David Robinson, and ask the questions for you. Though I might not answer them since I will probably focus on getting the code right. With the this spirit let's investigate the data, here's my take :
+
+### What is the average cost/km per country?
+
+
+```{r}
+transit_cost %>%
+  group_by(country) %>%
+  summarise(mean_cost_km = mean(cost_km_millions)) %>%
+  mutate(country = fct_reorder(country, mean_cost_km)) %>% # we add this
+  ggplot(aes(x = mean_cost_km,
+             y = country)) +
+  geom_col(fill = "skyblue") +
+  geom_vline(aes(xintercept = transit_cost$cost_km_millions %>% mean), color = "lightpink") +
+  ma_theme +
+  labs(title = "Mean cost/km for each country",
+       x = "mean of cost/km (in millions US$)")
+
+transit_cost %>%
+  group_by(country) %>%
+  summarise(mean_cost_km = mean(cost_km_millions)) %>%
+  mutate(status_int_mean = if_else(mean_cost_km > transit_cost$cost_km_millions %>% mean, "above_cost_mean_km", "below_cost_mean_km")) %>%
+  mutate(country = fct_reorder(country, mean_cost_km)) %>% # we add this
+  ggplot(aes(x = mean_cost_km,
+             y = country)) +
+  geom_col(fill = "skyblue") +
+  facet_wrap(~ status_int_mean, scales = "free_y") +
+  ma_theme +
+  labs(title = "Mean cost/km for each country",
+       subtitle = "Dividing countries above and below the international mean of cost/km.",
+       x = "mean of cost/km (in millions US$)")
+```
+
+
+### What characteristics does the top most expensive lines have?
+
+```{r}
+transit_cost %>%
+  mutate(status_int_mean = if_else(cost_km_millions > transit_cost$cost_km_millions %>% mean(), "above_cost_mean_km", "below_cost_mean_km")) %>%
+  mutate(line_status = if_else(end_year <= 2020, "completed", "ongoing")) %>%
+  mutate(period = end_year - start_year) %>%
+  ggplot() +
+  geom_point(aes(x = period,
+               y = length, color = line_status)) +
+  facet_grid(~ status_int_mean) +
+  ma_theme +
+  theme(legend.key = element_rect(fill = "#4a4a4a")) 
+
+```
+
+### What about the cities, and their lines
+
+```{r}
+transit_cost %>%
+  mutate(city = fct_reorder(city, number_lines)) %>%
+  mutate(city = fct_lump(city, 30)) %>%
+  filter(city != "Other") %>%
+  ggplot() +
+  geom_col(aes(x = number_lines,
+               y = city), 
+           fill = "skyblue") +
+  ma_theme +
+  labs(title = "Cities with the most lines",
+       x = "number of lines")
+```
+
+What if we consider Chinese cities as outliers and remove them from this plot, would we find an interesting idea?
+
+```{r}
+transit_cost %>%
+  mutate(is_china = if_else(country == "China", "China", "not China")) %>%
+  mutate(city = fct_reorder(city, number_lines)) %>%
+  mutate(city = fct_lump(city, 40)) %>%
+  filter(city != "Other") %>%
+  ggplot() +
+  geom_col(aes(x = number_lines,
+               y = city,
+               fill = is_china)) +
+  ma_theme +
+  labs(title = "Cities(none Chinese, and Chinese) with the most lines",
+       x = "number of lines") +
+  guides(fill = guide_legend("Which city is Chinese?"))
+```
+
+Yeah, we can see much better the number of transit lines for each city. 
+
+So what about the cost anyway? 
+
+```{r}
+transit_cost %>%
+  group_by(city) %>%
+  mutate(mean_city_cost = mean(cost_km_millions)) %>%
+  ungroup() %>%
+  filter(country != "China") %>%
+  mutate(city = fct_reorder(city, number_lines)) %>%
+  mutate(city = fct_lump(city, 50)) %>%
+  filter(city != "Other") %>%
+  ggplot() +
+  geom_col(aes(x = number_lines,
+               y = city, 
+               fill = mean_city_cost)) +
+  scale_fill_viridis_c() +
+  ma_theme
+```
+
+New York lines, appear to be the most expensive in this data. What about Chinese cities?
+
+```{r}
+transit_cost %>%
+  filter(country == "China") %>%
+  group_by(city) %>%
+  mutate(mean_city_cost = mean(cost_km_millions)) %>%
+  ungroup() %>%
+  mutate(city = fct_reorder(city, number_lines)) %>%
+  ggplot() +
+  geom_col(aes(x = number_lines,
+               y = city, 
+               fill = mean_city_cost)) +
+  scale_fill_viridis_c() +
+  ma_theme
+```
+
+
+Well, this is not even close to the 2 Billion dollars cost per Kilometer in New York, as the most expensive Chinese transit costs a little above 200 Million dollars for the Shenzhen and Tianjin Cities. We should take these insights with a grain of salt anyway because we didn't take the inflation of the currency into account.
+
+On another note, these transit systems can be undergrounds sometimes, would that affect the cost of lines?
+
+```{r}
+a <- transit_cost %>% 
+  filter(country != "China") %>%
+  mutate(line_status = if_else(end_year <= 2020, "completed", "ongoing")) %>%
+  mutate(city = fct_lump(city, 30)) %>%
+  mutate(city = fct_reorder(city, cost_km_millions)) %>%
+  filter(city != "Other") %>%
+  ggplot() +
+  geom_point(aes(y = cost_km_millions, 
+                 x = tunnel_per,
+                 size = stations),
+             color = "#16c79a",
+             alpha = 0.7) +
+  geom_text(aes(y = cost_km_millions, 
+                x = tunnel_per,
+                label = city),
+            check_overlap = TRUE,
+            hjust = -0.1, 
+            nudge_x = 0.05,
+            color = "#d4dddd",
+            family = "DejaVu Sans Mono",
+            size = 3) +
+  scale_color_viridis_c() +
+  coord_flip() +
+  facet_wrap(~ line_status) +
+  labs(title = "Characteristics of top 30 cities (none Chinese)\ndivided by the status of construction",
+       subtitle = "Cost/km in millions to the tunnel percentage of the total\nline and the number of stations for each line.",
+       y = "cost/km in millions (USD)",
+       x = "tunnel percentage") +
+  ma_theme +
+  theme(legend.key = element_rect(fill = "#4a4a4a"))
+a  
+```
+
+The relationship isn't as clear as I initially intended to show in this plot. Note that I have removed the overlapping city names from the plot, that's why not all of them is present there.
+
+### What about Chinese infrastructure?
+
+```{r}
+b <- transit_cost %>% 
+  filter(country == "China") %>%
+  mutate(line_status = if_else(end_year <= 2020, "completed", "ongoing")) %>%
+  mutate(city = fct_lump(city, 30)) %>%
+  mutate(city = fct_reorder(city, cost_km_millions)) %>%
+  filter(city != "Other") %>%
+  ggplot() +
+  geom_point(aes(y = cost_km_millions, 
+                 x = tunnel_per,
+                 size = stations),
+             color = "#16c79a",
+             alpha = 0.7) +
+  geom_text(aes(y = cost_km_millions, 
+                x = tunnel_per,
+                label = city),
+            check_overlap = TRUE,
+            hjust = -0.1, 
+            nudge_x = 0.05,
+            color = "#d4dddd",
+            family = "DejaVu Sans Mono",
+            size = 3) +
+  scale_color_viridis_c() +
+  coord_flip() +
+  facet_wrap(~ line_status) +
+  labs(title = "Characteristics of top 30 cities (only Chinese)\ndivided by the status of construction",
+       subtitle = "Cost/km in millions to the tunnel percentage of the total\nline and the number of stations for each line.",
+       y = "cost/km in millions (USD)",
+       x = "tunnel percentage",
+       caption = "github : @bennour007 | twitter : @bennour007sin") +
+  ma_theme +
+  theme(legend.key = element_rect(fill = "#4a4a4a"))
+b
+```
+
+
+I think this would be very interesting if we plot it in a map. Let's map it off, first we need to obtain the world map, where we can filter it for the Chinese territories, and then extract the spatial coordinates of each chinese city in order to plot them off.
+
+```{r}
+world <- ne_countries(scale = "medium" , returnclass = "sf")
+country_names <- transit_cost$country %>% unique()
+city_names <- transit_cost$city %>% unique()
+```
+
+```{r}
+c <- world.cities %>%
+  as_tibble() %>%
+  mutate(name = str_remove(name, "'")) %>%
+  filter(country.etc %in% country_names) %>%
+  filter(name %in% city_names) %>%
+  right_join(transit_cost, by = c("name" = "city")) %>%
+  select(- country.etc) %>%
+  filter(country == "China") %>%
+  ggplot() +
+  geom_sf(data = world %>% filter(name == "China"), 
+          fill= "#bdc3c7", 
+          color = "#bdc3c7") +
+  geom_point(aes(x = long, 
+                 y = lat,
+                 size = cost_km_millions),
+             alpha = 0.7,
+             color = "#16c79a") +
+  geom_text(aes(x = long, 
+                y = lat,
+                label = name),
+            check_overlap = TRUE,
+            hjust = -0.1, 
+            nudge_x = 0.05,
+            color = "#efe8d1",
+            family = "DejaVu Sans Mono",
+            size = 3) +
+  ma_theme +
+  theme(panel.grid = element_blank(),
+        axis.text = element_blank(),
+        axis.title = element_blank(),
+        legend.key = element_rect(fill = "#4a4a4a"),
+        axis.ticks = element_blank(),
+        panel.background = element_rect(fill = "#4a4a4a")) + 
+  guides(size = guide_legend("cost/km")) +
+  labs(title = "Chinese cities' infrastructure",
+       subtitle = "Costs per kilometer given for each line",
+       caption = "github : @bennour007 | twitter : @bennour007sin")
+c
+```
+
+There you go folks, that's all I got.
+
+## One last question, to be answered in further updates
+
+Wouldn't it be interesting if we compare the number of lines for each city to its population? At the end the variable number_lines doesn't provide us with a comparative ratio, but just with a descriptive value of that specific city. In simpler terms, we might need to fix a specific attribute for each city in order to properly compare their infrastructure.
+
+I'll keep this post updated, thank you for stopping by.
+

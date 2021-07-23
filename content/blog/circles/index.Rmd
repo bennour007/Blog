@@ -1,0 +1,45 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "The wrong inspirations and the right calculations"
+subtitle: ""
+summary: "About the last few weeks, the good change, and the overwhelming reality!"
+authors: []
+tags: []
+categories: []
+date: 2021-02-13T10:46:48+01:00
+lastmod: 2021-02-13T10:46:48+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "Hannibal crossing the Alps-1980"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+It's been a while indeed. Tons of things happened since my last post on the personal and the professional level as well. This post is supposed to carefully explain what I am going through, what I am going to face, and the effects of these events on my career plans.
+
+Since I've graduated last December, I took some rest and went right on looking for a job, however looking for a job around the new year appeared to be a very bad idea. Every company is basically either getting their accounts sorted, or just still planning for the coming year, so there was few to no opportunities for me to apply to. As for the few opportunities that were available at that time, and for one reason or another, apparently I wasn't appealing enough for the HR's. I think the reason for this is that most HR employees do not really understand the technical needs of their companies, and cannot grasp the technical issues that the candidate must address. Most of these employees just pick the honor's kid from the engineering school, unaware of the lost potential of everyone else who are willing to grind like a Moulinex machine. Adding to that the fact that there is a lot of ambiguity regarding the JD of Data Scientists (since that what I was applying for), and the value they are supposed to contribute to the company with anyway.
+
+However, unlike most HR's in Tunisia, National Pen was different, warm, direct, open. It is especially different when the interviews are done on an international level with global managers and board members of the company, which means they know who you are and what you do inside the company. This is very rewarding when you are on the right track and doing well in your job, but can also mean that there's a lot expected from you and not meeting the global standards can cost you your job.  
+
+My position in National Pen, unlike many of my peers who work there in the front desk operations directly with the clients, is in the back side of the desk. I query data, clean it, and send it to production, that's all I do. Of course with some extra effort more contribution can be done to automate, polish, and optimize the processes from our team's side. My direct supervisor who is based in San Diego, is frankly an inspiration, she automated a large chunk of the work load by herself and she adjusted her work hours to meet ours in Tunisia so she can help us with the process and the training. That level of commitment is just inspiring and one can only lower the hat in respect. 
+
+Moreover, this level of commitment is really scary for me, and it just pushes me to think about what I might be missing in other opportunities. Its a basic economic paradigm called "the opportunity cost", i.e: the cost of what I am doing right now is not me doing it alone, but also what I might be missing out from not doing other things completely or partially. And for me that cost is academic research.
+
+I thought I really wanted a career in academia, become a doctor(Ph.D. I mean), do research, and teach clueless teens(and adults) science. But getting to the corporate world, especially a multinational with a great culture just *started* to change my mind. The reason for this is basically the grounds for development, improvement, and learning, which does not only involve my JD in the company, but also can bring a positive contribution on my personal side-projects, which will allow me to enlarge and diversify my portfolio for future opportunities.
+
+Now, to sum up : I am indeed afraid of commitment(instead I would be enjoying the company of a beautiful lady rather than writing this), but committing to a position where the superiors are an inspiration is very helpful to overcome this fear and build up the foundations over which I can in fact evolve professionally and personally in a friendly work place. These simple facts led me to rethink my plans and thoughts about academia and that is just overwhelming.
+
+Thank you for stopping by.

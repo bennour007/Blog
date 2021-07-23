@@ -1,0 +1,66 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Good morning AMERICAAAA!"
+subtitle: ""
+summary: "American politics: why Trump won in 2016 and lost this year!"
+authors: []
+tags: ["politics"]
+categories: ["politics"]
+date: 2020-11-11T23:53:08+01:00
+lastmod: 2020-11-11T23:53:08+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "They think its funny too!"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+  I didn't write anything in over a month now(without counting my failed attempts to actually do so in the middle of the dark cold nights here). I am not sure what motivated me to actually put some words into order this time, but I am doing so, with the sound of a beautiful middle-aged women, apparently a morning show host yelling to its viewers : "Good morning AMERICAAAA!". Apparently I have been hooked on the elections that took place ages ago in the US, as I found myself up until 4 AM watching CNN, NBC, CNBC, MSNBC, heck I got more familiar with US counties more than I am with Tunisian ones. I just wanted to see how wrong the polls will get the results this time.
+  
+  There's no bottom line to this event, its just the undeclared war between the progressives and the conservatives in the US taking place. 
+  
+## What is happening in the US?
+
+The US is living in a dividing time, where rural(and mostly white) America is rooting for the conservative values, while urban(diversified, black, latinos, white, etc.) America is rooting for progressive ideals. However, this division has always existed, so what's new?
+
+Well the news started with the orange boomer(aka : Trump) announcing to run for president, and actually winning the election. What some progressives, and non Americans do not understand, is that Trump didn't win because of his character, or because of his capacity to run the most weaponized nation on earth, it was because of the issues that the normal American cared for, namely : immigration, and jobs. In this context, Trump run a successful campaign promising to go to build a wall, focus on job creation and support American industries. Voting on these issues is what led white folks in the mid-west and basically everywhere else to show up and vote for him on E-Day.
+
+On the other side, we find the democratic party, after the Obama years, seeking to stay in power and build on the policies established by their boss in the White House, they chose Clinton, not Bill, his wife, Hillary, the ruthless-once-secretary of state. But at that time, her only agenda seems to be: 'vote for me because I am a women'. There was no outstanding messages in what she campaigned for, nothing different from the Obama administration at least. 
+
+This led to the extreme polarization between the issues that Trump stood for, and the experience, and character of Hilary Clinton. The people decided to go with Trump with a red wave against every single poll conducted at that time (DATA COLLECTION BIAS: DuuuH), taking also control of both houses in congress.
+
+The controversial character of Trump then, started to surface more and more, especially with the American media who didn't save any punches, adding to the mess that Trump created and the fact that he did not deliver on his promises, and underplayed the Corona disaster in the US just before the election. 
+
+With an unsatisfied voter-base, Trump, couldn't beat up Biden, who is the former vice-president in the Obama administration, a former senator, and a career politician, who wasn't even the second choice in the DNC(the democratic national convention voted for senator Bernie Sanders as first nominee, mayor Pete Buttigieg as second, then in third place was Biden). Polls have projected for almost a year now, that Biden will win by 5 to 9 points difference in a land slide, but again, against all polls, Biden won very narrowly. 
+
+What we can say about this election is that in contrast to 2016, it is a referendum on character. And Americans seems to denounce Trump, who didn't deliver on his promises, over Biden, who promises unity and healing. Both without a precise platform.
+
+The media, progressives, and minorities also played a great role in pushing for a Biden win, a win where the left in the democratic party is stronger than ever and is pushing for its agenda to Biden's desk once in office. Red America is alerted, thinking that these progressives will raise taxes which will cut jobs, and open the country to immigrants which will decrease their purchase power. 
+
+Simply put, what is happening in the US is a huge misunderstanding and a bitter partisanship that is based on conflict rather than on ideas. Ideas is what got Trump elected in the first place, and Obama before him. Simple and meaningful ideas. This was missing from both Candidates this year, which led voters to chose between two characters rather than two platforms, And (almost)everyone likes anyone else more than they like Trump.
+
+Thank you for stopping by.
+
+
+
+
+
+
+
+
+
+
+

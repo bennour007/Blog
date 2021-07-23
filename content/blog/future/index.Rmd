@@ -1,0 +1,45 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Pragmatically interesting"
+subtitle: ""
+summary: "Thinking beyond the fog of confusion induced by interesting rejections: fighting mediocrity with strategy and reflection."
+authors: []
+tags: []
+categories: []
+date: 2020-12-03T07:56:59+01:00
+lastmod: 2020-12-03T07:56:59+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "'The fog of war', PAINTING BY LIEUTENANT ANSON 1935"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+Recently, I have applied to many research positions in different parts of the world where I am supposed to bring my quantitative and coding background to the battle grounds of these opportunities. Each time I conduct an interview, the feedback I get is: *"we think you have an interesting profile, but we found a better match for the position"*. keep in mind that I have applied to opportunities in different domains and areas, from biology, psychology, AI, etc. Now, my issue with this is that, I get no points for being interesting, which means I need to get practical, pragmatic, operational, functional, you name it. The challenge is not to get there, I know I can get there, but until then, the challenge is to figure how to get there. What does it really mean for the ones who are going to assess my candidacy and profile? These questions require deep reflection, about the right steps, and the wrong moves I've made thus far. 
+
+I am indeed proud of what I have become these couple of years, but staying only interesting is not enough, as i said, I get no point for that anyway. So what should I do? I think before I think about the reviewer, I need to think about myself, and the skills I am able to bring to the table right now. I did some research and found that common skill-sets of successful consultants are basically 
+
+* The ability to produce production-ready outputs, in the forms of dashboards, packages, or simply data analysis. 
+
+* Strong foundations in statistics, or a specific field in which they specialize.
+
+I think these are the most important attributes in let's say *"pragmatically interesting analyst"*. 
+
+In this context I will have to give myself a chance to actually get back in the competition, and upgrade my game. This will be done as I progress in different projects that should be the corner stone of this upgrade. The first project should be without any doubt creating an R package that implements my Directional Double Bootstrap algorithm. This should be a major turning point for my skills. Second, I need to dive deeper with shiny dashboarding, as it is indeed one of the most important skills that I can bring to the industry, especially in my country. Lastly, I think I should deepen my knowledge in statistics, economics, and mathematics in order to be able to actually compete in a higher level.
+
+Again, blogging about these stuff maybe isn't the best thing I can do right now, but it helps put everything into the right perspective. I hope this actually helps anyone who might be living the same struggle as I am right now. I hope also they can afford to actually do this, because frankly its expensive to invest in one's self. Sur-ce, I salute all of you hard working, broke, and strategic-thinking folks all over the world.
+
+Thank you for stopping by.
