@@ -2,9 +2,9 @@
 date: "2019-02-25T13:38:41-06:00"
 description: Fill in your details and I will get back to you as soon as possible.
 draft: false
-formspree_form_id: id-from-formspree
+formspree_form_id: https://formspree.io/f/xjvjedql
 layout: split-right
-name: Contact Us Form
+name: Contact 
 show_poweredby_formspree: true
 show_social_links: true
 submit_button_label: Send Message

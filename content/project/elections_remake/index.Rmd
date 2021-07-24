@@ -58,18 +58,74 @@ As I mentioned above, I used data provided by [Cahiers de la Liberté](http://ww
 After cleaning and processing here's the complete data of current parliament with a detailed table where we can pinpoint how much each party benefited from the largest remains system:
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
-de00 <- read_csv('https://raw.githubusercontent.com/bennour007/elections_2019/master/data/de19t0_clean.csv') %>% 
-  mutate(prop_qs = (total_seats - q_seats)/total_seats * 100,
-         prop_qs = round(prop_qs, 2)) %>% 
-  mutate(party = fct_reorder(party, total_seats)) 
+de00 <- good_data(0) %>% 
+  select(- threshold) %>% 
+  filter(total_seats != 0) %>% 
+  mutate(ratio = (total_seats - q_seats)/total_seats * 100,
+         ratio = round(ratio, 2)) %>% 
+  mutate(party = fct_reorder(party, total_seats)) %>% 
+  rename('Quota' = 'q_seats',
+         'Remains' = 'r_seats',
+         'Total' = 'total_seats')
 
 ```
 
 
-```{r echo=FALSE, message=TRUE, warning=TRUE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 de00 %>% 
-  arrange(prop_qs) %>% 
-  gt()
+  arrange(ratio) %>% 
+  gt()%>%
+  tab_spanner(
+    label = 'Seats',
+    columns = c(Quota, Remains, Total)
+  ) %>% 
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = "left",
+        color = "black",
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_body(
+        columns = vars(ratio)
+      )
+    )
+  ) %>%
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = "bottom",
+        color = "black",
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_column_labels(
+        columns = gt::everything()
+      )
+    )
+  ) %>% 
+  fmt_percent(
+    columns = ratio,
+    decimals = 0, 
+    scale_values = F
+  ) %>% 
+  data_color(
+    columns = vars(Total),
+    colors = scales::col_numeric(
+      palette = c("#ffffff", "#f2fbd2", "#c9ecb4", "#93d3ab", "#35b0ab"),
+      domain = NULL
+    )
+  ) %>%
+  
+  tab_source_note("@Bennour007sin | DATA: Cahiers de la Liberté") %>%
+  tab_header(
+    title = md("**2019 elections with largest remains threshold at 0%**"),
+    subtitle = "Decomposition of the total seats won by Quota(direct votes) and Remains the ratio of the Remains seats to the total won"
+    )
+
 ```
 
 Before we dive into the the results with the threshold, Id like to pin point, that Outsider_1 and Outsider_2 are simply independent lists I didn't have time to check the proper names for, but I trust the data collectors in this regard.
@@ -78,34 +134,133 @@ Concerning the the table above however, the clearest observation is that the top
 
 Given the notes above, the idea of the threshold is simply distributing the largest remains seats on less lists, which will relatively help declare a winner with clear majority(109 seats). Let's dive into how the parliament will look like if a 5% threshold is established using the same data:
 
-```{r echo=FALSE, message=TRUE, warning=TRUE}
-de05 <- read_csv('https://raw.githubusercontent.com/bennour007/elections_2019/master/data/de19t5_clean.csv') %>% 
-  mutate(prop_qs = (total_seats - q_seats)/total_seats * 100,
-         prop_qs = round(prop_qs, 2)) %>% 
-  mutate(party = fct_reorder(party, total_seats))
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+de05 <- good_data(0.05) %>% 
+  mutate(ratio = (total_seats - q_seats)/total_seats * 100,
+         ratio = round(ratio, 2)) %>% 
+  mutate(party = fct_reorder(party, total_seats)) %>% 
+  rename('Quota' = 'q_seats',
+         'Remains' = 'r_seats',
+         'Total' = 'total_seats')
+```
 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 de05 %>% 
-  arrange(prop_qs) %>% 
-  gt()
+  arrange(ratio) %>% 
+  gt() %>% 
+    tab_spanner(
+    label = 'Seats',
+    columns = c(Quota, Remains, Total)
+  ) %>% 
+    tab_style(
+    style = list(
+      cell_borders(
+        sides = "left",
+        color = "black",
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_body(
+        columns = vars(ratio)
+      )
+    )
+  ) %>%
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = "bottom",
+        color = "black",
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_column_labels(
+        columns = gt::everything()
+      )
+    )
+  ) %>% 
+  fmt_percent(
+    columns = ratio,
+    decimals = 0, 
+    scale_values = F
+  ) %>% 
+    data_color(
+      columns = vars(Total),
+      colors = scales::col_numeric(
+        palette = c("#ffffff", "#f2fbd2", "#c9ecb4", "#93d3ab", "#35b0ab"),
+        domain = NULL
+    )
+  )  %>% 
+  cols_label(
+  ) %>%
+  tab_source_note("@Bennour007sin | DATA: Cahiers de la Liberté") %>%
+  tab_header(
+    title = md("**2019 elections with largest remains threshold at 5%**"),
+    subtitle = "Decomposition of the total seats won by Quota(direct votes) and Remains the ratio of the Remains seats to the total won"
+    )
 ```
 
 
 Looking at the table above its doesnt seem that we have a major change in the proportion of largest remains seats comparing to direct voting seats for the top 6 winners, however, the list of winners did shrink indeed by few parties(7 to be precise) counting for 33% of the previous list.
 
-```{r echo=FALSE, message=TRUE, warning=TRUE}
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 de00 %>% 
   left_join(de05, by = 'party') %>% 
-  select(party, total_seats.x, total_seats.y) %>% 
-  mutate(total_seats.y = replace_na(total_seats.y, 0),
-         diff = total_seats.y - total_seats.x) %>% 
+  select(party, Total.x, Total.y) %>% 
+  mutate(Total.y = replace_na(Total.y, 0),
+         diff = Total.y - Total.x) %>% 
   arrange(-diff) %>% 
-  rename('seats at 0 %' = 'total_seats.x', 'seats at 5%' = 'total_seats.y') %>% 
-  gt()
+  rename('seats at 0 %' = 'Total.x', 'seats at 5%' = 'Total.y') %>% 
+  gt() %>% 
+  data_color(
+  columns = vars(diff),
+  colors = scales::col_factor(
+    palette = "RdYlBu",
+    domain = NULL
+    )
+  ) %>%
+
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = "left",
+        color = "black",
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_body(
+        columns = vars(diff)
+      )
+    )
+  ) %>%
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = "bottom",
+        color = "black",
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_column_labels(
+        columns = gt::everything()
+      )
+    )
+  ) %>% 
+  tab_source_note("@Bennour007sin | DATA: Cahiers de la Liberté") %>%
+  tab_header(
+    title = md("**2019 election ar 0% and 5% threshold**"),
+    subtitle = "The difference, the winners, and the loosers"
+    )
+
 ```
 
 *In case you are more interested(or not, am not asking, you need to check this out) you can check this lovely dashboard I wrote to illustrate the potential changes in the elections results have we changed the threshold. Check it out in this [link](https://bennour-med-hsin.shinyapps.io/e2019_dash/).*
 
-[here](https://bennour-med-hsin.shinyapps.io/e2019_dash/).
 
 <div>
 <iframe height="800" width="100%" margin-left=yes frameborder="no" src="https://bennour-med-hsin.shinyapps.io/e2019_dash/">
@@ -123,6 +278,7 @@ p1
 ```
 
 What we can conclude from this beautiful chart is that the only winners from changing the threshold are the Islamist party ENNAHDHA and its ally QALB TOUNES, everyone else will be extremely effected by such a change especially given that some of these parties have all of their seats from the largest remains TAHYA TOUNES as an example would not win any seats beyond the 7% threshold.
+
 
 
 Cheers!

@@ -28,6 +28,7 @@ image:
 projects: []
 ---
 
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>Few days ago, the parliamentary committee on elections and internal order approved few changes in the new electoral method probably in an anticipation for an early general elections given the chaotic political scene in Tunisia right now. In this regard I decided to create this post as a reminder to myself of one of my earliest projects as a novice R/Python programmer(still am btw), and discuss the changes in the electoral method, compare then to the previous method and the potential change in results. In order to do so I had to find the data in a usable format first which was tedious as the ISIE(the government body responsible on the elections) did not publish data in this regard as they usually do. The data I used was collected and treated by <a href="http://www.cahiersdelaliberte.org/">Cahiers de la Liberté</a> and published on their platform <a href="https://www.data4tunisia.org/">data4tunisia.org</a> which is one of their many projects promoting open data in Tunisia, Shout out to them for the great work.</p>
@@ -46,12 +47,12 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
 <h2>The current parliament of 2019 elections:</h2>
 <p>As I mentioned above, I used data provided by <a href="http://www.cahiersdelaliberte.org/">Cahiers de la Liberté</a>, though I wrote my own code to simulate the current and amended electoral law, you can find all of that in <a href="https://github.com/bennour007/elections_2019/">this repo</a>.</p>
 <p>After cleaning and processing here’s the complete data of current parliament with a detailed table where we can pinpoint how much each party benefited from the largest remains system:</p>
-<div id="vrujpaitdh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="meiqitnxlw" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vrujpaitdh .gt_table {
+#meiqitnxlw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -76,7 +77,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-left-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_heading {
+#meiqitnxlw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -88,7 +89,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_title {
+#meiqitnxlw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -98,7 +99,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-bottom-width: 0;
 }
 
-#vrujpaitdh .gt_subtitle {
+#meiqitnxlw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -108,13 +109,13 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-width: 0;
 }
 
-#vrujpaitdh .gt_bottom_border {
+#meiqitnxlw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_col_headings {
+#meiqitnxlw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -129,7 +130,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_col_heading {
+#meiqitnxlw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -149,7 +150,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   overflow-x: hidden;
 }
 
-#vrujpaitdh .gt_column_spanner_outer {
+#meiqitnxlw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -161,15 +162,15 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 4px;
 }
 
-#vrujpaitdh .gt_column_spanner_outer:first-child {
+#meiqitnxlw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vrujpaitdh .gt_column_spanner_outer:last-child {
+#meiqitnxlw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vrujpaitdh .gt_column_spanner {
+#meiqitnxlw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -181,7 +182,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   width: 100%;
 }
 
-#vrujpaitdh .gt_group_heading {
+#meiqitnxlw .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -203,7 +204,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   vertical-align: middle;
 }
 
-#vrujpaitdh .gt_empty_group_heading {
+#meiqitnxlw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -218,15 +219,15 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   vertical-align: middle;
 }
 
-#vrujpaitdh .gt_from_md > :first-child {
+#meiqitnxlw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vrujpaitdh .gt_from_md > :last-child {
+#meiqitnxlw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vrujpaitdh .gt_row {
+#meiqitnxlw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -245,7 +246,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   overflow-x: hidden;
 }
 
-#vrujpaitdh .gt_stub {
+#meiqitnxlw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -257,7 +258,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-left: 12px;
 }
 
-#vrujpaitdh .gt_summary_row {
+#meiqitnxlw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -267,7 +268,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 5px;
 }
 
-#vrujpaitdh .gt_first_summary_row {
+#meiqitnxlw .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -277,7 +278,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_grand_summary_row {
+#meiqitnxlw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -287,7 +288,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 5px;
 }
 
-#vrujpaitdh .gt_first_grand_summary_row {
+#meiqitnxlw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -297,11 +298,11 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_striped {
+#meiqitnxlw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vrujpaitdh .gt_table_body {
+#meiqitnxlw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -310,7 +311,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-bottom-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_footnotes {
+#meiqitnxlw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -324,13 +325,13 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_footnote {
+#meiqitnxlw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vrujpaitdh .gt_sourcenotes {
+#meiqitnxlw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -344,185 +345,193 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vrujpaitdh .gt_sourcenote {
+#meiqitnxlw .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vrujpaitdh .gt_left {
+#meiqitnxlw .gt_left {
   text-align: left;
 }
 
-#vrujpaitdh .gt_center {
+#meiqitnxlw .gt_center {
   text-align: center;
 }
 
-#vrujpaitdh .gt_right {
+#meiqitnxlw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vrujpaitdh .gt_font_normal {
+#meiqitnxlw .gt_font_normal {
   font-weight: normal;
 }
 
-#vrujpaitdh .gt_font_bold {
+#meiqitnxlw .gt_font_bold {
   font-weight: bold;
 }
 
-#vrujpaitdh .gt_font_italic {
+#meiqitnxlw .gt_font_italic {
   font-style: italic;
 }
 
-#vrujpaitdh .gt_super {
+#meiqitnxlw .gt_super {
   font-size: 65%;
 }
 
-#vrujpaitdh .gt_footnote_marks {
+#meiqitnxlw .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
 }
 </style>
 <table class="gt_table">
-  
+  <thead class="gt_header">
+    <tr>
+      <th colspan="5" class="gt_heading gt_title gt_font_normal" style><strong>2019 elections with largest remains threshold at 0%</strong></th>
+    </tr>
+    <tr>
+      <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Decomposition of the total seats won by Quota(direct votes) and Remains the ratio of the Remains seats to the total won</th>
+    </tr>
+  </thead>
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">party</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">q_seats</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">r_seats</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">total_seats</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop_qs</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">party</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3">
+        <span class="gt_column_spanner">Seats</span>
+      </th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">ratio</th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">Quota</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">Remains</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">Total</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_center">ennahdha</td>
+    <tr><td class="gt_row gt_center">ENNAHDHA</td>
 <td class="gt_row gt_right">28</td>
 <td class="gt_row gt_right">23</td>
-<td class="gt_row gt_right">51</td>
-<td class="gt_row gt_right">45.10</td></tr>
-    <tr><td class="gt_row gt_center">qalb_tounes</td>
+<td class="gt_row gt_right" style="background-color: #35B0AB; color: #000000;">51</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">45&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">QALB TOUNES</td>
 <td class="gt_row gt_right">17</td>
 <td class="gt_row gt_right">21</td>
-<td class="gt_row gt_right">38</td>
-<td class="gt_row gt_right">55.26</td></tr>
-    <tr><td class="gt_row gt_center">pdl</td>
+<td class="gt_row gt_right" style="background-color: #95D4AB; color: #000000;">38</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">55&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">PDL</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">15</td>
-<td class="gt_row gt_right">18</td>
-<td class="gt_row gt_right">83.33</td></tr>
-    <tr><td class="gt_row gt_center">tayar</td>
+<td class="gt_row gt_right" style="background-color: #E3F6C7; color: #000000;">18</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">83&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">TAYAR</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">19</td>
-<td class="gt_row gt_right">22</td>
-<td class="gt_row gt_right">86.36</td></tr>
-    <tr><td class="gt_row gt_center">harakt_el_chaab</td>
+<td class="gt_row gt_right" style="background-color: #D6F1BE; color: #000000;">22</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">86&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">HARAKT EL CHAAB</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">14</td>
-<td class="gt_row gt_right">15</td>
-<td class="gt_row gt_right">93.33</td></tr>
-    <tr><td class="gt_row gt_center">coalition_karama</td>
+<td class="gt_row gt_right" style="background-color: #EDF9CE; color: #000000;">15</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">93&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">COALITION KARAMA</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">20</td>
-<td class="gt_row gt_right">21</td>
-<td class="gt_row gt_right">95.24</td></tr>
-    <tr><td class="gt_row gt_center">afek_tounes</td>
+<td class="gt_row gt_right" style="background-color: #D9F2C0; color: #000000;">21</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">95&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">AAICH TOUNSI</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">AFEK TOUNES</td>
+<td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">al_badil</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">AL BADIL</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">amal_wa_3amal</td>
+<td class="gt_row gt_right" style="background-color: #FDFEF8; color: #000000;">3</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">AMAL WA AAMAL</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">2</td>
-<td class="gt_row gt_right">2</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">machrou3_tounes</td>
+<td class="gt_row gt_right" style="background-color: #FEFFFB; color: #000000;">2</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">MACHROUA TOUNES</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">4</td>
-<td class="gt_row gt_right">4</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">nidaa_tounes</td>
+<td class="gt_row gt_right" style="background-color: #FCFEF4; color: #000000;">4</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">NIDAA TOUNES</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">outsider_1</td>
+<td class="gt_row gt_right" style="background-color: #FDFEF8; color: #000000;">3</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">OUTSIDER 1</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">10</td>
-<td class="gt_row gt_right">10</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">outsider_2</td>
+<td class="gt_row gt_right" style="background-color: #F6FCDF; color: #000000;">10</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">OUTSIDER 2</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">parti_rahma</td>
+<td class="gt_row gt_right" style="background-color: #FDFEF8; color: #000000;">3</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">PARTI RAHMA</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">4</td>
-<td class="gt_row gt_right">4</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">partie_front_populaire</td>
+<td class="gt_row gt_right" style="background-color: #FCFEF4; color: #000000;">4</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">PARTIE FRONT POPULAIRE</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">psd</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">PSD</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">tahya_tounes</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">TAHYA TOUNES</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">14</td>
-<td class="gt_row gt_right">14</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">tayar_ma7abba</td>
+<td class="gt_row gt_right" style="background-color: #F0FAD1; color: #000000;">14</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">TAYAR MAHABBA</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">uds</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">UDS</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">upr</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">UPR</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">x3ich_tounsi</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
+<td class="gt_row gt_right" style="background-color: #FDFEF8; color: #000000;">3</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
   </tbody>
-  
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">@Bennour007sin | DATA: Cahiers de la Liberté</td>
+    </tr>
+  </tfoot>
   
 </table>
 </div>
 <p>Before we dive into the the results with the threshold, Id like to pin point, that Outsider_1 and Outsider_2 are simply independent lists I didn’t have time to check the proper names for, but I trust the data collectors in this regard.</p>
 <p>Concerning the the table above however, the clearest observation is that the top 6 winning parties had at least 45% of their seats distributed by the largest remains system, while the rest of the lists obtained all of their seats distributed by the same system instead of direct votes(also referred to by quota seats).</p>
 <p>Given the notes above, the idea of the threshold is simply distributing the largest remains seats on less lists, which will relatively help declare a winner with clear majority(109 seats). Let’s dive into how the parliament will look like if a 5% threshold is established using the same data:</p>
-<pre><code>## 
-## ── Column specification ────────────────────────────────────────────────────────
-## cols(
-##   party = col_character(),
-##   q_seats = col_double(),
-##   r_seats = col_double(),
-##   total_seats = col_double()
-## )</code></pre>
-<div id="vvfcaphypu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="mlzvbbxwid" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vvfcaphypu .gt_table {
+#mlzvbbxwid .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -547,7 +556,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-left-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_heading {
+#mlzvbbxwid .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -559,7 +568,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_title {
+#mlzvbbxwid .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -569,7 +578,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-bottom-width: 0;
 }
 
-#vvfcaphypu .gt_subtitle {
+#mlzvbbxwid .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -579,13 +588,13 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-width: 0;
 }
 
-#vvfcaphypu .gt_bottom_border {
+#mlzvbbxwid .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_col_headings {
+#mlzvbbxwid .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -600,7 +609,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_col_heading {
+#mlzvbbxwid .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -620,7 +629,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   overflow-x: hidden;
 }
 
-#vvfcaphypu .gt_column_spanner_outer {
+#mlzvbbxwid .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -632,15 +641,15 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 4px;
 }
 
-#vvfcaphypu .gt_column_spanner_outer:first-child {
+#mlzvbbxwid .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vvfcaphypu .gt_column_spanner_outer:last-child {
+#mlzvbbxwid .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vvfcaphypu .gt_column_spanner {
+#mlzvbbxwid .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -652,7 +661,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   width: 100%;
 }
 
-#vvfcaphypu .gt_group_heading {
+#mlzvbbxwid .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -674,7 +683,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   vertical-align: middle;
 }
 
-#vvfcaphypu .gt_empty_group_heading {
+#mlzvbbxwid .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -689,15 +698,15 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   vertical-align: middle;
 }
 
-#vvfcaphypu .gt_from_md > :first-child {
+#mlzvbbxwid .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vvfcaphypu .gt_from_md > :last-child {
+#mlzvbbxwid .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vvfcaphypu .gt_row {
+#mlzvbbxwid .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -716,7 +725,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   overflow-x: hidden;
 }
 
-#vvfcaphypu .gt_stub {
+#mlzvbbxwid .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -728,7 +737,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-left: 12px;
 }
 
-#vvfcaphypu .gt_summary_row {
+#mlzvbbxwid .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -738,7 +747,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 5px;
 }
 
-#vvfcaphypu .gt_first_summary_row {
+#mlzvbbxwid .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -748,7 +757,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_grand_summary_row {
+#mlzvbbxwid .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -758,7 +767,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 5px;
 }
 
-#vvfcaphypu .gt_first_grand_summary_row {
+#mlzvbbxwid .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -768,11 +777,11 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_striped {
+#mlzvbbxwid .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vvfcaphypu .gt_table_body {
+#mlzvbbxwid .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -781,7 +790,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-bottom-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_footnotes {
+#mlzvbbxwid .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -795,13 +804,13 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_footnote {
+#mlzvbbxwid .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vvfcaphypu .gt_sourcenotes {
+#mlzvbbxwid .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -815,140 +824,171 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#vvfcaphypu .gt_sourcenote {
+#mlzvbbxwid .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vvfcaphypu .gt_left {
+#mlzvbbxwid .gt_left {
   text-align: left;
 }
 
-#vvfcaphypu .gt_center {
+#mlzvbbxwid .gt_center {
   text-align: center;
 }
 
-#vvfcaphypu .gt_right {
+#mlzvbbxwid .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vvfcaphypu .gt_font_normal {
+#mlzvbbxwid .gt_font_normal {
   font-weight: normal;
 }
 
-#vvfcaphypu .gt_font_bold {
+#mlzvbbxwid .gt_font_bold {
   font-weight: bold;
 }
 
-#vvfcaphypu .gt_font_italic {
+#mlzvbbxwid .gt_font_italic {
   font-style: italic;
 }
 
-#vvfcaphypu .gt_super {
+#mlzvbbxwid .gt_super {
   font-size: 65%;
 }
 
-#vvfcaphypu .gt_footnote_marks {
+#mlzvbbxwid .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
 }
 </style>
 <table class="gt_table">
-  
+  <thead class="gt_header">
+    <tr>
+      <th colspan="6" class="gt_heading gt_title gt_font_normal" style><strong>2019 elections with largest remains threshold at 5%</strong></th>
+    </tr>
+    <tr>
+      <th colspan="6" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Decomposition of the total seats won by Quota(direct votes) and Remains the ratio of the Remains seats to the total won</th>
+    </tr>
+  </thead>
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">party</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">q_seats</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">r_seats</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">total_seats</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">prop_qs</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">party</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="3">
+        <span class="gt_column_spanner">Seats</span>
+      </th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">threshold</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="2" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">ratio</th>
+    </tr>
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">Quota</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">Remains</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">Total</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_center">ennahdha</td>
+    <tr><td class="gt_row gt_center">ENNAHDHA</td>
 <td class="gt_row gt_right">28</td>
 <td class="gt_row gt_right">44</td>
-<td class="gt_row gt_right">72</td>
-<td class="gt_row gt_right">61.11</td></tr>
-    <tr><td class="gt_row gt_center">qalb_tounes</td>
+<td class="gt_row gt_right" style="background-color: #35B0AB; color: #000000;">72</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">61&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">QALB TOUNES</td>
 <td class="gt_row gt_right">17</td>
 <td class="gt_row gt_right">32</td>
-<td class="gt_row gt_right">49</td>
-<td class="gt_row gt_right">65.31</td></tr>
-    <tr><td class="gt_row gt_center">pdl</td>
+<td class="gt_row gt_right" style="background-color: #A3DAAE; color: #000000;">49</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">65&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">PDL</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">17</td>
-<td class="gt_row gt_right">20</td>
-<td class="gt_row gt_right">85.00</td></tr>
-    <tr><td class="gt_row gt_center">tayar</td>
+<td class="gt_row gt_right" style="background-color: #EFFAD0; color: #000000;">20</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">85&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">TAYAR</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">17</td>
-<td class="gt_row gt_right">20</td>
-<td class="gt_row gt_right">85.00</td></tr>
-    <tr><td class="gt_row gt_center">harakt_el_chaab</td>
+<td class="gt_row gt_right" style="background-color: #EFFAD0; color: #000000;">20</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">85&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">HARAKT EL CHAAB</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">11</td>
-<td class="gt_row gt_right">12</td>
-<td class="gt_row gt_right">91.67</td></tr>
-    <tr><td class="gt_row gt_center">coalition_karama</td>
+<td class="gt_row gt_right" style="background-color: #F7FDE3; color: #000000;">12</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">92&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">COALITION KARAMA</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">19</td>
-<td class="gt_row gt_right">20</td>
-<td class="gt_row gt_right">95.00</td></tr>
-    <tr><td class="gt_row gt_center">al_badil</td>
+<td class="gt_row gt_right" style="background-color: #EFFAD0; color: #000000;">20</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">95&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">AL BADIL</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">amal_wa_3amal</td>
+<td class="gt_row gt_right" style="background-color: #FEFFFA; color: #000000;">3</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">AMAL WA AAMAL</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">nidaa_tounes</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">NIDAA TOUNES</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">outsider_1</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">OUTSIDER 1</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">6</td>
-<td class="gt_row gt_right">6</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">parti_rahma</td>
+<td class="gt_row gt_right" style="background-color: #FCFEF2; color: #000000;">6</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">PARTI RAHMA</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">partie_front_populaire</td>
+<td class="gt_row gt_right" style="background-color: #FEFFFA; color: #000000;">3</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">PARTIE FRONT POPULAIRE</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">tahya_tounes</td>
+<td class="gt_row gt_right" style="background-color: #FFFFFF; color: #000000;">1</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">TAHYA TOUNES</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">7</td>
-<td class="gt_row gt_right">7</td>
-<td class="gt_row gt_right">100.00</td></tr>
-    <tr><td class="gt_row gt_center">upr</td>
+<td class="gt_row gt_right" style="background-color: #FBFEF0; color: #000000;">7</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
+    <tr><td class="gt_row gt_center">UPR</td>
 <td class="gt_row gt_right">0</td>
 <td class="gt_row gt_right">2</td>
-<td class="gt_row gt_right">2</td>
-<td class="gt_row gt_right">100.00</td></tr>
+<td class="gt_row gt_right" style="background-color: #FEFFFC; color: #000000;">2</td>
+<td class="gt_row gt_right">0.05</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black;">100&percnt;</td></tr>
   </tbody>
-  
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="6">@Bennour007sin | DATA: Cahiers de la Liberté</td>
+    </tr>
+  </tfoot>
   
 </table>
 </div>
 <p>Looking at the table above its doesnt seem that we have a major change in the proportion of largest remains seats comparing to direct voting seats for the top 6 winners, however, the list of winners did shrink indeed by few parties(7 to be precise) counting for 33% of the previous list.</p>
-<div id="ephkgcieux" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="lncmjwyrjt" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ephkgcieux .gt_table {
+#lncmjwyrjt .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -973,7 +1013,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-left-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_heading {
+#lncmjwyrjt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -985,7 +1025,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_title {
+#lncmjwyrjt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -995,7 +1035,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-bottom-width: 0;
 }
 
-#ephkgcieux .gt_subtitle {
+#lncmjwyrjt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1005,13 +1045,13 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-width: 0;
 }
 
-#ephkgcieux .gt_bottom_border {
+#lncmjwyrjt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_col_headings {
+#lncmjwyrjt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1026,7 +1066,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_col_heading {
+#lncmjwyrjt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1046,7 +1086,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   overflow-x: hidden;
 }
 
-#ephkgcieux .gt_column_spanner_outer {
+#lncmjwyrjt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1058,15 +1098,15 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 4px;
 }
 
-#ephkgcieux .gt_column_spanner_outer:first-child {
+#lncmjwyrjt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ephkgcieux .gt_column_spanner_outer:last-child {
+#lncmjwyrjt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ephkgcieux .gt_column_spanner {
+#lncmjwyrjt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1078,7 +1118,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   width: 100%;
 }
 
-#ephkgcieux .gt_group_heading {
+#lncmjwyrjt .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1100,7 +1140,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   vertical-align: middle;
 }
 
-#ephkgcieux .gt_empty_group_heading {
+#lncmjwyrjt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1115,15 +1155,15 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   vertical-align: middle;
 }
 
-#ephkgcieux .gt_from_md > :first-child {
+#lncmjwyrjt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ephkgcieux .gt_from_md > :last-child {
+#lncmjwyrjt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ephkgcieux .gt_row {
+#lncmjwyrjt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1142,7 +1182,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   overflow-x: hidden;
 }
 
-#ephkgcieux .gt_stub {
+#lncmjwyrjt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1154,7 +1194,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-left: 12px;
 }
 
-#ephkgcieux .gt_summary_row {
+#lncmjwyrjt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1164,7 +1204,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 5px;
 }
 
-#ephkgcieux .gt_first_summary_row {
+#lncmjwyrjt .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1174,7 +1214,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_grand_summary_row {
+#lncmjwyrjt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1184,7 +1224,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   padding-right: 5px;
 }
 
-#ephkgcieux .gt_first_grand_summary_row {
+#lncmjwyrjt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1194,11 +1234,11 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-top-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_striped {
+#lncmjwyrjt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ephkgcieux .gt_table_body {
+#lncmjwyrjt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1207,7 +1247,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-bottom-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_footnotes {
+#lncmjwyrjt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1221,13 +1261,13 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_footnote {
+#lncmjwyrjt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ephkgcieux .gt_sourcenotes {
+#lncmjwyrjt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1241,148 +1281,158 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
   border-right-color: #D3D3D3;
 }
 
-#ephkgcieux .gt_sourcenote {
+#lncmjwyrjt .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ephkgcieux .gt_left {
+#lncmjwyrjt .gt_left {
   text-align: left;
 }
 
-#ephkgcieux .gt_center {
+#lncmjwyrjt .gt_center {
   text-align: center;
 }
 
-#ephkgcieux .gt_right {
+#lncmjwyrjt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ephkgcieux .gt_font_normal {
+#lncmjwyrjt .gt_font_normal {
   font-weight: normal;
 }
 
-#ephkgcieux .gt_font_bold {
+#lncmjwyrjt .gt_font_bold {
   font-weight: bold;
 }
 
-#ephkgcieux .gt_font_italic {
+#lncmjwyrjt .gt_font_italic {
   font-style: italic;
 }
 
-#ephkgcieux .gt_super {
+#lncmjwyrjt .gt_super {
   font-size: 65%;
 }
 
-#ephkgcieux .gt_footnote_marks {
+#lncmjwyrjt .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
 }
 </style>
 <table class="gt_table">
-  
+  <thead class="gt_header">
+    <tr>
+      <th colspan="4" class="gt_heading gt_title gt_font_normal" style><strong>2019 election ar 0% and 5% threshold</strong></th>
+    </tr>
+    <tr>
+      <th colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>The difference, the winners, and the loosers</th>
+    </tr>
+  </thead>
   <thead class="gt_col_headings">
     <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1">party</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">seats at 0 %</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">seats at 5%</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">diff</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">party</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">seats at 0 %</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">seats at 5%</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">diff</th>
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_center">ennahdha</td>
+    <tr><td class="gt_row gt_center">ENNAHDHA</td>
 <td class="gt_row gt_right">51</td>
 <td class="gt_row gt_right">72</td>
-<td class="gt_row gt_right">21</td></tr>
-    <tr><td class="gt_row gt_center">qalb_tounes</td>
+<td class="gt_row gt_right" style="background-color: #4575B4; color: #FFFFFF; border-left-width: 3px; border-left-style: solid; border-left-color: black;">21</td></tr>
+    <tr><td class="gt_row gt_center">QALB TOUNES</td>
 <td class="gt_row gt_right">38</td>
 <td class="gt_row gt_right">49</td>
-<td class="gt_row gt_right">11</td></tr>
-    <tr><td class="gt_row gt_center">pdl</td>
+<td class="gt_row gt_right" style="background-color: #74ADD1; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">11</td></tr>
+    <tr><td class="gt_row gt_center">PDL</td>
 <td class="gt_row gt_right">18</td>
 <td class="gt_row gt_right">20</td>
-<td class="gt_row gt_right">2</td></tr>
-    <tr><td class="gt_row gt_center">al_badil</td>
+<td class="gt_row gt_right" style="background-color: #ABD9E9; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">2</td></tr>
+    <tr><td class="gt_row gt_center">AL BADIL</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">0</td></tr>
-    <tr><td class="gt_row gt_center">partie_front_populaire</td>
+<td class="gt_row gt_right" style="background-color: #E0F3F8; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">0</td></tr>
+    <tr><td class="gt_row gt_center">PARTIE FRONT POPULAIRE</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">0</td></tr>
-    <tr><td class="gt_row gt_center">afek_tounes</td>
+<td class="gt_row gt_right" style="background-color: #E0F3F8; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">0</td></tr>
+    <tr><td class="gt_row gt_center">AAICH TOUNSI</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">amal_wa_3amal</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">AFEK TOUNES</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">0</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">AMAL WA AAMAL</td>
 <td class="gt_row gt_right">2</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">coalition_karama</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">COALITION KARAMA</td>
 <td class="gt_row gt_right">21</td>
 <td class="gt_row gt_right">20</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">parti_rahma</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">PARTI RAHMA</td>
 <td class="gt_row gt_right">4</td>
 <td class="gt_row gt_right">3</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">psd</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">PSD</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">tayar_ma7abba</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">TAYAR MAHABBA</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">uds</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">UDS</td>
 <td class="gt_row gt_right">1</td>
 <td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">upr</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">UPR</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">2</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">x3ich_tounsi</td>
-<td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">-1</td></tr>
-    <tr><td class="gt_row gt_center">nidaa_tounes</td>
+<td class="gt_row gt_right" style="background-color: #FFFFBF; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-1</td></tr>
+    <tr><td class="gt_row gt_center">NIDAA TOUNES</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">1</td>
-<td class="gt_row gt_right">-2</td></tr>
-    <tr><td class="gt_row gt_center">tayar</td>
+<td class="gt_row gt_right" style="background-color: #FEE090; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-2</td></tr>
+    <tr><td class="gt_row gt_center">TAYAR</td>
 <td class="gt_row gt_right">22</td>
 <td class="gt_row gt_right">20</td>
-<td class="gt_row gt_right">-2</td></tr>
-    <tr><td class="gt_row gt_center">harakt_el_chaab</td>
+<td class="gt_row gt_right" style="background-color: #FEE090; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-2</td></tr>
+    <tr><td class="gt_row gt_center">HARAKT EL CHAAB</td>
 <td class="gt_row gt_right">15</td>
 <td class="gt_row gt_right">12</td>
-<td class="gt_row gt_right">-3</td></tr>
-    <tr><td class="gt_row gt_center">outsider_2</td>
+<td class="gt_row gt_right" style="background-color: #FDAE61; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-3</td></tr>
+    <tr><td class="gt_row gt_center">OUTSIDER 2</td>
 <td class="gt_row gt_right">3</td>
 <td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">-3</td></tr>
-    <tr><td class="gt_row gt_center">machrou3_tounes</td>
+<td class="gt_row gt_right" style="background-color: #FDAE61; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-3</td></tr>
+    <tr><td class="gt_row gt_center">MACHROUA TOUNES</td>
 <td class="gt_row gt_right">4</td>
 <td class="gt_row gt_right">0</td>
-<td class="gt_row gt_right">-4</td></tr>
-    <tr><td class="gt_row gt_center">outsider_1</td>
+<td class="gt_row gt_right" style="background-color: #F46D43; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-4</td></tr>
+    <tr><td class="gt_row gt_center">OUTSIDER 1</td>
 <td class="gt_row gt_right">10</td>
 <td class="gt_row gt_right">6</td>
-<td class="gt_row gt_right">-4</td></tr>
-    <tr><td class="gt_row gt_center">tahya_tounes</td>
+<td class="gt_row gt_right" style="background-color: #F46D43; color: #000000; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-4</td></tr>
+    <tr><td class="gt_row gt_center">TAHYA TOUNES</td>
 <td class="gt_row gt_right">14</td>
 <td class="gt_row gt_right">7</td>
-<td class="gt_row gt_right">-7</td></tr>
+<td class="gt_row gt_right" style="background-color: #D73027; color: #FFFFFF; border-left-width: 3px; border-left-style: solid; border-left-color: black;">-7</td></tr>
   </tbody>
-  
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="4">@Bennour007sin | DATA: Cahiers de la Liberté</td>
+    </tr>
+  </tfoot>
   
 </table>
 </div>
 <p><em>In case you are more interested(or not, am not asking, you need to check this out) you can check this lovely dashboard I wrote to illustrate the potential changes in the elections results have we changed the threshold. Check it out in this <a href="https://bennour-med-hsin.shinyapps.io/e2019_dash/">link</a>.</em></p>
-<p><a href="https://bennour-med-hsin.shinyapps.io/e2019_dash/">here</a>.</p>
 <div>
 <iframe height="800" width="100%" margin-left="yes" frameborder="no" src="https://bennour-med-hsin.shinyapps.io/e2019_dash/">
 </iframe>
@@ -1391,7 +1441,7 @@ amazing <a href="https://anc.majles.marsad.tn/fr/simulation_modes_scrutin">post<
 <div id="with-good-data-comes-great-visualizations" class="section level3">
 <h3>With good data comes great Visualizations</h3>
 <p>A friend of mine who provided me with great feedback on the dashboard linked above, also inspired me to use a different kind of recapitulative plots, it seems we can summarize the change in the seats number per party should the threshold itself change using a streamgraph, however, I think the bump-plot using <a href="https://github.com/davidsjoberg/ggbump">ggbump</a> is a bit better in this case. In any case, here’s how the threshold percentage change would have affected the last general election of 2019.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>What we can conclude from this beautiful chart is that the only winners from changing the threshold are the Islamist party ENNAHDHA and its ally QALB TOUNES, everyone else will be extremely effected by such a change especially given that some of these parties have all of their seats from the largest remains TAHYA TOUNES as an example would not win any seats beyond the 7% threshold.</p>
 <p>Cheers!</p>
 </div>
