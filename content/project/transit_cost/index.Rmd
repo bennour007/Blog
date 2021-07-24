@@ -24,6 +24,7 @@ A new data-set is up on the [TidyTuesday repository](https://github.com/rfordata
 
 ## Import data and libraries.
 
+
 The folks in R4DS online learning community created a package that automatically loads the data into R with all the available information on the variables in question. I prefer the good old way using readr. As for the libraries to use I always start by loading Tidyverse, and since we have country-wise data, I will also load other packages such sf, ggspatial, and others(but we might not need to use them all) as you will see here: 
 
 ```{r message=FALSE, warning=FALSE}

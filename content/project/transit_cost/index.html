@@ -20,8 +20,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="index_files/anchor-sections/anchor-sections.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>A new data-set is up on the <a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday repository</a>. This week’s data is about the cost of transit across the world. In this post I will explore it, and put on some kick-ass data viz into action. I have been working and playing with data from the TidyTuesday project for 2 years now, but I have never done it on regular basis. This year I am going through with a weekly post for each data-set every Tuesday. So let’s kick it off.</p>
@@ -75,15 +74,12 @@ library(patchwork)</code></pre>
   drop_na() %&gt;%
   mutate_at(vars(start_year, end_year, tunnel_per, real_cost), as.numeric) %&gt;%
   drop_na()</code></pre>
-<pre><code>## Warning: Problem with `mutate()` input `end_year`.
-## ℹ NAs introduced by coercion
-## ℹ Input `end_year` is `.Primitive(&quot;as.double&quot;)(end_year)`.</code></pre>
-<pre><code>## Warning in mask$eval_all_mutate(dots[[i]]): NAs introduced by coercion</code></pre>
+<pre><code>## Warning in mask$eval_all_mutate(quo): NAs introduced by coercion</code></pre>
 <p>I used the drop_na function to remove the rows where NA is generated after calling as.numeric, end_year is set as “X” for the line 6 metro in Cairo, I did some research and found no official clue on the matter. So we can ignore the warning message in this case.</p>
 <p>Let’s see if we still have any NAs anyway</p>
 <pre class="r"><code>transit_cost %&gt;%
   filter_all(any_vars(is.na(.)))</code></pre>
-<pre><code>## # A tibble: 0 x 20
+<pre><code>## # A tibble: 0 × 20
 ## # … with 20 variables: e &lt;dbl&gt;, country &lt;chr&gt;, city &lt;chr&gt;, line &lt;chr&gt;,
 ## #   start_year &lt;dbl&gt;, end_year &lt;dbl&gt;, rr &lt;dbl&gt;, length &lt;dbl&gt;, tunnel_per &lt;dbl&gt;,
 ## #   tunnel &lt;dbl&gt;, stations &lt;dbl&gt;, source1 &lt;chr&gt;, cost &lt;dbl&gt;, currency &lt;chr&gt;,
@@ -98,26 +94,26 @@ library(patchwork)</code></pre>
   glimpse()</code></pre>
 <pre><code>## Rows: 427
 ## Columns: 20
-## $ e                &lt;dbl&gt; 7136, 7137, 7138, 7139, 7144, 7145, 7146, 7147, 7152…
-## $ country          &lt;chr&gt; &quot;Canada&quot;, &quot;Canada&quot;, &quot;Canada&quot;, &quot;Canada&quot;, &quot;Canada&quot;, &quot;N…
-## $ city             &lt;chr&gt; &quot;Vancouver&quot;, &quot;Toronto&quot;, &quot;Toronto&quot;, &quot;Toronto&quot;, &quot;Toron…
-## $ line             &lt;chr&gt; &quot;Broadway&quot;, &quot;Vaughan&quot;, &quot;Scarborough&quot;, &quot;Ontario&quot;, &quot;Yo…
-## $ start_year       &lt;dbl&gt; 2020, 2009, 2020, 2020, 2020, 2003, 2020, 2009, 2020…
-## $ end_year         &lt;dbl&gt; 2025, 2017, 2030, 2030, 2030, 2018, 2026, 2016, 2027…
-## $ rr               &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
-## $ length           &lt;dbl&gt; 5.7, 8.6, 7.8, 15.5, 7.4, 9.7, 5.8, 5.1, 4.2, 4.2, 6…
-## $ tunnel_per       &lt;dbl&gt; 87.72, 100.00, 100.00, 57.00, 100.00, 73.00, 100.00,…
-## $ tunnel           &lt;dbl&gt; 5.0, 8.6, 7.8, 8.8, 7.4, 7.1, 5.8, 5.1, 4.2, 4.2, 6.…
-## $ stations         &lt;dbl&gt; 6, 6, 3, 15, 6, 8, 5, 2, 2, 2, 3, 3, 4, 7, 13, 4, 4,…
-## $ source1          &lt;chr&gt; &quot;Plan&quot;, &quot;Media&quot;, &quot;Wiki&quot;, &quot;Plan&quot;, &quot;Plan&quot;, &quot;Wiki&quot;, &quot;Me…
-## $ cost             &lt;dbl&gt; 2830, 3200, 5500, 8573, 5600, 3100, 4500, 1756, 3600…
-## $ currency         &lt;chr&gt; &quot;CAD&quot;, &quot;CAD&quot;, &quot;CAD&quot;, &quot;CAD&quot;, &quot;CAD&quot;, &quot;EUR&quot;, &quot;CAD&quot;, &quot;US…
-## $ year             &lt;dbl&gt; 2018, 2013, 2018, 2019, 2020, 2009, 2018, 2012, 2023…
-## $ ppp_rate         &lt;dbl&gt; 0.840, 0.810, 0.840, 0.840, 0.840, 1.300, 0.840, 1.0…
-## $ real_cost        &lt;dbl&gt; 2377.200, 2592.000, 4620.000, 7201.320, 4704.000, 40…
-## $ cost_km_millions &lt;dbl&gt; 417.05263, 301.39535, 592.30769, 464.60129, 635.6756…
-## $ source2          &lt;chr&gt; &quot;Media&quot;, &quot;Media&quot;, &quot;Media&quot;, &quot;Plan&quot;, &quot;Media&quot;, &quot;Media&quot;,…
-## $ reference        &lt;chr&gt; &quot;https://www.translink.ca/Plans-and-Projects/Rapid-T…</code></pre>
+## $ e                &lt;dbl&gt; 7136, 7137, 7138, 7139, 7144, 7145, 7146, 7147, 7152,…
+## $ country          &lt;chr&gt; &quot;Canada&quot;, &quot;Canada&quot;, &quot;Canada&quot;, &quot;Canada&quot;, &quot;Canada&quot;, &quot;Ne…
+## $ city             &lt;chr&gt; &quot;Vancouver&quot;, &quot;Toronto&quot;, &quot;Toronto&quot;, &quot;Toronto&quot;, &quot;Toront…
+## $ line             &lt;chr&gt; &quot;Broadway&quot;, &quot;Vaughan&quot;, &quot;Scarborough&quot;, &quot;Ontario&quot;, &quot;Yon…
+## $ start_year       &lt;dbl&gt; 2020, 2009, 2020, 2020, 2020, 2003, 2020, 2009, 2020,…
+## $ end_year         &lt;dbl&gt; 2025, 2017, 2030, 2030, 2030, 2018, 2026, 2016, 2027,…
+## $ rr               &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+## $ length           &lt;dbl&gt; 5.7, 8.6, 7.8, 15.5, 7.4, 9.7, 5.8, 5.1, 4.2, 4.2, 6.…
+## $ tunnel_per       &lt;dbl&gt; 87.72, 100.00, 100.00, 57.00, 100.00, 73.00, 100.00, …
+## $ tunnel           &lt;dbl&gt; 5.0, 8.6, 7.8, 8.8, 7.4, 7.1, 5.8, 5.1, 4.2, 4.2, 6.3…
+## $ stations         &lt;dbl&gt; 6, 6, 3, 15, 6, 8, 5, 2, 2, 2, 3, 3, 4, 7, 13, 4, 4, …
+## $ source1          &lt;chr&gt; &quot;Plan&quot;, &quot;Media&quot;, &quot;Wiki&quot;, &quot;Plan&quot;, &quot;Plan&quot;, &quot;Wiki&quot;, &quot;Med…
+## $ cost             &lt;dbl&gt; 2830, 3200, 5500, 8573, 5600, 3100, 4500, 1756, 3600,…
+## $ currency         &lt;chr&gt; &quot;CAD&quot;, &quot;CAD&quot;, &quot;CAD&quot;, &quot;CAD&quot;, &quot;CAD&quot;, &quot;EUR&quot;, &quot;CAD&quot;, &quot;USD…
+## $ year             &lt;dbl&gt; 2018, 2013, 2018, 2019, 2020, 2009, 2018, 2012, 2023,…
+## $ ppp_rate         &lt;dbl&gt; 0.840, 0.810, 0.840, 0.840, 0.840, 1.300, 0.840, 1.00…
+## $ real_cost        &lt;dbl&gt; 2377.200, 2592.000, 4620.000, 7201.320, 4704.000, 403…
+## $ cost_km_millions &lt;dbl&gt; 417.05263, 301.39535, 592.30769, 464.60129, 635.67568…
+## $ source2          &lt;chr&gt; &quot;Media&quot;, &quot;Media&quot;, &quot;Media&quot;, &quot;Plan&quot;, &quot;Media&quot;, &quot;Media&quot;, …
+## $ reference        &lt;chr&gt; &quot;https://www.translink.ca/Plans-and-Projects/Rapid-Tr…</code></pre>
 <p>Well, there are some interesting information in this data-set, especially the cost per Km, and the length of the lines present in the data, I appreciate the use of the metric system as well. In any case, there are different angles from which we can see and analyze the importance of these variable, I am only presenting mine.</p>
 <p>First, I would like to tidy the data some more, I will add two variable as follows; for each country I will add the average length of transit lines, and for each city I will add the total number of lines.</p>
 <pre class="r"><code>transit_cost &lt;- transit_cost %&gt;%
@@ -133,7 +129,7 @@ library(patchwork)</code></pre>
 <pre class="r"><code>transit_cost %&gt;%
   filter(country == &quot;China&quot;) %&gt;%
   select(country, city, number_lines, mean_length, length) </code></pre>
-<pre><code>## # A tibble: 169 x 5
+<pre><code>## # A tibble: 169 × 5
 ##    country city    number_lines mean_length length
 ##    &lt;chr&gt;   &lt;chr&gt;          &lt;int&gt;       &lt;dbl&gt;  &lt;dbl&gt;
 ##  1 China   Beijing           21        24.1  28.2 
@@ -172,8 +168,7 @@ library(patchwork)</code></pre>
   ma_theme +
   labs(title = &quot;Mean cost/km for each country&quot;,
        x = &quot;mean of cost/km (in millions US$)&quot;)</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <pre class="r"><code>transit_cost %&gt;%
   group_by(country) %&gt;%
   summarise(mean_cost_km = mean(cost_km_millions)) %&gt;%
@@ -187,8 +182,7 @@ library(patchwork)</code></pre>
   labs(title = &quot;Mean cost/km for each country&quot;,
        subtitle = &quot;Dividing countries above and below the international mean of cost/km.&quot;,
        x = &quot;mean of cost/km (in millions US$)&quot;)</code></pre>
-<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
 </div>
 <div id="what-characteristics-does-the-top-most-expensive-lines-have" class="section level3">
 <h3>What characteristics does the top most expensive lines have?</h3>
@@ -202,7 +196,7 @@ library(patchwork)</code></pre>
   facet_grid(~ status_int_mean) +
   ma_theme +
   theme(legend.key = element_rect(fill = &quot;#4a4a4a&quot;)) </code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="what-about-the-cities-and-their-lines" class="section level3">
 <h3>What about the cities, and their lines</h3>
@@ -217,7 +211,7 @@ library(patchwork)</code></pre>
   ma_theme +
   labs(title = &quot;Cities with the most lines&quot;,
        x = &quot;number of lines&quot;)</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <p>What if we consider Chinese cities as outliers and remove them from this plot, would we find an interesting idea?</p>
 <pre class="r"><code>transit_cost %&gt;%
   mutate(is_china = if_else(country == &quot;China&quot;, &quot;China&quot;, &quot;not China&quot;)) %&gt;%
@@ -232,7 +226,7 @@ library(patchwork)</code></pre>
   labs(title = &quot;Cities(none Chinese, and Chinese) with the most lines&quot;,
        x = &quot;number of lines&quot;) +
   guides(fill = guide_legend(&quot;Which city is Chinese?&quot;))</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>Yeah, we can see much better the number of transit lines for each city.</p>
 <p>So what about the cost anyway?</p>
 <pre class="r"><code>transit_cost %&gt;%
@@ -249,7 +243,7 @@ library(patchwork)</code></pre>
                fill = mean_city_cost)) +
   scale_fill_viridis_c() +
   ma_theme</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>New York lines, appear to be the most expensive in this data. What about Chinese cities?</p>
 <pre class="r"><code>transit_cost %&gt;%
   filter(country == &quot;China&quot;) %&gt;%
@@ -263,7 +257,7 @@ library(patchwork)</code></pre>
                fill = mean_city_cost)) +
   scale_fill_viridis_c() +
   ma_theme</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Well, this is not even close to the 2 Billion dollars cost per Kilometer in New York, as the most expensive Chinese transit costs a little above 200 Million dollars for the Shenzhen and Tianjin Cities. We should take these insights with a grain of salt anyway because we didn’t take the inflation of the currency into account.</p>
 <p>On another note, these transit systems can be undergrounds sometimes, would that affect the cost of lines?</p>
 <pre class="r"><code>a &lt;- transit_cost %&gt;% 
@@ -297,7 +291,7 @@ library(patchwork)</code></pre>
   ma_theme +
   theme(legend.key = element_rect(fill = &quot;#4a4a4a&quot;))
 a  </code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>The relationship isn’t as clear as I initially intended to show in this plot. Note that I have removed the overlapping city names from the plot, that’s why not all of them is present there.</p>
 </div>
 <div id="what-about-chinese-infrastructure" class="section level3">
@@ -334,7 +328,7 @@ a  </code></pre>
   ma_theme +
   theme(legend.key = element_rect(fill = &quot;#4a4a4a&quot;))
 b</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>I think this would be very interesting if we plot it in a map. Let’s map it off, first we need to obtain the world map, where we can filter it for the Chinese territories, and then extract the spatial coordinates of each chinese city in order to plot them off.</p>
 <pre class="r"><code>world &lt;- ne_countries(scale = &quot;medium&quot; , returnclass = &quot;sf&quot;)
 country_names &lt;- transit_cost$country %&gt;% unique()
@@ -379,7 +373,7 @@ city_names &lt;- transit_cost$city %&gt;% unique()</code></pre>
 c</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_text).</code></pre>
-<p><img src="index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>There you go folks, that’s all I got.</p>
 </div>
 </div>
