@@ -1,0 +1,215 @@
+---
+title: Bees
+date: 2022-01-15T12:07:59+01:00
+draft: false
+editor_options: 
+  chunk_output_type: console
+---
+
+### Intro
+
+### Context
+
+### setup the workspace
+
+Let's import the libraries we might need, beware, I always start with the `tidyverse` first, and add other libraries as I go. 
+
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+Now let's import the data 
+
+```{r}
+colony <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/colony.csv')
+stressor <- read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-11/stressor.csv')
+
+```
+
+
+### Explore the data
+
+Of course a good start is tpo read the data dictionry provided by the authors very carefully. How does the data look like though? I will use the `gt` package to output the tables in a pretty format for the blog, but this is not necessary.
+
+```{r}
+colony %>% 
+  top_n(n = 10) %>% 
+  gt() %>% 
+  tab_header(
+    title = 'Quarterly colony statistics from 2015 to 2021 in each US state'
+  )
+```
+
+```{r}
+stressor %>% 
+  top_n(n = 10) %>% 
+  gt() %>% 
+  tab_header(
+    title = 'Quarterly stressor statistics from 2015 to 2021 in each US state'
+  )
+```
+
+#### What the information in both tables looks like visually?
+
+Visualizing data is very important, i would like to see if there's anything weird that I need to check or take it into consideration in further steps in both tables. My first reflex is to see how the number of colonies change over time in each state. In this case I should combine both year and and months colons just to have a unique date for each observation for the sake of simplicity. we can do that using the `unite` function.
+
+```{r}
+data_ends <- colony %>% 
+  unite(
+    'date',
+    year:months,
+    sep = ' '
+  ) %>% 
+  filter(
+    date == '2018 October-December' 
+  )
+
+colony %>% 
+  unite(
+    'date',
+    year:months,
+    sep = ' '
+  ) %>% 
+  ggplot(
+    aes(
+      x = date,
+      y = colony_n
+    )
+  ) +
+  geom_line(
+    aes(
+      group = state
+    )
+  ) +
+  ggrepel::geom_text_repel(
+    aes(
+      label = state
+    ), 
+    data = data_ends
+  ) +
+  theme(axis.text.x = element_text(angle = 45))
+```
+
+
+So, from here we can observe 3 things: 
+
+  - There is no data points for April-July Quarter (Q2) of 2019
+  - There are 3 main over-amplified data points state wise, those are California, North Dakota, and Florida. Also Note the presence of a National average, that could have been misleading.
+  - A clear seasonality, probably due to the nature of bee activities and the average weather in that state.
+  
+In the plot above I used `geom_text_repel` from the `ggrepel` package to annotate each state just where the data point are missing for the sake of clarity. In order to do that I created the same table filtered by the date at that point, i.e: '2018 October-December'.   
+
+Note that I'm not making any thematic changes for this plot, I'm only using this as a simple way to see what I need to keep in mind, or fix in further steps, so presentation isn't really important here.
+
+Before we move on to fixing the data, Let's check the stressor table.
+
+```{r}
+# data_ends <- stressor %>% 
+#   unite(
+#     'date',
+#     year:months,
+#     sep = ' '
+#   ) %>% 
+#   filter(
+#     date == '2018 October-December' 
+#   )
+
+stressor %>% 
+   unite(
+    'date',
+    year:months,
+    sep = ' '
+  ) %>% 
+  ggplot(
+    aes(
+      x = date,
+      y = stress_pct
+    ) 
+  )+
+  geom_line(
+    aes(
+      group = state
+    )
+  ) +
+  facet_grid(stressor~.)
+```
+
+For the stressor table, I don't really see much of anything that seems a clear trend to me, except that we have the same date gap as the other table. But this might probably be wrong as we go further and do all sorts of analysis. 
+
+**Data Tweaking:**
+
+  - First we need to get both tables with unique dates so we don't have to do it over and over.
+  - Second, we must eliminate the national average from the colony table. It would be useful to look at it individually  later on, but its always better to summarize the data on my own. 
+  - Third, I need to investigate the missing values, as if they are missing, or just have the value of 0. 
+
+#### uniting the date columns and removing the national Average
+
+
+```{r}
+stressor <- stressor %>% 
+   unite(
+    'date',
+    year:months,
+    sep = ' '
+  )
+
+colony <- colony %>% 
+   unite(
+    'date',
+    year:months,
+    sep = ' '
+  ) %>%   filter(state != 'United States' & state != 'Other States')
+```
+
+
+Great, now we can focus on the colony table.
+
+```{r}
+colony %>% 
+  ggplot(
+    aes(
+      x = date,
+      y = colony_n
+    )
+  ) +
+  geom_line(
+    aes(
+      group = state
+    )
+  ) +
+  theme(axis.text.x = element_text(angle = 45))
+```
+
+I wonder why there's so much fluctuation in the colony numbers in some states? We can investigate this further by simply checking deviation fro each state during the whole period, then we will have a better metric to compare them with.
+
+```{r}
+colony %>% 
+  group_by(state) %>% 
+  summarise(
+    deviation = sd(colony_n, na.rm = T) %>% 
+      round(., 0)
+  ) %>% 
+  arrange(desc(deviation)) %>% 
+  mutate(
+    state = fct_reorder(state, deviation)
+  ) %>% 
+  ggplot(
+    aes(
+      x = deviation,
+      y = state
+    )
+  )+
+  geom_col() + 
+  ggrepel::geom_text_repel(
+    aes(label = deviation)
+  )
+```
+
+Okay, this will probably relate to the stressor data, Let's aggregate that data and if they are correlated together.
+
+```{r}
+stressor
+```
+
+

@@ -105,12 +105,12 @@ enableEmoji = true
   
 
 [menu]
-  # Configure header 
-#  [[menu.header]]
-#    name = "About"
-#    title = "About"
-#   url = "/about/"
-#  weight = 1
+# Configure header 
+  [[menu.header]]
+    name = "About"
+    title = "About"
+   url = "/about/"
+  weight = 1
 
   [[menu.header]]
     name = "Blog"
