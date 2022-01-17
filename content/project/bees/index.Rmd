@@ -172,5 +172,4 @@ colony %>%
   )
 ```
 
-I think I have to bring additional data on the weather, to chevck if the 
 

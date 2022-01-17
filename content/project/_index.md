@@ -8,7 +8,7 @@ cascade:
     show_sidebar_adunit: false
     text_link_label: View all projects
     text_link_url: /project/
-description: The time I spent nerding around, in your fingertips!
+description: The time I spent nerding around, at your fingertips!
 layout: list-grid
 show_author_byline: false
 show_post_date: true
