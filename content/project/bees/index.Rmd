@@ -172,4 +172,64 @@ colony %>%
   )
 ```
 
+```{r}
+colony %>% 
+  group_by(date) %>% 
+  summarise(
+    colony_n = mean(colony_n, na.rm = T),
+    colony_lost = mean(colony_lost, na.rm = T),
+    colony_added = mean(colony_added, na.rm = T),
+    colony_reno = mean(colony_reno, na.rm = T),
+  ) %>% 
+  ungroup() %>% 
+  pivot_longer(
+    cols=c(colony_n, colony_lost, colony_added, colony_reno), 
+    names_to = "colony_state",
+    values_to = "number"
+  ) %>% 
+  mutate(
+    colony_state = as_factor(colony_state),
+    colony_state = fct_relevel(colony_state, 
+                               'colony_n', 'colony_lost', 'colony_added', 'colony_reno' )  
+  ) %>%
+  ggplot() + 
+  geom_col(
+    aes(
+      date,
+      number,
+      fill = colony_state
+    ),
+    position = position_fill()
+  ) +
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+All these numbers on their own, do not give us a summerising idea of what we need to learn.
+
+What we want to see is, how are colonies doing from one year to the other given the renovation to loss ratio.. 
+
+so if we 
+
+let's try something different ey.
+
+```{r}
+
+df_states <-
+  read_csv("content/project/bees/50_us_states_all_data.csv", col_names = F) %>% 
+  select(state = "X2", ISO2 = "X3")%>%
+  add_row(state = "District of Colombia", ISO2 = "DC")
+```
+
+```{r}
+map_hex <- geojson_read("content/project/bees/us_states_hexgrid.geojson.json",  what = "sp")
+map_hex@data <-
+  map_hex@data %>%
+  mutate(google_name = gsub(" \\(United States\\)", "", google_name))
+## fortify
+map_hex_fortified <- tidy(map_hex, region = "google_name")
+## centroids for labels
+centroids <- cbind.data.frame(data.frame(gCentroid(map_hex, byid = T),
+                                         id = map_hex@data$iso3166_2,
+                                         id_long = str_wrap(map_hex@data$google_name, 12)))
 
