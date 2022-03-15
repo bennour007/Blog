@@ -1,0 +1,940 @@
+---
+title: 'O Freedom, My Freedom!'
+date: 2022-03-15T15:32:21+01:00
+draft: false
+summary: 'On freedom, rights, numbers, and the African continent!'
+tags: ["TidyTuesday", "tidy", "maps"]
+image:
+  caption: "Konstantin Yuon-New Planet, 1921"
+  focal_point: ""
+  preview_only: false
+editor_options: 
+  chunk_output_type: console
+output: 
+  html_document: 
+    toc: yes
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="{{< blogdown/postref >}}index_files/plotly-binding/plotly.js"></script>
+<script src="{{< blogdown/postref >}}index_files/typedarray/typedarray.min.js"></script>
+<script src="{{< blogdown/postref >}}index_files/jquery/jquery.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/crosstalk/js/crosstalk.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/plotly-main/plotly-latest.min.js"></script>
+
+
+<p>It’s 2022, where technology is driving the world with data and information, often times it turns out to be private data, and misinformation. However this unprecedented ease of communication allowed humans to express themselves in more divers and creative ways. But for this expression to grow, thrive, and produce an output freedom is mandatory.</p>
+<p>In this context Freedom house together with the United Nations created a data-set on the state of freedom in the world. As part of the Tidy Tuesday project We will check this data and see what we can come up with.</p>
+<div id="loading-libraries" class="section level2">
+<h2>Loading libraries</h2>
+<pre class="r"><code>library(tidyverse)
+# we probably will need GT, sf, and biscale
+library(gt)
+library(sf)
+library(biscale)</code></pre>
+</div>
+<div id="data-summary" class="section level2">
+<h2>Data Summary</h2>
+<p>Let’s first import data (and clean it’s column names)</p>
+<pre class="r"><code>freedom &lt;- readr::read_csv(&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-02-22/freedom.csv&#39;) %&gt;% 
+  janitor::clean_names()
+
+freedom</code></pre>
+<pre><code>## # A tibble: 4,979 × 8
+##    country      year    cl    pr status region_code region_name is_ldc
+##    &lt;chr&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;
+##  1 Afghanistan  1995     7     7 NF             142 Asia             1
+##  2 Afghanistan  1996     7     7 NF             142 Asia             1
+##  3 Afghanistan  1997     7     7 NF             142 Asia             1
+##  4 Afghanistan  1998     7     7 NF             142 Asia             1
+##  5 Afghanistan  1999     7     7 NF             142 Asia             1
+##  6 Afghanistan  2000     7     7 NF             142 Asia             1
+##  7 Afghanistan  2001     7     7 NF             142 Asia             1
+##  8 Afghanistan  2002     6     6 NF             142 Asia             1
+##  9 Afghanistan  2003     6     6 NF             142 Asia             1
+## 10 Afghanistan  2004     6     5 NF             142 Asia             1
+## # … with 4,969 more rows</code></pre>
+<p>A quick look at the summary stats</p>
+<pre class="r"><code>freedom %&gt;% 
+  summary()</code></pre>
+<pre><code>##    country               year            cl              pr       
+##  Length:4979        Min.   :1995   Min.   :1.000   Min.   :1.000  
+##  Class :character   1st Qu.:2001   1st Qu.:2.000   1st Qu.:1.000  
+##  Mode  :character   Median :2008   Median :3.000   Median :3.000  
+##                     Mean   :2008   Mean   :3.369   Mean   :3.411  
+##                     3rd Qu.:2014   3rd Qu.:5.000   3rd Qu.:6.000  
+##                     Max.   :2020   Max.   :7.000   Max.   :7.000  
+##     status           region_code     region_name            is_ldc      
+##  Length:4979        Min.   :  2.00   Length:4979        Min.   :0.0000  
+##  Class :character   1st Qu.:  2.00   Class :character   1st Qu.:0.0000  
+##  Mode  :character   Median : 19.00   Mode  :character   Median :0.0000  
+##                     Mean   : 72.53                      Mean   :0.2362  
+##                     3rd Qu.:142.00                      3rd Qu.:0.0000  
+##                     Max.   :150.00                      Max.   :1.0000</code></pre>
+<p>It might be a little easier if we simply convert the character cols to factors</p>
+<pre class="r"><code>freedom %&gt;% 
+  mutate(
+    country = as_factor(country),
+    status = as_factor(status),
+    region_name = as_factor(region_name)
+    ) %&gt;% 
+  summary()</code></pre>
+<pre><code>##                 country          year            cl              pr       
+##  Afghanistan        :  26   Min.   :1995   Min.   :1.000   Min.   :1.000  
+##  Albania            :  26   1st Qu.:2001   1st Qu.:2.000   1st Qu.:1.000  
+##  Algeria            :  26   Median :2008   Median :3.000   Median :3.000  
+##  Andorra            :  26   Mean   :2008   Mean   :3.369   Mean   :3.411  
+##  Angola             :  26   3rd Qu.:2014   3rd Qu.:5.000   3rd Qu.:6.000  
+##  Antigua and Barbuda:  26   Max.   :2020   Max.   :7.000   Max.   :7.000  
+##  (Other)            :4823                                                 
+##  status     region_code       region_name       is_ldc      
+##  NF:1257   Min.   :  2.00   Asia    :1218   Min.   :0.0000  
+##  PF:1503   1st Qu.:  2.00   Europe  :1099   1st Qu.:0.0000  
+##  F :2219   Median : 19.00   Africa  :1388   Median :0.0000  
+##            Mean   : 72.53   Americas: 910   Mean   :0.2362  
+##            3rd Qu.:142.00   Oceania : 364   3rd Qu.:0.0000  
+##            Max.   :150.00                   Max.   :1.0000  
+## </code></pre>
+<p>Unfortunately we can’t get much information using the transformation we did because there are various years for each of the factors, thus in order to get a better idea on the numbers for each factor let’s choose one year and filter.</p>
+<pre class="r"><code>freedom %&gt;% 
+  mutate(
+    country = as_factor(country),
+    status = as_factor(status),
+    region_name = as_factor(region_name)
+    ) %&gt;% 
+  filter(
+    year == 2020
+  ) %&gt;% 
+  summary()</code></pre>
+<pre><code>##                 country         year            cl             pr       
+##  Afghanistan        :  1   Min.   :2020   Min.   :1.00   Min.   :1.000  
+##  Albania            :  1   1st Qu.:2020   1st Qu.:2.00   1st Qu.:1.000  
+##  Algeria            :  1   Median :2020   Median :3.00   Median :3.000  
+##  Andorra            :  1   Mean   :2020   Mean   :3.42   Mean   :3.554  
+##  Angola             :  1   3rd Qu.:2020   3rd Qu.:5.00   3rd Qu.:6.000  
+##  Antigua and Barbuda:  1   Max.   :2020   Max.   :7.00   Max.   :7.000  
+##  (Other)            :187                                                
+##  status   region_code       region_name     is_ldc      
+##  NF:54   Min.   :  2.00   Asia    :47   Min.   :0.0000  
+##  PF:58   1st Qu.:  2.00   Europe  :43   1st Qu.:0.0000  
+##  F :81   Median : 19.00   Africa  :54   Median :0.0000  
+##          Mean   : 72.66   Americas:35   Mean   :0.2383  
+##          3rd Qu.:142.00   Oceania :14   3rd Qu.:0.0000  
+##          Max.   :150.00                 Max.   :1.0000  
+## </code></pre>
+<p>With this simple filter we can see in the summary output how many countries we have in each region as well as the general status (free(F), partially free(PF), and not free(NF)) for all countries.</p>
+<p>Let’s check the data time wise</p>
+<pre class="r"><code>freedom %&gt;% 
+  count(region_name, year) %&gt;% 
+  ggplot()+
+  geom_line(
+    aes(
+      year, 
+      n,
+      color = region_name
+    )
+  ) +
+  labs(
+    title = &#39;The number of observations(countries) for each region over time&#39;
+  )</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>It’s probably not the best option to use a line chart to describe slight changes in the data, in our case the number of observation per region. However it’s a fast solution to check things out fast, in this case we can detect that for the African and Asian regions there has been an increase in the number of countries in one instance, however for the Europe region this happened twice. I doubt this is going to affect our approach, but let’s keep it in mind for further analysis.</p>
+</div>
+<div id="exploration" class="section level2">
+<h2>Exploration</h2>
+<p>The first idea that comes in mind for me is to check how the freedom status for each region changed over the years. But first, you noticed the first chart is quite vanilla, by my standards I would say it lacks aesthetics. Yes I’m doing all this for fun, but it doesn’t mean I should compromise on beauty and style. Therefore I will start by setting up a theme that will be used hereafter.</p>
+<div id="le-theme" class="section level3">
+<h3>Le theme</h3>
+<pre class="r"><code>le_theme &lt;- theme(
+  panel.background = element_rect(
+    fill = &#39;#E5E3C9&#39;,
+    color = NA
+  ),
+  plot.background = element_rect(
+    fill = &#39;#E5E3C9&#39;,
+    color = NA
+  ),
+  strip.background = element_rect(
+    fill = &#39;#E5E3C9&#39;,
+    color = NA
+  ),
+  legend.background = element_rect(
+    fill = &#39;#E5E3C9&#39;,
+    color = NA
+  ),
+  legend.box.background = element_rect(
+    fill = &#39;#E5E3C9&#39;,
+    color = NA
+  ),
+  panel.grid.major.x = element_blank(),
+  panel.grid.major.y = element_line(
+    colour = &#39;#F4FCD9&#39;
+  ),
+  panel.grid.minor.y = element_blank(),
+  panel.grid.minor.x = element_line(
+    colour = &#39;#F4FCD9&#39;
+  ),
+  legend.text = element_text(
+    family = &#39;URWGothic&#39;
+  ),
+  legend.title = element_text(
+    family = &#39;URWGothic&#39;
+  ),
+  plot.title = element_text(
+    family = &#39;URWGothic&#39;
+  ),
+  plot.subtitle = element_text(
+    family = &#39;URWGothic&#39;
+  ),
+  axis.text = element_text(
+    family = &#39;URWGothic&#39;
+  ),
+  axis.title = element_text(
+    family = &#39;URWGothic&#39;
+  ),
+  strip.text = element_text(
+    family = &#39;URWGothic&#39;
+  ),
+  legend.key = element_rect(colour = NA, fill = NA),
+)</code></pre>
+<p>Another Important Aesthetic addition in my oppinion is the use of a different color palette. I didn’t have much time to set my own palettes, but using the <a href="https://github.com/BlakeRMills/MetBrewer"><code>MetBrewer</code></a> package we can use pre-built palettes inspired from the worlds most famous paintings. It’s brilliant package, shout-out to the maintainers.</p>
+<pre class="r"><code>freedom %&gt;% 
+  group_by(region_name, year, status) %&gt;% 
+  summarise(
+    status,
+    count = n()
+  ) %&gt;% 
+  ggplot(
+    aes(
+      year, 
+      count
+    )
+  ) + 
+  geom_point(
+    aes(
+      color = status
+    ) , 
+    size = 0.6,
+    alpha = 0.3
+  )+
+  geom_line(
+    aes(
+      color = status
+    )
+  ) +
+  facet_grid(region_name~.) +
+  ##############################################################################
+  # Using the MetBrewer package to set the palettes manually for the color scales.
+  scale_color_manual(
+    values= MetBrewer::met.brewer(&quot;VanGogh2&quot;, 3)
+  ) +
+  ##############################################################################
+  labs(
+    title = &#39;Count of countries per status and region from 1995 to 2020&#39;
+  ) + 
+  le_theme</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>I like aggregation, it gives general tendencies and ease up investigation. What if we look at the global aggregate of the status over the years.</p>
+<pre class="r"><code>freedom %&gt;% 
+  group_by(status, year) %&gt;% 
+  summarise(
+    count = n()
+  ) %&gt;% 
+  ggplot() + 
+  geom_line(
+    aes(
+      year,
+      count,
+      color = status
+    )
+  ) +
+  scale_color_manual(
+    values= MetBrewer::met.brewer(&quot;VanGogh2&quot;, 3)
+  ) +
+  labs(
+    title = &#39;Number of countries per status between 1995 and 2020&#39;
+  ) + 
+  le_theme</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>At the aggregate level, we can observe that the difference between 1995 and 2020 in the number of free countries is positive, however also the difference in the number of non free country in the period is positive, wile the less countries are partially free in 2020 compared to 1995.</p>
+<p>Let’s dig deep on the changes, this a great use case for the <code>gt</code> package.</p>
+<pre class="r"><code>freedom %&gt;% 
+  group_by(status, year) %&gt;% 
+  summarise(
+    count = n()
+  ) %&gt;% 
+  filter(
+    year %in% c(1995,2020)
+  ) %&gt;% 
+  pivot_wider(
+    names_from = year,
+    values_from = count
+  ) %&gt;% 
+  mutate(
+    difference = `2020` - `1995`,
+    percentage = difference / `2020`
+  ) %&gt;% 
+  ungroup() %&gt;% 
+  gt() %&gt;% 
+  fmt_percent(
+    columns = percentage
+  ) %&gt;% 
+  cols_align(
+    columns = c(percentage, difference),
+    align = &#39;right&#39;
+  ) %&gt;% 
+  # add black thick border to the left of the difference column 
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = &#39;left&#39;,
+        color = &#39;black&#39;, 
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_body(
+        columns = difference
+      )
+    )
+  ) %&gt;% 
+  # add black thick border to the bottom of the column names
+  tab_style(
+    style = list(
+      cell_borders(
+        sides = &#39;bottom&#39;,
+        color = &#39;black&#39;, 
+        weight = px(3)
+      )
+    ),
+    locations = list(
+      cells_column_labels(
+        columns = everything()
+      )
+    )
+  ) %&gt;% 
+  data_color(
+    columns = difference,
+    colors = scales::col_numeric(
+      palette = as.character(paletteer::paletteer_d(&quot;ggsci::red_material&quot;, n = 3)),
+      domain = NULL
+    )
+  ) %&gt;% 
+  data_color(
+    columns = percentage,
+    colors = scales::col_numeric(
+      palette = as.character(paletteer::paletteer_d(&quot;nord::frost&quot;)),
+      domain = NULL
+    )
+  ) %&gt;% 
+  tab_header(
+    title = &#39;Global difference in Status between 1995 and 2020&#39;,
+    subtitle = &#39;Is the world more free in 2020 than in 1995?&#39;
+  ) %&gt;% 
+  tab_source_note(
+    &#39;@Bennour007sin|www.bennour.tn&#39;
+  ) %&gt;% 
+  tab_source_note(
+    &#39;data: UN &amp; Freedom House&#39;
+  )</code></pre>
+<div id="pluwqfogcq" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#pluwqfogcq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pluwqfogcq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pluwqfogcq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pluwqfogcq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pluwqfogcq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pluwqfogcq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pluwqfogcq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pluwqfogcq .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pluwqfogcq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pluwqfogcq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pluwqfogcq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pluwqfogcq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pluwqfogcq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#pluwqfogcq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pluwqfogcq .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pluwqfogcq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pluwqfogcq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pluwqfogcq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pluwqfogcq .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pluwqfogcq .gt_left {
+  text-align: left;
+}
+
+#pluwqfogcq .gt_center {
+  text-align: center;
+}
+
+#pluwqfogcq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pluwqfogcq .gt_font_normal {
+  font-weight: normal;
+}
+
+#pluwqfogcq .gt_font_bold {
+  font-weight: bold;
+}
+
+#pluwqfogcq .gt_font_italic {
+  font-style: italic;
+}
+
+#pluwqfogcq .gt_super {
+  font-size: 65%;
+}
+
+#pluwqfogcq .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="5" class="gt_heading gt_title gt_font_normal" style>Global difference in Status between 1995 and 2020</th>
+    </tr>
+    <tr>
+      <th colspan="5" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style>Is the world more free in 2020 than in 1995?</th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">status</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">1995</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">2020</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">difference</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: black;">percentage</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">F</td>
+<td class="gt_row gt_right">76</td>
+<td class="gt_row gt_right">81</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black; background-color: #EF9A9A; color: #000000;">5</td>
+<td class="gt_row gt_right" style="background-color: #5E81AC; color: #000000;">6.17&percnt;</td></tr>
+    <tr><td class="gt_row gt_left">NF</td>
+<td class="gt_row gt_right">52</td>
+<td class="gt_row gt_right">54</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black; background-color: #FCC0C4; color: #000000;">2</td>
+<td class="gt_row gt_right" style="background-color: #7596BA; color: #000000;">3.70&percnt;</td></tr>
+    <tr><td class="gt_row gt_left">PF</td>
+<td class="gt_row gt_right">61</td>
+<td class="gt_row gt_right">58</td>
+<td class="gt_row gt_right" style="border-left-width: 3px; border-left-style: solid; border-left-color: black; background-color: #FFEBEE; color: #000000;">-3</td>
+<td class="gt_row gt_right" style="background-color: #8FBCBB; color: #000000;">&minus;5.17&percnt;</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">@Bennour007sin|www.bennour.tn</td>
+    </tr>
+    <tr>
+      <td class="gt_sourcenote" colspan="5">data: UN &amp; Freedom House</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+<p>Digging deeper to check for the relative changes in the general status between 1995 and 2020 for each continent is an interesting idea after reviewing these status in the global context. For this one I decided to fo something different and make an interactive chart using <code>ggplotly()</code>.</p>
+<pre class="r"><code>plt &lt;- freedom %&gt;% 
+  group_by(region_name, status, year) %&gt;% 
+  summarise(
+    count = n()
+  ) %&gt;% 
+  filter(
+    year %in% c(1995,2020)
+  ) %&gt;% 
+  mutate(
+    year = as_factor(year)
+  ) %&gt;% 
+  ungroup(status, year) %&gt;% 
+  pivot_wider(
+    names_from = year, 
+    values_from = count
+  ) %&gt;% 
+  mutate(
+    pct_change = (`1995` - `2020`) / `2020`
+  ) %&gt;% 
+  pivot_longer(
+    cols = 3:4,
+    names_to = &#39;year&#39;,
+    values_to = &#39;count&#39;
+  ) %&gt;% 
+  ggplot(
+    aes(
+      pct_change,
+      status
+    )
+  )+
+  geom_col(
+    aes(
+      count,
+      status, 
+      fill = year
+    ), 
+    width = 0.09,
+    alpha = 0.7,
+    position = &#39;dodge&#39;
+  ) +
+  geom_point(
+    aes(
+      pct_change,
+      status
+    ),
+    shape = 18,
+    color = &#39;#A68DAD&#39;,
+    size = 4
+  ) + 
+  scale_x_continuous(
+    labels = scales::percent_format(
+      accuracy = 1, 
+      scale = 1
+    )
+  ) + 
+  scale_fill_manual(
+    values= MetBrewer::met.brewer(&quot;VanGogh2&quot;, 2)
+  ) +
+  facet_grid(~region_name, scales = &#39;free_x&#39;) +
+  labs(
+    title = &#39;Number of countries and percentage of change in each status in 1995 and 2020 per region&#39;
+  ) + 
+  le_theme
+
+plotly::ggplotly(plt)</code></pre>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[{"orientation":"v","width":[9,24,20],"base":[0.955,1.955,2.955],"x":[4.5,12,10],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count:  9<br />status: F<br />year: 1995","count: 24<br />status: NF<br />year: 1995","count: 20<br />status: PF<br />year: 1995"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(189,49,6,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"1995","legendgroup":"1995","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[19,1,15],"base":[0.955,1.955,2.955],"x":[9.5,0.5,7.5],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count: 19<br />status: F<br />year: 1995","count:  1<br />status: NF<br />year: 1995","count: 15<br />status: PF<br />year: 1995"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(189,49,6,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"1995","legendgroup":"1995","showlegend":false,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[5,26,15],"base":[0.955,1.955,2.955],"x":[2.5,13,7.5],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count:  5<br />status: F<br />year: 1995","count: 26<br />status: NF<br />year: 1995","count: 15<br />status: PF<br />year: 1995"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(189,49,6,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"1995","legendgroup":"1995","showlegend":false,"xaxis":"x3","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[32,1,8],"base":[0.955,1.955,2.955],"x":[16,0.5,4],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count: 32<br />status: F<br />year: 1995","count:  1<br />status: NF<br />year: 1995","count:  8<br />status: PF<br />year: 1995"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(189,49,6,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"1995","legendgroup":"1995","showlegend":false,"xaxis":"x4","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[11,3],"base":[0.955,2.955],"x":[5.5,1.5],"y":[0.0449999999999999,0.0449999999999999],"text":["count: 11<br />status: F<br />year: 1995","count:  3<br />status: PF<br />year: 1995"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(189,49,6,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"1995","legendgroup":"1995","showlegend":false,"xaxis":"x5","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[9,23,22],"base":[1,2,3],"x":[4.5,11.5,11],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count:  9<br />status: F<br />year: 2020","count: 23<br />status: NF<br />year: 2020","count: 22<br />status: PF<br />year: 2020"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(238,190,4,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2020","legendgroup":"2020","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[21,3,11],"base":[1,2,3],"x":[10.5,1.5,5.5],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count: 21<br />status: F<br />year: 2020","count:  3<br />status: NF<br />year: 2020","count: 11<br />status: PF<br />year: 2020"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(238,190,4,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2020","legendgroup":"2020","showlegend":false,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[6,26,15],"base":[1,2,3],"x":[3,13,7.5],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count:  6<br />status: F<br />year: 2020","count: 26<br />status: NF<br />year: 2020","count: 15<br />status: PF<br />year: 2020"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(238,190,4,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2020","legendgroup":"2020","showlegend":false,"xaxis":"x3","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[33,2,8],"base":[1,2,3],"x":[16.5,1,4],"y":[0.0449999999999999,0.0449999999999999,0.0449999999999999],"text":["count: 33<br />status: F<br />year: 2020","count:  2<br />status: NF<br />year: 2020","count:  8<br />status: PF<br />year: 2020"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(238,190,4,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2020","legendgroup":"2020","showlegend":false,"xaxis":"x4","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":[12,2],"base":[1,3],"x":[6,1],"y":[0.0449999999999999,0.0449999999999999],"text":["count: 12<br />status: F<br />year: 2020","count:  2<br />status: PF<br />year: 2020"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(238,190,4,0.7)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"2020","legendgroup":"2020","showlegend":false,"xaxis":"x5","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0,0,0.0434782608695652,0.0434782608695652,-0.0909090909090909,-0.0909090909090909],"y":[1,1,2,2,3,3],"text":["pct_change:  0.00000000<br />status: F","pct_change:  0.00000000<br />status: F","pct_change:  0.04347826<br />status: NF","pct_change:  0.04347826<br />status: NF","pct_change: -0.09090909<br />status: PF","pct_change: -0.09090909<br />status: PF"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(166,141,173,1)","opacity":1,"size":15.1181102362205,"symbol":"diamond","line":{"width":1.88976377952756,"color":"rgba(166,141,173,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-0.0952380952380952,-0.0952380952380952,-0.666666666666667,-0.666666666666667,0.363636363636364,0.363636363636364],"y":[1,1,2,2,3,3],"text":["pct_change: -0.09523810<br />status: F","pct_change: -0.09523810<br />status: F","pct_change: -0.66666667<br />status: NF","pct_change: -0.66666667<br />status: NF","pct_change:  0.36363636<br />status: PF","pct_change:  0.36363636<br />status: PF"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(166,141,173,1)","opacity":1,"size":15.1181102362205,"symbol":"diamond","line":{"width":1.88976377952756,"color":"rgba(166,141,173,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x2","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-0.166666666666667,-0.166666666666667,0,0,0,0],"y":[1,1,2,2,3,3],"text":["pct_change: -0.16666667<br />status: F","pct_change: -0.16666667<br />status: F","pct_change:  0.00000000<br />status: NF","pct_change:  0.00000000<br />status: NF","pct_change:  0.00000000<br />status: PF","pct_change:  0.00000000<br />status: PF"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(166,141,173,1)","opacity":1,"size":15.1181102362205,"symbol":"diamond","line":{"width":1.88976377952756,"color":"rgba(166,141,173,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x3","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-0.0303030303030303,-0.0303030303030303,-0.5,-0.5,0,0],"y":[1,1,2,2,3,3],"text":["pct_change: -0.03030303<br />status: F","pct_change: -0.03030303<br />status: F","pct_change: -0.50000000<br />status: NF","pct_change: -0.50000000<br />status: NF","pct_change:  0.00000000<br />status: PF","pct_change:  0.00000000<br />status: PF"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(166,141,173,1)","opacity":1,"size":15.1181102362205,"symbol":"diamond","line":{"width":1.88976377952756,"color":"rgba(166,141,173,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x4","yaxis":"y","hoverinfo":"text","frame":null},{"x":[-0.0833333333333333,-0.0833333333333333,0.5,0.5],"y":[1,1,3,3],"text":["pct_change: -0.08333333<br />status: F","pct_change: -0.08333333<br />status: F","pct_change:  0.50000000<br />status: PF","pct_change:  0.50000000<br />status: PF"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(166,141,173,1)","opacity":1,"size":15.1181102362205,"symbol":"diamond","line":{"width":1.88976377952756,"color":"rgba(166,141,173,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x5","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":55.4520547945205,"r":18.9954337899543,"b":40.1826484018265,"l":37.2602739726027},"plot_bgcolor":"rgba(229,227,201,1)","paper_bgcolor":"rgba(229,227,201,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of countries and percentage of change in each status in 1995 and 2020 per region","font":{"color":"rgba(0,0,0,1)","family":"URWGothic","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,0.195923026744945],"automargin":true,"type":"linear","autorange":false,"range":[-1.29545454545455,25.2045454545455],"tickmode":"array","ticktext":["0%","5%","10%","15%","20%","25%"],"tickvals":[0,5,10,15,20,25],"categoryorder":"array","categoryarray":["0%","5%","10%","15%","20%","25%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URWGothic","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"annotations":[{"text":"pct_change","x":0.5,"y":0,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"URWGothic","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"top","annotationType":"axis","yshift":-21.9178082191781},{"text":"status","x":0,"y":0.5,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"URWGothic","size":14.6118721461187},"xref":"paper","yref":"paper","textangle":-90,"xanchor":"right","yanchor":"center","annotationType":"axis","xshift":-21.9178082191781},{"text":"Africa","x":0.0979615133724723,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"URWGothic","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Americas","x":0.3,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"URWGothic","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Asia","x":0.5,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"URWGothic","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Europe","x":0.7,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"URWGothic","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Oceania","x":0.902038486627528,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"URWGothic","size":11.689497716895},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"}],"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,3.6],"tickmode":"array","ticktext":["F","NF","PF"],"tickvals":[1,2,3],"categoryorder":"array","categoryarray":["F","NF","PF"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URWGothic","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(244,252,217,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.195923026744945,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(229,227,201,1)","line":{"color":"transparent","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.195923026744945,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.204076973255055,"x1":0.395923026744945,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(229,227,201,1)","line":{"color":"transparent","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.204076973255055,"x1":0.395923026744945,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.404076973255055,"x1":0.595923026744945,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(229,227,201,1)","line":{"color":"transparent","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.404076973255055,"x1":0.595923026744945,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.604076973255055,"x1":0.795923026744945,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(229,227,201,1)","line":{"color":"transparent","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.604076973255055,"x1":0.795923026744945,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.804076973255055,"x1":1,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(229,227,201,1)","line":{"color":"transparent","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.804076973255055,"x1":1,"y0":0,"y1":23.37899543379,"yanchor":1,"ysizemode":"pixel"}],"xaxis2":{"type":"linear","autorange":false,"range":[-1.75,22.0833333333333],"tickmode":"array","ticktext":["0%","5%","10%","15%","20%"],"tickvals":[-2.22044604925031e-16,5,10,15,20],"categoryorder":"array","categoryarray":["0%","5%","10%","15%","20%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URWGothic","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"domain":[0.204076973255055,0.395923026744945],"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis3":{"type":"linear","autorange":false,"range":[-1.475,27.3083333333333],"tickmode":"array","ticktext":["0%","10%","20%"],"tickvals":[0,10,20],"categoryorder":"array","categoryarray":["0%","10%","20%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URWGothic","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"domain":[0.404076973255055,0.595923026744945],"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis4":{"type":"linear","autorange":false,"range":[-2.175,34.675],"tickmode":"array","ticktext":["0%","10%","20%","30%"],"tickvals":[0,10,20,30],"categoryorder":"array","categoryarray":["0%","10%","20%","30%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URWGothic","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"domain":[0.604076973255055,0.795923026744945],"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis5":{"type":"linear","autorange":false,"range":[-0.6875,12.6041666666667],"tickmode":"array","ticktext":["0%","2%","5%","8%","10%","12%"],"tickvals":[0,2.5,5,7.5,10,12.5],"categoryorder":"array","categoryarray":["0%","2%","5%","8%","10%","12%"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URWGothic","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"domain":[0.804076973255055,1],"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"showlegend":true,"legend":{"bgcolor":"rgba(229,227,201,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"URWGothic","size":11.689497716895},"title":{"text":"year","font":{"color":"rgba(0,0,0,1)","family":"URWGothic","size":14.6118721461187}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"47b2c2503d546":{"x":{},"y":{},"fill":{},"type":"bar"},"47b2c324d76df":{"x":{},"y":{}}},"cur_data":"47b2c2503d546","visdat":{"47b2c2503d546":["function (y) ","x"],"47b2c324d76df":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p>The users can hoover on the components of the chart and check the difference on the spot. But somehow this is not rendering in the right manner, if anyone can help please reach out.</p>
+</div>
+</div>
+<div id="liberties-political-and-civil" class="section level2">
+<h2>Liberties : Political and Civil</h2>
+<p>What is the state of Civil and Political liberties over the continents</p>
+<pre class="r"><code>freedom %&gt;% 
+  group_by(region_name) %&gt;% 
+  summarise(
+    avg_CL = mean(cl),
+    avg_PR = mean(pr),
+    avg_L = (avg_CL + avg_PR)/2
+  ) %&gt;% 
+  pivot_longer(
+    cols = 2:3,
+    names_to = &#39;index&#39;,
+    values_to = &#39;value&#39;
+  ) %&gt;% 
+  mutate(
+    region_name = fct_reorder(region_name, avg_L, .desc = T)
+  ) %&gt;% 
+  ggplot()+
+  geom_col(
+    aes(
+      value,
+      region_name,
+      fill = index
+    ),
+    position = &#39;dodge&#39;
+  ) +
+  geom_point(
+    aes(
+      avg_L,
+      region_name
+    ),
+    shape = 18,
+    size = 10,
+    color = &#39;#A68DAD&#39;
+  ) + 
+  labs(
+    title = &#39;Overall year/region mean of Civil and Political liberties&#39;, 
+    subtitle = &#39;less is better, and Europe is the Freeiest region in the world&#39;,
+    y = &#39;Region&#39;
+  ) +
+  scale_fill_manual(
+    values= MetBrewer::met.brewer(&quot;VanGogh2&quot;, 2), 
+    name = &#39;Average Liberty&#39;,
+    labels = c(&#39;Civil&#39;, &#39;Political&#39;)
+  ) + 
+  le_theme</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>As an African I’m usually curious in investigating data regarding my region, this time I was inspirded by CÉDRIC SCHERER’s Visualisation of the Malaria Data from the WHO.</p>
+<p>You can check his code <a href="https://github.com/z3tt/TidyTuesday/blob/master/R/2018_33_Malaria.Rmd">here</a> and the chart itself <a href="https://raw.githubusercontent.com/Z3tt/TidyTuesday/master/plots/2018_33/2018_33_MalariaDeaths.png">here</a>.</p>
+<p>The reason I appreciated this chart was the Artist’s use of bi-scale legend to denote the dispurtion of the Malaria virus. In our case it can be ver useful to apply the same principle to make a bi-scale for the civil and political liberty at the same time on the same chart.</p>
+<p>Making a 2-dimensional legend scale is made possible by the <a href="https://slu-opengis.github.io/biscale/articles/biscale.html"><code>biscale</code> package</a> which is what we will make below.</p>
+</div>
+<div id="le-map" class="section level2">
+<h2>Le map</h2>
+<p>To make this map we need to get geometric data of the African continent, this possible with the <code>sf</code> package.</p>
+<pre class="r"><code>africa_map_data &lt;- st_as_sf(
+  rworldmap::getMap(resolution = &#39;high&#39;)
+  ) %&gt;% 
+  filter(
+    continent == &#39;Africa&#39;
+  ) </code></pre>
+<p>Once the geometric data is ready, we must create our main data, the one we will use to make the map itself. i.e: We will need to join the freedom data with the geometric data.
+At the same time we will need to let <code>ggplot</code> know that we will be using bi-dimensional scales by using the <code>bi_class()</code> and the <code>bi_scale_fill()</code> functions.</p>
+<p>In the <code>bi_class()</code> function we set up the the dimensions we will use to create our new scale, in our case those are the political right and civil liberty variables. We need to also make the fill mapping <code>geom_sf</code> assigned to <code>bi_class</code>, and we also need to set a palette theme in the <code>bi_scale_fill</code>.</p>
+<p>Shout-out to the maintainers of this package for the great documentation and for Cedric for his constant sharing of his art, it definitely helps.</p>
+<pre class="r"><code>africa_map &lt;- africa_map_data %&gt;%
+  left_join(
+    freedom %&gt;% 
+      filter(year == 2020), 
+    by = c(&quot;NAME&quot;=&quot;country&quot;)
+  ) %&gt;% 
+  bi_class(
+    x = pr, 
+    y = cl, 
+    dim= 3, 
+    style = &#39;quantile&#39;
+  ) %&gt;% 
+  ggplot() +
+  geom_sf(
+    aes(
+      fill = bi_class
+    ),
+    color = &quot;grey20&quot;,
+    lwd = 0.2,
+    show.legend = F
+  ) + 
+  bi_scale_fill(
+    pal = &quot;DkCyan&quot;, 
+    dim = 3
+  )+ 
+  labs(
+    title = &#39;Political and Civil Liberties in Africa in 2020&#39;,
+    subtitle = &#39;Lighter colors denote more freedom&#39;,
+    caption = &quot;@Bennour007sin|www.bennour.tn \n data: UN &amp; Freedom House&quot;
+  ) </code></pre>
+<p>All what is left for us to do is set up the legend itself to help the readers navigate the map, we do that by determining the extent of the legend, in our case we will use a 3x3 map. We will also need to set up the palette theme it must be the same as the map theme of course. Lastly we set up the labs for the legend, the background color, the size, and the fonts, then we should be ready to combine all of this in one chart.</p>
+<pre class="r"><code>africa_map_legend &lt;- bi_legend(
+  pal = &quot;DkCyan&quot;,
+  dim = 3,
+  xlab = &quot;Political Rights&quot;,
+  ylab = &quot;Civil Liberties&quot;
+) + 
+  bi_theme(
+    bg_color = &quot;#D3E4CD&quot;,
+    base_family = &quot;Changa One&quot;,
+    base_size = 15
+  )</code></pre>
+<p>Finaly we use the <code>cowplot</code> package to combine both the map and the legend and we end up with both the map and the legend together. We will use a different theme so everything look better before we render.</p>
+<pre class="r"><code>le_theme_map &lt;- theme(
+  axis.ticks = element_blank(),
+  axis.text = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  panel.background = element_rect(color = NA, 
+                                  fill = &quot;#D3E4CD&quot;),
+  plot.background = element_rect(color = NA, 
+                                 fill = &quot;#D3E4CD&quot;,
+                                 size = 5),
+  plot.title = element_text(family = &quot;Changa One&quot;, 
+                            color = &quot;black&quot;,
+                            size = 25, 
+                            face = &quot;bold&quot;,
+                            hjust = 0.5,
+                            margin = margin(t = 36, b = 6)),
+  plot.subtitle = element_text(family = &quot;Changa One&quot;, 
+                               color = &quot;#5F939A&quot;,
+                               size = 20, 
+                               hjust = 0.5,
+                               margin = margin(t = 6, b = 20)),
+  plot.caption = element_text(family = &quot;Changa One&quot;, 
+                              color = &quot;#806A8A&quot;, 
+                              size = 14, 
+                              face = &quot;plain&quot;,
+                              hjust = 0.5,
+                              margin = margin(t = 0, b = 36))
+)</code></pre>
+<pre class="r"><code>africa_map_final &lt;- cowplot::ggdraw() +
+  cowplot::draw_plot(africa_map + le_theme, 0, 0, 1, 1) +
+  cowplot::draw_plot(africa_map_legend, 0.15, 0.25, 0.2, 0.2)</code></pre>
+<p><img src="2022-18-freedom.jpg" /></p>
+<p>Cheers!</p>
+</div>
