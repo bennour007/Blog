@@ -1,0 +1,45 @@
+---
+title: The pipe is broken!
+author: ~
+date: '2020-07-11'
+slug: the-pipe-is-broken
+categories: []
+tags: []
+subtitle: ''
+summary: 'Not the pipe you are thinking about!'
+authors: []
+lastmod: '2020-07-11T10:33:51+01:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+I have been thinking for a while this week on what should I write about this weekend, until something came up at work and got me inspired. Today, in the same spirit of the previous article about "high standards", I am going to talk about pipes. 
+
+Pipes are a great invention in the history of humanity, it helped us transport matter of liquid nature, and with technological advancement, now, gas and plasma. However, those are not the pipes I'd like to talk about today. Instead I would like to focus on the abstract pipes, the ones transporting information from one transformation to another in order to derive knowledge from it.
+
+Earlier this week I have presented my research proposal for a jury in TBS. *I was ate alive*. And the major criticism I got, was about clarity, and the absence of a clear formatting, or to my understanding :*THE PIPE*, hence the title of this article. 
+
+Pipes, are not only a method for organizing thoughts, but also the ability to explain an idea in modular way, increasing in complexity in each step, in order to breakdown the entire thing into simple peaces from top to bottom. This is what is missing in some of the teaching methods we are using today in all sorts of subjects. However, we can also see this lack of organization in all aspects of life, and everyday activity. especially in Tunisia. 
+
+The objective of this article is to provide a statement about, what are pipes, and how important they are. 
+
+As I mentioned above, pipes are an abstract tool to divide an idea into modules which can be analyzed individually, without loosing the flow of the relations between these different modules. In fact pipes are a great way to clear up relations between these modules of ideas. In programming, especially in R, we use mgrittr package to link up code from one output to the next input in a simple way. In real life though this is more complex than it sounds. 
+
+Linking ideas (or modules) with each other, is not a simple task. In fact, to be achieved in a near optimal manner, one needs to be able to comfortably answer four important questions: 
+
+  * What is the general idea that one wants to explain.?
+  
+  * What is the basic structure, or modules, that construct this idea.?
+  
+  * Who the hell are you explaining to.?
+  
+  * What the hell are they expecting.?
+
+Answering these four questions and being able to criticize the answer you come up with, is what will allow you to simplify the information to its purist form and present it in the way that the receiver will totally understand. This is not an easy task, in fact, it is a skill that ones develop with time, and practice. For this reason, I am very interested in pursuing a teaching career, as it is the perfect path for someone to actually have an incentive to simplify information and actually work on his pipes. 
+
+Thank you for stopping by. 
+

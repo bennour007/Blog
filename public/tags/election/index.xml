@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>election on Bennour&#39;s</title>
+    <link>https://www.bennour.tn/tags/election/</link>
+    <description>Recent content in election on Bennour&#39;s</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Jul 2021 21:53:45 +0100</lastBuildDate><atom:link href="https://www.bennour.tn/tags/election/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2019 Elections remake</title>
+      <link>https://www.bennour.tn/project/elections_remake/</link>
+      <pubDate>Sat, 10 Jul 2021 21:53:45 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/elections_remake/</guid>
+      <description>Few lines on the new election law, data, plots, and a dashboard!</description>
+    </item>
+    
+  </channel>
+</rss>

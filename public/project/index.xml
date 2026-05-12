@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LE PORTFOLIO on Bennour&#39;s</title>
+    <link>https://www.bennour.tn/project/</link>
+    <description>Recent content in LE PORTFOLIO on Bennour&#39;s</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 15 Mar 2022 15:32:21 +0100</lastBuildDate><atom:link href="https://www.bennour.tn/project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>O Freedom, My Freedom!</title>
+      <link>https://www.bennour.tn/project/freedom/</link>
+      <pubDate>Tue, 15 Mar 2022 15:32:21 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/freedom/</guid>
+      <description>On freedom, rights, numbers, and the African continent!</description>
+    </item>
+    
+    <item>
+      <title>2019 Elections remake</title>
+      <link>https://www.bennour.tn/project/elections_remake/</link>
+      <pubDate>Sat, 10 Jul 2021 21:53:45 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/elections_remake/</guid>
+      <description>Few lines on the new election law, data, plots, and a dashboard!</description>
+    </item>
+    
+    <item>
+      <title>Tate&#39;s art collection</title>
+      <link>https://www.bennour.tn/project/tatearts/</link>
+      <pubDate>Fri, 15 Jan 2021 12:52:05 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/tatearts/</guid>
+      <description>TidyTuesday-Week3-2021</description>
+    </item>
+    
+    <item>
+      <title>International transit costs</title>
+      <link>https://www.bennour.tn/project/transit_cost/</link>
+      <pubDate>Thu, 07 Jan 2021 12:53:34 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/transit_cost/</guid>
+      <description>TidyTuesday-Week2-2021</description>
+    </item>
+    
+    <item>
+      <title>Tunisan primary schools: the data is on!</title>
+      <link>https://www.bennour.tn/project/education_tunisia/</link>
+      <pubDate>Fri, 01 Jan 2021 13:10:34 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/education_tunisia/</guid>
+      <description>Extracting and tidying data</description>
+    </item>
+    
+    <item>
+      <title>Burgers</title>
+      <link>https://www.bennour.tn/project/burgers/</link>
+      <pubDate>Tue, 29 Dec 2020 00:32:02 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/burgers/</guid>
+      <description>Burger-economics, visualization, and a refresher of undergraduate economics</description>
+    </item>
+    
+    <item>
+      <title>Tunisian Poverty data</title>
+      <link>https://www.bennour.tn/project/ins/</link>
+      <pubDate>Sat, 14 Nov 2020 17:05:24 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/ins/</guid>
+      <description>Tunsian poverty data from the INS report</description>
+    </item>
+    
+    <item>
+      <title>Canadian wind turbines</title>
+      <link>https://www.bennour.tn/project/turbines/</link>
+      <pubDate>Thu, 29 Oct 2020 18:10:38 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/turbines/</guid>
+      <description>A short post and analysis on the Canadian wind turbines data set, using R, and everything tidy.</description>
+    </item>
+    
+    <item>
+      <title>Elections project</title>
+      <link>https://www.bennour.tn/project/elections/</link>
+      <pubDate>Wed, 07 Oct 2020 21:54:20 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/elections/</guid>
+      <description>I extract the general elections data of 2014 in Tunisia, and replicate the results.</description>
+    </item>
+    
+    <item>
+      <title>My research idea in one post</title>
+      <link>https://www.bennour.tn/project/research/</link>
+      <pubDate>Sun, 04 Oct 2020 22:15:11 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/research/</guid>
+      <description>Efficiency, and statistical computing</description>
+    </item>
+    
+    <item>
+      <title>Data-oriented democracy</title>
+      <link>https://www.bennour.tn/project/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.bennour.tn/project/internal-project/</guid>
+      <description>Studying the electoral system in Tunisia.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.92.0" />
+<title>Canadian wind turbines | Bennour&#39;s</title>
+
+
+<meta property="twitter:site" content="@bennour007sin">
+<meta property="twitter:creator" content="@bennour007sin">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="TidyTuesday, animated graphs, maps, and lots of unanswered questions">
+
+
+<meta property="og:site_name" content="Bennour&#39;s">
+<meta property="og:title" content="Canadian wind turbines | Bennour&#39;s">
+<meta property="og:description" content="TidyTuesday, animated graphs, maps, and lots of unanswered questions" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://www.bennour.tn/project/turbines/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://www.bennour.tn/project/turbines/featured.jpeg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://www.bennour.tn/project/turbines/featured.jpeg" >
+    
+    
+  <meta itemprop="name" content="Canadian wind turbines">
+<meta itemprop="description" content="A short post and analysis on the Canadian wind turbines data set, using R, and everything tidy."><meta itemprop="datePublished" content="2020-10-29T18:10:38+01:00" />
+<meta itemprop="dateModified" content="2020-10-29T18:10:38+01:00" />
+<meta itemprop="wordCount" content="1718"><meta itemprop="image" content="https://www.bennour.tn/project/turbines/featured.jpeg">
+<meta itemprop="keywords" content="TidyTuesday," />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/blogophonic-mark-dark.jpg" type="image/x-icon">
+  <link rel="icon" href="/img/blogophonic-mark-dark.jpg" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.757387d3093da4352ade30fef034f446191c65ae978569bb5ec52926b9c5c675.css" integrity="sha256-dXOH0wk9pDUq3jD&#43;8DT0RhkcZa6XhWm7XsUpJrnFxnU=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.08fcbd3115d4e09819ce50d2403b01454644de398d423736c5aa34188dfac119.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://www.bennour.tn" title="Home">
+      <span class="f4 fw7">Bennour&#39;s</span>
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/project/" title="Project Portfolio">Projects</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Canadian wind turbines</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">TidyTuesday, animated graphs, maps, and lots of unanswered questions</h4>
+        
+        <p class="f7 db mv0 ttu">October 29, 2020</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+<link href="index_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="index_files/anchor-sections/anchor-sections.js"></script>
+
+
+<p>In this post I will be treating the Canadian wind turbines dataset. you can check it out <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-10-27/readme.md">here</a></p>
+<p>This data set is part of the Tidytuesday project, I love the project, I love the data published in it.</p>
+<p>The best way to start all this, is to import tidyverse first thing, and just use the data from an online source just like in the github page.</p>
+<pre class="r"><code>library(tidyverse)
+wind_turbine &lt;- read_csv(&#39;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-10-27/wind-turbine.csv&#39;)
+theme_set(theme_light())</code></pre>
+<pre class="r"><code>wind_turbine %&gt;% glimpse()</code></pre>
+<pre><code>## Rows: 6,698
+## Columns: 15
+## $ objectid                   &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,…
+## $ province_territory         &lt;chr&gt; &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;, &quot;Alberta&quot;…
+## $ project_name               &lt;chr&gt; &quot;Optimist Wind Energy&quot;, &quot;Castle River Wind…
+## $ total_project_capacity_mw  &lt;dbl&gt; 0.90, 44.00, 3.78, 3.78, 3.78, 3.78, 19.50…
+## $ turbine_identifier         &lt;chr&gt; &quot;OWE1&quot;, &quot;CRW1&quot;, &quot;WWT1&quot;, &quot;WWT2&quot;, &quot;WWT3&quot;, &quot;W…
+## $ turbine_number_in_project  &lt;chr&gt; &quot;1/2&quot;, &quot;1/60&quot;, &quot;1/6&quot;, &quot;2/6&quot;, &quot;3/6&quot;, &quot;4/6&quot;,…
+## $ turbine_rated_capacity_k_w &lt;dbl&gt; 150, 600, 600, 600, 600, 660, 1300, 1300, …
+## $ rotor_diameter_m           &lt;dbl&gt; 23, 44, 44, 44, 44, 47, 60, 60, 60, 60, 60…
+## $ hub_height_m               &lt;dbl&gt; 30, 40, 50, 50, 50, 50, 46, 46, 46, 46, 46…
+## $ manufacturer               &lt;chr&gt; &quot;Bonus&quot;, &quot;Vestas&quot;, &quot;Vestas&quot;, &quot;Vestas&quot;, &quot;Ve…
+## $ model                      &lt;chr&gt; &quot;AN 150/30&quot;, &quot;V44/600&quot;, &quot;V44/600&quot;, &quot;V44/60…
+## $ commissioning_date         &lt;chr&gt; &quot;1993&quot;, &quot;1997&quot;, &quot;1998&quot;, &quot;1998&quot;, &quot;1998&quot;, &quot;2…
+## $ latitude                   &lt;dbl&gt; 49.52535, 49.51264, 49.23307, 49.23303, 49…
+## $ longitude                  &lt;dbl&gt; -114.0548, -114.0357, -113.6549, -113.6302…
+## $ notes                      &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</code></pre>
+<p>Now what kind of insights can we derive from this data? I am not really sure, nevertheless, the first that we need to do is try to understand what we have here. Since we have spatial data its an opportunity to work with maps then, anyhow, the more we dig the more we figure stuff to do, either because they are simply cool, or because they ease our work flow.</p>
+<p>So let’s see where these turbines are concentrated in:</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  count(province_territory, sort = T) %&gt;%
+  mutate(percentage = round((n/6698)*100, 2),
+         cumulative = cumsum(percentage)) </code></pre>
+<pre><code>## # A tibble: 12 x 4
+##    province_territory            n percentage cumulative
+##    &lt;chr&gt;                     &lt;int&gt;      &lt;dbl&gt;      &lt;dbl&gt;
+##  1 Ontario                    2663      39.8        39.8
+##  2 Quebec                     1991      29.7        69.5
+##  3 Alberta                     900      13.4        82.9
+##  4 Nova Scotia                 310       4.63       87.6
+##  5 British Columbia            292       4.36       91.9
+##  6 Saskatchewan                153       2.28       94.2
+##  7 Manitoba                    133       1.99       96.2
+##  8 New Brunswick               119       1.78       98.0
+##  9 Prince Edward Island        104       1.55       99.5
+## 10 Newfoundland and Labrador    27       0.4        99.9
+## 11 Northwest Territories         4       0.06      100. 
+## 12 Yukon                         2       0.03      100.</code></pre>
+<p>So there you go, 69% of the wind turbines in canada are installed in Ontario and Quebec(82% if we add Alberta). This is an interesting fact, but I think we should look up when did all this started, and how is the turbines service period is distributed.</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  count(commissioning_date, sort = T)</code></pre>
+<pre><code>## # A tibble: 35 x 2
+##    commissioning_date     n
+##    &lt;chr&gt;              &lt;int&gt;
+##  1 2014                 873
+##  2 2015                 635
+##  3 2013                 621
+##  4 2011                 590
+##  5 2009                 485
+##  6 2006                 455
+##  7 2012                 404
+##  8 2010                 334
+##  9 2016                 266
+## 10 2014/2015            207
+## # … with 25 more rows</code></pre>
+<p>Apparently there is some year inputs where we don’t have one year alone but rather a two years season; like instead of having 2014, we have 2014/2015 as a year. My take on this will be to keep only the first year of the combinations, since the year column is presented as a text we can do this easily using :</p>
+<pre class="r"><code>wind_turbine[,12] &lt;- wind_turbine %&gt;%
+  select(commissioning_date) %&gt;%
+  sapply(.,str_remove, &quot;/.*&quot;) %&gt;%
+  as.numeric() %&gt;% 
+  as_tibble() </code></pre>
+<p>The chunck above will fix the date issue directly in the original data column, then we don’t have to change it everytime.</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  count(commissioning_date, sort = T) %&gt;%
+  mutate(percentage = round((n/6698)*100, 2),
+         commissioning_date = as_factor(commissioning_date)) %&gt;%
+  ggplot(aes(x = commissioning_date, 
+             y = percentage)) +
+    geom_col(fill = &quot;skyblue&quot;) +
+    theme(axis.text.x=element_text(angle=90, hjust=1, vjust = 1))</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>This is the distribution of the percentage of wind turbines commissioned over the time period of the data set(25 years).</p>
+<p>We can also do a more pragmatic visualization like the following :</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  count(commissioning_date, sort = T) %&gt;%
+  mutate(percentage = round((n/6698)*100, 2),
+         commissioning_date = as_factor(commissioning_date)) %&gt;%
+  mutate(commissioning_date= fct_reorder(commissioning_date, percentage)) %&gt;%
+  ggplot(aes(x = commissioning_date,
+             y = percentage)) +
+    geom_col(fill = &quot;skyblue&quot;) +
+    coord_flip() </code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Let’s see what a descriptive summary of this distribution would give us :</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  count(commissioning_date, sort = T) %&gt;%
+  mutate(percentage = round((n/6698)*100, 2),
+         commissioning_date = as_factor(commissioning_date)) %&gt;%
+  summary()</code></pre>
+<pre><code>##  commissioning_date       n            percentage    
+##  1993   : 1         Min.   :   1.0   Min.   : 0.010  
+##  1995   : 1         1st Qu.:  66.0   1st Qu.: 0.990  
+##  1997   : 1         Median : 133.0   Median : 1.990  
+##  1998   : 1         Mean   : 267.9   Mean   : 3.999  
+##  1999   : 1         3rd Qu.: 404.0   3rd Qu.: 6.030  
+##  2000   : 1         Max.   :1080.0   Max.   :16.120  
+##  (Other):19</code></pre>
+<p>The average turbine commissioning is at 4% every year. Now how do these numbers compare province wise?
+An animated map will be very useful in this case, and frankly very challenging as well since I have never come across spatial data before, but let’s do it anyway, let’s set the map first:</p>
+<pre class="r"><code>library(maps)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;maps&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:purrr&#39;:
+## 
+##     map</code></pre>
+<pre class="r"><code>library(gganimate)
+library(gifski)
+
+canada &lt;- map_data(&quot;world&quot;, region = &quot;canada&quot;)</code></pre>
+<p>However, a main issue that we need is how did the characteristics of each wind turbine project evolved over the period over which the data is collected. I thought I would use gganimate for this task to see the variation over time and space but it was so useless, its better to get onto this the old way.</p>
+<pre class="r"><code>canada %&gt;%
+  ggplot(aes(x = long, 
+             y = lat)) + 
+    geom_polygon(aes(group = group), fill = &quot;grey&quot;) + 
+    geom_hex(data = wind_turbine, 
+             aes(x = longitude, 
+                 y = latitude)) + 
+    labs(title = &quot;Where the turbines are located generally?&quot;) +
+    theme_void()</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Well, there you go guys, geom_hex allows us to have a better view on the intensity of the turbines concentration, especially in the east south part.</p>
+<p>I am also intereseted in the capacity of each turbine, a map and a bubble point apporoach resulted in an ugly graph, then again, I used geom_hex</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  group_by(province_territory) %&gt;%
+  summarise(average = mean(turbine_rated_capacity_k_w, na.rm = T)) %&gt;%
+  mutate(province_territory = fct_reorder(province_territory, average)) %&gt;%
+  ggplot(aes(x = province_territory,
+             y = average)) + 
+    geom_col(fill = &quot;skyblue&quot;) + 
+    coord_flip() +
+    labs(title = &quot;The average turbine capacity in kw in each province&quot;) </code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>There has been some 200ich NA’s in the turbine_rated_capacity_k_w variable omitted, so take this table with a grain of salt.</p>
+<p>A good idea is to just check the nation wide average of turbine rated capacity and its evoloution over time:</p>
+<pre class="r"><code>library(lubridate)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lubridate&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     date, intersect, setdiff, union</code></pre>
+<pre class="r"><code>wind_turbine %&gt;%
+  group_by(commissioning_date) %&gt;%
+  summarise(average = mean(turbine_rated_capacity_k_w, na.rm = T)) %&gt;%
+  ggplot(aes(x = commissioning_date,
+             y = average)) +
+    geom_line(color = &quot;skyblue&quot;, size = 0.5) +
+    geom_point() + 
+    labs(title = &quot;Evolution of individual turbine capacity over time&quot;) </code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<pre class="r"><code>############################################################################
+############################################################################
+# The same thing but faceting over the provinces #
+wind_turbine %&gt;%
+  group_by(commissioning_date, province_territory) %&gt;%
+  summarise(average = mean(turbine_rated_capacity_k_w, na.rm = T)) %&gt;%
+  mutate(commissioning_date = year(as.Date(as.character(commissioning_date), format = &quot;%Y&quot;))) %&gt;%
+  ggplot(aes(x = commissioning_date,
+             y = average)) +
+    geom_line(color = &quot;skyblue&quot;, size = 0.5) +
+    geom_point() + 
+    facet_wrap(province_territory~.)+
+    labs(title = &quot;Evolution of individual turbine capacity over time for each province&quot;)</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;commissioning_date&#39; (override with `.groups` argument)</code></pre>
+<pre><code>## geom_path: Each group consists of only one observation. Do you need to adjust
+## the group aesthetic?</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+<p>These turbines are mainly established under specific projects, a good idea is to understand the characteristics of these projects and how they did evolve over time and where. For example, a province might have one project that produces higher energy than others with more projects with less turbines and less energy output. Its up to us to figure this out. Let’s get back to the data:</p>
+<p>Let’s start with the project capacity in mega watts:</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  group_by(province_territory) %&gt;%
+  summarise(average = mean(total_project_capacity_mw)) %&gt;%
+  mutate(province_territory = fct_reorder(province_territory, average)) %&gt;%
+  ggplot(aes(x = province_territory,
+             y = average)) +
+  geom_col(fill = &quot;skyblue&quot;) +
+  coord_flip() +
+  labs(title = &quot;Average project capacity in mw in each province&quot;) </code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<pre class="r"><code>wind_turbine %&gt;%
+  select(total_project_capacity_mw) %&gt;%
+  summary()</code></pre>
+<pre><code>##  total_project_capacity_mw
+##  Min.   :  0.3            
+##  1st Qu.: 70.5            
+##  Median :102.0            
+##  Mean   :134.8            
+##  3rd Qu.:181.5            
+##  Max.   :350.0</code></pre>
+<p>The descriptive statistics provides us that the average project capacity over 25 years in the provincees in Canada is 134.8.</p>
+<p>To get more information about the evolution of the projects’ capacities over the years we will do this :</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  group_by(province_territory, commissioning_date) %&gt;%
+  summarise(average = mean(total_project_capacity_mw)) %&gt;%
+  ggplot(aes(x = province_territory,
+             y = average)) +
+    geom_col(fill = &quot;skyblue&quot;) +
+    coord_flip() +
+    labs(title = &#39;Year: {closest_state}&#39;) +
+    transition_states(commissioning_date) +
+    shadow_mark(fill = &#39;lightgrey&#39;, size = 0.4, past = T, future = F)</code></pre>
+<pre><code>## `summarise()` regrouping output by &#39;province_territory&#39; (override with `.groups` argument)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.gif" /><!-- --></p>
+<p>Oh yeah, this shows not only the evolution of the capacity over time but also on the province level, Alberta, Ontario, and Quebec are leading the way, and gganimate is awsome. <strong>But I think this graph can be improved, if anyone can help me with that please do!</strong></p>
+<p>Let’s how the national average varies with the years:</p>
+<pre class="r"><code>wind_turbine %&gt;%
+  group_by(commissioning_date) %&gt;%
+  summarise(average = mean(total_project_capacity_mw)) %&gt;%
+  ggplot(aes(x= commissioning_date,
+             y = average)) +
+    geom_point() +
+    geom_line(color = &quot;skyblue&quot;, size = 0.4) + 
+    labs(title = &quot;Evolution of projects capacities since 1993 nationwide&quot;) </code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Now what else can we improve here :</p>
+<ul>
+<li><p>Characteristics of the turbines themselves over time and province.</p></li>
+<li><p>The companies who made the turbines, who are they and how often did they do it?</p></li>
+<li><p>Mine for any important informations in the notes variable.</p></li>
+</ul>
+<p>I guess that’s all for now folks, I will keep this post updated as much as I can, feel free to hit me up with your feedback and to use the code to your liking.</p>
+<p>Thank you for stopping by(keep showing up for the updates).</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">October 29, 2020</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">9 minute read, 1718 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://www.bennour.tn/categories/tidytuesday">TidyTuesday</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://www.bennour.tn/tags/tidytuesday">TidyTuesday</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/project/freedom/">O Freedom, My Freedom!</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/project/tatearts/">Tate&#39;s art collection</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/project/transit_cost/">International transit costs</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://www.bennour.tn/project/ins/">&larr; Tunisian Poverty data</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://www.bennour.tn/project/elections/">Elections project &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2026 B.M.H, Tunisia
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/bennour007" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/bennour007sin" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/bennour-medhsin/" title="linkedin" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="/blog/index.xml" title="rss" >
+      <i class="fas fa-rss fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>

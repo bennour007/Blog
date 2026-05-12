@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>research on Bennour&#39;s</title>
+    <link>https://www.bennour.tn/tags/research/</link>
+    <description>Recent content in research on Bennour&#39;s</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Oct 2020 22:15:11 +0100</lastBuildDate><atom:link href="https://www.bennour.tn/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My research idea in one post</title>
+      <link>https://www.bennour.tn/project/research/</link>
+      <pubDate>Sun, 04 Oct 2020 22:15:11 +0100</pubDate>
+      
+      <guid>https://www.bennour.tn/project/research/</guid>
+      <description>Efficiency, and statistical computing</description>
+    </item>
+    
+  </channel>
+</rss>
