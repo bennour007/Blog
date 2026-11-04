@@ -1,0 +1,45 @@
+---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
+title: "Tate's art collection"
+subtitle: ""
+summary: "TidyTuesday-Week3-2021"
+authors: []
+tags: ["TidyTuesday"]
+categories: ["TidyTuesday"]
+date: 2021-01-15T12:52:05+01:00
+lastmod: 2021-01-15T12:52:05+01:00
+featured: false
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "The Burning of the Houses of Parliament, 16 October 1834 J.M.W. Turner"
+  focal_point: ""
+  preview_only: false
+
+# Projects (optional).
+#   Associate this post with one or more of your projects.
+#   Simply enter your project's folder or file name without extension.
+#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
+#   Otherwise, set `projects = []`.
+projects: []
+---
+
+For this week, the folks in the TidyTuesday project provided us with data from the Tate gallery. This data is regarding artworks collected since the 1500. For this week's data, I won't really provide a code tutorial, but rather I will simply share My Viz. Of course you can review the code [here](https://github.com/bennour007/tidy/tree/master/week3-2021).
+
+The main challenge from this week's data is deciding the main angle of analysis, believe it ain't simple, there has been lots of trials in this regard and decided to go with  decomposing the artworks into two categories, 2-dimensional, and 3-dimensional, also I eliminated artworks by Turner, Joseph Mallord William for whom I will dedicate a specific analysis, here's my take:
+
+![.](week3plot_1.png)
+
+![.](week3plot_2.png)
+
+![.](week3plot_3.png)
+
+
+
+
+
+

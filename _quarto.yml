@@ -1,0 +1,51 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "blog/**/*.qmd"
+    - "projects/**/*.qmd"
+  resources:
+    - "projects/*/old_files/"
+
+website:
+  title: "B.M.H."
+  site-url: https://www.bennour.tn
+  description: "Learning, reading, writing, and coding everyday"
+  open-graph: true
+  navbar:
+    left:
+      - text: Research
+        href: research.qmd
+      - text: Projects
+        href: projects/index.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: CV
+        href: files/cv.pdf
+        target: _blank
+    right:
+      - icon: github
+        href: https://github.com/bennour007
+      - icon: linkedin
+        href: https://www.linkedin.com/in/bennour-medhsin/
+      - icon: rss
+        href: blog/index.xml
+
+format:
+  html:
+    theme: [cosmo, custom.scss]
+    css: styles.css
+    toc: false
+    highlight-style: a11y      # readable, high-contrast code colours
+    code-copy: true            # copy button on code blocks
+    code-overflow: scroll      # long lines scroll instead of wrapping
+    fig-width: 8               # default R/Python figure size, in inches
+    fig-height: 5
+    fig-align: center
+
+execute:
+  freeze: auto
+
+
+

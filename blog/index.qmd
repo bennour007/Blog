@@ -1,0 +1,11 @@
+---
+title: "Some writings"
+listing:
+  contents: "*/index.*"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+page-layout: full
+---
+
