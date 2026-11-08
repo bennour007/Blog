@@ -1,0 +1,785 @@
+---
+title: "Chapter 1: An activity with rules in which people or teams compete against each other"
+description: "A simulation of how the shape of our social ties, and the way rewards are counted, decide if and when we cooperate"
+date: 2026-11-08
+# categories: [game theory, networks, simulation, R]
+toc: true
+toc-location: left
+code-fold: true
+code-summary: "Show the code"
+code-annotations: hover
+reference-location: margin
+cap-location: margin
+---
+
+
+Recently I've been trying to avoid and cut ties with all sorts of brain rot, no social media platform is safe from this. And as a creative person that's my kryptonite. To that end I rediscovered the joy of video games again. It's fun, engaging, and definitely better than doom scrolling. 
+
+I thought to myself that in that spirit, maybe a post on games is a nice restart for this website. But it's not your typical kind of game, it's another interest I started getting into that originate from microeconomics and game theory. 
+
+In this post, the objective is to simulate an experiment, a game known in academic literature as the prisoner's dilemma. 
+
+
+```{r}
+#| label: setup
+#| code-summary: "Setup: packages, fonts, colours, themes"
+
+pacman::p_load(tidyverse, tidygraph, ggraph, Matrix, showtext)
+
+# Fonts: the site's typeface, registered under the names the themes use
+font_add_google("Literata", "literata", regular.wt = 400, bold.wt = 700)
+font_add_google("Literata", "literata-800", regular.wt = 800)
+showtext_auto()
+knitr::opts_chunk$set(fig.showtext = TRUE)
+
+set.seed(5)
+
+# Layer 1: the dictionary
+palette <- list(ink = "#4e1d4c", paper = "#ebd3a2")
+
+# Layer 2: n shades from ink, blending at most 45% of the way towards paper
+shades <- \(n) colorRampPalette(c(palette$ink, palette$paper))(101)[round(seq(1, 46, length.out = n))]
+
+# Layer 3: roles
+state_colours <- c(Cooperator = palette$ink, Defector = palette$paper)
+
+update_geom_defaults("line",  list(colour = palette$ink, linewidth = 0.8))
+update_geom_defaults("point", list(colour = palette$ink))
+update_geom_defaults("text",  list(colour = palette$ink, family = "literata"))
+
+theme_bmh <- \(base_size = 13) {
+  theme_minimal(base_size = base_size, base_family = "literata") +
+    theme(
+      plot.background     = element_rect(fill = palette$paper, colour = NA),
+      panel.grid.major    = element_line(colour = alpha(palette$ink, 0.12), linewidth = 0.3),
+      panel.grid.minor    = element_blank(),
+      text                = element_text(colour = palette$ink),
+      axis.text           = element_text(colour = palette$ink),
+      plot.title          = element_text(family = "literata-800", size = rel(1.25),
+                                         margin = margin(b = 4)),
+      plot.subtitle       = element_text(face = "italic", margin = margin(b = 12)),
+      plot.title.position = "plot",
+      legend.position     = "none",
+      plot.margin         = margin(14, 14, 14, 14)
+    )
+}
+
+theme_bmh_void <- \(base_size = 13) {
+  theme_void(base_size = base_size, base_family = "literata") +
+    theme(
+      plot.background = element_rect(fill = palette$paper, colour = NA),
+      text            = element_text(colour = palette$ink),
+      legend.position = "bottom"
+    )
+}
+```
+
+The prisoner's dilemma is a simple puzzle, but it has powerful implications for our understanding of human behaviour when we assume rationality. It asks a question that sounds naive and turns out to be deep: **if cheating always pays, why does anyone cooperate?**
+
+We'll build the answer in small steps: first two players and one choice, then a crowd of players who copy each other, and finally players living in networks of different shapes.
+
+## Game 0
+
+Two agents meet. Each chooses to **cooperate** (C) or **defect** (D), and what each earns depends on both choices:
+
+$$
+\begin{array}{c|cc}
+ & \text{other } C & \text{other } D \\ \hline
+\text{me } C & 1 & 0 \\
+\text{me } D & b & 0
+\end{array}
+\qquad 1 < b < 2
+$$
+
+If we both cooperate, we each earn 1. If I defect while you cooperate, I take $b$ and you get nothing. If we both defect, nobody gains anything. The single number $b$ controls how *tempting* cheating is, and we'll run the experiment with different values throughout the rest of this post.
+
+::: {.column-margin}
+**The general dilemma.** Any game where the temptation $T$ beats the reward for mutual cooperation $R$, which beats the punishment for mutual defection $P$, which is at least as good as the sucker's payoff $S$:
+
+$$T > R > P \ge S$$
+
+Here $R = 1$, $T = b$ and $P = S = 0$. Setting $P = S$ is a common simplification known as the *weak* prisoner's dilemma: it leaves a single parameter, $b$.
+:::
+
+## Cheating is tempting
+
+Here we don't know what the other player will do, so we compare our two options against each possible decision of the other player. How much more do we earn by defecting instead of cooperating?
+
+$$
+\begin{array}{l|cc|c}
+\text{If the other...} & \text{I cooperate} & \text{I defect} & \text{Gain from defecting} \\ \hline
+\text{cooperates} & 1 & b & b - 1 > 0 \\
+\text{defects}    & 0 & 0 & 0 - 0 = 0
+\end{array}
+$$
+
+Whatever the other player does, defecting is never worse, and sometimes better. A careful, self-interested (rational) player therefore defects. The other player reasons in exactly the same way, so both defect and both earn 0, while cooperating would have given each of them 1.
+
+The paradox is that **what is rational for each player is bad for both.** @fig-gain shows it for every level of temptation: the advantage of defecting grows with $b$ when the other cooperates, and it never drops below zero.
+
+::: {.column-margin}
+**Dominant strategy.** A choice that is at least as good as any alternative, whatever the others do. Here, defecting.
+
+**Nash equilibrium.** A situation where no player can do better by changing only their own choice. Here, both defecting: a player who switches to cooperating alone still earns 0, so gains nothing.
+:::
+
+```{r}
+#| label: fig-gain
+#| fig-cap: "The extra payoff from defecting rather than cooperating. It is never negative, so defecting is always at least as good."
+#| code-summary: "Code: the gain from defecting"
+
+gains <- expand_grid(
+  b     = seq(1, 2, by = 0.01),
+  other = c("If the other cooperates", "If the other defects")
+) |>
+  mutate(gain = if_else(other == "If the other cooperates", b - 1, 0))
+
+gains |>
+  ggplot(aes(b, gain, linetype = other)) +
+  geom_line() +
+  geom_text(
+    data = \(d) filter(d, b == max(b)),
+    aes(label = other), hjust = 0, nudge_x = 0.03, size = 3.6
+  ) +
+  scale_x_continuous(limits = c(1, 2.85), breaks = seq(1, 2, by = 0.25)) +
+  labs(
+    title    = "Defecting never loses",
+    subtitle = "Extra payoff from defecting instead of cooperating",
+    x = "Temptation b", y = NULL
+  ) +
+  theme_bmh()
+```
+
+## Extending the game to many players
+
+So far the players reasoned their way to defection. In reality, people rarely work out their decisions like this. Most of the time, they **look around and copy whoever seems to be doing well**. That's the rule we'll use from now on.
+
+How do players decide whom to copy? In each round, every player $i$ compares their payoff $\Pi_i$ with that of one other player $j$, $\Pi_j$, and adopts $j$'s decision with probability
+
+$$
+W(i \leftarrow j) = \frac{1}{1 + e^{-(\Pi_j - \Pi_i)/K}}
+$$
+
+Suppose we earned 2 points in a round and the player we compare ourselves with earned 3. They did **1 point better than us**. In the formula, that difference is written $\Pi_j - \Pi_i$: their points minus ours. So the rule simply reads: **the more points the other player earned compared to us, the more likely we are to copy them.**
+
+Why this particular formula? Because it behaves the way we'd expect people to behave:
+
+- **It always gives a chance between 0% and 100%**, however big the difference in points.
+- **The better the other player did, the likelier we are to copy them.**
+- **If we earned the same, it's 50/50.**
+- **Nobody is perfect.** Sometimes we copy a player who did worse, or ignore one who did better, because we misjudged how well they were doing.
+
+::: {.column-margin}
+**For the curious.** This is the same S-shaped curve as in a logit regression. It appears naturally if every player judges the others' points with a small random error: $W$ is then the chance that the other player *looks* better than me.
+:::
+
+### What $K$ does
+
+$K$ describes **how clearly players see who is doing better**. With a small $K$, players copy the actual winners of the game. With a large $K$, players often misjudge who is doing better, and sometimes copy a losing strategy. The table shows the chance that we copy a player who earned more points than us:
+
+$$
+\begin{array}{l|ccc}
+ & \text{0.5 points more} & \text{1 point more} & \text{2 points more} \\ \hline
+K = 0.1 & 99\% & \approx 100\% & \approx 100\% \\
+K = 1   & 62\% & 73\% & 88\% \\
+K = 10  & 51\% & 52\% & 55\%
+\end{array}
+$$
+
+- **$K = 0.1$, mostly correct judgements:** players almost always copy someone who did better, even by half a point.
+- **$K = 1$, sloppy imitation:** someone who did 1 point better is copied about three times out of four. Better behaviour still spreads, but mistakes are common.
+- **$K = 10$, random imitation:** players can barely tell who did better, so copying is close to a coin toss.
+
+Why compare $K$ with 1? Because in this game points come in steps of about 1: each cooperating partner is worth 1 point. A $K$ much smaller than 1 means players notice even small differences; a $K$ much bigger than 1 means they miss even large ones.
+
+Throughout the post we use $K = 0.1$: players who pay attention to how others are doing, but still make the occasional mistake (@fig-imitation).
+
+```{r}
+#| label: fig-imitation
+#| fig-cap: "The chance of copying someone, given how much better they did. Low noise K means people copy almost only better performers."
+#| code-summary: "Code: the imitation rule"
+
+expand_grid(diff = seq(-3, 3, by = 0.05), K = c(0.1, 1, 10)) |>
+  mutate(p_copy = 1 / (1 + exp(-diff / K)), K = factor(K)) |>
+  ggplot(aes(diff, p_copy, colour = K, linetype = K)) +
+  geom_line() +
+  scale_colour_manual(values = shades(3)) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(
+    title    = "How noise changes imitation",
+    subtitle = "Chance of copying, by difference in points",
+    x = "Their points minus mine", y = NULL,
+    colour = "Noise K", linetype = "Noise K"
+  ) +
+  theme_bmh() +
+  theme(legend.position = "bottom")
+```
+
+### The model in code
+
+Everything that follows uses two functions. `make_network()` decides **who meets whom**: everyone, or only friends in networks of different shapes. All the friendship networks give players about four friends on average, so only their *shape* differs. `simulate()` runs the rounds: play, compare, copy. For clarity I won't discuss the details of the model here, but you can find them in the [appendix](#appendix) at the end of this page.
+
+```{r}
+#| label: model-run
+#| ref.label: model
+#| echo: false
+```
+
+### We are all friends
+
+Let's start with a simple example of a society built on three assumptions:
+
+1. There are $N = 200$ players.
+2. In every round, **each player plays the two-player game once with every other player.**
+3. A player's **score for the round** is the sum of the points from all those games.
+
+At the start of a round, a share $x$ of the players cooperate and the rest, a share $1 - x$, defect.
+
+#### Step 1: who earns what
+
+All cooperators are in exactly the same situation: they meet the same crowd and make the same choice. So they all get the same score, which we call $\Pi_C$. Likewise, every defector gets the same score, $\Pi_D$. **$\Pi_C$ is the round score of any one cooperator, and $\Pi_D$ the round score of any one defector.**
+
+An example. With $x = 0.5$ there are 100 cooperators and 100 defectors, and we set the temptation to $b = 1.2$:
+
+$$
+\begin{array}{l|cc|c}
+ & \text{meets cooperators} & \text{meets defectors} & \text{round score} \\ \hline
+\text{a cooperator} & 99 \text{ games} \times 1 & 100 \text{ games} \times 0 & \Pi_C = 99 \\
+\text{a defector}   & 100 \text{ games} \times b & 99 \text{ games} \times 0 & \Pi_D = 120
+\end{array}
+$$
+
+A cooperator meets the 99 *other* cooperators and earns 1 from each. A defector meets all 100 cooperators and earns $b = 1.2$ from each. Games against defectors pay nothing to anyone, so they don't add to either score.
+
+In general, with letters: there are $xN$ cooperators and $(1-x)N$ defectors, so
+
+$$
+\Pi_C = \underbrace{(xN - 1) \times 1}_{\text{games with other cooperators}} + \underbrace{(1-x)N \times 0}_{\text{games with defectors}} = xN - 1
+$$
+
+$$
+\Pi_D = \underbrace{xN \times b}_{\text{games with cooperators}} + \underbrace{\big((1-x)N - 1\big) \times 0}_{\text{games with other defectors}} = b\,xN
+$$
+
+and the gap between the two scores is
+
+$$
+\Pi_D - \Pi_C = (b - 1)\,xN + 1 > 0.
+$$
+
+**As long as anyone cooperates, every defector outscores every cooperator.** Defectors collect $b$ from each cooperator, cooperators only 1, and both get nothing from defectors.
+
+#### Step 2: who copies whom
+
+At the end of the round, each player compares their score with one other player chosen at random, and copies that player with the imitation rule. To keep notation short, write $W(d)$ for the chance of copying someone who scored $d$ points more than you, and $d = \Pi_D - \Pi_C$ for the gap from step 1.
+
+Only meetings between a cooperator and a defector can change anything; comparing with someone who plays like you changes nothing. There are two such cases:
+
+- **A cooperator looks at a defector**, who scored $d$ points more, and switches to defecting with chance $W(d)$. Since $d > 0$, this chance is above 50%.
+- **A defector looks at a cooperator**, who scored $d$ points *less*, and switches to cooperating with chance $W(-d)$, below 50%.
+
+Now count the expected switches in one round. Each of the $xN$ cooperators picks a defector with chance $1 - x$ and then switches with chance $W(d)$. Each of the $(1-x)N$ defectors picks a cooperator with chance $x$ and then switches with chance $W(-d)$:
+
+$$
+\text{cooperators lost} = xN \cdot (1-x) \cdot W(d),
+\qquad
+\text{cooperators gained} = (1-x)N \cdot x \cdot W(-d)
+$$
+
+The number of cooperators changes by *gained minus lost*:
+
+$$
+\text{gained} - \text{lost} = x(1-x)\,N\,\big[\,W(-d) - W(d)\,\big]
+$$
+
+Since $x$ is the *share* of cooperators, the number divided by $N$, the share changes by this amount divided by $N$:
+
+$$
+\Delta x = x(1-x)\,\big[\,W(-d) - W(d)\,\big]
+$$
+
+Each part of this formula has a plain meaning:
+
+- **$x(1-x)$ is how often cooperators and defectors meet.** It is largest when the crowd is half and half, and zero when everyone plays the same strategy. Change only stops when one strategy has disappeared.
+- **$W(-d) - W(d)$ is the balance between the two kinds of switches.** The imitation rule has a simple property: the chance of copying someone who did $d$ points better and the chance of copying someone who did $d$ points worse always add up to 100%, so $W(-d) = 1 - W(d)$, and the bracket equals $1 - 2\,W(d)$. Since defectors always score more, $W(d)$ is above 50%, which makes the bracket negative.
+
+**So the share of cooperators shrinks in every round, whatever the temptation $b$**, until no cooperator is left.
+
+Back to the example, with $K = 0.1$: the gap is $d = 120 - 99 = 21$ points, a huge difference for such careful players. So $W(d) \approx 100\%$ and $W(-d) \approx 0\%$, and
+
+$$
+\Delta x \approx 0.5 \times 0.5 \times (0 - 1) = -0.25.
+$$
+
+In a single round, cooperation drops from half the crowd to about a quarter.
+
+
+@fig-crowd runs the full simulation from three starting points: a single defector, 25 defectors, and half the crowd.
+
+```{r}
+#| label: fig-crowd
+#| fig-cap: "In a crowd where everyone meets everyone, defection takes over from any starting point, even a single defector. 200 players, temptation b = 1.2."
+#| code-summary: "Code: a well-mixed crowd from three starting points"
+
+crowd <- tibble(defectors = c(1, 25, 100)) |>
+  mutate(
+    label = paste(defectors, if_else(defectors == 1, "defector", "defectors")),
+    run   = map(defectors, \(k) make_network("everyone", n = 200) |>
+                  simulate(b = 1.2, steps = 40, init = start_with(200, k)) |>
+                  coop_over_time())
+  ) |>
+  unnest(run)
+
+crowd |>
+  ggplot(aes(round, cooperation, linetype = label)) +
+  geom_line() +
+  # scale_colour_manual(values = shades(3)) +
+  scale_x_continuous(limits = c(-3, 40), breaks = seq(0, 40, by = 10)) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    title    = "In a crowd, cooperation dies",
+    subtitle = "Share of cooperators, starting from 1, 25 or 100 defectors",
+    x = "Round", y = NULL
+  ) +
+  theme_bmh()
+```
+
+The starting point changes *how fast* cooperation collapses, not *whether* it collapses. With a single defector, nothing seems to happen for the first few rounds: almost nobody meets the defector, so $x(1-x)$ is tiny and few players switch. But every cooperator who copies the defector becomes a defector too, so their number roughly doubles each round, and the collapse accelerates. A crowd of cooperators cannot resist even one defector.
+
+## Just friends
+
+The crowd assumed that everyone meets everyone. Real people don't: they meet their friends, colleagues and neighbours. So let's change one assumption and keep everything else (the payoffs, $b = 1.2$, the imitation rule): Each player plays the game only with their friends, and compares their score only with a friend.
+
+This one change matters because **your score now depends only on what your friends do.** A cooperator earns 1 for each cooperating friend; a defector earns $b$ for each cooperating friend; nobody earns anything from friends who defect. For all players at once:
+
+$$
+\boldsymbol{\pi} = (A\,\mathbf{s}) \odot \big(\mathbf{s} + b\,(\mathbf{1} - \mathbf{s})\big)
+$$
+
+Here $\mathbf{s}$ lists every player, with 1 for a cooperator and 0 for a defector, and $A$ records who is friends with whom. $A\mathbf{s}$ counts each player's cooperating friends. The second factor equals 1 for cooperators and $b$ for defectors, and $\odot$ multiplies the two lists element by element. The appendix works through a small example.
+
+In the crowd, every defector collected $b$ from *every* cooperator, so defectors always won. With friends, a defector only collects from the cooperators it is actually friends with, and that is not necessarily many.
+
+### Two situations
+
+@fig-friends shows two small networks. Each circle is a player, each line a friendship, and the number is that player's score for the round.
+
+**When two groups meet** (left), the cooperators all have four cooperating friends and score 4. The defector on the link between the groups has a single cooperating friend and scores $1 \times 1.2 = 1.2$; the other defectors have no cooperating friends and score 0. When that defector compares itself with the cooperator it knows, it sees a friend doing far better, and it tends to switch. **A group of cooperators holds its ground**, because defectors outside it can only reach it through a few links.
+
+**When a defector is inside the group** (right), it is friends with four cooperators and scores $4 \times 1.2 = 4.8$, while each of them, with one friend now defecting, scores 3. Every friend it has sees it doing better, and defection spreads through the group.
+
+The rule behind both: **a defector does well only when it is friends with many cooperators.** Cooperators are safe when their friends are mostly cooperators and defectors can reach them only through a few links. They are exposed when a defector sits among them.
+
+```{r}
+#| label: fig-friends
+#| layout-ncol: 2
+#| fig-cap: "Scores for one round, with temptation b = 1.2. Filled circles are cooperators; each line is a friendship."
+#| fig-subcap:
+#|   - "Two friend groups, linked by one friendship."
+#|   - "A defector inside a group of friends."
+#| code-summary: "Code: two small networks of friends"
+
+# Each player's score, exactly as in simulate(): cooperating friends times 1 or b
+round_scores <- \(g, s, b = 1.2) {
+  n_c <- as.vector(igraph::as_adjacency_matrix(g) %*% s)
+  if_else(s == 1, n_c, b * n_c)
+}
+
+draw_friends <- \(g, s) {
+  g |>
+    activate(nodes) |>
+    mutate(
+      state = if_else(s == 1, "Cooperator", "Defector"),
+      label = format(round_scores(g, s), nsmall = 1)
+    ) |>
+    ggraph(layout = "stress") +
+    geom_edge_link(colour = alpha(palette$ink, 0.4)) +
+    geom_node_point(aes(fill = state), shape = 21, size = 12, colour = palette$ink) +
+    geom_node_text(aes(label = label, colour = state), family = "literata", size = 3.6) +
+    scale_fill_manual(values = state_colours) +
+    scale_colour_manual(values = c(Cooperator = palette$paper, Defector = palette$ink),
+                        guide = "none") +
+    labs(fill = NULL) +
+    theme_bmh_void()
+}
+
+# Left: five cooperating friends and five defecting friends, one friendship between the groups
+two_groups <- create_complete(5) |>
+  bind_graphs(create_complete(5)) |>
+  bind_edges(tibble(from = 5, to = 6))
+
+draw_friends(two_groups, s = c(1, 1, 1, 1, 1, 0, 0, 0, 0, 0))
+
+# Right: five friends, one of whom defects
+draw_friends(create_complete(5), s = c(1, 1, 0, 1, 1))
+```
+
+
+
+### A close-knit society
+
+Now the full simulation, with a whole society built from friend circles. Players sit in a circle, and each is friends with the two people on either side: four friends each, most of whom also know each other. We start from a random half-and-half mix, as in the crowd, so the question is whether cooperators can find each other and form groups before defectors break in.
+
+```{r}
+#| label: fig-close-knit
+#| fig-cap: "Share of cooperators over time in a close-knit network of 1,024 players, compared with the crowd. Temptation b = 1.2."
+#| code-summary: "Code: cooperation in a close-knit network"
+
+bind_rows(
+  `Close-knit` = make_network("close_knit") |>
+    simulate(b = 1.2, steps = 300) |>
+    coop_over_time(),
+  Crowd = make_network("everyone", n = 200) |>
+    simulate(b = 1.2, steps = 300) |>
+    coop_over_time(),
+  .id = "society"
+) |>
+  ggplot(aes(round, cooperation, colour = society, linetype = society)) +
+  geom_line() +
+  geom_text(
+    data = \(d) filter(d, round == max(round)),
+    aes(label = society), hjust = 0, nudge_x = 5, size = 3.6
+  ) +
+  scale_colour_manual(values = shades(2)) +
+  scale_x_continuous(limits = c(0, 370), breaks = seq(0, 300, by = 100)) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    title    = "Friends versus the crowd",   # CHECK: retitle once you see the result
+    subtitle = "Share of cooperators",
+    x = "Round", y = NULL
+  ) +
+  theme_bmh()
+```
+
+
+
+## Hubs
+
+Real friendship networks are not that even either. In a close-knit circle everyone has four friends; in real life, most people have a handful of connections and a few have very many. In a network grown by preferential attachment, where newcomers befriend already popular players, the share of players with $k$ friends falls like a power law,
+
+$$
+P(k) \propto k^{-3},
+$$
+
+so most players have two or three friends while a few hubs have dozens.
+
+Hubs change the comparison. A cooperating hub with $k_h$ friends, most of them cooperators, scores about $k_h$. A defecting player on the edge of the network, with only 2 friends, scores at most $2b < 4$. Whenever
+
+$$
+k_h > 2b,
+$$
+
+that player looks at the hub, sees a friend doing much better, and copies cooperation. Hubs act as **visible, successful examples**, and cooperation spreads outward from them.
+
+To test this, we run every network type across the whole range of temptation, five times each, and record the share of cooperators once it settles: the average over the last 200 of 1,000 rounds (@fig-networks).
+
+::: {.column-margin}
+**The network types**
+
+- *Close-knit*: four friends each, who mostly know each other.
+- *Small world*: the close-knit network, with 5% of friendships rewired at random.
+- *Random*: four friends each, chosen at random.
+- *Hubs*: grown by preferential attachment, four friends on average.
+
+Hubs promoting cooperation is a well-known result.^[Santos, F. C., & Pacheco, J. M. (2005). Scale-free networks provide a unifying framework for the emergence of cooperation. *Physical Review Letters*, 95, 098104.]
+:::
+
+```{r}
+#| label: sweep
+#| code-summary: "Code: run every network at every temptation (the slow part, a few minutes)"
+
+network_names <- c(
+  close_knit  = "Close-knit",
+  small_world = "Small world",
+  random      = "Random",
+  scale_free  = "Hubs"
+)
+
+sweep <- expand_grid(
+  network     = names(network_names),
+  payoff_rule = c("total", "average"),
+  b           = seq(1, 2, by = 0.1),
+  run         = 1:5
+) |>
+  mutate(
+    cooperation = pmap_dbl(
+      list(network, b, payoff_rule),
+      \(network, b, payoff_rule) make_network(network) |>
+        simulate(b = b, payoff_rule = payoff_rule) |>
+        tail(200) |>
+        map_dbl(mean) |>
+        mean()
+    )
+  ) |>
+  group_by(network, payoff_rule, b) |>
+  summarise(cooperation = mean(cooperation), .groups = "drop") |>
+  mutate(network = factor(network, levels = names(network_names), labels = network_names))
+```
+
+```{r}
+#| label: fig-networks
+#| column: page-right
+#| fig-cap: "Share of cooperators once the simulation settles, by network shape and temptation. Each point averages five runs."
+#| code-summary: "Code: comparing network shapes"
+
+sweep |>
+  filter(payoff_rule == "total") |>
+  ggplot(aes(b, cooperation, colour = network, linetype = network)) +
+  geom_line() +
+  geom_point(size = 1.5) +
+  scale_colour_manual(values = shades(4)) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    title    = "Hubs keep cooperation alive",   # CHECK: retitle if the figure says otherwise
+    subtitle = "Share of cooperators by network shape",
+    x = "Temptation b", y = NULL, colour = NULL, linetype = NULL
+  ) +
+  theme_bmh() +
+  theme(legend.position = "bottom")
+```
+
+<!-- CHECK: describe the figure, e.g. where each line drops and how far the hubs line holds out. -->
+The hub network should sustain cooperation at temptations that wipe it out in the other networks. @fig-hubs shows why: after the run, the largest nodes, the hubs, are the cooperators.
+
+```{r}
+#| label: fig-hubs
+#| fig-cap: "A smaller hub network (300 players) after 1,000 rounds at b = 1.2. Node size shows the number of friends; filled circles are cooperators."
+#| code-summary: "Code: who cooperates in a hub network"
+
+hub_net    <- make_network("scale_free", n = 300)
+hub_states <- hub_net |> simulate(b = 1.2) |> tail(1) |> pluck(1)
+
+hub_net |>
+  activate(nodes) |>
+  mutate(
+    state  = if_else(hub_states == 1, "Cooperator", "Defector"),
+    degree = centrality_degree()
+  ) |>
+  ggraph(layout = "stress") +
+  geom_edge_link(colour = alpha(palette$ink, 0.2)) +
+  geom_node_point(aes(size = degree, fill = state), shape = 21, colour = palette$ink) +
+  scale_fill_manual(values = state_colours) +
+  scale_size(range = c(1, 8), guide = "none") +
+  labs(fill = NULL) +
+  theme_bmh_void()
+```
+
+## The twist: how rewards are counted
+
+So far, a player's score is the **sum** over all their friendships. That's exactly what makes hubs rich: more friends, more points. But friendships cost time and effort. If every friendship has a cost, a fairer measure of success is the **average** score per friendship:
+
+$$
+\tilde{\pi}_i = \frac{\pi_i}{k_i},
+\qquad
+\tilde{\pi}_i \in [0, 1] \text{ for a cooperator},
+\qquad
+\tilde{\pi}_i \in [0, b] \text{ for a defector}
+$$
+
+Under this rule, a hub is no richer than anyone else just because it has many friends. Its advantage came entirely from its number of links, and averaging removes exactly that. Nothing about the network changes, only the accounting (@fig-rules).
+
+
+
+```{r}
+#| label: fig-rules
+#| column: page-right
+#| fig-cap: "The same comparison under the two accounting rules. Summing scores rewards hubs for their friendships; averaging removes that advantage."
+#| code-summary: "Code: total versus average scores"
+
+sweep |>
+  mutate(payoff_rule = if_else(payoff_rule == "total",
+                               "Scores summed over friendships",
+                               "Scores averaged over friendships")) |>
+  ggplot(aes(b, cooperation, colour = network, linetype = network)) +
+  geom_line() +
+  geom_point(size = 1.5) +
+  facet_wrap(~ payoff_rule) +
+  scale_colour_manual(values = shades(4)) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(
+    title    = "The rules matter as much as the network",
+    subtitle = "Share of cooperators under two ways of counting rewards",
+    x = "Temptation b", y = NULL, colour = NULL, linetype = NULL
+  ) +
+  theme_bmh() +
+  theme(legend.position = "bottom")
+```
+
+<!-- CHECK: describe how much the hubs line drops under averaging. -->
+
+## What we learned
+
+**Cooperation is less about character than about architecture.** The players in this post were identical and purely self-interested. Whether they cooperated depended on whom they met and whom they compared themselves with. In a crowd, cheating always looks better and cooperation dies. Among friends, cooperators can shelter in close-knit groups. Around hubs, successful cooperators become examples that others copy. <!-- CHECK: adjust to what your figures show -->
+
+**Architecture alone isn't enough.** The hub effect disappeared as soon as we changed how rewards were counted. The same network can support cooperation or undermine it, depending on the rules that turn relationships into payoffs. In other words, structure and institutions decide together.
+
+**The model is deliberately simple.** The networks never change, there is only one game, and imitation is the only way players learn. Each of those assumptions is a door to the next post: players who choose their friends, who remember past rounds, or who follow rules set by a group.
+
+## Appendix: how the model works {#appendix}
+
+The whole simulation rests on two functions and two small helpers. This appendix explains what each one does, then follows a single round on a network of just four players, so you can check every step by hand. The numbers in brackets below refer to the numbered notes in the code.
+
+```{r}
+#| label: model
+#| eval: false
+#| code-fold: true
+
+make_network <- \(type, n = 1024) {                                         # <1>
+  switch(type,
+    everyone    = create_complete(n),                                       # <2>
+    close_knit  = play_smallworld(n_dim = 1, dim_size = n,
+                                  order = 2, p_rewire = 0),                 # <3>
+    small_world = play_smallworld(n_dim = 1, dim_size = n,
+                                  order = 2, p_rewire = 0.05),              # <4>
+    random      = play_degree(rep(4, n), method = "vl"),                    # <5>
+    scale_free  = play_barabasi_albert(n, power = 1, growth = 2,
+                                       directed = FALSE)                    # <6>
+  ) |>
+    activate(nodes) |>
+    filter(!node_is_isolated())                                             # <7>
+}
+
+simulate <- \(g, b, K = 0.1, rho0 = 0.5, steps = 1000, payoff_rule = "total", init = NULL) {
+  n     <- igraph::vcount(g)
+  A     <- igraph::as_adjacency_matrix(g, sparse = TRUE)                     # <8>
+  deg   <- igraph::degree(g)
+  nbrs  <- igraph::as_adj_list(g) |> map(as.integer) |> unlist()             # <9>
+  start <- c(0, cumsum(deg))[seq_len(n)]
+
+  step <- \(s, ...) {
+    n_c  <- as.vector(A %*% s)                                               # <10>
+    pay  <- if_else(s == 1, n_c, b * n_c)                                    # <11>
+    if (payoff_rule == "average") pay <- pay / deg                           # <12>
+    j    <- nbrs[start + ceiling(runif(n) * deg)]                            # <13>
+    copy <- runif(n) < 1 / (1 + exp(-(pay[j] - pay) / K))                    # <14>
+    if_else(copy, s[j], s)                                                   # <15>
+  }
+
+  accumulate(seq_len(steps), step, .init = init %||% rbinom(n, 1, rho0))     # <16>
+}
+
+start_with <- \(n, defectors) sample(c(rep(0, defectors), rep(1, n - defectors)))   # <17>
+
+coop_over_time <- \(states) tibble(                                          # <18>
+  round       = seq_along(states) - 1,
+  cooperation = map_dbl(states, mean)
+)
+```
+1. Build one of five networks with `n` players (1,024 by default).
+2. Everyone is connected to everyone: a well-mixed crowd.
+3. Players sit in a circle and are friends with the two people on each side: four friends each, most of whom are also friends with each other.
+4. The same circle, with 5% of friendships rewired to random players far away.
+5. A random network where everyone has exactly four friends: as many as in the circle, but with no friend groups.
+6. A network grown by preferential attachment: newcomers befriend already popular players, which creates hubs.
+7. A safety net: remove any player left without friends, who could not play.
+8. The adjacency matrix $A$: entry $(i, j)$ is 1 if players $i$ and $j$ are friends.
+9. Every player's friends in one long list, and where each player's part of it `start`s.
+10. Count each player's cooperating friends: $A\mathbf{s}$.
+11. Apply the payoff table: 1 per cooperating friend for a cooperator, $b$ for a defector.
+12. The alternative accounting rule: average the score over friendships instead of summing.
+13. Each player picks one random friend to compare with.
+14. Copy that friend with probability $W$, the imitation rule.
+15. Players who copy take the friend's strategy; the others keep theirs.
+16. Start from `init` if given, otherwise from a random mix; run `steps` rounds and keep every one.
+17. A starting crowd of `n` players with exactly `defectors` defectors.
+18. Turn the list of rounds into a table: the share of cooperators in each round.
+
+### The two functions
+
+**`make_network(type, n)` decides who meets whom.** It returns a network: a list of players and the friendships between them. The five types are the five societies of this post:
+
+$$
+\begin{array}{l|l|l}
+\texttt{type} & \text{who you meet} & \text{used in} \\ \hline
+\texttt{everyone}     & \text{every other player} & \text{We are all friends} \\
+\texttt{close\_knit}  & \text{4 friends, who mostly know each other} & \text{Just friends} \\
+\texttt{small\_world} & \text{the same, with a few far-away friendships} & \text{Hubs} \\
+\texttt{random}       & \text{4 friends chosen at random} & \text{Hubs} \\
+\texttt{scale\_free}  & \text{few friends for most, many for a few hubs} & \text{Hubs}
+\end{array}
+$$
+
+Apart from the crowd, every network gives players four friends on average, so when results differ, it is because of the network's *shape*, not the number of contacts.
+
+**`simulate(g, b, ...)` plays the game on that network.** Its inputs are the assumptions of the post:
+
+$$
+\begin{array}{l|l|l}
+\text{input} & \text{meaning} & \text{default} \\ \hline
+\texttt{g} & \text{the network, from make\_network()} & \text{} \\
+\texttt{b} & \text{the temptation} & \text{} \\
+\texttt{K} & \text{the noise in comparisons} & 0.1 \\
+\texttt{rho0} & \text{share of cooperators at the start, if no init} & 0.5 \\
+\texttt{init} & \text{an exact starting mix, from start\_with()} & \text{none} \\
+\texttt{steps} & \text{number of rounds} & 1{,}000 \\
+\texttt{payoff\_rule} & \text{"total" or "average"} & \text{"total"}
+\end{array}
+$$
+
+Its output is the history of the game: a list with one entry per round, where each entry gives every player's strategy, 1 for cooperate and 0 for defect. Everything in the figures is computed from that history.
+
+### One round, step by step
+
+Take four players sitting in a ring, so each has two friends: 1 is friends with 2 and 4, 2 with 1 and 3, and so on. Players 1, 2 and 3 cooperate, player 4 defects, and $b = 1.2$, $K = 0.1$.
+
+**The network as a table.** The adjacency matrix $A$ has a 1 wherever two players are friends. The strategies form the list $\mathbf{s}$:
+
+$$
+A = \begin{pmatrix} 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 0 \\ 0 & 1 & 0 & 1 \\ 1 & 0 & 1 & 0 \end{pmatrix},
+\qquad
+\mathbf{s} = \begin{pmatrix} 1 \\ 1 \\ 1 \\ 0 \end{pmatrix}
+$$
+
+**(10) Count cooperating friends.** Multiplying $A$ by $\mathbf{s}$ adds up, for each player, the strategies of their friends, which is the number of cooperators among them:
+
+$$
+A\mathbf{s} = \begin{pmatrix} s_2 + s_4 \\ s_1 + s_3 \\ s_2 + s_4 \\ s_1 + s_3 \end{pmatrix} = \begin{pmatrix} 1 \\ 2 \\ 1 \\ 2 \end{pmatrix}
+$$
+
+**(11) Scores.** Cooperators earn 1 per cooperating friend; the defector earns $b$:
+
+$$
+\boldsymbol{\pi} = \begin{pmatrix} 1 \times 1 \\ 2 \times 1 \\ 1 \times 1 \\ 2 \times 1.2 \end{pmatrix} = \begin{pmatrix} 1 \\ 2 \\ 1 \\ 2.4 \end{pmatrix}
+$$
+
+Player 4 is friends with two cooperators and earns the most: a defector doing well because it sits among cooperators, as in @fig-friends.
+
+**(12) The alternative rule.** With `payoff_rule = "average"`, each score is divided by the number of friends: here everyone has 2, so the scores become 0.5, 1, 0.5 and 1.2.
+
+**(9) and (13) Pick a friend.** We need one random friend for every player at once. Note 9 writes all friend lists one after another in a single list, and records where each player's part starts:
+
+$$
+\texttt{nbrs} = (\underbrace{2, 4}_{\text{player 1}}, \underbrace{1, 3}_{\text{player 2}}, \underbrace{2, 4}_{\text{player 3}}, \underbrace{1, 3}_{\text{player 4}}),
+\qquad
+\texttt{start} = (0, 2, 4, 6)
+$$
+
+Note 13 draws, for each player, a random position within their own part: `ceiling(runif(n) * deg)` gives 1 or 2 here, since everyone has two friends. Suppose the draws are $(2, 1, 2, 1)$. Then the positions in `nbrs` are $\texttt{start} + \text{draw} = (2, 3, 6, 7)$, and the chosen friends are $j = (4, 1, 4, 1)$: players 1 and 3 look at player 4, players 2 and 4 look at player 1. The same trick works for any network, whatever the number of friends, with no loop over players.
+
+**(14) Decide whether to copy.** Each player compares their score with their chosen friend's, using the imitation rule:
+
+$$
+\begin{array}{c|c|c|c}
+\text{player} & \text{looks at} & \text{score difference} & \text{chance of copying} \\ \hline
+1 & 4 & 2.4 - 1 = 1.4 & \approx 100\% \\
+2 & 1 & 1 - 2 = -1 & \approx 0\% \\
+3 & 4 & 2.4 - 1 = 1.4 & \approx 100\% \\
+4 & 1 & 1 - 2.4 = -1.4 & \approx 0\%
+\end{array}
+$$
+
+`runif(n) < W` turns each chance into a yes or a no: a random number between 0 and 1 is below 0.9999 almost surely, and below 0.0001 almost never.
+
+**(15) Update.** Players 1 and 3 copy player 4 and defect; players 2 and 4 keep their strategies. The new list is $\mathbf{s} = (0, 1, 0, 0)$: one defector became three in a single round.
+
+All players decide at the same time, based on the same round's scores. This is a modelling choice called synchronous updating.
+
+**(16) Repeat.** `accumulate()` applies `step` to the starting list, then to the result, then to that result, and keeps every intermediate list. It does the same as this loop:
+
+```r
+states <- list(s0)
+for (t in 1:steps) states[[t + 1]] <- step(states[[t]])
+```
+
+So `simulate(..., steps = 1000)` returns 1,001 lists: the start and one per round.
+
