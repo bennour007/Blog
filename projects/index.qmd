@@ -1,13 +1,13 @@
 ---
-title: "Projects"
+title: "Some Projects"
 listing:
   contents: "*/index.qmd"
   sort: "date desc"
-  type: grid
+  type: default
   categories: true
+  feed: true
+  fields: [image, date, reading-time, title, description, categories]
 page-layout: full
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+In here you can find some projects I worked on. For now, you won't find much yet since I'm upgrading my digital home. But I will be posting in here progressively. 

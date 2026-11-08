@@ -2,16 +2,11 @@
 title: An emotional state that is associated with mild to severe levels of discomfort!
 date: '2026-05-12'
 slug: drunk confessions
-categories: []
-tags: []
-subtitle: ''
 summary: 'Do not drink too much and then try to explain to your professors an idea you got when high'
-authors: []
 featured: false
 draft: false
 image: featured.jpg
-image-alt: "Henri Rousseau, 'The Dream' , 1910, oil on canvas"
-projects: []
+image-alt: "Henri Rousseau, The Dream , 1910, oil on canvas"
 ---
 
 

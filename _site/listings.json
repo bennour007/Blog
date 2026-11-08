@@ -1,5 +1,15 @@
 [
   {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/proj_new_chapter/index.html"
+    ]
+  },
+  {
+    "listing": "/cv/index.html",
+    "items": []
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/naive/index.html",
@@ -18,21 +28,6 @@
       "/blog/evolution/index.html",
       "/blog/breaking/index.html",
       "/blog/overwhelmed/index.html"
-    ]
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/freedom/index.html",
-      "/projects/elections_remake/index.html",
-      "/projects/tatearts/index.html",
-      "/projects/transit_cost/index.html",
-      "/projects/education_tunisia/index.html",
-      "/projects/burgers/index.html",
-      "/projects/elections/index.html",
-      "/projects/ins/index.html",
-      "/projects/turbines/index.html",
-      "/projects/research/index.html"
     ]
   }
 ]

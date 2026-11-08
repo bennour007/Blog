@@ -1,0 +1,186 @@
+# Newest first: the page shows entries in exactly this order.
+# Fields: title, when, where, note, tools, type, categories, current, links
+# Only title, when and categories are required. current: true fills the dot.
+#
+# Links example, add under any entry:
+#   links:
+#     - label: "DOI"
+#       url: "https://doi.org/..."
+
+- title: "Teaching Quantitative Methods (BA)"
+  when: "Sep 2026 – present"
+  where: "University of Pécs - Faculty of Business and Economics"
+  note: "Tutored the seminars for the introductory course in Algebra and Calculus"
+  categories: [Work]
+  current: true
+
+- title: "PhD candidate, Regional Development"
+  when: "2022 – present"            # TODO: your start year
+  where: "Doctoral School of Regional Policy and Economics, University of Pécs - Faculty of Business and Economics"
+  note: "Stipendium Hungaricum scholarship. ETA for final defense: Feb 2027"
+  categories: [Education]
+  current: true
+
+- title: "How European regions optimise their complexity through technological diversification"
+  when: "Sep 2026"
+  where: "EconNet Workshop Pécs, University of Pécs - Faculty of Business and Economics"
+  type: "Conference"
+  categories: [Research]
+
+- title: "Foreign Direct Investment and the Limits of Regional Upgrading: Evidence from GVC Roles in Central and Eastern Europe"
+  when: "Aug 2026"
+  where: "ERSA 2026 Congress · Sofia, Bulgaria"
+  note: "With Zoltán Gál."
+  type: "Conference"
+  categories: [Research]
+
+- title: "Contextualising Regional Technological Diversification in
+European Regions: Network Structure, Industrial Alignment, Entrepreneurial Ecosystems, and
+Spatial Interdependence"
+  when: "May 2026"
+  where: "MKE Doctoral workshop, University of Pécs - Faculty of Business and Economics"
+  type: "Conference"
+  categories: [Research]
+
+- title: "Regional potential and friction for technological diversification: a machine learning frontier approach"
+  when: "Jan 2026"
+  where: "Journal of Physics: Complexity, 7(1), 015005 · Open access"
+  type: "Journal article"
+  categories: [Research]   # keep whatever value your file uses now
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1088/2632-072X/ae35bc"
+  # TODO: add the DOI link
+
+- title: "Regional potential and friction for technological diversification"
+  when: "Jan 2026"
+  where: "8th Geography of Innovation Conference, Corvinus University · Budapest"
+  type: "Conference"
+  categories: [Research]
+
+- title: "Predicting regional patents diversification and their triggers: an explainable machine learning approach"
+  when: "Aug 2025"
+  where: "64th ERSA Congress · Athens, Greece"
+  type: "Conference"
+  categories: [Research]
+
+- title: "Efficiency of Eastern European schools and the role of their context"
+  when: "2025"
+  where: "Society and Economy, 47(3), 318–337"
+  type: "Journal article"
+  categories: [Research]
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1556/204.2025.00005"
+  # TODO: add the DOI link
+
+- title: "Structural Challenges and GVC Positions in FDI Dependent Economies: Insights from the V4 Regions"
+  when: "Jun 2025"
+  where: "XVII Finance Days in Pécs, Finance and Accounting International Scientific Conference · Pécs"
+  note: "With Zoltán Gál."
+  type: "Conference"
+  categories: [Research]
+
+- title: "Data Analyst Consultant, severity assessment"
+  when: "Oct 2024 – Jun 2025"
+  where: "IDMC (Internal Displacement Monitoring Centre) · Geneva, Switzerland"
+  note: "Built a config-driven targets pipeline for REACH and IOM needs-assessment data from 15 countries: survey-weighted estimates, group tests and disaggregations, with small cells suppressed automatically, merged into a 2022–2024 severity dataset."
+  tools: "R · targets · srvyr"
+  categories: [Work]
+
+- title: "Adoption of digital web technology, inequality and the role of space"
+  when: "May 2024"
+  where: "RKK40 Anniversary Conference, HUN-REN Institute for Regional Studies · Pécs"
+  note: "With Stefan Apostol and András Gyimesi."
+  type: "Conference"
+  categories: [Research]
+
+- title: "How Hungarian Universities and Research Institutions Can Expand Their Scientific Expertise?"
+  when: "Apr 2024"
+  where: "MKE Doctoral workshop, University of Pécs - Faculty of Business and Economics"
+  type: "Conference"
+  categories: [Research]
+
+- title: "Visegrad Countries and Education Challenges: An Efficiency Analysis"
+  when: "Mar 2024"
+  where: "Globalisation, Integration, Cooperation conference, University of Szeged · Szeged"
+  type: "Conference"
+  categories: [Research]
+
+# TODO: these two repository records have no venue. Add one, then uncomment.
+
+#
+# - title: "Efficiency of Schools in the Visegrad Region, a StoNED Approach"
+#   when: "2023"
+#   where: ""
+#   type: "Conference"
+#   categories: [Research]
+
+- title: "Consultant"
+  when: "Aug – Dec 2023"
+  where: "The Graph Network · Geneva, Switzerland"
+  note: "Designed and recorded data science courses."
+  tools: "R"
+  categories: [Work]
+
+- title: "Consultant"
+  when: "Sep 2022 – Jan 2023"
+  where: "Geomatys · Montpellier, France"
+  note: "Refactored and redesigned R code bases, optimising running time and memory use."
+  tools: "R · data.table"
+  categories: [Work]
+
+- title: "Data Officer"
+  when: "Apr – Sep 2022"
+  where: "REACH Initiative · Tunis"
+  note: "Designed data pipelines and monitoring dashboards for several teams, and coordinated inputs on data collection."
+  tools: "R · Python · PostgreSQL · Azure"
+  categories: [Work]
+
+- title: "Database Specialist"
+  when: "Jan 2021 – Jan 2022"
+  where: "National Pen · Tunis"
+  note: "Automated key processes, and cleaned and managed company data."
+  tools: "SQL Server · MS Access"
+  categories: [Work]
+
+- title: "MSc in Business Analytics"
+  when: "Dec 2020"
+  where: "Tunis Business School"
+  note: "Efficiency analysis and modelling, computational statistics."
+  categories: [Education]
+
+- title: "Data Analyst"
+  when: "Mar – Aug 2020"
+  where: "EMRHOD Consulting · Tunis"
+  note: "Developed client proposals, and designed and ran quantitative and qualitative studies, including focus groups."
+  tools: "SPSS · R · Python · Power BI"
+  categories: [Work]
+
+- title: "Teaching Assistant"
+  when: "Jan – Jul 2020"
+  where: "Tunis Business School"
+  note: "Tutored the introductory course in descriptive statistics and probability."
+  categories: [Work]
+
+- title: "Team Lead, Analysis"
+  when: "2019 – 2020"
+  where: "Data-colab"
+  categories: [Misc]
+
+- title: "Operations Intern"
+  when: "Jun – Aug 2019"
+  where: "N3XT Tunisie · Tunis"
+  note: "Implemented SAP S/4HANA operations modules to match clients' business needs."
+  categories: [Work]
+
+- title: "BSc in Econometrics"
+  when: "Jul 2018"
+  where: "ISG Sousse"
+  note: "Probability and statistics, econometrics and operations research."
+  categories: [Education]
+
+- title: "Co-founder and board member"
+  when: "2018 – 2020"
+  where: "TBS Data Science Club, Tunis Business School"
+  categories: [Misc]

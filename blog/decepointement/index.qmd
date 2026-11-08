@@ -4,7 +4,6 @@
 title: "New goals?"
 subtitle: ""
 summary: "News, potential changes, and self validation"
-authors: []
 tags: []
 categories: []
 date: 2021-05-02T21:14:11+01:00

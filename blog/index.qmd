@@ -1,11 +1,14 @@
 ---
-title: "Some writings"
+title: "Some Writings"
+body-classes: blog
+toc: false
 listing:
-  contents: "*/index.*"
+  contents: "*/index.qmd"
   sort: "date desc"
   type: default
   categories: true
   feed: true
+  fields: [image, date, reading-time, title, description, categories]
 page-layout: full
 ---
 

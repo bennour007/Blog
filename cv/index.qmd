@@ -1,0 +1,137 @@
+---
+title: "Curriculum Vitae"
+listing:
+  - id: timeline
+    contents: timeline.yml
+    template: timeline.ejs
+    sort: false
+    categories: false
+    filter-ui: false
+    sort-ui: false
+    page-size: 200
+editor_options: 
+  chunk_output_type: console
+---
+
+I'm a PhD candidate in Regional Development at the University of Pécs, Hungary, working on regional innovation, technological diversification and efficiency analysis. Before and alongside the PhD, I've worked as a data analyst and consultant for humanitarian, research and private organisations.
+
+
+[Download the PDF](/files/academic-cv.pdf){.cv-download}
+
+
+## How I work
+
+I build pipelines so the analysis runs itself, and my time goes into the reporting.
+
+```{r}
+#| label: how-i-work
+#| message: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(ggiraph)
+
+ink   <- "#4e1d4c"
+paper <- "#ebd3a2"
+gdtools::register_gfont("Literata")
+
+workflow <- here::here("cv", "workflow.yml") |>
+  yaml::read_yaml() |>
+  map(as_tibble) |>
+  list_rbind() |>
+  mutate(
+    x   = row_number(),
+    tip = glue::glue(
+      "<strong>{stage}</strong><br><em>{tools}</em><br><br>{how}<br><br>{example}"
+    )
+  )
+
+p <- workflow |>
+  ggplot(aes(x, 0)) +
+  annotate("segment", x = 1, xend = 4, y = 0, yend = 0,
+           colour = ink, linewidth = 0.6) +
+  annotate("path",
+         x = c(4, 4, 1, 1),
+         y = c(-0.45, -0.8, -0.8, -0.45),
+         colour = ink, linewidth = 0.4, linetype = "dashed",
+         linejoin = "mitre",
+         arrow = arrow(length = unit(6, "pt"), type = "closed")) +
+  annotate("text", x = 2.5, y = -1.2,
+           label = "change anything, and only what depends on it reruns",
+           family = "Literata", fontface = "italic", colour = ink, size = 4) +
+  geom_point_interactive(aes(tooltip = tip, data_id = stage),
+                         size = 9, shape = 21, fill = paper,
+                         colour = ink, stroke = 1.2) +
+  geom_text_interactive(aes(y = 0.45, label = stage, tooltip = tip, data_id = stage),
+                        family = "Literata", fontface = "bold",
+                        colour = ink, size = 5.5) +
+  geom_text_interactive(aes(y = -0.3, label = short, tooltip = tip, data_id = stage),
+                        family = "Literata", colour = ink, size = 3.4) +
+  scale_x_continuous(limits = c(0.5, 4.5)) +
+  scale_y_continuous(limits = c(-1.4, 0.8)) +
+  theme_void() +
+  theme(plot.background = element_rect(fill = paper, colour = NA))
+
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+girafe(
+  ggobj = p, width_svg = 8, height_svg = 3, bg = paper,
+  options = list(
+    opts_hover(css = "fill:#4e1d4c;"),
+    opts_hover_inv(css = "opacity:0.3;"),
+    opts_tooltip(css = paste(
+      "background:#4e1d4c; color:#ebd3a2; padding:10px 14px;",
+      "font-family:Literata,serif; border-radius:2px; max-width:320px;"
+    )),
+    opts_toolbar(saveaspng = FALSE),
+    opts_sizing(rescale = F)
+  )
+)
+```
+
+## Timeline
+
+```{=html}
+<div class="cv-tabs" role="group" aria-label="Filter the timeline" hidden>
+  <button type="button" data-filter="all" data-label="All" aria-pressed="true">All</button>
+  <button type="button" data-filter="research" data-label="Research" aria-pressed="false">Research</button>
+  <button type="button" data-filter="work" data-label="Work" aria-pressed="false">Work</button>
+  <button type="button" data-filter="education" data-label="Education" aria-pressed="false">Education</button>
+  <button type="button" data-filter="misc" data-label="Misc" aria-pressed="false">Misc</button>
+</div>
+```
+
+::: {#timeline}
+:::
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelector(".cv-tabs");
+  const entries = document.querySelectorAll(".cv-entry");
+  if (!tabs || !entries.length) return;
+
+  tabs.hidden = false;   // tabs appear only when the script runs
+
+  tabs.addEventListener("click", (event) => {
+    const tab = event.target.closest("button[data-filter]");
+    if (!tab) return;
+    const filter = tab.dataset.filter;
+
+    tabs.querySelectorAll("button").forEach((b) =>
+      b.setAttribute("aria-pressed", b === tab ? "true" : "false"));
+
+    entries.forEach((entry) => {
+      entry.hidden = filter !== "all" && entry.dataset.group !== filter;
+    });
+  });
+});
+</script>
+```

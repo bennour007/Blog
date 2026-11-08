@@ -2,6 +2,7 @@
 title: "Research"
 ---
 
-This is a Quarto website.
+Hello!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I'm still working on this part of the site.
+If you want to know more about my research you can check the CV page or my [ORCID](https://orcid.org/0000-0002-9651-4035)

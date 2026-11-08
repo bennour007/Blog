@@ -1,0 +1,23 @@
+- stage: "Data"
+  short: "data.table · tidyverse"
+  tools: "data.table · tidyverse · arrow · sf · srvyr"
+  how: "Large raw files are read and joined with data.table, then shaped with dplyr and tidyr; heavy intermediate sets go to Parquet."
+  example: "Dissertation: European patent records (REGPAT) for 30 countries, linked to NUTS 2 regions and 4-digit technology classes."
+
+- stage: "Pipeline"
+  short: "targets · crew · purrr"
+  tools: "targets · tarchetypes · crew · purrr"
+  how: "Every step is a documented function and a target; branching splits work by year, technology or country, and crew runs it in parallel."
+  example: "Dissertation: six linked pipelines, from machine learning to econometrics. IDMC: one config-driven pipeline over REACH and IOM needs-assessment data from 15 countries."
+
+- stage: "Model"
+  short: "tidymodels · fixest"
+  tools: "tidymodels · ranger · fixest · lme4 · pspatreg · survey"
+  how: "Specifications are named lists of formulas fitted with purrr::map, so a new model is one line."
+  example: "Journal of Physics: Complexity (2026): random forests trained per technology and year to estimate each region's diversification frontier, followed by fixed-effects, multilevel and spatial panel models."
+
+- stage: "Report"
+  short: "ggplot2 · gt · Quarto"
+  tools: "ggplot2 · ggraph · sf · gt · modelsummary · Quarto"
+  how: "Tables, maps and figures are targets too, so a late change reruns only what depends on it."
+  example: "Dissertation: regression tables, spatial cluster maps and correlation matrices built in the pipeline. IDMC: a harmonised 2022–2024 severity dataset with small cells suppressed automatically."
