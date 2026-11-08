@@ -7,10 +7,6 @@
     ]
   },
   {
-    "listing": "/cv/index.html",
-    "items": []
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/naive/index.html",
@@ -30,5 +26,9 @@
       "/blog/breaking/index.html",
       "/blog/overwhelmed/index.html"
     ]
+  },
+  {
+    "listing": "/cv/index.html",
+    "items": []
   }
 ]
