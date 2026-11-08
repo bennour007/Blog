@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 66049b03-6be9-469d-9e4a-1e2606219df8
+      url: https://silly-trifle-773ec5.netlify.app
