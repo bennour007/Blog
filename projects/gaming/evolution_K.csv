@@ -1,0 +1,8429 @@
+network,value,round,cooperation
+Close-knit,0.01,0,0.4969
+Close-knit,0.01,1,0.2701
+Close-knit,0.01,2,0.1506
+Close-knit,0.01,3,0.0953
+Close-knit,0.01,4,0.0719
+Close-knit,0.01,5,0.0561
+Close-knit,0.01,6,0.049
+Close-knit,0.01,7,0.0424
+Close-knit,0.01,8,0.0387
+Close-knit,0.01,9,0.0373
+Close-knit,0.01,10,0.0322
+Close-knit,0.01,11,0.0287
+Close-knit,0.01,12,0.0289
+Close-knit,0.01,13,0.027
+Close-knit,0.01,14,0.0254
+Close-knit,0.01,15,0.0225
+Close-knit,0.01,16,0.0203
+Close-knit,0.01,17,0.0193
+Close-knit,0.01,18,0.0172
+Close-knit,0.01,19,0.0158
+Close-knit,0.01,20,0.0141
+Close-knit,0.01,21,0.0113
+Close-knit,0.01,22,0.0104
+Close-knit,0.01,23,0.0102
+Close-knit,0.01,24,0.0098
+Close-knit,0.01,25,0.008
+Close-knit,0.01,26,0.0064
+Close-knit,0.01,27,0.0057
+Close-knit,0.01,28,0.0047
+Close-knit,0.01,29,0.0043
+Close-knit,0.01,30,0.0045
+Close-knit,0.01,31,0.0043
+Close-knit,0.01,32,0.0033
+Close-knit,0.01,33,0.0025
+Close-knit,0.01,34,0.0029
+Close-knit,0.01,35,0.0021
+Close-knit,0.01,36,0.0021
+Close-knit,0.01,37,8e-4
+Close-knit,0.01,38,6e-4
+Close-knit,0.01,39,6e-4
+Close-knit,0.01,40,6e-4
+Close-knit,0.01,41,0
+Close-knit,0.01,42,0
+Close-knit,0.01,43,0
+Close-knit,0.01,44,0
+Close-knit,0.01,45,0
+Close-knit,0.01,46,0
+Close-knit,0.01,47,0
+Close-knit,0.01,48,0
+Close-knit,0.01,49,0
+Close-knit,0.01,50,0
+Close-knit,0.01,51,0
+Close-knit,0.01,52,0
+Close-knit,0.01,53,0
+Close-knit,0.01,54,0
+Close-knit,0.01,55,0
+Close-knit,0.01,56,0
+Close-knit,0.01,57,0
+Close-knit,0.01,58,0
+Close-knit,0.01,59,0
+Close-knit,0.01,60,0
+Close-knit,0.01,61,0
+Close-knit,0.01,62,0
+Close-knit,0.01,63,0
+Close-knit,0.01,64,0
+Close-knit,0.01,65,0
+Close-knit,0.01,66,0
+Close-knit,0.01,67,0
+Close-knit,0.01,68,0
+Close-knit,0.01,69,0
+Close-knit,0.01,70,0
+Close-knit,0.01,71,0
+Close-knit,0.01,72,0
+Close-knit,0.01,73,0
+Close-knit,0.01,74,0
+Close-knit,0.01,75,0
+Close-knit,0.01,76,0
+Close-knit,0.01,77,0
+Close-knit,0.01,78,0
+Close-knit,0.01,79,0
+Close-knit,0.01,80,0
+Close-knit,0.01,81,0
+Close-knit,0.01,82,0
+Close-knit,0.01,83,0
+Close-knit,0.01,84,0
+Close-knit,0.01,85,0
+Close-knit,0.01,86,0
+Close-knit,0.01,87,0
+Close-knit,0.01,88,0
+Close-knit,0.01,89,0
+Close-knit,0.01,90,0
+Close-knit,0.01,91,0
+Close-knit,0.01,92,0
+Close-knit,0.01,93,0
+Close-knit,0.01,94,0
+Close-knit,0.01,95,0
+Close-knit,0.01,96,0
+Close-knit,0.01,97,0
+Close-knit,0.01,98,0
+Close-knit,0.01,99,0
+Close-knit,0.01,100,0
+Close-knit,0.01,101,0
+Close-knit,0.01,102,0
+Close-knit,0.01,103,0
+Close-knit,0.01,104,0
+Close-knit,0.01,105,0
+Close-knit,0.01,106,0
+Close-knit,0.01,107,0
+Close-knit,0.01,108,0
+Close-knit,0.01,109,0
+Close-knit,0.01,110,0
+Close-knit,0.01,111,0
+Close-knit,0.01,112,0
+Close-knit,0.01,113,0
+Close-knit,0.01,114,0
+Close-knit,0.01,115,0
+Close-knit,0.01,116,0
+Close-knit,0.01,117,0
+Close-knit,0.01,118,0
+Close-knit,0.01,119,0
+Close-knit,0.01,120,0
+Close-knit,0.01,121,0
+Close-knit,0.01,122,0
+Close-knit,0.01,123,0
+Close-knit,0.01,124,0
+Close-knit,0.01,125,0
+Close-knit,0.01,126,0
+Close-knit,0.01,127,0
+Close-knit,0.01,128,0
+Close-knit,0.01,129,0
+Close-knit,0.01,130,0
+Close-knit,0.01,131,0
+Close-knit,0.01,132,0
+Close-knit,0.01,133,0
+Close-knit,0.01,134,0
+Close-knit,0.01,135,0
+Close-knit,0.01,136,0
+Close-knit,0.01,137,0
+Close-knit,0.01,138,0
+Close-knit,0.01,139,0
+Close-knit,0.01,140,0
+Close-knit,0.01,141,0
+Close-knit,0.01,142,0
+Close-knit,0.01,143,0
+Close-knit,0.01,144,0
+Close-knit,0.01,145,0
+Close-knit,0.01,146,0
+Close-knit,0.01,147,0
+Close-knit,0.01,148,0
+Close-knit,0.01,149,0
+Close-knit,0.01,150,0
+Close-knit,0.01,151,0
+Close-knit,0.01,152,0
+Close-knit,0.01,153,0
+Close-knit,0.01,154,0
+Close-knit,0.01,155,0
+Close-knit,0.01,156,0
+Close-knit,0.01,157,0
+Close-knit,0.01,158,0
+Close-knit,0.01,159,0
+Close-knit,0.01,160,0
+Close-knit,0.01,161,0
+Close-knit,0.01,162,0
+Close-knit,0.01,163,0
+Close-knit,0.01,164,0
+Close-knit,0.01,165,0
+Close-knit,0.01,166,0
+Close-knit,0.01,167,0
+Close-knit,0.01,168,0
+Close-knit,0.01,169,0
+Close-knit,0.01,170,0
+Close-knit,0.01,171,0
+Close-knit,0.01,172,0
+Close-knit,0.01,173,0
+Close-knit,0.01,174,0
+Close-knit,0.01,175,0
+Close-knit,0.01,176,0
+Close-knit,0.01,177,0
+Close-knit,0.01,178,0
+Close-knit,0.01,179,0
+Close-knit,0.01,180,0
+Close-knit,0.01,181,0
+Close-knit,0.01,182,0
+Close-knit,0.01,183,0
+Close-knit,0.01,184,0
+Close-knit,0.01,185,0
+Close-knit,0.01,186,0
+Close-knit,0.01,187,0
+Close-knit,0.01,188,0
+Close-knit,0.01,189,0
+Close-knit,0.01,190,0
+Close-knit,0.01,191,0
+Close-knit,0.01,192,0
+Close-knit,0.01,193,0
+Close-knit,0.01,194,0
+Close-knit,0.01,195,0
+Close-knit,0.01,196,0
+Close-knit,0.01,197,0
+Close-knit,0.01,198,0
+Close-knit,0.01,199,0
+Close-knit,0.01,200,0
+Close-knit,0.01,201,0
+Close-knit,0.01,202,0
+Close-knit,0.01,203,0
+Close-knit,0.01,204,0
+Close-knit,0.01,205,0
+Close-knit,0.01,206,0
+Close-knit,0.01,207,0
+Close-knit,0.01,208,0
+Close-knit,0.01,209,0
+Close-knit,0.01,210,0
+Close-knit,0.01,211,0
+Close-knit,0.01,212,0
+Close-knit,0.01,213,0
+Close-knit,0.01,214,0
+Close-knit,0.01,215,0
+Close-knit,0.01,216,0
+Close-knit,0.01,217,0
+Close-knit,0.01,218,0
+Close-knit,0.01,219,0
+Close-knit,0.01,220,0
+Close-knit,0.01,221,0
+Close-knit,0.01,222,0
+Close-knit,0.01,223,0
+Close-knit,0.01,224,0
+Close-knit,0.01,225,0
+Close-knit,0.01,226,0
+Close-knit,0.01,227,0
+Close-knit,0.01,228,0
+Close-knit,0.01,229,0
+Close-knit,0.01,230,0
+Close-knit,0.01,231,0
+Close-knit,0.01,232,0
+Close-knit,0.01,233,0
+Close-knit,0.01,234,0
+Close-knit,0.01,235,0
+Close-knit,0.01,236,0
+Close-knit,0.01,237,0
+Close-knit,0.01,238,0
+Close-knit,0.01,239,0
+Close-knit,0.01,240,0
+Close-knit,0.01,241,0
+Close-knit,0.01,242,0
+Close-knit,0.01,243,0
+Close-knit,0.01,244,0
+Close-knit,0.01,245,0
+Close-knit,0.01,246,0
+Close-knit,0.01,247,0
+Close-knit,0.01,248,0
+Close-knit,0.01,249,0
+Close-knit,0.01,250,0
+Close-knit,0.01,251,0
+Close-knit,0.01,252,0
+Close-knit,0.01,253,0
+Close-knit,0.01,254,0
+Close-knit,0.01,255,0
+Close-knit,0.01,256,0
+Close-knit,0.01,257,0
+Close-knit,0.01,258,0
+Close-knit,0.01,259,0
+Close-knit,0.01,260,0
+Close-knit,0.01,261,0
+Close-knit,0.01,262,0
+Close-knit,0.01,263,0
+Close-knit,0.01,264,0
+Close-knit,0.01,265,0
+Close-knit,0.01,266,0
+Close-knit,0.01,267,0
+Close-knit,0.01,268,0
+Close-knit,0.01,269,0
+Close-knit,0.01,270,0
+Close-knit,0.01,271,0
+Close-knit,0.01,272,0
+Close-knit,0.01,273,0
+Close-knit,0.01,274,0
+Close-knit,0.01,275,0
+Close-knit,0.01,276,0
+Close-knit,0.01,277,0
+Close-knit,0.01,278,0
+Close-knit,0.01,279,0
+Close-knit,0.01,280,0
+Close-knit,0.01,281,0
+Close-knit,0.01,282,0
+Close-knit,0.01,283,0
+Close-knit,0.01,284,0
+Close-knit,0.01,285,0
+Close-knit,0.01,286,0
+Close-knit,0.01,287,0
+Close-knit,0.01,288,0
+Close-knit,0.01,289,0
+Close-knit,0.01,290,0
+Close-knit,0.01,291,0
+Close-knit,0.01,292,0
+Close-knit,0.01,293,0
+Close-knit,0.01,294,0
+Close-knit,0.01,295,0
+Close-knit,0.01,296,0
+Close-knit,0.01,297,0
+Close-knit,0.01,298,0
+Close-knit,0.01,299,0
+Close-knit,0.01,300,0
+Close-knit,0.03,0,0.5008
+Close-knit,0.03,1,0.2619
+Close-knit,0.03,2,0.1395
+Close-knit,0.03,3,0.0922
+Close-knit,0.03,4,0.0715
+Close-knit,0.03,5,0.06
+Close-knit,0.03,6,0.0502
+Close-knit,0.03,7,0.0441
+Close-knit,0.03,8,0.0418
+Close-knit,0.03,9,0.0369
+Close-knit,0.03,10,0.0338
+Close-knit,0.03,11,0.0332
+Close-knit,0.03,12,0.0309
+Close-knit,0.03,13,0.0273
+Close-knit,0.03,14,0.025
+Close-knit,0.03,15,0.0236
+Close-knit,0.03,16,0.0215
+Close-knit,0.03,17,0.0215
+Close-knit,0.03,18,0.0184
+Close-knit,0.03,19,0.0176
+Close-knit,0.03,20,0.0168
+Close-knit,0.03,21,0.0164
+Close-knit,0.03,22,0.016
+Close-knit,0.03,23,0.0154
+Close-knit,0.03,24,0.0135
+Close-knit,0.03,25,0.0115
+Close-knit,0.03,26,0.0094
+Close-knit,0.03,27,0.0094
+Close-knit,0.03,28,0.008
+Close-knit,0.03,29,0.0066
+Close-knit,0.03,30,0.0051
+Close-knit,0.03,31,0.0053
+Close-knit,0.03,32,0.0045
+Close-knit,0.03,33,0.0037
+Close-knit,0.03,34,0.0025
+Close-knit,0.03,35,0.0021
+Close-knit,0.03,36,0.0016
+Close-knit,0.03,37,0.0014
+Close-knit,0.03,38,0.0012
+Close-knit,0.03,39,8e-4
+Close-knit,0.03,40,0
+Close-knit,0.03,41,0
+Close-knit,0.03,42,0
+Close-knit,0.03,43,0
+Close-knit,0.03,44,0
+Close-knit,0.03,45,0
+Close-knit,0.03,46,0
+Close-knit,0.03,47,0
+Close-knit,0.03,48,0
+Close-knit,0.03,49,0
+Close-knit,0.03,50,0
+Close-knit,0.03,51,0
+Close-knit,0.03,52,0
+Close-knit,0.03,53,0
+Close-knit,0.03,54,0
+Close-knit,0.03,55,0
+Close-knit,0.03,56,0
+Close-knit,0.03,57,0
+Close-knit,0.03,58,0
+Close-knit,0.03,59,0
+Close-knit,0.03,60,0
+Close-knit,0.03,61,0
+Close-knit,0.03,62,0
+Close-knit,0.03,63,0
+Close-knit,0.03,64,0
+Close-knit,0.03,65,0
+Close-knit,0.03,66,0
+Close-knit,0.03,67,0
+Close-knit,0.03,68,0
+Close-knit,0.03,69,0
+Close-knit,0.03,70,0
+Close-knit,0.03,71,0
+Close-knit,0.03,72,0
+Close-knit,0.03,73,0
+Close-knit,0.03,74,0
+Close-knit,0.03,75,0
+Close-knit,0.03,76,0
+Close-knit,0.03,77,0
+Close-knit,0.03,78,0
+Close-knit,0.03,79,0
+Close-knit,0.03,80,0
+Close-knit,0.03,81,0
+Close-knit,0.03,82,0
+Close-knit,0.03,83,0
+Close-knit,0.03,84,0
+Close-knit,0.03,85,0
+Close-knit,0.03,86,0
+Close-knit,0.03,87,0
+Close-knit,0.03,88,0
+Close-knit,0.03,89,0
+Close-knit,0.03,90,0
+Close-knit,0.03,91,0
+Close-knit,0.03,92,0
+Close-knit,0.03,93,0
+Close-knit,0.03,94,0
+Close-knit,0.03,95,0
+Close-knit,0.03,96,0
+Close-knit,0.03,97,0
+Close-knit,0.03,98,0
+Close-knit,0.03,99,0
+Close-knit,0.03,100,0
+Close-knit,0.03,101,0
+Close-knit,0.03,102,0
+Close-knit,0.03,103,0
+Close-knit,0.03,104,0
+Close-knit,0.03,105,0
+Close-knit,0.03,106,0
+Close-knit,0.03,107,0
+Close-knit,0.03,108,0
+Close-knit,0.03,109,0
+Close-knit,0.03,110,0
+Close-knit,0.03,111,0
+Close-knit,0.03,112,0
+Close-knit,0.03,113,0
+Close-knit,0.03,114,0
+Close-knit,0.03,115,0
+Close-knit,0.03,116,0
+Close-knit,0.03,117,0
+Close-knit,0.03,118,0
+Close-knit,0.03,119,0
+Close-knit,0.03,120,0
+Close-knit,0.03,121,0
+Close-knit,0.03,122,0
+Close-knit,0.03,123,0
+Close-knit,0.03,124,0
+Close-knit,0.03,125,0
+Close-knit,0.03,126,0
+Close-knit,0.03,127,0
+Close-knit,0.03,128,0
+Close-knit,0.03,129,0
+Close-knit,0.03,130,0
+Close-knit,0.03,131,0
+Close-knit,0.03,132,0
+Close-knit,0.03,133,0
+Close-knit,0.03,134,0
+Close-knit,0.03,135,0
+Close-knit,0.03,136,0
+Close-knit,0.03,137,0
+Close-knit,0.03,138,0
+Close-knit,0.03,139,0
+Close-knit,0.03,140,0
+Close-knit,0.03,141,0
+Close-knit,0.03,142,0
+Close-knit,0.03,143,0
+Close-knit,0.03,144,0
+Close-knit,0.03,145,0
+Close-knit,0.03,146,0
+Close-knit,0.03,147,0
+Close-knit,0.03,148,0
+Close-knit,0.03,149,0
+Close-knit,0.03,150,0
+Close-knit,0.03,151,0
+Close-knit,0.03,152,0
+Close-knit,0.03,153,0
+Close-knit,0.03,154,0
+Close-knit,0.03,155,0
+Close-knit,0.03,156,0
+Close-knit,0.03,157,0
+Close-knit,0.03,158,0
+Close-knit,0.03,159,0
+Close-knit,0.03,160,0
+Close-knit,0.03,161,0
+Close-knit,0.03,162,0
+Close-knit,0.03,163,0
+Close-knit,0.03,164,0
+Close-knit,0.03,165,0
+Close-knit,0.03,166,0
+Close-knit,0.03,167,0
+Close-knit,0.03,168,0
+Close-knit,0.03,169,0
+Close-knit,0.03,170,0
+Close-knit,0.03,171,0
+Close-knit,0.03,172,0
+Close-knit,0.03,173,0
+Close-knit,0.03,174,0
+Close-knit,0.03,175,0
+Close-knit,0.03,176,0
+Close-knit,0.03,177,0
+Close-knit,0.03,178,0
+Close-knit,0.03,179,0
+Close-knit,0.03,180,0
+Close-knit,0.03,181,0
+Close-knit,0.03,182,0
+Close-knit,0.03,183,0
+Close-knit,0.03,184,0
+Close-knit,0.03,185,0
+Close-knit,0.03,186,0
+Close-knit,0.03,187,0
+Close-knit,0.03,188,0
+Close-knit,0.03,189,0
+Close-knit,0.03,190,0
+Close-knit,0.03,191,0
+Close-knit,0.03,192,0
+Close-knit,0.03,193,0
+Close-knit,0.03,194,0
+Close-knit,0.03,195,0
+Close-knit,0.03,196,0
+Close-knit,0.03,197,0
+Close-knit,0.03,198,0
+Close-knit,0.03,199,0
+Close-knit,0.03,200,0
+Close-knit,0.03,201,0
+Close-knit,0.03,202,0
+Close-knit,0.03,203,0
+Close-knit,0.03,204,0
+Close-knit,0.03,205,0
+Close-knit,0.03,206,0
+Close-knit,0.03,207,0
+Close-knit,0.03,208,0
+Close-knit,0.03,209,0
+Close-knit,0.03,210,0
+Close-knit,0.03,211,0
+Close-knit,0.03,212,0
+Close-knit,0.03,213,0
+Close-knit,0.03,214,0
+Close-knit,0.03,215,0
+Close-knit,0.03,216,0
+Close-knit,0.03,217,0
+Close-knit,0.03,218,0
+Close-knit,0.03,219,0
+Close-knit,0.03,220,0
+Close-knit,0.03,221,0
+Close-knit,0.03,222,0
+Close-knit,0.03,223,0
+Close-knit,0.03,224,0
+Close-knit,0.03,225,0
+Close-knit,0.03,226,0
+Close-knit,0.03,227,0
+Close-knit,0.03,228,0
+Close-knit,0.03,229,0
+Close-knit,0.03,230,0
+Close-knit,0.03,231,0
+Close-knit,0.03,232,0
+Close-knit,0.03,233,0
+Close-knit,0.03,234,0
+Close-knit,0.03,235,0
+Close-knit,0.03,236,0
+Close-knit,0.03,237,0
+Close-knit,0.03,238,0
+Close-knit,0.03,239,0
+Close-knit,0.03,240,0
+Close-knit,0.03,241,0
+Close-knit,0.03,242,0
+Close-knit,0.03,243,0
+Close-knit,0.03,244,0
+Close-knit,0.03,245,0
+Close-knit,0.03,246,0
+Close-knit,0.03,247,0
+Close-knit,0.03,248,0
+Close-knit,0.03,249,0
+Close-knit,0.03,250,0
+Close-knit,0.03,251,0
+Close-knit,0.03,252,0
+Close-knit,0.03,253,0
+Close-knit,0.03,254,0
+Close-knit,0.03,255,0
+Close-knit,0.03,256,0
+Close-knit,0.03,257,0
+Close-knit,0.03,258,0
+Close-knit,0.03,259,0
+Close-knit,0.03,260,0
+Close-knit,0.03,261,0
+Close-knit,0.03,262,0
+Close-knit,0.03,263,0
+Close-knit,0.03,264,0
+Close-knit,0.03,265,0
+Close-knit,0.03,266,0
+Close-knit,0.03,267,0
+Close-knit,0.03,268,0
+Close-knit,0.03,269,0
+Close-knit,0.03,270,0
+Close-knit,0.03,271,0
+Close-knit,0.03,272,0
+Close-knit,0.03,273,0
+Close-knit,0.03,274,0
+Close-knit,0.03,275,0
+Close-knit,0.03,276,0
+Close-knit,0.03,277,0
+Close-knit,0.03,278,0
+Close-knit,0.03,279,0
+Close-knit,0.03,280,0
+Close-knit,0.03,281,0
+Close-knit,0.03,282,0
+Close-knit,0.03,283,0
+Close-knit,0.03,284,0
+Close-knit,0.03,285,0
+Close-knit,0.03,286,0
+Close-knit,0.03,287,0
+Close-knit,0.03,288,0
+Close-knit,0.03,289,0
+Close-knit,0.03,290,0
+Close-knit,0.03,291,0
+Close-knit,0.03,292,0
+Close-knit,0.03,293,0
+Close-knit,0.03,294,0
+Close-knit,0.03,295,0
+Close-knit,0.03,296,0
+Close-knit,0.03,297,0
+Close-knit,0.03,298,0
+Close-knit,0.03,299,0
+Close-knit,0.03,300,0
+Close-knit,0.1,0,0.5121
+Close-knit,0.1,1,0.2916
+Close-knit,0.1,2,0.1619
+Close-knit,0.1,3,0.1057
+Close-knit,0.1,4,0.0771
+Close-knit,0.1,5,0.0605
+Close-knit,0.1,6,0.0498
+Close-knit,0.1,7,0.0443
+Close-knit,0.1,8,0.0404
+Close-knit,0.1,9,0.0365
+Close-knit,0.1,10,0.0316
+Close-knit,0.1,11,0.0256
+Close-knit,0.1,12,0.0232
+Close-knit,0.1,13,0.0195
+Close-knit,0.1,14,0.0154
+Close-knit,0.1,15,0.0146
+Close-knit,0.1,16,0.0135
+Close-knit,0.1,17,0.0129
+Close-knit,0.1,18,0.0109
+Close-knit,0.1,19,0.0094
+Close-knit,0.1,20,0.0084
+Close-knit,0.1,21,0.0061
+Close-knit,0.1,22,0.0061
+Close-knit,0.1,23,0.0051
+Close-knit,0.1,24,0.0045
+Close-knit,0.1,25,0.0047
+Close-knit,0.1,26,0.0037
+Close-knit,0.1,27,0.0031
+Close-knit,0.1,28,0.0023
+Close-knit,0.1,29,0.0021
+Close-knit,0.1,30,0.002
+Close-knit,0.1,31,0.0025
+Close-knit,0.1,32,0.0025
+Close-knit,0.1,33,0.0027
+Close-knit,0.1,34,0.0029
+Close-knit,0.1,35,0.0027
+Close-knit,0.1,36,0.0025
+Close-knit,0.1,37,0.0023
+Close-knit,0.1,38,0.0023
+Close-knit,0.1,39,0.0025
+Close-knit,0.1,40,0.0021
+Close-knit,0.1,41,0.0016
+Close-knit,0.1,42,0.0014
+Close-knit,0.1,43,0.0014
+Close-knit,0.1,44,0.0014
+Close-knit,0.1,45,0.0016
+Close-knit,0.1,46,0.0014
+Close-knit,0.1,47,8e-4
+Close-knit,0.1,48,0.001
+Close-knit,0.1,49,8e-4
+Close-knit,0.1,50,0.001
+Close-knit,0.1,51,6e-4
+Close-knit,0.1,52,0
+Close-knit,0.1,53,0
+Close-knit,0.1,54,0
+Close-knit,0.1,55,0
+Close-knit,0.1,56,0
+Close-knit,0.1,57,0
+Close-knit,0.1,58,0
+Close-knit,0.1,59,0
+Close-knit,0.1,60,0
+Close-knit,0.1,61,0
+Close-knit,0.1,62,0
+Close-knit,0.1,63,0
+Close-knit,0.1,64,0
+Close-knit,0.1,65,0
+Close-knit,0.1,66,0
+Close-knit,0.1,67,0
+Close-knit,0.1,68,0
+Close-knit,0.1,69,0
+Close-knit,0.1,70,0
+Close-knit,0.1,71,0
+Close-knit,0.1,72,0
+Close-knit,0.1,73,0
+Close-knit,0.1,74,0
+Close-knit,0.1,75,0
+Close-knit,0.1,76,0
+Close-knit,0.1,77,0
+Close-knit,0.1,78,0
+Close-knit,0.1,79,0
+Close-knit,0.1,80,0
+Close-knit,0.1,81,0
+Close-knit,0.1,82,0
+Close-knit,0.1,83,0
+Close-knit,0.1,84,0
+Close-knit,0.1,85,0
+Close-knit,0.1,86,0
+Close-knit,0.1,87,0
+Close-knit,0.1,88,0
+Close-knit,0.1,89,0
+Close-knit,0.1,90,0
+Close-knit,0.1,91,0
+Close-knit,0.1,92,0
+Close-knit,0.1,93,0
+Close-knit,0.1,94,0
+Close-knit,0.1,95,0
+Close-knit,0.1,96,0
+Close-knit,0.1,97,0
+Close-knit,0.1,98,0
+Close-knit,0.1,99,0
+Close-knit,0.1,100,0
+Close-knit,0.1,101,0
+Close-knit,0.1,102,0
+Close-knit,0.1,103,0
+Close-knit,0.1,104,0
+Close-knit,0.1,105,0
+Close-knit,0.1,106,0
+Close-knit,0.1,107,0
+Close-knit,0.1,108,0
+Close-knit,0.1,109,0
+Close-knit,0.1,110,0
+Close-knit,0.1,111,0
+Close-knit,0.1,112,0
+Close-knit,0.1,113,0
+Close-knit,0.1,114,0
+Close-knit,0.1,115,0
+Close-knit,0.1,116,0
+Close-knit,0.1,117,0
+Close-knit,0.1,118,0
+Close-knit,0.1,119,0
+Close-knit,0.1,120,0
+Close-knit,0.1,121,0
+Close-knit,0.1,122,0
+Close-knit,0.1,123,0
+Close-knit,0.1,124,0
+Close-knit,0.1,125,0
+Close-knit,0.1,126,0
+Close-knit,0.1,127,0
+Close-knit,0.1,128,0
+Close-knit,0.1,129,0
+Close-knit,0.1,130,0
+Close-knit,0.1,131,0
+Close-knit,0.1,132,0
+Close-knit,0.1,133,0
+Close-knit,0.1,134,0
+Close-knit,0.1,135,0
+Close-knit,0.1,136,0
+Close-knit,0.1,137,0
+Close-knit,0.1,138,0
+Close-knit,0.1,139,0
+Close-knit,0.1,140,0
+Close-knit,0.1,141,0
+Close-knit,0.1,142,0
+Close-knit,0.1,143,0
+Close-knit,0.1,144,0
+Close-knit,0.1,145,0
+Close-knit,0.1,146,0
+Close-knit,0.1,147,0
+Close-knit,0.1,148,0
+Close-knit,0.1,149,0
+Close-knit,0.1,150,0
+Close-knit,0.1,151,0
+Close-knit,0.1,152,0
+Close-knit,0.1,153,0
+Close-knit,0.1,154,0
+Close-knit,0.1,155,0
+Close-knit,0.1,156,0
+Close-knit,0.1,157,0
+Close-knit,0.1,158,0
+Close-knit,0.1,159,0
+Close-knit,0.1,160,0
+Close-knit,0.1,161,0
+Close-knit,0.1,162,0
+Close-knit,0.1,163,0
+Close-knit,0.1,164,0
+Close-knit,0.1,165,0
+Close-knit,0.1,166,0
+Close-knit,0.1,167,0
+Close-knit,0.1,168,0
+Close-knit,0.1,169,0
+Close-knit,0.1,170,0
+Close-knit,0.1,171,0
+Close-knit,0.1,172,0
+Close-knit,0.1,173,0
+Close-knit,0.1,174,0
+Close-knit,0.1,175,0
+Close-knit,0.1,176,0
+Close-knit,0.1,177,0
+Close-knit,0.1,178,0
+Close-knit,0.1,179,0
+Close-knit,0.1,180,0
+Close-knit,0.1,181,0
+Close-knit,0.1,182,0
+Close-knit,0.1,183,0
+Close-knit,0.1,184,0
+Close-knit,0.1,185,0
+Close-knit,0.1,186,0
+Close-knit,0.1,187,0
+Close-knit,0.1,188,0
+Close-knit,0.1,189,0
+Close-knit,0.1,190,0
+Close-knit,0.1,191,0
+Close-knit,0.1,192,0
+Close-knit,0.1,193,0
+Close-knit,0.1,194,0
+Close-knit,0.1,195,0
+Close-knit,0.1,196,0
+Close-knit,0.1,197,0
+Close-knit,0.1,198,0
+Close-knit,0.1,199,0
+Close-knit,0.1,200,0
+Close-knit,0.1,201,0
+Close-knit,0.1,202,0
+Close-knit,0.1,203,0
+Close-knit,0.1,204,0
+Close-knit,0.1,205,0
+Close-knit,0.1,206,0
+Close-knit,0.1,207,0
+Close-knit,0.1,208,0
+Close-knit,0.1,209,0
+Close-knit,0.1,210,0
+Close-knit,0.1,211,0
+Close-knit,0.1,212,0
+Close-knit,0.1,213,0
+Close-knit,0.1,214,0
+Close-knit,0.1,215,0
+Close-knit,0.1,216,0
+Close-knit,0.1,217,0
+Close-knit,0.1,218,0
+Close-knit,0.1,219,0
+Close-knit,0.1,220,0
+Close-knit,0.1,221,0
+Close-knit,0.1,222,0
+Close-knit,0.1,223,0
+Close-knit,0.1,224,0
+Close-knit,0.1,225,0
+Close-knit,0.1,226,0
+Close-knit,0.1,227,0
+Close-knit,0.1,228,0
+Close-knit,0.1,229,0
+Close-knit,0.1,230,0
+Close-knit,0.1,231,0
+Close-knit,0.1,232,0
+Close-knit,0.1,233,0
+Close-knit,0.1,234,0
+Close-knit,0.1,235,0
+Close-knit,0.1,236,0
+Close-knit,0.1,237,0
+Close-knit,0.1,238,0
+Close-knit,0.1,239,0
+Close-knit,0.1,240,0
+Close-knit,0.1,241,0
+Close-knit,0.1,242,0
+Close-knit,0.1,243,0
+Close-knit,0.1,244,0
+Close-knit,0.1,245,0
+Close-knit,0.1,246,0
+Close-knit,0.1,247,0
+Close-knit,0.1,248,0
+Close-knit,0.1,249,0
+Close-knit,0.1,250,0
+Close-knit,0.1,251,0
+Close-knit,0.1,252,0
+Close-knit,0.1,253,0
+Close-knit,0.1,254,0
+Close-knit,0.1,255,0
+Close-knit,0.1,256,0
+Close-knit,0.1,257,0
+Close-knit,0.1,258,0
+Close-knit,0.1,259,0
+Close-knit,0.1,260,0
+Close-knit,0.1,261,0
+Close-knit,0.1,262,0
+Close-knit,0.1,263,0
+Close-knit,0.1,264,0
+Close-knit,0.1,265,0
+Close-knit,0.1,266,0
+Close-knit,0.1,267,0
+Close-knit,0.1,268,0
+Close-knit,0.1,269,0
+Close-knit,0.1,270,0
+Close-knit,0.1,271,0
+Close-knit,0.1,272,0
+Close-knit,0.1,273,0
+Close-knit,0.1,274,0
+Close-knit,0.1,275,0
+Close-knit,0.1,276,0
+Close-knit,0.1,277,0
+Close-knit,0.1,278,0
+Close-knit,0.1,279,0
+Close-knit,0.1,280,0
+Close-knit,0.1,281,0
+Close-knit,0.1,282,0
+Close-knit,0.1,283,0
+Close-knit,0.1,284,0
+Close-knit,0.1,285,0
+Close-knit,0.1,286,0
+Close-knit,0.1,287,0
+Close-knit,0.1,288,0
+Close-knit,0.1,289,0
+Close-knit,0.1,290,0
+Close-knit,0.1,291,0
+Close-knit,0.1,292,0
+Close-knit,0.1,293,0
+Close-knit,0.1,294,0
+Close-knit,0.1,295,0
+Close-knit,0.1,296,0
+Close-knit,0.1,297,0
+Close-knit,0.1,298,0
+Close-knit,0.1,299,0
+Close-knit,0.1,300,0
+Close-knit,0.3,0,0.5029
+Close-knit,0.3,1,0.2916
+Close-knit,0.3,2,0.1789
+Close-knit,0.3,3,0.1223
+Close-knit,0.3,4,0.0875
+Close-knit,0.3,5,0.0725
+Close-knit,0.3,6,0.0611
+Close-knit,0.3,7,0.0543
+Close-knit,0.3,8,0.0455
+Close-knit,0.3,9,0.043
+Close-knit,0.3,10,0.0381
+Close-knit,0.3,11,0.0314
+Close-knit,0.3,12,0.0275
+Close-knit,0.3,13,0.0258
+Close-knit,0.3,14,0.0219
+Close-knit,0.3,15,0.0221
+Close-knit,0.3,16,0.0203
+Close-knit,0.3,17,0.0201
+Close-knit,0.3,18,0.0199
+Close-knit,0.3,19,0.0191
+Close-knit,0.3,20,0.0182
+Close-knit,0.3,21,0.0166
+Close-knit,0.3,22,0.016
+Close-knit,0.3,23,0.0152
+Close-knit,0.3,24,0.0125
+Close-knit,0.3,25,0.0123
+Close-knit,0.3,26,0.0111
+Close-knit,0.3,27,0.0117
+Close-knit,0.3,28,0.0113
+Close-knit,0.3,29,0.0107
+Close-knit,0.3,30,0.0102
+Close-knit,0.3,31,0.0102
+Close-knit,0.3,32,0.0098
+Close-knit,0.3,33,0.009
+Close-knit,0.3,34,0.0082
+Close-knit,0.3,35,0.0078
+Close-knit,0.3,36,0.009
+Close-knit,0.3,37,0.0088
+Close-knit,0.3,38,0.0094
+Close-knit,0.3,39,0.0086
+Close-knit,0.3,40,0.0084
+Close-knit,0.3,41,0.0084
+Close-knit,0.3,42,0.0082
+Close-knit,0.3,43,0.0078
+Close-knit,0.3,44,0.0076
+Close-knit,0.3,45,0.0086
+Close-knit,0.3,46,0.0078
+Close-knit,0.3,47,0.0078
+Close-knit,0.3,48,0.0082
+Close-knit,0.3,49,0.008
+Close-knit,0.3,50,0.0082
+Close-knit,0.3,51,0.0084
+Close-knit,0.3,52,0.008
+Close-knit,0.3,53,0.0082
+Close-knit,0.3,54,0.0086
+Close-knit,0.3,55,0.0094
+Close-knit,0.3,56,0.009
+Close-knit,0.3,57,0.009
+Close-knit,0.3,58,0.009
+Close-knit,0.3,59,0.009
+Close-knit,0.3,60,0.0082
+Close-knit,0.3,61,0.0082
+Close-knit,0.3,62,0.0078
+Close-knit,0.3,63,0.0078
+Close-knit,0.3,64,0.0078
+Close-knit,0.3,65,0.0076
+Close-knit,0.3,66,0.0072
+Close-knit,0.3,67,0.0064
+Close-knit,0.3,68,0.0061
+Close-knit,0.3,69,0.0057
+Close-knit,0.3,70,0.0057
+Close-knit,0.3,71,0.0064
+Close-knit,0.3,72,0.0066
+Close-knit,0.3,73,0.007
+Close-knit,0.3,74,0.0066
+Close-knit,0.3,75,0.0063
+Close-knit,0.3,76,0.0059
+Close-knit,0.3,77,0.0051
+Close-knit,0.3,78,0.0043
+Close-knit,0.3,79,0.0041
+Close-knit,0.3,80,0.0039
+Close-knit,0.3,81,0.0041
+Close-knit,0.3,82,0.0033
+Close-knit,0.3,83,0.0035
+Close-knit,0.3,84,0.0033
+Close-knit,0.3,85,0.0037
+Close-knit,0.3,86,0.0033
+Close-knit,0.3,87,0.0031
+Close-knit,0.3,88,0.0035
+Close-knit,0.3,89,0.0037
+Close-knit,0.3,90,0.0037
+Close-knit,0.3,91,0.0033
+Close-knit,0.3,92,0.0033
+Close-knit,0.3,93,0.0029
+Close-knit,0.3,94,0.0023
+Close-knit,0.3,95,0.0023
+Close-knit,0.3,96,0.0023
+Close-knit,0.3,97,0.002
+Close-knit,0.3,98,0.0018
+Close-knit,0.3,99,0.0016
+Close-knit,0.3,100,0.001
+Close-knit,0.3,101,0.001
+Close-knit,0.3,102,0.001
+Close-knit,0.3,103,0.0014
+Close-knit,0.3,104,0.0012
+Close-knit,0.3,105,0.0014
+Close-knit,0.3,106,0.0016
+Close-knit,0.3,107,0.0016
+Close-knit,0.3,108,0.0016
+Close-knit,0.3,109,0.0014
+Close-knit,0.3,110,0.0016
+Close-knit,0.3,111,0.0021
+Close-knit,0.3,112,0.0021
+Close-knit,0.3,113,0.0018
+Close-knit,0.3,114,0.0014
+Close-knit,0.3,115,0.0014
+Close-knit,0.3,116,0.0012
+Close-knit,0.3,117,0.0014
+Close-knit,0.3,118,0.0012
+Close-knit,0.3,119,0.0016
+Close-knit,0.3,120,0.0014
+Close-knit,0.3,121,8e-4
+Close-knit,0.3,122,4e-4
+Close-knit,0.3,123,2e-4
+Close-knit,0.3,124,0
+Close-knit,0.3,125,0
+Close-knit,0.3,126,0
+Close-knit,0.3,127,0
+Close-knit,0.3,128,0
+Close-knit,0.3,129,0
+Close-knit,0.3,130,0
+Close-knit,0.3,131,0
+Close-knit,0.3,132,0
+Close-knit,0.3,133,0
+Close-knit,0.3,134,0
+Close-knit,0.3,135,0
+Close-knit,0.3,136,0
+Close-knit,0.3,137,0
+Close-knit,0.3,138,0
+Close-knit,0.3,139,0
+Close-knit,0.3,140,0
+Close-knit,0.3,141,0
+Close-knit,0.3,142,0
+Close-knit,0.3,143,0
+Close-knit,0.3,144,0
+Close-knit,0.3,145,0
+Close-knit,0.3,146,0
+Close-knit,0.3,147,0
+Close-knit,0.3,148,0
+Close-knit,0.3,149,0
+Close-knit,0.3,150,0
+Close-knit,0.3,151,0
+Close-knit,0.3,152,0
+Close-knit,0.3,153,0
+Close-knit,0.3,154,0
+Close-knit,0.3,155,0
+Close-knit,0.3,156,0
+Close-knit,0.3,157,0
+Close-knit,0.3,158,0
+Close-knit,0.3,159,0
+Close-knit,0.3,160,0
+Close-knit,0.3,161,0
+Close-knit,0.3,162,0
+Close-knit,0.3,163,0
+Close-knit,0.3,164,0
+Close-knit,0.3,165,0
+Close-knit,0.3,166,0
+Close-knit,0.3,167,0
+Close-knit,0.3,168,0
+Close-knit,0.3,169,0
+Close-knit,0.3,170,0
+Close-knit,0.3,171,0
+Close-knit,0.3,172,0
+Close-knit,0.3,173,0
+Close-knit,0.3,174,0
+Close-knit,0.3,175,0
+Close-knit,0.3,176,0
+Close-knit,0.3,177,0
+Close-knit,0.3,178,0
+Close-knit,0.3,179,0
+Close-knit,0.3,180,0
+Close-knit,0.3,181,0
+Close-knit,0.3,182,0
+Close-knit,0.3,183,0
+Close-knit,0.3,184,0
+Close-knit,0.3,185,0
+Close-knit,0.3,186,0
+Close-knit,0.3,187,0
+Close-knit,0.3,188,0
+Close-knit,0.3,189,0
+Close-knit,0.3,190,0
+Close-knit,0.3,191,0
+Close-knit,0.3,192,0
+Close-knit,0.3,193,0
+Close-knit,0.3,194,0
+Close-knit,0.3,195,0
+Close-knit,0.3,196,0
+Close-knit,0.3,197,0
+Close-knit,0.3,198,0
+Close-knit,0.3,199,0
+Close-knit,0.3,200,0
+Close-knit,0.3,201,0
+Close-knit,0.3,202,0
+Close-knit,0.3,203,0
+Close-knit,0.3,204,0
+Close-knit,0.3,205,0
+Close-knit,0.3,206,0
+Close-knit,0.3,207,0
+Close-knit,0.3,208,0
+Close-knit,0.3,209,0
+Close-knit,0.3,210,0
+Close-knit,0.3,211,0
+Close-knit,0.3,212,0
+Close-knit,0.3,213,0
+Close-knit,0.3,214,0
+Close-knit,0.3,215,0
+Close-knit,0.3,216,0
+Close-knit,0.3,217,0
+Close-knit,0.3,218,0
+Close-knit,0.3,219,0
+Close-knit,0.3,220,0
+Close-knit,0.3,221,0
+Close-knit,0.3,222,0
+Close-knit,0.3,223,0
+Close-knit,0.3,224,0
+Close-knit,0.3,225,0
+Close-knit,0.3,226,0
+Close-knit,0.3,227,0
+Close-knit,0.3,228,0
+Close-knit,0.3,229,0
+Close-knit,0.3,230,0
+Close-knit,0.3,231,0
+Close-knit,0.3,232,0
+Close-knit,0.3,233,0
+Close-knit,0.3,234,0
+Close-knit,0.3,235,0
+Close-knit,0.3,236,0
+Close-knit,0.3,237,0
+Close-knit,0.3,238,0
+Close-knit,0.3,239,0
+Close-knit,0.3,240,0
+Close-knit,0.3,241,0
+Close-knit,0.3,242,0
+Close-knit,0.3,243,0
+Close-knit,0.3,244,0
+Close-knit,0.3,245,0
+Close-knit,0.3,246,0
+Close-knit,0.3,247,0
+Close-knit,0.3,248,0
+Close-knit,0.3,249,0
+Close-knit,0.3,250,0
+Close-knit,0.3,251,0
+Close-knit,0.3,252,0
+Close-knit,0.3,253,0
+Close-knit,0.3,254,0
+Close-knit,0.3,255,0
+Close-knit,0.3,256,0
+Close-knit,0.3,257,0
+Close-knit,0.3,258,0
+Close-knit,0.3,259,0
+Close-knit,0.3,260,0
+Close-knit,0.3,261,0
+Close-knit,0.3,262,0
+Close-knit,0.3,263,0
+Close-knit,0.3,264,0
+Close-knit,0.3,265,0
+Close-knit,0.3,266,0
+Close-knit,0.3,267,0
+Close-knit,0.3,268,0
+Close-knit,0.3,269,0
+Close-knit,0.3,270,0
+Close-knit,0.3,271,0
+Close-knit,0.3,272,0
+Close-knit,0.3,273,0
+Close-knit,0.3,274,0
+Close-knit,0.3,275,0
+Close-knit,0.3,276,0
+Close-knit,0.3,277,0
+Close-knit,0.3,278,0
+Close-knit,0.3,279,0
+Close-knit,0.3,280,0
+Close-knit,0.3,281,0
+Close-knit,0.3,282,0
+Close-knit,0.3,283,0
+Close-knit,0.3,284,0
+Close-knit,0.3,285,0
+Close-knit,0.3,286,0
+Close-knit,0.3,287,0
+Close-knit,0.3,288,0
+Close-knit,0.3,289,0
+Close-knit,0.3,290,0
+Close-knit,0.3,291,0
+Close-knit,0.3,292,0
+Close-knit,0.3,293,0
+Close-knit,0.3,294,0
+Close-knit,0.3,295,0
+Close-knit,0.3,296,0
+Close-knit,0.3,297,0
+Close-knit,0.3,298,0
+Close-knit,0.3,299,0
+Close-knit,0.3,300,0
+Close-knit,1,0,0.51
+Close-knit,1,1,0.3795
+Close-knit,1,2,0.2939
+Close-knit,1,3,0.2336
+Close-knit,1,4,0.1912
+Close-knit,1,5,0.1598
+Close-knit,1,6,0.1287
+Close-knit,1,7,0.108
+Close-knit,1,8,0.0908
+Close-knit,1,9,0.0738
+Close-knit,1,10,0.0643
+Close-knit,1,11,0.0578
+Close-knit,1,12,0.0523
+Close-knit,1,13,0.0482
+Close-knit,1,14,0.0432
+Close-knit,1,15,0.0387
+Close-knit,1,16,0.035
+Close-knit,1,17,0.0305
+Close-knit,1,18,0.0287
+Close-knit,1,19,0.0256
+Close-knit,1,20,0.0229
+Close-knit,1,21,0.0205
+Close-knit,1,22,0.0199
+Close-knit,1,23,0.0201
+Close-knit,1,24,0.0182
+Close-knit,1,25,0.017
+Close-knit,1,26,0.0174
+Close-knit,1,27,0.0164
+Close-knit,1,28,0.015
+Close-knit,1,29,0.0146
+Close-knit,1,30,0.0133
+Close-knit,1,31,0.0129
+Close-knit,1,32,0.0115
+Close-knit,1,33,0.0102
+Close-knit,1,34,0.009
+Close-knit,1,35,0.0092
+Close-knit,1,36,0.0092
+Close-knit,1,37,0.0086
+Close-knit,1,38,0.0074
+Close-knit,1,39,0.0074
+Close-knit,1,40,0.0066
+Close-knit,1,41,0.0064
+Close-knit,1,42,0.0061
+Close-knit,1,43,0.0051
+Close-knit,1,44,0.0051
+Close-knit,1,45,0.0049
+Close-knit,1,46,0.0049
+Close-knit,1,47,0.0041
+Close-knit,1,48,0.0029
+Close-knit,1,49,0.0027
+Close-knit,1,50,0.0021
+Close-knit,1,51,0.001
+Close-knit,1,52,4e-4
+Close-knit,1,53,2e-4
+Close-knit,1,54,2e-4
+Close-knit,1,55,2e-4
+Close-knit,1,56,0
+Close-knit,1,57,0
+Close-knit,1,58,0
+Close-knit,1,59,0
+Close-knit,1,60,0
+Close-knit,1,61,0
+Close-knit,1,62,0
+Close-knit,1,63,0
+Close-knit,1,64,0
+Close-knit,1,65,0
+Close-knit,1,66,0
+Close-knit,1,67,0
+Close-knit,1,68,0
+Close-knit,1,69,0
+Close-knit,1,70,0
+Close-knit,1,71,0
+Close-knit,1,72,0
+Close-knit,1,73,0
+Close-knit,1,74,0
+Close-knit,1,75,0
+Close-knit,1,76,0
+Close-knit,1,77,0
+Close-knit,1,78,0
+Close-knit,1,79,0
+Close-knit,1,80,0
+Close-knit,1,81,0
+Close-knit,1,82,0
+Close-knit,1,83,0
+Close-knit,1,84,0
+Close-knit,1,85,0
+Close-knit,1,86,0
+Close-knit,1,87,0
+Close-knit,1,88,0
+Close-knit,1,89,0
+Close-knit,1,90,0
+Close-knit,1,91,0
+Close-knit,1,92,0
+Close-knit,1,93,0
+Close-knit,1,94,0
+Close-knit,1,95,0
+Close-knit,1,96,0
+Close-knit,1,97,0
+Close-knit,1,98,0
+Close-knit,1,99,0
+Close-knit,1,100,0
+Close-knit,1,101,0
+Close-knit,1,102,0
+Close-knit,1,103,0
+Close-knit,1,104,0
+Close-knit,1,105,0
+Close-knit,1,106,0
+Close-knit,1,107,0
+Close-knit,1,108,0
+Close-knit,1,109,0
+Close-knit,1,110,0
+Close-knit,1,111,0
+Close-knit,1,112,0
+Close-knit,1,113,0
+Close-knit,1,114,0
+Close-knit,1,115,0
+Close-knit,1,116,0
+Close-knit,1,117,0
+Close-knit,1,118,0
+Close-knit,1,119,0
+Close-knit,1,120,0
+Close-knit,1,121,0
+Close-knit,1,122,0
+Close-knit,1,123,0
+Close-knit,1,124,0
+Close-knit,1,125,0
+Close-knit,1,126,0
+Close-knit,1,127,0
+Close-knit,1,128,0
+Close-knit,1,129,0
+Close-knit,1,130,0
+Close-knit,1,131,0
+Close-knit,1,132,0
+Close-knit,1,133,0
+Close-knit,1,134,0
+Close-knit,1,135,0
+Close-knit,1,136,0
+Close-knit,1,137,0
+Close-knit,1,138,0
+Close-knit,1,139,0
+Close-knit,1,140,0
+Close-knit,1,141,0
+Close-knit,1,142,0
+Close-knit,1,143,0
+Close-knit,1,144,0
+Close-knit,1,145,0
+Close-knit,1,146,0
+Close-knit,1,147,0
+Close-knit,1,148,0
+Close-knit,1,149,0
+Close-knit,1,150,0
+Close-knit,1,151,0
+Close-knit,1,152,0
+Close-knit,1,153,0
+Close-knit,1,154,0
+Close-knit,1,155,0
+Close-knit,1,156,0
+Close-knit,1,157,0
+Close-knit,1,158,0
+Close-knit,1,159,0
+Close-knit,1,160,0
+Close-knit,1,161,0
+Close-knit,1,162,0
+Close-knit,1,163,0
+Close-knit,1,164,0
+Close-knit,1,165,0
+Close-knit,1,166,0
+Close-knit,1,167,0
+Close-knit,1,168,0
+Close-knit,1,169,0
+Close-knit,1,170,0
+Close-knit,1,171,0
+Close-knit,1,172,0
+Close-knit,1,173,0
+Close-knit,1,174,0
+Close-knit,1,175,0
+Close-knit,1,176,0
+Close-knit,1,177,0
+Close-knit,1,178,0
+Close-knit,1,179,0
+Close-knit,1,180,0
+Close-knit,1,181,0
+Close-knit,1,182,0
+Close-knit,1,183,0
+Close-knit,1,184,0
+Close-knit,1,185,0
+Close-knit,1,186,0
+Close-knit,1,187,0
+Close-knit,1,188,0
+Close-knit,1,189,0
+Close-knit,1,190,0
+Close-knit,1,191,0
+Close-knit,1,192,0
+Close-knit,1,193,0
+Close-knit,1,194,0
+Close-knit,1,195,0
+Close-knit,1,196,0
+Close-knit,1,197,0
+Close-knit,1,198,0
+Close-knit,1,199,0
+Close-knit,1,200,0
+Close-knit,1,201,0
+Close-knit,1,202,0
+Close-knit,1,203,0
+Close-knit,1,204,0
+Close-knit,1,205,0
+Close-knit,1,206,0
+Close-knit,1,207,0
+Close-knit,1,208,0
+Close-knit,1,209,0
+Close-knit,1,210,0
+Close-knit,1,211,0
+Close-knit,1,212,0
+Close-knit,1,213,0
+Close-knit,1,214,0
+Close-knit,1,215,0
+Close-knit,1,216,0
+Close-knit,1,217,0
+Close-knit,1,218,0
+Close-knit,1,219,0
+Close-knit,1,220,0
+Close-knit,1,221,0
+Close-knit,1,222,0
+Close-knit,1,223,0
+Close-knit,1,224,0
+Close-knit,1,225,0
+Close-knit,1,226,0
+Close-knit,1,227,0
+Close-knit,1,228,0
+Close-knit,1,229,0
+Close-knit,1,230,0
+Close-knit,1,231,0
+Close-knit,1,232,0
+Close-knit,1,233,0
+Close-knit,1,234,0
+Close-knit,1,235,0
+Close-knit,1,236,0
+Close-knit,1,237,0
+Close-knit,1,238,0
+Close-knit,1,239,0
+Close-knit,1,240,0
+Close-knit,1,241,0
+Close-knit,1,242,0
+Close-knit,1,243,0
+Close-knit,1,244,0
+Close-knit,1,245,0
+Close-knit,1,246,0
+Close-knit,1,247,0
+Close-knit,1,248,0
+Close-knit,1,249,0
+Close-knit,1,250,0
+Close-knit,1,251,0
+Close-knit,1,252,0
+Close-knit,1,253,0
+Close-knit,1,254,0
+Close-knit,1,255,0
+Close-knit,1,256,0
+Close-knit,1,257,0
+Close-knit,1,258,0
+Close-knit,1,259,0
+Close-knit,1,260,0
+Close-knit,1,261,0
+Close-knit,1,262,0
+Close-knit,1,263,0
+Close-knit,1,264,0
+Close-knit,1,265,0
+Close-knit,1,266,0
+Close-knit,1,267,0
+Close-knit,1,268,0
+Close-knit,1,269,0
+Close-knit,1,270,0
+Close-knit,1,271,0
+Close-knit,1,272,0
+Close-knit,1,273,0
+Close-knit,1,274,0
+Close-knit,1,275,0
+Close-knit,1,276,0
+Close-knit,1,277,0
+Close-knit,1,278,0
+Close-knit,1,279,0
+Close-knit,1,280,0
+Close-knit,1,281,0
+Close-knit,1,282,0
+Close-knit,1,283,0
+Close-knit,1,284,0
+Close-knit,1,285,0
+Close-knit,1,286,0
+Close-knit,1,287,0
+Close-knit,1,288,0
+Close-knit,1,289,0
+Close-knit,1,290,0
+Close-knit,1,291,0
+Close-knit,1,292,0
+Close-knit,1,293,0
+Close-knit,1,294,0
+Close-knit,1,295,0
+Close-knit,1,296,0
+Close-knit,1,297,0
+Close-knit,1,298,0
+Close-knit,1,299,0
+Close-knit,1,300,0
+Close-knit,3,0,0.5061
+Close-knit,3,1,0.4385
+Close-knit,3,2,0.3982
+Close-knit,3,3,0.3717
+Close-knit,3,4,0.3426
+Close-knit,3,5,0.3076
+Close-knit,3,6,0.2885
+Close-knit,3,7,0.2658
+Close-knit,3,8,0.2436
+Close-knit,3,9,0.2289
+Close-knit,3,10,0.2162
+Close-knit,3,11,0.2059
+Close-knit,3,12,0.1959
+Close-knit,3,13,0.184
+Close-knit,3,14,0.1734
+Close-knit,3,15,0.1631
+Close-knit,3,16,0.1566
+Close-knit,3,17,0.1492
+Close-knit,3,18,0.141
+Close-knit,3,19,0.1297
+Close-knit,3,20,0.1236
+Close-knit,3,21,0.1158
+Close-knit,3,22,0.1107
+Close-knit,3,23,0.1061
+Close-knit,3,24,0.1047
+Close-knit,3,25,0.0965
+Close-knit,3,26,0.093
+Close-knit,3,27,0.0914
+Close-knit,3,28,0.0857
+Close-knit,3,29,0.0857
+Close-knit,3,30,0.0814
+Close-knit,3,31,0.0775
+Close-knit,3,32,0.074
+Close-knit,3,33,0.0711
+Close-knit,3,34,0.0699
+Close-knit,3,35,0.0658
+Close-knit,3,36,0.0621
+Close-knit,3,37,0.0619
+Close-knit,3,38,0.0598
+Close-knit,3,39,0.0572
+Close-knit,3,40,0.0555
+Close-knit,3,41,0.052
+Close-knit,3,42,0.0496
+Close-knit,3,43,0.0445
+Close-knit,3,44,0.0465
+Close-knit,3,45,0.0445
+Close-knit,3,46,0.0422
+Close-knit,3,47,0.0391
+Close-knit,3,48,0.0359
+Close-knit,3,49,0.0334
+Close-knit,3,50,0.0307
+Close-knit,3,51,0.0299
+Close-knit,3,52,0.0273
+Close-knit,3,53,0.025
+Close-knit,3,54,0.0244
+Close-knit,3,55,0.0242
+Close-knit,3,56,0.0248
+Close-knit,3,57,0.0219
+Close-knit,3,58,0.0197
+Close-knit,3,59,0.0184
+Close-knit,3,60,0.0176
+Close-knit,3,61,0.0158
+Close-knit,3,62,0.0158
+Close-knit,3,63,0.0158
+Close-knit,3,64,0.0146
+Close-knit,3,65,0.0129
+Close-knit,3,66,0.0131
+Close-knit,3,67,0.0135
+Close-knit,3,68,0.0145
+Close-knit,3,69,0.0127
+Close-knit,3,70,0.0137
+Close-knit,3,71,0.0135
+Close-knit,3,72,0.0135
+Close-knit,3,73,0.0133
+Close-knit,3,74,0.0139
+Close-knit,3,75,0.0141
+Close-knit,3,76,0.0141
+Close-knit,3,77,0.0143
+Close-knit,3,78,0.0131
+Close-knit,3,79,0.0129
+Close-knit,3,80,0.0133
+Close-knit,3,81,0.0135
+Close-knit,3,82,0.0131
+Close-knit,3,83,0.0137
+Close-knit,3,84,0.0133
+Close-knit,3,85,0.0135
+Close-knit,3,86,0.0125
+Close-knit,3,87,0.0125
+Close-knit,3,88,0.0107
+Close-knit,3,89,0.01
+Close-knit,3,90,0.0098
+Close-knit,3,91,0.0098
+Close-knit,3,92,0.0098
+Close-knit,3,93,0.0084
+Close-knit,3,94,0.0082
+Close-knit,3,95,0.0076
+Close-knit,3,96,0.0076
+Close-knit,3,97,0.007
+Close-knit,3,98,0.0082
+Close-knit,3,99,0.008
+Close-knit,3,100,0.0086
+Close-knit,3,101,0.0082
+Close-knit,3,102,0.0076
+Close-knit,3,103,0.0078
+Close-knit,3,104,0.008
+Close-knit,3,105,0.0092
+Close-knit,3,106,0.0086
+Close-knit,3,107,0.008
+Close-knit,3,108,0.0078
+Close-knit,3,109,0.0074
+Close-knit,3,110,0.0068
+Close-knit,3,111,0.0064
+Close-knit,3,112,0.0061
+Close-knit,3,113,0.0055
+Close-knit,3,114,0.0055
+Close-knit,3,115,0.0051
+Close-knit,3,116,0.0053
+Close-knit,3,117,0.0047
+Close-knit,3,118,0.0049
+Close-knit,3,119,0.0049
+Close-knit,3,120,0.0041
+Close-knit,3,121,0.0049
+Close-knit,3,122,0.0049
+Close-knit,3,123,0.0041
+Close-knit,3,124,0.0029
+Close-knit,3,125,0.0033
+Close-knit,3,126,0.0018
+Close-knit,3,127,0.0016
+Close-knit,3,128,0.0014
+Close-knit,3,129,0.0014
+Close-knit,3,130,0.0014
+Close-knit,3,131,0.0016
+Close-knit,3,132,4e-4
+Close-knit,3,133,4e-4
+Close-knit,3,134,4e-4
+Close-knit,3,135,2e-4
+Close-knit,3,136,0
+Close-knit,3,137,0
+Close-knit,3,138,0
+Close-knit,3,139,0
+Close-knit,3,140,0
+Close-knit,3,141,0
+Close-knit,3,142,0
+Close-knit,3,143,0
+Close-knit,3,144,0
+Close-knit,3,145,0
+Close-knit,3,146,0
+Close-knit,3,147,0
+Close-knit,3,148,0
+Close-knit,3,149,0
+Close-knit,3,150,0
+Close-knit,3,151,0
+Close-knit,3,152,0
+Close-knit,3,153,0
+Close-knit,3,154,0
+Close-knit,3,155,0
+Close-knit,3,156,0
+Close-knit,3,157,0
+Close-knit,3,158,0
+Close-knit,3,159,0
+Close-knit,3,160,0
+Close-knit,3,161,0
+Close-knit,3,162,0
+Close-knit,3,163,0
+Close-knit,3,164,0
+Close-knit,3,165,0
+Close-knit,3,166,0
+Close-knit,3,167,0
+Close-knit,3,168,0
+Close-knit,3,169,0
+Close-knit,3,170,0
+Close-knit,3,171,0
+Close-knit,3,172,0
+Close-knit,3,173,0
+Close-knit,3,174,0
+Close-knit,3,175,0
+Close-knit,3,176,0
+Close-knit,3,177,0
+Close-knit,3,178,0
+Close-knit,3,179,0
+Close-knit,3,180,0
+Close-knit,3,181,0
+Close-knit,3,182,0
+Close-knit,3,183,0
+Close-knit,3,184,0
+Close-knit,3,185,0
+Close-knit,3,186,0
+Close-knit,3,187,0
+Close-knit,3,188,0
+Close-knit,3,189,0
+Close-knit,3,190,0
+Close-knit,3,191,0
+Close-knit,3,192,0
+Close-knit,3,193,0
+Close-knit,3,194,0
+Close-knit,3,195,0
+Close-knit,3,196,0
+Close-knit,3,197,0
+Close-knit,3,198,0
+Close-knit,3,199,0
+Close-knit,3,200,0
+Close-knit,3,201,0
+Close-knit,3,202,0
+Close-knit,3,203,0
+Close-knit,3,204,0
+Close-knit,3,205,0
+Close-knit,3,206,0
+Close-knit,3,207,0
+Close-knit,3,208,0
+Close-knit,3,209,0
+Close-knit,3,210,0
+Close-knit,3,211,0
+Close-knit,3,212,0
+Close-knit,3,213,0
+Close-knit,3,214,0
+Close-knit,3,215,0
+Close-knit,3,216,0
+Close-knit,3,217,0
+Close-knit,3,218,0
+Close-knit,3,219,0
+Close-knit,3,220,0
+Close-knit,3,221,0
+Close-knit,3,222,0
+Close-knit,3,223,0
+Close-knit,3,224,0
+Close-knit,3,225,0
+Close-knit,3,226,0
+Close-knit,3,227,0
+Close-knit,3,228,0
+Close-knit,3,229,0
+Close-knit,3,230,0
+Close-knit,3,231,0
+Close-knit,3,232,0
+Close-knit,3,233,0
+Close-knit,3,234,0
+Close-knit,3,235,0
+Close-knit,3,236,0
+Close-knit,3,237,0
+Close-knit,3,238,0
+Close-knit,3,239,0
+Close-knit,3,240,0
+Close-knit,3,241,0
+Close-knit,3,242,0
+Close-knit,3,243,0
+Close-knit,3,244,0
+Close-knit,3,245,0
+Close-knit,3,246,0
+Close-knit,3,247,0
+Close-knit,3,248,0
+Close-knit,3,249,0
+Close-knit,3,250,0
+Close-knit,3,251,0
+Close-knit,3,252,0
+Close-knit,3,253,0
+Close-knit,3,254,0
+Close-knit,3,255,0
+Close-knit,3,256,0
+Close-knit,3,257,0
+Close-knit,3,258,0
+Close-knit,3,259,0
+Close-knit,3,260,0
+Close-knit,3,261,0
+Close-knit,3,262,0
+Close-knit,3,263,0
+Close-knit,3,264,0
+Close-knit,3,265,0
+Close-knit,3,266,0
+Close-knit,3,267,0
+Close-knit,3,268,0
+Close-knit,3,269,0
+Close-knit,3,270,0
+Close-knit,3,271,0
+Close-knit,3,272,0
+Close-knit,3,273,0
+Close-knit,3,274,0
+Close-knit,3,275,0
+Close-knit,3,276,0
+Close-knit,3,277,0
+Close-knit,3,278,0
+Close-knit,3,279,0
+Close-knit,3,280,0
+Close-knit,3,281,0
+Close-knit,3,282,0
+Close-knit,3,283,0
+Close-knit,3,284,0
+Close-knit,3,285,0
+Close-knit,3,286,0
+Close-knit,3,287,0
+Close-knit,3,288,0
+Close-knit,3,289,0
+Close-knit,3,290,0
+Close-knit,3,291,0
+Close-knit,3,292,0
+Close-knit,3,293,0
+Close-knit,3,294,0
+Close-knit,3,295,0
+Close-knit,3,296,0
+Close-knit,3,297,0
+Close-knit,3,298,0
+Close-knit,3,299,0
+Close-knit,3,300,0
+Close-knit,10,0,0.4939
+Close-knit,10,1,0.4672
+Close-knit,10,2,0.4594
+Close-knit,10,3,0.4379
+Close-knit,10,4,0.4199
+Close-knit,10,5,0.4074
+Close-knit,10,6,0.3912
+Close-knit,10,7,0.3795
+Close-knit,10,8,0.3709
+Close-knit,10,9,0.3553
+Close-knit,10,10,0.3512
+Close-knit,10,11,0.3549
+Close-knit,10,12,0.3561
+Close-knit,10,13,0.35
+Close-knit,10,14,0.3443
+Close-knit,10,15,0.342
+Close-knit,10,16,0.334
+Close-knit,10,17,0.3283
+Close-knit,10,18,0.3238
+Close-knit,10,19,0.3254
+Close-knit,10,20,0.3193
+Close-knit,10,21,0.3131
+Close-knit,10,22,0.3148
+Close-knit,10,23,0.3154
+Close-knit,10,24,0.3096
+Close-knit,10,25,0.3098
+Close-knit,10,26,0.309
+Close-knit,10,27,0.3111
+Close-knit,10,28,0.3098
+Close-knit,10,29,0.308
+Close-knit,10,30,0.3045
+Close-knit,10,31,0.3047
+Close-knit,10,32,0.3049
+Close-knit,10,33,0.3023
+Close-knit,10,34,0.2984
+Close-knit,10,35,0.2975
+Close-knit,10,36,0.299
+Close-knit,10,37,0.2943
+Close-knit,10,38,0.2924
+Close-knit,10,39,0.2898
+Close-knit,10,40,0.291
+Close-knit,10,41,0.2918
+Close-knit,10,42,0.2883
+Close-knit,10,43,0.2902
+Close-knit,10,44,0.2857
+Close-knit,10,45,0.2863
+Close-knit,10,46,0.285
+Close-knit,10,47,0.2836
+Close-knit,10,48,0.2809
+Close-knit,10,49,0.2824
+Close-knit,10,50,0.2758
+Close-knit,10,51,0.2764
+Close-knit,10,52,0.2771
+Close-knit,10,53,0.275
+Close-knit,10,54,0.2773
+Close-knit,10,55,0.277
+Close-knit,10,56,0.2748
+Close-knit,10,57,0.2766
+Close-knit,10,58,0.2756
+Close-knit,10,59,0.2734
+Close-knit,10,60,0.2709
+Close-knit,10,61,0.2723
+Close-knit,10,62,0.2699
+Close-knit,10,63,0.2691
+Close-knit,10,64,0.2646
+Close-knit,10,65,0.2631
+Close-knit,10,66,0.26
+Close-knit,10,67,0.2576
+Close-knit,10,68,0.2559
+Close-knit,10,69,0.2572
+Close-knit,10,70,0.2572
+Close-knit,10,71,0.2555
+Close-knit,10,72,0.257
+Close-knit,10,73,0.2543
+Close-knit,10,74,0.2512
+Close-knit,10,75,0.2496
+Close-knit,10,76,0.2488
+Close-knit,10,77,0.2426
+Close-knit,10,78,0.2406
+Close-knit,10,79,0.2379
+Close-knit,10,80,0.2357
+Close-knit,10,81,0.2344
+Close-knit,10,82,0.2303
+Close-knit,10,83,0.2297
+Close-knit,10,84,0.2295
+Close-knit,10,85,0.2258
+Close-knit,10,86,0.2273
+Close-knit,10,87,0.2258
+Close-knit,10,88,0.2254
+Close-knit,10,89,0.223
+Close-knit,10,90,0.2225
+Close-knit,10,91,0.2234
+Close-knit,10,92,0.2213
+Close-knit,10,93,0.2188
+Close-knit,10,94,0.2168
+Close-knit,10,95,0.2148
+Close-knit,10,96,0.2107
+Close-knit,10,97,0.2121
+Close-knit,10,98,0.2096
+Close-knit,10,99,0.208
+Close-knit,10,100,0.2074
+Close-knit,10,101,0.208
+Close-knit,10,102,0.2082
+Close-knit,10,103,0.2047
+Close-knit,10,104,0.2035
+Close-knit,10,105,0.1984
+Close-knit,10,106,0.2016
+Close-knit,10,107,0.1996
+Close-knit,10,108,0.1998
+Close-knit,10,109,0.1969
+Close-knit,10,110,0.1936
+Close-knit,10,111,0.1918
+Close-knit,10,112,0.1893
+Close-knit,10,113,0.185
+Close-knit,10,114,0.1834
+Close-knit,10,115,0.1838
+Close-knit,10,116,0.1805
+Close-knit,10,117,0.182
+Close-knit,10,118,0.1846
+Close-knit,10,119,0.1855
+Close-knit,10,120,0.185
+Close-knit,10,121,0.1836
+Close-knit,10,122,0.1811
+Close-knit,10,123,0.1824
+Close-knit,10,124,0.1803
+Close-knit,10,125,0.1818
+Close-knit,10,126,0.1816
+Close-knit,10,127,0.1801
+Close-knit,10,128,0.1797
+Close-knit,10,129,0.1793
+Close-knit,10,130,0.182
+Close-knit,10,131,0.1809
+Close-knit,10,132,0.1795
+Close-knit,10,133,0.1795
+Close-knit,10,134,0.1764
+Close-knit,10,135,0.1742
+Close-knit,10,136,0.1725
+Close-knit,10,137,0.1711
+Close-knit,10,138,0.1678
+Close-knit,10,139,0.168
+Close-knit,10,140,0.1674
+Close-knit,10,141,0.166
+Close-knit,10,142,0.1666
+Close-knit,10,143,0.1646
+Close-knit,10,144,0.1648
+Close-knit,10,145,0.1611
+Close-knit,10,146,0.16
+Close-knit,10,147,0.1619
+Close-knit,10,148,0.159
+Close-knit,10,149,0.1576
+Close-knit,10,150,0.1568
+Close-knit,10,151,0.1551
+Close-knit,10,152,0.1514
+Close-knit,10,153,0.1512
+Close-knit,10,154,0.1514
+Close-knit,10,155,0.1504
+Close-knit,10,156,0.1504
+Close-knit,10,157,0.1492
+Close-knit,10,158,0.1447
+Close-knit,10,159,0.1449
+Close-knit,10,160,0.1439
+Close-knit,10,161,0.1449
+Close-knit,10,162,0.1424
+Close-knit,10,163,0.1436
+Close-knit,10,164,0.1412
+Close-knit,10,165,0.1381
+Close-knit,10,166,0.1326
+Close-knit,10,167,0.1316
+Close-knit,10,168,0.1289
+Close-knit,10,169,0.1273
+Close-knit,10,170,0.126
+Close-knit,10,171,0.1256
+Close-knit,10,172,0.1256
+Close-knit,10,173,0.1236
+Close-knit,10,174,0.1242
+Close-knit,10,175,0.124
+Close-knit,10,176,0.1258
+Close-knit,10,177,0.1225
+Close-knit,10,178,0.1225
+Close-knit,10,179,0.1225
+Close-knit,10,180,0.1242
+Close-knit,10,181,0.1256
+Close-knit,10,182,0.1256
+Close-knit,10,183,0.1266
+Close-knit,10,184,0.1244
+Close-knit,10,185,0.125
+Close-knit,10,186,0.1244
+Close-knit,10,187,0.1252
+Close-knit,10,188,0.1244
+Close-knit,10,189,0.1254
+Close-knit,10,190,0.1209
+Close-knit,10,191,0.1187
+Close-knit,10,192,0.1186
+Close-knit,10,193,0.1197
+Close-knit,10,194,0.1197
+Close-knit,10,195,0.1207
+Close-knit,10,196,0.1217
+Close-knit,10,197,0.1223
+Close-knit,10,198,0.1217
+Close-knit,10,199,0.1199
+Close-knit,10,200,0.1195
+Close-knit,10,201,0.1184
+Close-knit,10,202,0.1193
+Close-knit,10,203,0.1189
+Close-knit,10,204,0.1187
+Close-knit,10,205,0.1174
+Close-knit,10,206,0.1145
+Close-knit,10,207,0.116
+Close-knit,10,208,0.1152
+Close-knit,10,209,0.115
+Close-knit,10,210,0.1141
+Close-knit,10,211,0.1137
+Close-knit,10,212,0.1152
+Close-knit,10,213,0.1166
+Close-knit,10,214,0.1145
+Close-knit,10,215,0.1156
+Close-knit,10,216,0.1125
+Close-knit,10,217,0.1139
+Close-knit,10,218,0.1117
+Close-knit,10,219,0.1109
+Close-knit,10,220,0.1098
+Close-knit,10,221,0.1092
+Close-knit,10,222,0.1109
+Close-knit,10,223,0.1133
+Close-knit,10,224,0.1127
+Close-knit,10,225,0.1113
+Close-knit,10,226,0.1123
+Close-knit,10,227,0.1125
+Close-knit,10,228,0.1125
+Close-knit,10,229,0.1129
+Close-knit,10,230,0.115
+Close-knit,10,231,0.115
+Close-knit,10,232,0.1152
+Close-knit,10,233,0.116
+Close-knit,10,234,0.1158
+Close-knit,10,235,0.1152
+Close-knit,10,236,0.1152
+Close-knit,10,237,0.1145
+Close-knit,10,238,0.1148
+Close-knit,10,239,0.1145
+Close-knit,10,240,0.1127
+Close-knit,10,241,0.1117
+Close-knit,10,242,0.1102
+Close-knit,10,243,0.1131
+Close-knit,10,244,0.1117
+Close-knit,10,245,0.1123
+Close-knit,10,246,0.1133
+Close-knit,10,247,0.1162
+Close-knit,10,248,0.1127
+Close-knit,10,249,0.1139
+Close-knit,10,250,0.1148
+Close-knit,10,251,0.1145
+Close-knit,10,252,0.1148
+Close-knit,10,253,0.1146
+Close-knit,10,254,0.1127
+Close-knit,10,255,0.1102
+Close-knit,10,256,0.1086
+Close-knit,10,257,0.1094
+Close-knit,10,258,0.1088
+Close-knit,10,259,0.1076
+Close-knit,10,260,0.1086
+Close-knit,10,261,0.109
+Close-knit,10,262,0.1074
+Close-knit,10,263,0.1074
+Close-knit,10,264,0.1082
+Close-knit,10,265,0.1109
+Close-knit,10,266,0.1086
+Close-knit,10,267,0.10780000000000001
+Close-knit,10,268,0.1055
+Close-knit,10,269,0.1057
+Close-knit,10,270,0.1047
+Close-knit,10,271,0.1037
+Close-knit,10,272,0.1029
+Close-knit,10,273,0.1037
+Close-knit,10,274,0.1012
+Close-knit,10,275,0.1
+Close-knit,10,276,0.0998
+Close-knit,10,277,0.1012
+Close-knit,10,278,0.1014
+Close-knit,10,279,0.1016
+Close-knit,10,280,0.1018
+Close-knit,10,281,0.1018
+Close-knit,10,282,0.1014
+Close-knit,10,283,0.101
+Close-knit,10,284,0.101
+Close-knit,10,285,0.0979
+Close-knit,10,286,0.0979
+Close-knit,10,287,0.0982
+Close-knit,10,288,0.0982
+Close-knit,10,289,0.0984
+Close-knit,10,290,0.0992
+Close-knit,10,291,0.0988
+Close-knit,10,292,0.0984
+Close-knit,10,293,0.0979
+Close-knit,10,294,0.0994
+Close-knit,10,295,0.0971
+Close-knit,10,296,0.0959
+Close-knit,10,297,0.0928
+Close-knit,10,298,0.0922
+Close-knit,10,299,0.0914
+Close-knit,10,300,0.0902
+Small world,0.01,0,0.5133
+Small world,0.01,1,0.3037
+Small world,0.01,2,0.1961
+Small world,0.01,3,0.1482
+Small world,0.01,4,0.1152
+Small world,0.01,5,0.1041
+Small world,0.01,6,0.0893
+Small world,0.01,7,0.0799
+Small world,0.01,8,0.0758
+Small world,0.01,9,0.0684
+Small world,0.01,10,0.0686
+Small world,0.01,11,0.0635
+Small world,0.01,12,0.0619
+Small world,0.01,13,0.0613
+Small world,0.01,14,0.058
+Small world,0.01,15,0.0551
+Small world,0.01,16,0.0525
+Small world,0.01,17,0.052
+Small world,0.01,18,0.0486
+Small world,0.01,19,0.0508
+Small world,0.01,20,0.048
+Small world,0.01,21,0.0463
+Small world,0.01,22,0.0445
+Small world,0.01,23,0.0484
+Small world,0.01,24,0.0449
+Small world,0.01,25,0.0475
+Small world,0.01,26,0.0439
+Small world,0.01,27,0.0432
+Small world,0.01,28,0.042
+Small world,0.01,29,0.0418
+Small world,0.01,30,0.0422
+Small world,0.01,31,0.0381
+Small world,0.01,32,0.0383
+Small world,0.01,33,0.0375
+Small world,0.01,34,0.0381
+Small world,0.01,35,0.0379
+Small world,0.01,36,0.0385
+Small world,0.01,37,0.0389
+Small world,0.01,38,0.035
+Small world,0.01,39,0.0377
+Small world,0.01,40,0.0354
+Small world,0.01,41,0.0371
+Small world,0.01,42,0.0375
+Small world,0.01,43,0.0357
+Small world,0.01,44,0.0369
+Small world,0.01,45,0.034
+Small world,0.01,46,0.0352
+Small world,0.01,47,0.0383
+Small world,0.01,48,0.0346
+Small world,0.01,49,0.0354
+Small world,0.01,50,0.0365
+Small world,0.01,51,0.0344
+Small world,0.01,52,0.0381
+Small world,0.01,53,0.0377
+Small world,0.01,54,0.0385
+Small world,0.01,55,0.0352
+Small world,0.01,56,0.0357
+Small world,0.01,57,0.0334
+Small world,0.01,58,0.0348
+Small world,0.01,59,0.0348
+Small world,0.01,60,0.0338
+Small world,0.01,61,0.0334
+Small world,0.01,62,0.0336
+Small world,0.01,63,0.0326
+Small world,0.01,64,0.0326
+Small world,0.01,65,0.0344
+Small world,0.01,66,0.033
+Small world,0.01,67,0.0311
+Small world,0.01,68,0.0334
+Small world,0.01,69,0.0322
+Small world,0.01,70,0.032
+Small world,0.01,71,0.0322
+Small world,0.01,72,0.0336
+Small world,0.01,73,0.0316
+Small world,0.01,74,0.0283
+Small world,0.01,75,0.0275
+Small world,0.01,76,0.0268
+Small world,0.01,77,0.027
+Small world,0.01,78,0.0291
+Small world,0.01,79,0.0283
+Small world,0.01,80,0.0289
+Small world,0.01,81,0.0295
+Small world,0.01,82,0.0279
+Small world,0.01,83,0.0277
+Small world,0.01,84,0.0275
+Small world,0.01,85,0.0309
+Small world,0.01,86,0.0295
+Small world,0.01,87,0.0305
+Small world,0.01,88,0.0307
+Small world,0.01,89,0.0309
+Small world,0.01,90,0.0314
+Small world,0.01,91,0.0303
+Small world,0.01,92,0.0324
+Small world,0.01,93,0.0316
+Small world,0.01,94,0.0297
+Small world,0.01,95,0.0311
+Small world,0.01,96,0.0285
+Small world,0.01,97,0.0289
+Small world,0.01,98,0.0287
+Small world,0.01,99,0.0309
+Small world,0.01,100,0.0299
+Small world,0.01,101,0.0268
+Small world,0.01,102,0.0283
+Small world,0.01,103,0.027
+Small world,0.01,104,0.0285
+Small world,0.01,105,0.0277
+Small world,0.01,106,0.0291
+Small world,0.01,107,0.0291
+Small world,0.01,108,0.0283
+Small world,0.01,109,0.0277
+Small world,0.01,110,0.0287
+Small world,0.01,111,0.0291
+Small world,0.01,112,0.0291
+Small world,0.01,113,0.027
+Small world,0.01,114,0.0283
+Small world,0.01,115,0.0303
+Small world,0.01,116,0.0299
+Small world,0.01,117,0.0291
+Small world,0.01,118,0.0291
+Small world,0.01,119,0.0297
+Small world,0.01,120,0.0287
+Small world,0.01,121,0.0285
+Small world,0.01,122,0.0264
+Small world,0.01,123,0.0281
+Small world,0.01,124,0.0303
+Small world,0.01,125,0.0297
+Small world,0.01,126,0.0289
+Small world,0.01,127,0.0289
+Small world,0.01,128,0.0279
+Small world,0.01,129,0.0264
+Small world,0.01,130,0.0283
+Small world,0.01,131,0.0279
+Small world,0.01,132,0.0258
+Small world,0.01,133,0.0264
+Small world,0.01,134,0.0271
+Small world,0.01,135,0.0242
+Small world,0.01,136,0.027
+Small world,0.01,137,0.0283
+Small world,0.01,138,0.0279
+Small world,0.01,139,0.0256
+Small world,0.01,140,0.0262
+Small world,0.01,141,0.0264
+Small world,0.01,142,0.0264
+Small world,0.01,143,0.027
+Small world,0.01,144,0.0254
+Small world,0.01,145,0.0254
+Small world,0.01,146,0.0266
+Small world,0.01,147,0.025
+Small world,0.01,148,0.0244
+Small world,0.01,149,0.0248
+Small world,0.01,150,0.0246
+Small world,0.01,151,0.024
+Small world,0.01,152,0.0256
+Small world,0.01,153,0.027
+Small world,0.01,154,0.0246
+Small world,0.01,155,0.0262
+Small world,0.01,156,0.0264
+Small world,0.01,157,0.0258
+Small world,0.01,158,0.0271
+Small world,0.01,159,0.0268
+Small world,0.01,160,0.0266
+Small world,0.01,161,0.0256
+Small world,0.01,162,0.0281
+Small world,0.01,163,0.0275
+Small world,0.01,164,0.0271
+Small world,0.01,165,0.0295
+Small world,0.01,166,0.0258
+Small world,0.01,167,0.0285
+Small world,0.01,168,0.0283
+Small world,0.01,169,0.0297
+Small world,0.01,170,0.0266
+Small world,0.01,171,0.0262
+Small world,0.01,172,0.0281
+Small world,0.01,173,0.0266
+Small world,0.01,174,0.0287
+Small world,0.01,175,0.0273
+Small world,0.01,176,0.026
+Small world,0.01,177,0.0273
+Small world,0.01,178,0.0254
+Small world,0.01,179,0.0262
+Small world,0.01,180,0.0246
+Small world,0.01,181,0.0268
+Small world,0.01,182,0.0246
+Small world,0.01,183,0.0234
+Small world,0.01,184,0.0248
+Small world,0.01,185,0.0246
+Small world,0.01,186,0.0244
+Small world,0.01,187,0.0238
+Small world,0.01,188,0.0242
+Small world,0.01,189,0.0238
+Small world,0.01,190,0.023
+Small world,0.01,191,0.0258
+Small world,0.01,192,0.0246
+Small world,0.01,193,0.0254
+Small world,0.01,194,0.0234
+Small world,0.01,195,0.0248
+Small world,0.01,196,0.024
+Small world,0.01,197,0.0246
+Small world,0.01,198,0.026
+Small world,0.01,199,0.0242
+Small world,0.01,200,0.0252
+Small world,0.01,201,0.0254
+Small world,0.01,202,0.026
+Small world,0.01,203,0.0227
+Small world,0.01,204,0.0244
+Small world,0.01,205,0.024
+Small world,0.01,206,0.0227
+Small world,0.01,207,0.0207
+Small world,0.01,208,0.0221
+Small world,0.01,209,0.0215
+Small world,0.01,210,0.0236
+Small world,0.01,211,0.0219
+Small world,0.01,212,0.0217
+Small world,0.01,213,0.0221
+Small world,0.01,214,0.0217
+Small world,0.01,215,0.0211
+Small world,0.01,216,0.0225
+Small world,0.01,217,0.0219
+Small world,0.01,218,0.0217
+Small world,0.01,219,0.0223
+Small world,0.01,220,0.0205
+Small world,0.01,221,0.0223
+Small world,0.01,222,0.0213
+Small world,0.01,223,0.0227
+Small world,0.01,224,0.0203
+Small world,0.01,225,0.0215
+Small world,0.01,226,0.0219
+Small world,0.01,227,0.0221
+Small world,0.01,228,0.0219
+Small world,0.01,229,0.0197
+Small world,0.01,230,0.0211
+Small world,0.01,231,0.0193
+Small world,0.01,232,0.0197
+Small world,0.01,233,0.0199
+Small world,0.01,234,0.0199
+Small world,0.01,235,0.0205
+Small world,0.01,236,0.0205
+Small world,0.01,237,0.0193
+Small world,0.01,238,0.0205
+Small world,0.01,239,0.0187
+Small world,0.01,240,0.0184
+Small world,0.01,241,0.0187
+Small world,0.01,242,0.0195
+Small world,0.01,243,0.0184
+Small world,0.01,244,0.0176
+Small world,0.01,245,0.0184
+Small world,0.01,246,0.0186
+Small world,0.01,247,0.018
+Small world,0.01,248,0.0178
+Small world,0.01,249,0.0187
+Small world,0.01,250,0.018
+Small world,0.01,251,0.0182
+Small world,0.01,252,0.0187
+Small world,0.01,253,0.0203
+Small world,0.01,254,0.0205
+Small world,0.01,255,0.0189
+Small world,0.01,256,0.0193
+Small world,0.01,257,0.0184
+Small world,0.01,258,0.0182
+Small world,0.01,259,0.0193
+Small world,0.01,260,0.0184
+Small world,0.01,261,0.0197
+Small world,0.01,262,0.0184
+Small world,0.01,263,0.0195
+Small world,0.01,264,0.0187
+Small world,0.01,265,0.0182
+Small world,0.01,266,0.018
+Small world,0.01,267,0.0174
+Small world,0.01,268,0.0189
+Small world,0.01,269,0.0166
+Small world,0.01,270,0.0191
+Small world,0.01,271,0.0189
+Small world,0.01,272,0.0197
+Small world,0.01,273,0.0191
+Small world,0.01,274,0.0174
+Small world,0.01,275,0.0174
+Small world,0.01,276,0.0193
+Small world,0.01,277,0.0189
+Small world,0.01,278,0.0176
+Small world,0.01,279,0.0182
+Small world,0.01,280,0.0186
+Small world,0.01,281,0.0182
+Small world,0.01,282,0.0189
+Small world,0.01,283,0.0178
+Small world,0.01,284,0.0174
+Small world,0.01,285,0.0203
+Small world,0.01,286,0.0186
+Small world,0.01,287,0.0187
+Small world,0.01,288,0.0197
+Small world,0.01,289,0.0186
+Small world,0.01,290,0.0186
+Small world,0.01,291,0.0186
+Small world,0.01,292,0.0178
+Small world,0.01,293,0.0178
+Small world,0.01,294,0.0184
+Small world,0.01,295,0.0193
+Small world,0.01,296,0.0186
+Small world,0.01,297,0.0189
+Small world,0.01,298,0.0189
+Small world,0.01,299,0.0184
+Small world,0.01,300,0.0187
+Small world,0.03,0,0.4979
+Small world,0.03,1,0.2793
+Small world,0.03,2,0.16
+Small world,0.03,3,0.1039
+Small world,0.03,4,0.0754
+Small world,0.03,5,0.0609
+Small world,0.03,6,0.0508
+Small world,0.03,7,0.0445
+Small world,0.03,8,0.0391
+Small world,0.03,9,0.0342
+Small world,0.03,10,0.0314
+Small world,0.03,11,0.0297
+Small world,0.03,12,0.0301
+Small world,0.03,13,0.0299
+Small world,0.03,14,0.0264
+Small world,0.03,15,0.0258
+Small world,0.03,16,0.0254
+Small world,0.03,17,0.0271
+Small world,0.03,18,0.0248
+Small world,0.03,19,0.0238
+Small world,0.03,20,0.0221
+Small world,0.03,21,0.0223
+Small world,0.03,22,0.0221
+Small world,0.03,23,0.0221
+Small world,0.03,24,0.0217
+Small world,0.03,25,0.0223
+Small world,0.03,26,0.0221
+Small world,0.03,27,0.0221
+Small world,0.03,28,0.023
+Small world,0.03,29,0.0207
+Small world,0.03,30,0.0193
+Small world,0.03,31,0.0205
+Small world,0.03,32,0.0201
+Small world,0.03,33,0.0205
+Small world,0.03,34,0.0191
+Small world,0.03,35,0.0191
+Small world,0.03,36,0.0199
+Small world,0.03,37,0.0184
+Small world,0.03,38,0.0176
+Small world,0.03,39,0.0168
+Small world,0.03,40,0.0168
+Small world,0.03,41,0.0174
+Small world,0.03,42,0.0174
+Small world,0.03,43,0.0176
+Small world,0.03,44,0.0162
+Small world,0.03,45,0.0199
+Small world,0.03,46,0.0166
+Small world,0.03,47,0.0156
+Small world,0.03,48,0.0162
+Small world,0.03,49,0.015
+Small world,0.03,50,0.0146
+Small world,0.03,51,0.0146
+Small world,0.03,52,0.0139
+Small world,0.03,53,0.0143
+Small world,0.03,54,0.0143
+Small world,0.03,55,0.0152
+Small world,0.03,56,0.0131
+Small world,0.03,57,0.0133
+Small world,0.03,58,0.0143
+Small world,0.03,59,0.0148
+Small world,0.03,60,0.0145
+Small world,0.03,61,0.0143
+Small world,0.03,62,0.0129
+Small world,0.03,63,0.0129
+Small world,0.03,64,0.0133
+Small world,0.03,65,0.0135
+Small world,0.03,66,0.0141
+Small world,0.03,67,0.0141
+Small world,0.03,68,0.0125
+Small world,0.03,69,0.0146
+Small world,0.03,70,0.0141
+Small world,0.03,71,0.0145
+Small world,0.03,72,0.0133
+Small world,0.03,73,0.0131
+Small world,0.03,74,0.0131
+Small world,0.03,75,0.0131
+Small world,0.03,76,0.0137
+Small world,0.03,77,0.0127
+Small world,0.03,78,0.0129
+Small world,0.03,79,0.0137
+Small world,0.03,80,0.0127
+Small world,0.03,81,0.0127
+Small world,0.03,82,0.0131
+Small world,0.03,83,0.0133
+Small world,0.03,84,0.0139
+Small world,0.03,85,0.0129
+Small world,0.03,86,0.0143
+Small world,0.03,87,0.0141
+Small world,0.03,88,0.0133
+Small world,0.03,89,0.0133
+Small world,0.03,90,0.0131
+Small world,0.03,91,0.0135
+Small world,0.03,92,0.0139
+Small world,0.03,93,0.0137
+Small world,0.03,94,0.0127
+Small world,0.03,95,0.0117
+Small world,0.03,96,0.0123
+Small world,0.03,97,0.0125
+Small world,0.03,98,0.0125
+Small world,0.03,99,0.0121
+Small world,0.03,100,0.0117
+Small world,0.03,101,0.0123
+Small world,0.03,102,0.0125
+Small world,0.03,103,0.0123
+Small world,0.03,104,0.0125
+Small world,0.03,105,0.0125
+Small world,0.03,106,0.0127
+Small world,0.03,107,0.0129
+Small world,0.03,108,0.0125
+Small world,0.03,109,0.0129
+Small world,0.03,110,0.0113
+Small world,0.03,111,0.0113
+Small world,0.03,112,0.0113
+Small world,0.03,113,0.0102
+Small world,0.03,114,0.0109
+Small world,0.03,115,0.0107
+Small world,0.03,116,0.0115
+Small world,0.03,117,0.0113
+Small world,0.03,118,0.0104
+Small world,0.03,119,0.0115
+Small world,0.03,120,0.0121
+Small world,0.03,121,0.0117
+Small world,0.03,122,0.0111
+Small world,0.03,123,0.0113
+Small world,0.03,124,0.0105
+Small world,0.03,125,0.0104
+Small world,0.03,126,0.0113
+Small world,0.03,127,0.0107
+Small world,0.03,128,0.0113
+Small world,0.03,129,0.0127
+Small world,0.03,130,0.0117
+Small world,0.03,131,0.0119
+Small world,0.03,132,0.0117
+Small world,0.03,133,0.0117
+Small world,0.03,134,0.0113
+Small world,0.03,135,0.01
+Small world,0.03,136,0.0109
+Small world,0.03,137,0.0104
+Small world,0.03,138,0.0119
+Small world,0.03,139,0.0121
+Small world,0.03,140,0.0113
+Small world,0.03,141,0.0113
+Small world,0.03,142,0.0113
+Small world,0.03,143,0.0121
+Small world,0.03,144,0.0107
+Small world,0.03,145,0.0109
+Small world,0.03,146,0.0111
+Small world,0.03,147,0.0113
+Small world,0.03,148,0.0119
+Small world,0.03,149,0.0107
+Small world,0.03,150,0.0127
+Small world,0.03,151,0.0119
+Small world,0.03,152,0.0141
+Small world,0.03,153,0.0121
+Small world,0.03,154,0.0115
+Small world,0.03,155,0.0129
+Small world,0.03,156,0.0115
+Small world,0.03,157,0.0115
+Small world,0.03,158,0.0111
+Small world,0.03,159,0.0125
+Small world,0.03,160,0.0111
+Small world,0.03,161,0.0104
+Small world,0.03,162,0.01
+Small world,0.03,163,0.0105
+Small world,0.03,164,0.0105
+Small world,0.03,165,0.0102
+Small world,0.03,166,0.0094
+Small world,0.03,167,0.0098
+Small world,0.03,168,0.0107
+Small world,0.03,169,0.0102
+Small world,0.03,170,0.0109
+Small world,0.03,171,0.0104
+Small world,0.03,172,0.0096
+Small world,0.03,173,0.0107
+Small world,0.03,174,0.0105
+Small world,0.03,175,0.0107
+Small world,0.03,176,0.0107
+Small world,0.03,177,0.0109
+Small world,0.03,178,0.0111
+Small world,0.03,179,0.0107
+Small world,0.03,180,0.0104
+Small world,0.03,181,0.0102
+Small world,0.03,182,0.0111
+Small world,0.03,183,0.0119
+Small world,0.03,184,0.0119
+Small world,0.03,185,0.0117
+Small world,0.03,186,0.0119
+Small world,0.03,187,0.0125
+Small world,0.03,188,0.0121
+Small world,0.03,189,0.0119
+Small world,0.03,190,0.0123
+Small world,0.03,191,0.0119
+Small world,0.03,192,0.0119
+Small world,0.03,193,0.0119
+Small world,0.03,194,0.0127
+Small world,0.03,195,0.0121
+Small world,0.03,196,0.0109
+Small world,0.03,197,0.0111
+Small world,0.03,198,0.0113
+Small world,0.03,199,0.0111
+Small world,0.03,200,0.01
+Small world,0.03,201,0.0105
+Small world,0.03,202,0.0119
+Small world,0.03,203,0.0104
+Small world,0.03,204,0.0102
+Small world,0.03,205,0.0113
+Small world,0.03,206,0.0125
+Small world,0.03,207,0.0109
+Small world,0.03,208,0.0115
+Small world,0.03,209,0.0117
+Small world,0.03,210,0.0113
+Small world,0.03,211,0.0121
+Small world,0.03,212,0.0117
+Small world,0.03,213,0.0113
+Small world,0.03,214,0.0119
+Small world,0.03,215,0.0117
+Small world,0.03,216,0.0113
+Small world,0.03,217,0.0121
+Small world,0.03,218,0.0111
+Small world,0.03,219,0.0121
+Small world,0.03,220,0.0131
+Small world,0.03,221,0.0127
+Small world,0.03,222,0.0117
+Small world,0.03,223,0.0125
+Small world,0.03,224,0.0129
+Small world,0.03,225,0.0127
+Small world,0.03,226,0.0125
+Small world,0.03,227,0.0145
+Small world,0.03,228,0.0129
+Small world,0.03,229,0.0143
+Small world,0.03,230,0.0133
+Small world,0.03,231,0.0145
+Small world,0.03,232,0.0129
+Small world,0.03,233,0.0133
+Small world,0.03,234,0.0125
+Small world,0.03,235,0.0123
+Small world,0.03,236,0.0115
+Small world,0.03,237,0.0129
+Small world,0.03,238,0.0119
+Small world,0.03,239,0.0119
+Small world,0.03,240,0.0109
+Small world,0.03,241,0.0109
+Small world,0.03,242,0.0117
+Small world,0.03,243,0.0111
+Small world,0.03,244,0.0119
+Small world,0.03,245,0.0109
+Small world,0.03,246,0.0107
+Small world,0.03,247,0.0121
+Small world,0.03,248,0.0113
+Small world,0.03,249,0.0107
+Small world,0.03,250,0.0121
+Small world,0.03,251,0.0119
+Small world,0.03,252,0.0109
+Small world,0.03,253,0.0119
+Small world,0.03,254,0.0127
+Small world,0.03,255,0.0119
+Small world,0.03,256,0.0113
+Small world,0.03,257,0.0121
+Small world,0.03,258,0.0115
+Small world,0.03,259,0.0115
+Small world,0.03,260,0.0113
+Small world,0.03,261,0.0107
+Small world,0.03,262,0.0113
+Small world,0.03,263,0.0104
+Small world,0.03,264,0.0109
+Small world,0.03,265,0.0105
+Small world,0.03,266,0.0109
+Small world,0.03,267,0.0107
+Small world,0.03,268,0.0105
+Small world,0.03,269,0.0104
+Small world,0.03,270,0.0109
+Small world,0.03,271,0.0115
+Small world,0.03,272,0.0111
+Small world,0.03,273,0.0111
+Small world,0.03,274,0.0113
+Small world,0.03,275,0.0113
+Small world,0.03,276,0.0098
+Small world,0.03,277,0.0096
+Small world,0.03,278,0.0107
+Small world,0.03,279,0.0115
+Small world,0.03,280,0.0111
+Small world,0.03,281,0.0102
+Small world,0.03,282,0.0098
+Small world,0.03,283,0.0105
+Small world,0.03,284,0.0104
+Small world,0.03,285,0.0111
+Small world,0.03,286,0.0102
+Small world,0.03,287,0.01
+Small world,0.03,288,0.0105
+Small world,0.03,289,0.0105
+Small world,0.03,290,0.0102
+Small world,0.03,291,0.0102
+Small world,0.03,292,0.0098
+Small world,0.03,293,0.01
+Small world,0.03,294,0.0098
+Small world,0.03,295,0.01
+Small world,0.03,296,0.0105
+Small world,0.03,297,0.0104
+Small world,0.03,298,0.0102
+Small world,0.03,299,0.0109
+Small world,0.03,300,0.0104
+Small world,0.1,0,0.517
+Small world,0.1,1,0.3096
+Small world,0.1,2,0.2059
+Small world,0.1,3,0.1506
+Small world,0.1,4,0.1172
+Small world,0.1,5,0.1055
+Small world,0.1,6,0.0955
+Small world,0.1,7,0.0846
+Small world,0.1,8,0.0795
+Small world,0.1,9,0.0762
+Small world,0.1,10,0.0717
+Small world,0.1,11,0.0688
+Small world,0.1,12,0.0664
+Small world,0.1,13,0.0637
+Small world,0.1,14,0.0645
+Small world,0.1,15,0.0645
+Small world,0.1,16,0.0629
+Small world,0.1,17,0.0617
+Small world,0.1,18,0.0607
+Small world,0.1,19,0.059
+Small world,0.1,20,0.0582
+Small world,0.1,21,0.0607
+Small world,0.1,22,0.0592
+Small world,0.1,23,0.0584
+Small world,0.1,24,0.0572
+Small world,0.1,25,0.058
+Small world,0.1,26,0.0574
+Small world,0.1,27,0.058
+Small world,0.1,28,0.0602
+Small world,0.1,29,0.0588
+Small world,0.1,30,0.0549
+Small world,0.1,31,0.0527
+Small world,0.1,32,0.0498
+Small world,0.1,33,0.0506
+Small world,0.1,34,0.0488
+Small world,0.1,35,0.0502
+Small world,0.1,36,0.0498
+Small world,0.1,37,0.0506
+Small world,0.1,38,0.0492
+Small world,0.1,39,0.0484
+Small world,0.1,40,0.0457
+Small world,0.1,41,0.0453
+Small world,0.1,42,0.0437
+Small world,0.1,43,0.0443
+Small world,0.1,44,0.0418
+Small world,0.1,45,0.0393
+Small world,0.1,46,0.0381
+Small world,0.1,47,0.0375
+Small world,0.1,48,0.0383
+Small world,0.1,49,0.0357
+Small world,0.1,50,0.0357
+Small world,0.1,51,0.0371
+Small world,0.1,52,0.0385
+Small world,0.1,53,0.0357
+Small world,0.1,54,0.0367
+Small world,0.1,55,0.0332
+Small world,0.1,56,0.0332
+Small world,0.1,57,0.0332
+Small world,0.1,58,0.0307
+Small world,0.1,59,0.0305
+Small world,0.1,60,0.0311
+Small world,0.1,61,0.0311
+Small world,0.1,62,0.0316
+Small world,0.1,63,0.0311
+Small world,0.1,64,0.0312
+Small world,0.1,65,0.0301
+Small world,0.1,66,0.0299
+Small world,0.1,67,0.0303
+Small world,0.1,68,0.0301
+Small world,0.1,69,0.0287
+Small world,0.1,70,0.0275
+Small world,0.1,71,0.0309
+Small world,0.1,72,0.0305
+Small world,0.1,73,0.0291
+Small world,0.1,74,0.0287
+Small world,0.1,75,0.0291
+Small world,0.1,76,0.0281
+Small world,0.1,77,0.027
+Small world,0.1,78,0.0307
+Small world,0.1,79,0.0273
+Small world,0.1,80,0.0275
+Small world,0.1,81,0.0266
+Small world,0.1,82,0.0268
+Small world,0.1,83,0.0246
+Small world,0.1,84,0.0236
+Small world,0.1,85,0.0234
+Small world,0.1,86,0.024
+Small world,0.1,87,0.0252
+Small world,0.1,88,0.0258
+Small world,0.1,89,0.0271
+Small world,0.1,90,0.0262
+Small world,0.1,91,0.0256
+Small world,0.1,92,0.0266
+Small world,0.1,93,0.0232
+Small world,0.1,94,0.0234
+Small world,0.1,95,0.0236
+Small world,0.1,96,0.0254
+Small world,0.1,97,0.0258
+Small world,0.1,98,0.0246
+Small world,0.1,99,0.0232
+Small world,0.1,100,0.0232
+Small world,0.1,101,0.0229
+Small world,0.1,102,0.0223
+Small world,0.1,103,0.0213
+Small world,0.1,104,0.0211
+Small world,0.1,105,0.0203
+Small world,0.1,106,0.0215
+Small world,0.1,107,0.0211
+Small world,0.1,108,0.0201
+Small world,0.1,109,0.0203
+Small world,0.1,110,0.0205
+Small world,0.1,111,0.0211
+Small world,0.1,112,0.0205
+Small world,0.1,113,0.0189
+Small world,0.1,114,0.0205
+Small world,0.1,115,0.0191
+Small world,0.1,116,0.0193
+Small world,0.1,117,0.0191
+Small world,0.1,118,0.0184
+Small world,0.1,119,0.0197
+Small world,0.1,120,0.0201
+Small world,0.1,121,0.0199
+Small world,0.1,122,0.0193
+Small world,0.1,123,0.0207
+Small world,0.1,124,0.0211
+Small world,0.1,125,0.0205
+Small world,0.1,126,0.0213
+Small world,0.1,127,0.017
+Small world,0.1,128,0.017
+Small world,0.1,129,0.0184
+Small world,0.1,130,0.0176
+Small world,0.1,131,0.0187
+Small world,0.1,132,0.0195
+Small world,0.1,133,0.0182
+Small world,0.1,134,0.0182
+Small world,0.1,135,0.0182
+Small world,0.1,136,0.0178
+Small world,0.1,137,0.0172
+Small world,0.1,138,0.0164
+Small world,0.1,139,0.0184
+Small world,0.1,140,0.0189
+Small world,0.1,141,0.0187
+Small world,0.1,142,0.0186
+Small world,0.1,143,0.0182
+Small world,0.1,144,0.0189
+Small world,0.1,145,0.0189
+Small world,0.1,146,0.0176
+Small world,0.1,147,0.0168
+Small world,0.1,148,0.0162
+Small world,0.1,149,0.0154
+Small world,0.1,150,0.0162
+Small world,0.1,151,0.0162
+Small world,0.1,152,0.0152
+Small world,0.1,153,0.0164
+Small world,0.1,154,0.0156
+Small world,0.1,155,0.0129
+Small world,0.1,156,0.0135
+Small world,0.1,157,0.0137
+Small world,0.1,158,0.0129
+Small world,0.1,159,0.0139
+Small world,0.1,160,0.0141
+Small world,0.1,161,0.0148
+Small world,0.1,162,0.016
+Small world,0.1,163,0.0156
+Small world,0.1,164,0.0145
+Small world,0.1,165,0.0145
+Small world,0.1,166,0.0131
+Small world,0.1,167,0.0127
+Small world,0.1,168,0.0127
+Small world,0.1,169,0.0129
+Small world,0.1,170,0.0125
+Small world,0.1,171,0.0129
+Small world,0.1,172,0.0121
+Small world,0.1,173,0.0131
+Small world,0.1,174,0.0139
+Small world,0.1,175,0.0129
+Small world,0.1,176,0.0117
+Small world,0.1,177,0.0125
+Small world,0.1,178,0.0125
+Small world,0.1,179,0.0125
+Small world,0.1,180,0.0125
+Small world,0.1,181,0.0131
+Small world,0.1,182,0.0141
+Small world,0.1,183,0.0139
+Small world,0.1,184,0.0145
+Small world,0.1,185,0.0137
+Small world,0.1,186,0.0119
+Small world,0.1,187,0.0121
+Small world,0.1,188,0.0133
+Small world,0.1,189,0.0123
+Small world,0.1,190,0.0131
+Small world,0.1,191,0.0127
+Small world,0.1,192,0.0133
+Small world,0.1,193,0.0119
+Small world,0.1,194,0.0121
+Small world,0.1,195,0.0131
+Small world,0.1,196,0.0127
+Small world,0.1,197,0.0121
+Small world,0.1,198,0.0123
+Small world,0.1,199,0.0131
+Small world,0.1,200,0.0123
+Small world,0.1,201,0.0115
+Small world,0.1,202,0.0123
+Small world,0.1,203,0.0121
+Small world,0.1,204,0.0121
+Small world,0.1,205,0.0125
+Small world,0.1,206,0.0121
+Small world,0.1,207,0.0121
+Small world,0.1,208,0.0121
+Small world,0.1,209,0.0119
+Small world,0.1,210,0.0117
+Small world,0.1,211,0.0125
+Small world,0.1,212,0.0111
+Small world,0.1,213,0.0125
+Small world,0.1,214,0.0117
+Small world,0.1,215,0.0115
+Small world,0.1,216,0.0121
+Small world,0.1,217,0.0113
+Small world,0.1,218,0.0121
+Small world,0.1,219,0.0123
+Small world,0.1,220,0.0123
+Small world,0.1,221,0.0137
+Small world,0.1,222,0.0131
+Small world,0.1,223,0.0133
+Small world,0.1,224,0.0127
+Small world,0.1,225,0.0117
+Small world,0.1,226,0.0127
+Small world,0.1,227,0.0129
+Small world,0.1,228,0.0119
+Small world,0.1,229,0.0113
+Small world,0.1,230,0.0133
+Small world,0.1,231,0.0125
+Small world,0.1,232,0.0127
+Small world,0.1,233,0.0119
+Small world,0.1,234,0.0117
+Small world,0.1,235,0.0119
+Small world,0.1,236,0.0115
+Small world,0.1,237,0.0131
+Small world,0.1,238,0.0115
+Small world,0.1,239,0.0123
+Small world,0.1,240,0.0119
+Small world,0.1,241,0.0102
+Small world,0.1,242,0.0109
+Small world,0.1,243,0.0117
+Small world,0.1,244,0.0117
+Small world,0.1,245,0.0109
+Small world,0.1,246,0.0104
+Small world,0.1,247,0.0107
+Small world,0.1,248,0.0102
+Small world,0.1,249,0.0111
+Small world,0.1,250,0.0105
+Small world,0.1,251,0.0117
+Small world,0.1,252,0.0113
+Small world,0.1,253,0.0111
+Small world,0.1,254,0.0111
+Small world,0.1,255,0.0113
+Small world,0.1,256,0.0111
+Small world,0.1,257,0.0104
+Small world,0.1,258,0.0115
+Small world,0.1,259,0.0111
+Small world,0.1,260,0.0105
+Small world,0.1,261,0.0111
+Small world,0.1,262,0.0111
+Small world,0.1,263,0.0117
+Small world,0.1,264,0.0113
+Small world,0.1,265,0.0123
+Small world,0.1,266,0.0135
+Small world,0.1,267,0.0119
+Small world,0.1,268,0.0109
+Small world,0.1,269,0.0107
+Small world,0.1,270,0.0123
+Small world,0.1,271,0.0111
+Small world,0.1,272,0.0115
+Small world,0.1,273,0.0102
+Small world,0.1,274,0.0107
+Small world,0.1,275,0.0104
+Small world,0.1,276,0.0117
+Small world,0.1,277,0.0107
+Small world,0.1,278,0.0105
+Small world,0.1,279,0.0119
+Small world,0.1,280,0.0102
+Small world,0.1,281,0.0105
+Small world,0.1,282,0.0107
+Small world,0.1,283,0.0109
+Small world,0.1,284,0.0107
+Small world,0.1,285,0.0115
+Small world,0.1,286,0.0125
+Small world,0.1,287,0.0127
+Small world,0.1,288,0.0123
+Small world,0.1,289,0.0125
+Small world,0.1,290,0.0127
+Small world,0.1,291,0.0109
+Small world,0.1,292,0.0125
+Small world,0.1,293,0.0121
+Small world,0.1,294,0.0113
+Small world,0.1,295,0.0111
+Small world,0.1,296,0.0107
+Small world,0.1,297,0.01
+Small world,0.1,298,0.01
+Small world,0.1,299,0.0104
+Small world,0.1,300,0.0113
+Small world,0.3,0,0.5062
+Small world,0.3,1,0.3238
+Small world,0.3,2,0.2246
+Small world,0.3,3,0.1684
+Small world,0.3,4,0.1332
+Small world,0.3,5,0.1139
+Small world,0.3,6,0.1014
+Small world,0.3,7,0.0941
+Small world,0.3,8,0.0848
+Small world,0.3,9,0.0781
+Small world,0.3,10,0.0723
+Small world,0.3,11,0.0607
+Small world,0.3,12,0.057
+Small world,0.3,13,0.0557
+Small world,0.3,14,0.05
+Small world,0.3,15,0.0479
+Small world,0.3,16,0.0467
+Small world,0.3,17,0.0449
+Small world,0.3,18,0.0422
+Small world,0.3,19,0.0432
+Small world,0.3,20,0.0398
+Small world,0.3,21,0.0375
+Small world,0.3,22,0.0365
+Small world,0.3,23,0.0346
+Small world,0.3,24,0.0322
+Small world,0.3,25,0.0307
+Small world,0.3,26,0.0303
+Small world,0.3,27,0.0283
+Small world,0.3,28,0.0287
+Small world,0.3,29,0.0258
+Small world,0.3,30,0.0252
+Small world,0.3,31,0.0262
+Small world,0.3,32,0.0242
+Small world,0.3,33,0.0219
+Small world,0.3,34,0.0213
+Small world,0.3,35,0.0217
+Small world,0.3,36,0.0205
+Small world,0.3,37,0.0191
+Small world,0.3,38,0.0186
+Small world,0.3,39,0.0187
+Small world,0.3,40,0.0172
+Small world,0.3,41,0.0172
+Small world,0.3,42,0.0172
+Small world,0.3,43,0.0164
+Small world,0.3,44,0.0164
+Small world,0.3,45,0.0174
+Small world,0.3,46,0.0174
+Small world,0.3,47,0.0187
+Small world,0.3,48,0.0187
+Small world,0.3,49,0.0191
+Small world,0.3,50,0.0205
+Small world,0.3,51,0.0186
+Small world,0.3,52,0.0168
+Small world,0.3,53,0.0156
+Small world,0.3,54,0.0164
+Small world,0.3,55,0.0158
+Small world,0.3,56,0.0164
+Small world,0.3,57,0.0154
+Small world,0.3,58,0.0143
+Small world,0.3,59,0.0143
+Small world,0.3,60,0.0131
+Small world,0.3,61,0.0139
+Small world,0.3,62,0.0137
+Small world,0.3,63,0.0143
+Small world,0.3,64,0.0143
+Small world,0.3,65,0.0123
+Small world,0.3,66,0.0123
+Small world,0.3,67,0.0119
+Small world,0.3,68,0.0121
+Small world,0.3,69,0.0119
+Small world,0.3,70,0.0111
+Small world,0.3,71,0.0117
+Small world,0.3,72,0.0115
+Small world,0.3,73,0.0115
+Small world,0.3,74,0.0117
+Small world,0.3,75,0.0127
+Small world,0.3,76,0.0104
+Small world,0.3,77,0.0102
+Small world,0.3,78,0.0104
+Small world,0.3,79,0.0104
+Small world,0.3,80,0.0094
+Small world,0.3,81,0.0096
+Small world,0.3,82,0.0105
+Small world,0.3,83,0.0117
+Small world,0.3,84,0.0117
+Small world,0.3,85,0.0111
+Small world,0.3,86,0.0109
+Small world,0.3,87,0.0111
+Small world,0.3,88,0.0102
+Small world,0.3,89,0.0107
+Small world,0.3,90,0.0111
+Small world,0.3,91,0.0111
+Small world,0.3,92,0.0102
+Small world,0.3,93,0.0102
+Small world,0.3,94,0.0111
+Small world,0.3,95,0.0111
+Small world,0.3,96,0.01
+Small world,0.3,97,0.0092
+Small world,0.3,98,0.009
+Small world,0.3,99,0.0084
+Small world,0.3,100,0.0074
+Small world,0.3,101,0.0082
+Small world,0.3,102,0.008
+Small world,0.3,103,0.009
+Small world,0.3,104,0.01
+Small world,0.3,105,0.009
+Small world,0.3,106,0.0088
+Small world,0.3,107,0.0084
+Small world,0.3,108,0.0082
+Small world,0.3,109,0.0088
+Small world,0.3,110,0.0082
+Small world,0.3,111,0.0092
+Small world,0.3,112,0.0086
+Small world,0.3,113,0.0074
+Small world,0.3,114,0.0074
+Small world,0.3,115,0.0064
+Small world,0.3,116,0.0068
+Small world,0.3,117,0.0063
+Small world,0.3,118,0.0057
+Small world,0.3,119,0.0039
+Small world,0.3,120,0.0039
+Small world,0.3,121,0.0039
+Small world,0.3,122,0.0029
+Small world,0.3,123,0.0033
+Small world,0.3,124,0.0043
+Small world,0.3,125,0.0039
+Small world,0.3,126,0.0035
+Small world,0.3,127,0.0037
+Small world,0.3,128,0.0039
+Small world,0.3,129,0.0029
+Small world,0.3,130,0.0039
+Small world,0.3,131,0.0041
+Small world,0.3,132,0.0043
+Small world,0.3,133,0.0029
+Small world,0.3,134,0.0023
+Small world,0.3,135,0.0027
+Small world,0.3,136,0.0029
+Small world,0.3,137,0.0031
+Small world,0.3,138,0.0035
+Small world,0.3,139,0.0033
+Small world,0.3,140,0.0025
+Small world,0.3,141,0.0027
+Small world,0.3,142,0.0035
+Small world,0.3,143,0.0041
+Small world,0.3,144,0.0039
+Small world,0.3,145,0.0033
+Small world,0.3,146,0.0033
+Small world,0.3,147,0.0033
+Small world,0.3,148,0.0039
+Small world,0.3,149,0.0041
+Small world,0.3,150,0.0041
+Small world,0.3,151,0.0037
+Small world,0.3,152,0.0049
+Small world,0.3,153,0.0049
+Small world,0.3,154,0.0047
+Small world,0.3,155,0.0051
+Small world,0.3,156,0.0049
+Small world,0.3,157,0.0039
+Small world,0.3,158,0.0043
+Small world,0.3,159,0.0039
+Small world,0.3,160,0.0033
+Small world,0.3,161,0.0031
+Small world,0.3,162,0.0027
+Small world,0.3,163,0.0029
+Small world,0.3,164,0.0029
+Small world,0.3,165,0.0027
+Small world,0.3,166,0.0025
+Small world,0.3,167,0.0027
+Small world,0.3,168,0.0023
+Small world,0.3,169,0.0025
+Small world,0.3,170,0.0023
+Small world,0.3,171,0.0021
+Small world,0.3,172,0.0021
+Small world,0.3,173,0.0023
+Small world,0.3,174,0.0027
+Small world,0.3,175,0.0025
+Small world,0.3,176,0.0027
+Small world,0.3,177,0.0027
+Small world,0.3,178,0.0029
+Small world,0.3,179,0.0023
+Small world,0.3,180,0.0027
+Small world,0.3,181,0.0023
+Small world,0.3,182,0.002
+Small world,0.3,183,0.0014
+Small world,0.3,184,0.0016
+Small world,0.3,185,0.0016
+Small world,0.3,186,0.0016
+Small world,0.3,187,0.0018
+Small world,0.3,188,0.002
+Small world,0.3,189,0.0014
+Small world,0.3,190,0.0014
+Small world,0.3,191,0.0016
+Small world,0.3,192,0.0021
+Small world,0.3,193,0.0016
+Small world,0.3,194,0.0016
+Small world,0.3,195,0.0018
+Small world,0.3,196,0.002
+Small world,0.3,197,0.0016
+Small world,0.3,198,0.0016
+Small world,0.3,199,0.0018
+Small world,0.3,200,0.0016
+Small world,0.3,201,0.0014
+Small world,0.3,202,0.0018
+Small world,0.3,203,0.0018
+Small world,0.3,204,0.0021
+Small world,0.3,205,0.0023
+Small world,0.3,206,0.0025
+Small world,0.3,207,0.0027
+Small world,0.3,208,0.0027
+Small world,0.3,209,0.0025
+Small world,0.3,210,0.002
+Small world,0.3,211,0.0025
+Small world,0.3,212,0.0027
+Small world,0.3,213,0.0023
+Small world,0.3,214,0.0025
+Small world,0.3,215,0.0023
+Small world,0.3,216,0.002
+Small world,0.3,217,0.0018
+Small world,0.3,218,0.0018
+Small world,0.3,219,0.0023
+Small world,0.3,220,0.002
+Small world,0.3,221,0.0014
+Small world,0.3,222,0.0012
+Small world,0.3,223,0.0012
+Small world,0.3,224,0.0018
+Small world,0.3,225,0.0025
+Small world,0.3,226,0.0018
+Small world,0.3,227,0.0018
+Small world,0.3,228,0.0018
+Small world,0.3,229,0.002
+Small world,0.3,230,0.0018
+Small world,0.3,231,0.0012
+Small world,0.3,232,0.0012
+Small world,0.3,233,0.0012
+Small world,0.3,234,8e-4
+Small world,0.3,235,8e-4
+Small world,0.3,236,0.0012
+Small world,0.3,237,0.001
+Small world,0.3,238,0.001
+Small world,0.3,239,0.001
+Small world,0.3,240,0.0012
+Small world,0.3,241,0.0012
+Small world,0.3,242,0.0012
+Small world,0.3,243,0.0012
+Small world,0.3,244,0.0018
+Small world,0.3,245,0.0014
+Small world,0.3,246,0.0014
+Small world,0.3,247,0.0012
+Small world,0.3,248,0.0018
+Small world,0.3,249,0.0014
+Small world,0.3,250,0.0014
+Small world,0.3,251,0.0012
+Small world,0.3,252,0.001
+Small world,0.3,253,8e-4
+Small world,0.3,254,4e-4
+Small world,0.3,255,2e-4
+Small world,0.3,256,0
+Small world,0.3,257,0
+Small world,0.3,258,0
+Small world,0.3,259,0
+Small world,0.3,260,0
+Small world,0.3,261,0
+Small world,0.3,262,0
+Small world,0.3,263,0
+Small world,0.3,264,0
+Small world,0.3,265,0
+Small world,0.3,266,0
+Small world,0.3,267,0
+Small world,0.3,268,0
+Small world,0.3,269,0
+Small world,0.3,270,0
+Small world,0.3,271,0
+Small world,0.3,272,0
+Small world,0.3,273,0
+Small world,0.3,274,0
+Small world,0.3,275,0
+Small world,0.3,276,0
+Small world,0.3,277,0
+Small world,0.3,278,0
+Small world,0.3,279,0
+Small world,0.3,280,0
+Small world,0.3,281,0
+Small world,0.3,282,0
+Small world,0.3,283,0
+Small world,0.3,284,0
+Small world,0.3,285,0
+Small world,0.3,286,0
+Small world,0.3,287,0
+Small world,0.3,288,0
+Small world,0.3,289,0
+Small world,0.3,290,0
+Small world,0.3,291,0
+Small world,0.3,292,0
+Small world,0.3,293,0
+Small world,0.3,294,0
+Small world,0.3,295,0
+Small world,0.3,296,0
+Small world,0.3,297,0
+Small world,0.3,298,0
+Small world,0.3,299,0
+Small world,0.3,300,0
+Small world,1,0,0.5053
+Small world,1,1,0.3738
+Small world,1,2,0.2895
+Small world,1,3,0.2463
+Small world,1,4,0.2068
+Small world,1,5,0.1836
+Small world,1,6,0.1648
+Small world,1,7,0.149
+Small world,1,8,0.1318
+Small world,1,9,0.1219
+Small world,1,10,0.1111
+Small world,1,11,0.1027
+Small world,1,12,0.0932
+Small world,1,13,0.0857
+Small world,1,14,0.0795
+Small world,1,15,0.0742
+Small world,1,16,0.0689
+Small world,1,17,0.0605
+Small world,1,18,0.0582
+Small world,1,19,0.0492
+Small world,1,20,0.0432
+Small world,1,21,0.0406
+Small world,1,22,0.0342
+Small world,1,23,0.0312
+Small world,1,24,0.0293
+Small world,1,25,0.026
+Small world,1,26,0.0258
+Small world,1,27,0.023
+Small world,1,28,0.0227
+Small world,1,29,0.0215
+Small world,1,30,0.0191
+Small world,1,31,0.0176
+Small world,1,32,0.0178
+Small world,1,33,0.0166
+Small world,1,34,0.0156
+Small world,1,35,0.0135
+Small world,1,36,0.0127
+Small world,1,37,0.0107
+Small world,1,38,0.0092
+Small world,1,39,0.009
+Small world,1,40,0.0098
+Small world,1,41,0.01
+Small world,1,42,0.0088
+Small world,1,43,0.0088
+Small world,1,44,0.007
+Small world,1,45,0.0064
+Small world,1,46,0.0068
+Small world,1,47,0.0072
+Small world,1,48,0.0068
+Small world,1,49,0.0066
+Small world,1,50,0.008
+Small world,1,51,0.0072
+Small world,1,52,0.007
+Small world,1,53,0.0064
+Small world,1,54,0.007
+Small world,1,55,0.0064
+Small world,1,56,0.0061
+Small world,1,57,0.0059
+Small world,1,58,0.0055
+Small world,1,59,0.0051
+Small world,1,60,0.0047
+Small world,1,61,0.0043
+Small world,1,62,0.0043
+Small world,1,63,0.0051
+Small world,1,64,0.0049
+Small world,1,65,0.0049
+Small world,1,66,0.0039
+Small world,1,67,0.0033
+Small world,1,68,0.0029
+Small world,1,69,0.0025
+Small world,1,70,0.002
+Small world,1,71,0.0012
+Small world,1,72,8e-4
+Small world,1,73,0.001
+Small world,1,74,0.001
+Small world,1,75,0.001
+Small world,1,76,0.001
+Small world,1,77,0.0014
+Small world,1,78,0.0014
+Small world,1,79,0.0016
+Small world,1,80,0.0014
+Small world,1,81,0.0012
+Small world,1,82,0.001
+Small world,1,83,0.0018
+Small world,1,84,0.0018
+Small world,1,85,0.0014
+Small world,1,86,4e-4
+Small world,1,87,4e-4
+Small world,1,88,2e-4
+Small world,1,89,0
+Small world,1,90,0
+Small world,1,91,0
+Small world,1,92,0
+Small world,1,93,0
+Small world,1,94,0
+Small world,1,95,0
+Small world,1,96,0
+Small world,1,97,0
+Small world,1,98,0
+Small world,1,99,0
+Small world,1,100,0
+Small world,1,101,0
+Small world,1,102,0
+Small world,1,103,0
+Small world,1,104,0
+Small world,1,105,0
+Small world,1,106,0
+Small world,1,107,0
+Small world,1,108,0
+Small world,1,109,0
+Small world,1,110,0
+Small world,1,111,0
+Small world,1,112,0
+Small world,1,113,0
+Small world,1,114,0
+Small world,1,115,0
+Small world,1,116,0
+Small world,1,117,0
+Small world,1,118,0
+Small world,1,119,0
+Small world,1,120,0
+Small world,1,121,0
+Small world,1,122,0
+Small world,1,123,0
+Small world,1,124,0
+Small world,1,125,0
+Small world,1,126,0
+Small world,1,127,0
+Small world,1,128,0
+Small world,1,129,0
+Small world,1,130,0
+Small world,1,131,0
+Small world,1,132,0
+Small world,1,133,0
+Small world,1,134,0
+Small world,1,135,0
+Small world,1,136,0
+Small world,1,137,0
+Small world,1,138,0
+Small world,1,139,0
+Small world,1,140,0
+Small world,1,141,0
+Small world,1,142,0
+Small world,1,143,0
+Small world,1,144,0
+Small world,1,145,0
+Small world,1,146,0
+Small world,1,147,0
+Small world,1,148,0
+Small world,1,149,0
+Small world,1,150,0
+Small world,1,151,0
+Small world,1,152,0
+Small world,1,153,0
+Small world,1,154,0
+Small world,1,155,0
+Small world,1,156,0
+Small world,1,157,0
+Small world,1,158,0
+Small world,1,159,0
+Small world,1,160,0
+Small world,1,161,0
+Small world,1,162,0
+Small world,1,163,0
+Small world,1,164,0
+Small world,1,165,0
+Small world,1,166,0
+Small world,1,167,0
+Small world,1,168,0
+Small world,1,169,0
+Small world,1,170,0
+Small world,1,171,0
+Small world,1,172,0
+Small world,1,173,0
+Small world,1,174,0
+Small world,1,175,0
+Small world,1,176,0
+Small world,1,177,0
+Small world,1,178,0
+Small world,1,179,0
+Small world,1,180,0
+Small world,1,181,0
+Small world,1,182,0
+Small world,1,183,0
+Small world,1,184,0
+Small world,1,185,0
+Small world,1,186,0
+Small world,1,187,0
+Small world,1,188,0
+Small world,1,189,0
+Small world,1,190,0
+Small world,1,191,0
+Small world,1,192,0
+Small world,1,193,0
+Small world,1,194,0
+Small world,1,195,0
+Small world,1,196,0
+Small world,1,197,0
+Small world,1,198,0
+Small world,1,199,0
+Small world,1,200,0
+Small world,1,201,0
+Small world,1,202,0
+Small world,1,203,0
+Small world,1,204,0
+Small world,1,205,0
+Small world,1,206,0
+Small world,1,207,0
+Small world,1,208,0
+Small world,1,209,0
+Small world,1,210,0
+Small world,1,211,0
+Small world,1,212,0
+Small world,1,213,0
+Small world,1,214,0
+Small world,1,215,0
+Small world,1,216,0
+Small world,1,217,0
+Small world,1,218,0
+Small world,1,219,0
+Small world,1,220,0
+Small world,1,221,0
+Small world,1,222,0
+Small world,1,223,0
+Small world,1,224,0
+Small world,1,225,0
+Small world,1,226,0
+Small world,1,227,0
+Small world,1,228,0
+Small world,1,229,0
+Small world,1,230,0
+Small world,1,231,0
+Small world,1,232,0
+Small world,1,233,0
+Small world,1,234,0
+Small world,1,235,0
+Small world,1,236,0
+Small world,1,237,0
+Small world,1,238,0
+Small world,1,239,0
+Small world,1,240,0
+Small world,1,241,0
+Small world,1,242,0
+Small world,1,243,0
+Small world,1,244,0
+Small world,1,245,0
+Small world,1,246,0
+Small world,1,247,0
+Small world,1,248,0
+Small world,1,249,0
+Small world,1,250,0
+Small world,1,251,0
+Small world,1,252,0
+Small world,1,253,0
+Small world,1,254,0
+Small world,1,255,0
+Small world,1,256,0
+Small world,1,257,0
+Small world,1,258,0
+Small world,1,259,0
+Small world,1,260,0
+Small world,1,261,0
+Small world,1,262,0
+Small world,1,263,0
+Small world,1,264,0
+Small world,1,265,0
+Small world,1,266,0
+Small world,1,267,0
+Small world,1,268,0
+Small world,1,269,0
+Small world,1,270,0
+Small world,1,271,0
+Small world,1,272,0
+Small world,1,273,0
+Small world,1,274,0
+Small world,1,275,0
+Small world,1,276,0
+Small world,1,277,0
+Small world,1,278,0
+Small world,1,279,0
+Small world,1,280,0
+Small world,1,281,0
+Small world,1,282,0
+Small world,1,283,0
+Small world,1,284,0
+Small world,1,285,0
+Small world,1,286,0
+Small world,1,287,0
+Small world,1,288,0
+Small world,1,289,0
+Small world,1,290,0
+Small world,1,291,0
+Small world,1,292,0
+Small world,1,293,0
+Small world,1,294,0
+Small world,1,295,0
+Small world,1,296,0
+Small world,1,297,0
+Small world,1,298,0
+Small world,1,299,0
+Small world,1,300,0
+Small world,3,0,0.5139
+Small world,3,1,0.4553
+Small world,3,2,0.4131
+Small world,3,3,0.3791
+Small world,3,4,0.3506
+Small world,3,5,0.3322
+Small world,3,6,0.317
+Small world,3,7,0.2986
+Small world,3,8,0.2867
+Small world,3,9,0.2758
+Small world,3,10,0.2646
+Small world,3,11,0.2553
+Small world,3,12,0.2475
+Small world,3,13,0.2334
+Small world,3,14,0.2213
+Small world,3,15,0.2117
+Small world,3,16,0.2062
+Small world,3,17,0.1916
+Small world,3,18,0.1812
+Small world,3,19,0.173
+Small world,3,20,0.1699
+Small world,3,21,0.1541
+Small world,3,22,0.149
+Small world,3,23,0.1344
+Small world,3,24,0.1285
+Small world,3,25,0.1266
+Small world,3,26,0.1215
+Small world,3,27,0.1146
+Small world,3,28,0.1096
+Small world,3,29,0.1035
+Small world,3,30,0.0992
+Small world,3,31,0.0947
+Small world,3,32,0.0889
+Small world,3,33,0.0854
+Small world,3,34,0.0816
+Small world,3,35,0.0793
+Small world,3,36,0.0725
+Small world,3,37,0.065
+Small world,3,38,0.0604
+Small world,3,39,0.0531
+Small world,3,40,0.0512
+Small world,3,41,0.0484
+Small world,3,42,0.0443
+Small world,3,43,0.042
+Small world,3,44,0.0404
+Small world,3,45,0.0377
+Small world,3,46,0.0379
+Small world,3,47,0.0354
+Small world,3,48,0.0334
+Small world,3,49,0.0332
+Small world,3,50,0.0305
+Small world,3,51,0.0287
+Small world,3,52,0.026
+Small world,3,53,0.0211
+Small world,3,54,0.0193
+Small world,3,55,0.018
+Small world,3,56,0.0172
+Small world,3,57,0.0164
+Small world,3,58,0.0156
+Small world,3,59,0.015
+Small world,3,60,0.0137
+Small world,3,61,0.0121
+Small world,3,62,0.0094
+Small world,3,63,0.0084
+Small world,3,64,0.0076
+Small world,3,65,0.0086
+Small world,3,66,0.0074
+Small world,3,67,0.0066
+Small world,3,68,0.0055
+Small world,3,69,0.0049
+Small world,3,70,0.0043
+Small world,3,71,0.0041
+Small world,3,72,0.0035
+Small world,3,73,0.0029
+Small world,3,74,0.0029
+Small world,3,75,0.0029
+Small world,3,76,0.0029
+Small world,3,77,0.0029
+Small world,3,78,0.0025
+Small world,3,79,0.0018
+Small world,3,80,0.0018
+Small world,3,81,0.0014
+Small world,3,82,0.0012
+Small world,3,83,8e-4
+Small world,3,84,8e-4
+Small world,3,85,4e-4
+Small world,3,86,2e-4
+Small world,3,87,0
+Small world,3,88,0
+Small world,3,89,0
+Small world,3,90,0
+Small world,3,91,0
+Small world,3,92,0
+Small world,3,93,0
+Small world,3,94,0
+Small world,3,95,0
+Small world,3,96,0
+Small world,3,97,0
+Small world,3,98,0
+Small world,3,99,0
+Small world,3,100,0
+Small world,3,101,0
+Small world,3,102,0
+Small world,3,103,0
+Small world,3,104,0
+Small world,3,105,0
+Small world,3,106,0
+Small world,3,107,0
+Small world,3,108,0
+Small world,3,109,0
+Small world,3,110,0
+Small world,3,111,0
+Small world,3,112,0
+Small world,3,113,0
+Small world,3,114,0
+Small world,3,115,0
+Small world,3,116,0
+Small world,3,117,0
+Small world,3,118,0
+Small world,3,119,0
+Small world,3,120,0
+Small world,3,121,0
+Small world,3,122,0
+Small world,3,123,0
+Small world,3,124,0
+Small world,3,125,0
+Small world,3,126,0
+Small world,3,127,0
+Small world,3,128,0
+Small world,3,129,0
+Small world,3,130,0
+Small world,3,131,0
+Small world,3,132,0
+Small world,3,133,0
+Small world,3,134,0
+Small world,3,135,0
+Small world,3,136,0
+Small world,3,137,0
+Small world,3,138,0
+Small world,3,139,0
+Small world,3,140,0
+Small world,3,141,0
+Small world,3,142,0
+Small world,3,143,0
+Small world,3,144,0
+Small world,3,145,0
+Small world,3,146,0
+Small world,3,147,0
+Small world,3,148,0
+Small world,3,149,0
+Small world,3,150,0
+Small world,3,151,0
+Small world,3,152,0
+Small world,3,153,0
+Small world,3,154,0
+Small world,3,155,0
+Small world,3,156,0
+Small world,3,157,0
+Small world,3,158,0
+Small world,3,159,0
+Small world,3,160,0
+Small world,3,161,0
+Small world,3,162,0
+Small world,3,163,0
+Small world,3,164,0
+Small world,3,165,0
+Small world,3,166,0
+Small world,3,167,0
+Small world,3,168,0
+Small world,3,169,0
+Small world,3,170,0
+Small world,3,171,0
+Small world,3,172,0
+Small world,3,173,0
+Small world,3,174,0
+Small world,3,175,0
+Small world,3,176,0
+Small world,3,177,0
+Small world,3,178,0
+Small world,3,179,0
+Small world,3,180,0
+Small world,3,181,0
+Small world,3,182,0
+Small world,3,183,0
+Small world,3,184,0
+Small world,3,185,0
+Small world,3,186,0
+Small world,3,187,0
+Small world,3,188,0
+Small world,3,189,0
+Small world,3,190,0
+Small world,3,191,0
+Small world,3,192,0
+Small world,3,193,0
+Small world,3,194,0
+Small world,3,195,0
+Small world,3,196,0
+Small world,3,197,0
+Small world,3,198,0
+Small world,3,199,0
+Small world,3,200,0
+Small world,3,201,0
+Small world,3,202,0
+Small world,3,203,0
+Small world,3,204,0
+Small world,3,205,0
+Small world,3,206,0
+Small world,3,207,0
+Small world,3,208,0
+Small world,3,209,0
+Small world,3,210,0
+Small world,3,211,0
+Small world,3,212,0
+Small world,3,213,0
+Small world,3,214,0
+Small world,3,215,0
+Small world,3,216,0
+Small world,3,217,0
+Small world,3,218,0
+Small world,3,219,0
+Small world,3,220,0
+Small world,3,221,0
+Small world,3,222,0
+Small world,3,223,0
+Small world,3,224,0
+Small world,3,225,0
+Small world,3,226,0
+Small world,3,227,0
+Small world,3,228,0
+Small world,3,229,0
+Small world,3,230,0
+Small world,3,231,0
+Small world,3,232,0
+Small world,3,233,0
+Small world,3,234,0
+Small world,3,235,0
+Small world,3,236,0
+Small world,3,237,0
+Small world,3,238,0
+Small world,3,239,0
+Small world,3,240,0
+Small world,3,241,0
+Small world,3,242,0
+Small world,3,243,0
+Small world,3,244,0
+Small world,3,245,0
+Small world,3,246,0
+Small world,3,247,0
+Small world,3,248,0
+Small world,3,249,0
+Small world,3,250,0
+Small world,3,251,0
+Small world,3,252,0
+Small world,3,253,0
+Small world,3,254,0
+Small world,3,255,0
+Small world,3,256,0
+Small world,3,257,0
+Small world,3,258,0
+Small world,3,259,0
+Small world,3,260,0
+Small world,3,261,0
+Small world,3,262,0
+Small world,3,263,0
+Small world,3,264,0
+Small world,3,265,0
+Small world,3,266,0
+Small world,3,267,0
+Small world,3,268,0
+Small world,3,269,0
+Small world,3,270,0
+Small world,3,271,0
+Small world,3,272,0
+Small world,3,273,0
+Small world,3,274,0
+Small world,3,275,0
+Small world,3,276,0
+Small world,3,277,0
+Small world,3,278,0
+Small world,3,279,0
+Small world,3,280,0
+Small world,3,281,0
+Small world,3,282,0
+Small world,3,283,0
+Small world,3,284,0
+Small world,3,285,0
+Small world,3,286,0
+Small world,3,287,0
+Small world,3,288,0
+Small world,3,289,0
+Small world,3,290,0
+Small world,3,291,0
+Small world,3,292,0
+Small world,3,293,0
+Small world,3,294,0
+Small world,3,295,0
+Small world,3,296,0
+Small world,3,297,0
+Small world,3,298,0
+Small world,3,299,0
+Small world,3,300,0
+Small world,10,0,0.5041
+Small world,10,1,0.4828
+Small world,10,2,0.4668
+Small world,10,3,0.4494
+Small world,10,4,0.448
+Small world,10,5,0.4512
+Small world,10,6,0.442
+Small world,10,7,0.4348
+Small world,10,8,0.432
+Small world,10,9,0.4295
+Small world,10,10,0.4139
+Small world,10,11,0.4152
+Small world,10,12,0.4156
+Small world,10,13,0.4061
+Small world,10,14,0.399
+Small world,10,15,0.3941
+Small world,10,16,0.3834
+Small world,10,17,0.3729
+Small world,10,18,0.3631
+Small world,10,19,0.3633
+Small world,10,20,0.3598
+Small world,10,21,0.3594
+Small world,10,22,0.3482
+Small world,10,23,0.3342
+Small world,10,24,0.3406
+Small world,10,25,0.3393
+Small world,10,26,0.3344
+Small world,10,27,0.327
+Small world,10,28,0.3186
+Small world,10,29,0.3162
+Small world,10,30,0.307
+Small world,10,31,0.3037
+Small world,10,32,0.3023
+Small world,10,33,0.2998
+Small world,10,34,0.293
+Small world,10,35,0.2912
+Small world,10,36,0.2881
+Small world,10,37,0.2754
+Small world,10,38,0.2695
+Small world,10,39,0.2682
+Small world,10,40,0.2639
+Small world,10,41,0.2605
+Small world,10,42,0.2629
+Small world,10,43,0.26
+Small world,10,44,0.2469
+Small world,10,45,0.2383
+Small world,10,46,0.233
+Small world,10,47,0.2332
+Small world,10,48,0.2305
+Small world,10,49,0.227
+Small world,10,50,0.2254
+Small world,10,51,0.2186
+Small world,10,52,0.2145
+Small world,10,53,0.2117
+Small world,10,54,0.2049
+Small world,10,55,0.1998
+Small world,10,56,0.1969
+Small world,10,57,0.1941
+Small world,10,58,0.1902
+Small world,10,59,0.1926
+Small world,10,60,0.1873
+Small world,10,61,0.1889
+Small world,10,62,0.1889
+Small world,10,63,0.1836
+Small world,10,64,0.1844
+Small world,10,65,0.1855
+Small world,10,66,0.1814
+Small world,10,67,0.1803
+Small world,10,68,0.1836
+Small world,10,69,0.1836
+Small world,10,70,0.1795
+Small world,10,71,0.1779
+Small world,10,72,0.1781
+Small world,10,73,0.1764
+Small world,10,74,0.1715
+Small world,10,75,0.1707
+Small world,10,76,0.1643
+Small world,10,77,0.1605
+Small world,10,78,0.1549
+Small world,10,79,0.1523
+Small world,10,80,0.1559
+Small world,10,81,0.1547
+Small world,10,82,0.1547
+Small world,10,83,0.1555
+Small world,10,84,0.1557
+Small world,10,85,0.159
+Small world,10,86,0.1518
+Small world,10,87,0.1482
+Small world,10,88,0.1453
+Small world,10,89,0.1436
+Small world,10,90,0.1396
+Small world,10,91,0.1336
+Small world,10,92,0.1318
+Small world,10,93,0.1303
+Small world,10,94,0.1312
+Small world,10,95,0.1287
+Small world,10,96,0.1266
+Small world,10,97,0.1234
+Small world,10,98,0.1236
+Small world,10,99,0.1197
+Small world,10,100,0.1172
+Small world,10,101,0.1133
+Small world,10,102,0.1129
+Small world,10,103,0.1135
+Small world,10,104,0.1105
+Small world,10,105,0.1145
+Small world,10,106,0.1146
+Small world,10,107,0.1109
+Small world,10,108,0.1104
+Small world,10,109,0.108
+Small world,10,110,0.1092
+Small world,10,111,0.1094
+Small world,10,112,0.1119
+Small world,10,113,0.115
+Small world,10,114,0.1168
+Small world,10,115,0.1139
+Small world,10,116,0.1098
+Small world,10,117,0.1127
+Small world,10,118,0.1148
+Small world,10,119,0.1127
+Small world,10,120,0.1158
+Small world,10,121,0.1154
+Small world,10,122,0.10780000000000001
+Small world,10,123,0.1088
+Small world,10,124,0.10780000000000001
+Small world,10,125,0.1021
+Small world,10,126,0.0971
+Small world,10,127,0.0975
+Small world,10,128,0.099
+Small world,10,129,0.1004
+Small world,10,130,0.0998
+Small world,10,131,0.0988
+Small world,10,132,0.0979
+Small world,10,133,0.0969
+Small world,10,134,0.0934
+Small world,10,135,0.0924
+Small world,10,136,0.0928
+Small world,10,137,0.0922
+Small world,10,138,0.0902
+Small world,10,139,0.0891
+Small world,10,140,0.0914
+Small world,10,141,0.0922
+Small world,10,142,0.0912
+Small world,10,143,0.0879
+Small world,10,144,0.0863
+Small world,10,145,0.084
+Small world,10,146,0.0828
+Small world,10,147,0.0791
+Small world,10,148,0.0756
+Small world,10,149,0.076
+Small world,10,150,0.0721
+Small world,10,151,0.0709
+Small world,10,152,0.0719
+Small world,10,153,0.0697
+Small world,10,154,0.0641
+Small world,10,155,0.0633
+Small world,10,156,0.0617
+Small world,10,157,0.0623
+Small world,10,158,0.0615
+Small world,10,159,0.058
+Small world,10,160,0.0562
+Small world,10,161,0.0572
+Small world,10,162,0.0584
+Small world,10,163,0.0584
+Small world,10,164,0.0559
+Small world,10,165,0.0551
+Small world,10,166,0.0504
+Small world,10,167,0.0531
+Small world,10,168,0.0512
+Small world,10,169,0.0498
+Small world,10,170,0.0475
+Small world,10,171,0.0488
+Small world,10,172,0.0477
+Small world,10,173,0.0441
+Small world,10,174,0.0422
+Small world,10,175,0.0422
+Small world,10,176,0.0443
+Small world,10,177,0.0459
+Small world,10,178,0.0461
+Small world,10,179,0.0447
+Small world,10,180,0.0447
+Small world,10,181,0.0457
+Small world,10,182,0.0463
+Small world,10,183,0.0477
+Small world,10,184,0.0469
+Small world,10,185,0.0471
+Small world,10,186,0.0443
+Small world,10,187,0.0418
+Small world,10,188,0.0373
+Small world,10,189,0.0365
+Small world,10,190,0.0381
+Small world,10,191,0.0375
+Small world,10,192,0.0369
+Small world,10,193,0.033
+Small world,10,194,0.0314
+Small world,10,195,0.0312
+Small world,10,196,0.033
+Small world,10,197,0.0342
+Small world,10,198,0.0346
+Small world,10,199,0.0305
+Small world,10,200,0.0305
+Small world,10,201,0.0312
+Small world,10,202,0.0307
+Small world,10,203,0.0303
+Small world,10,204,0.0277
+Small world,10,205,0.0268
+Small world,10,206,0.0258
+Small world,10,207,0.0244
+Small world,10,208,0.0244
+Small world,10,209,0.0238
+Small world,10,210,0.0238
+Small world,10,211,0.0207
+Small world,10,212,0.0205
+Small world,10,213,0.0201
+Small world,10,214,0.0201
+Small world,10,215,0.0186
+Small world,10,216,0.0187
+Small world,10,217,0.018
+Small world,10,218,0.0154
+Small world,10,219,0.0137
+Small world,10,220,0.0148
+Small world,10,221,0.0158
+Small world,10,222,0.0164
+Small world,10,223,0.015
+Small world,10,224,0.0156
+Small world,10,225,0.0154
+Small world,10,226,0.0125
+Small world,10,227,0.0117
+Small world,10,228,0.0119
+Small world,10,229,0.0111
+Small world,10,230,0.0094
+Small world,10,231,0.0094
+Small world,10,232,0.01
+Small world,10,233,0.0104
+Small world,10,234,0.0098
+Small world,10,235,0.0113
+Small world,10,236,0.0109
+Small world,10,237,0.01
+Small world,10,238,0.0098
+Small world,10,239,0.01
+Small world,10,240,0.0092
+Small world,10,241,0.0084
+Small world,10,242,0.008
+Small world,10,243,0.0068
+Small world,10,244,0.0076
+Small world,10,245,0.0084
+Small world,10,246,0.008
+Small world,10,247,0.007
+Small world,10,248,0.0059
+Small world,10,249,0.0055
+Small world,10,250,0.0057
+Small world,10,251,0.0053
+Small world,10,252,0.0059
+Small world,10,253,0.0045
+Small world,10,254,0.0043
+Small world,10,255,0.0043
+Small world,10,256,0.0053
+Small world,10,257,0.0055
+Small world,10,258,0.0055
+Small world,10,259,0.0061
+Small world,10,260,0.0063
+Small world,10,261,0.0061
+Small world,10,262,0.0055
+Small world,10,263,0.0053
+Small world,10,264,0.0053
+Small world,10,265,0.0051
+Small world,10,266,0.0045
+Small world,10,267,0.0043
+Small world,10,268,0.0047
+Small world,10,269,0.0045
+Small world,10,270,0.0037
+Small world,10,271,0.0033
+Small world,10,272,0.0041
+Small world,10,273,0.0045
+Small world,10,274,0.0041
+Small world,10,275,0.0047
+Small world,10,276,0.0049
+Small world,10,277,0.0035
+Small world,10,278,0.0045
+Small world,10,279,0.0041
+Small world,10,280,0.0041
+Small world,10,281,0.0045
+Small world,10,282,0.0045
+Small world,10,283,0.0051
+Small world,10,284,0.0059
+Small world,10,285,0.0053
+Small world,10,286,0.0049
+Small world,10,287,0.0051
+Small world,10,288,0.0053
+Small world,10,289,0.0053
+Small world,10,290,0.0053
+Small world,10,291,0.0049
+Small world,10,292,0.0051
+Small world,10,293,0.0043
+Small world,10,294,0.0045
+Small world,10,295,0.0049
+Small world,10,296,0.0055
+Small world,10,297,0.0049
+Small world,10,298,0.0059
+Small world,10,299,0.0055
+Small world,10,300,0.0051
+Random,0.01,0,0.5076
+Random,0.01,1,0.3129
+Random,0.01,2,0.2285
+Random,0.01,3,0.1779
+Random,0.01,4,0.1473
+Random,0.01,5,0.1268
+Random,0.01,6,0.1113
+Random,0.01,7,0.0994
+Random,0.01,8,0.0879
+Random,0.01,9,0.076
+Random,0.01,10,0.0635
+Random,0.01,11,0.059
+Random,0.01,12,0.0514
+Random,0.01,13,0.0471
+Random,0.01,14,0.0463
+Random,0.01,15,0.0437
+Random,0.01,16,0.0412
+Random,0.01,17,0.0352
+Random,0.01,18,0.032
+Random,0.01,19,0.032
+Random,0.01,20,0.0342
+Random,0.01,21,0.0318
+Random,0.01,22,0.0314
+Random,0.01,23,0.0293
+Random,0.01,24,0.0283
+Random,0.01,25,0.0279
+Random,0.01,26,0.025
+Random,0.01,27,0.025
+Random,0.01,28,0.023
+Random,0.01,29,0.0215
+Random,0.01,30,0.0221
+Random,0.01,31,0.0219
+Random,0.01,32,0.0195
+Random,0.01,33,0.0195
+Random,0.01,34,0.0199
+Random,0.01,35,0.0172
+Random,0.01,36,0.0176
+Random,0.01,37,0.0172
+Random,0.01,38,0.0156
+Random,0.01,39,0.0187
+Random,0.01,40,0.0168
+Random,0.01,41,0.0182
+Random,0.01,42,0.0146
+Random,0.01,43,0.0156
+Random,0.01,44,0.0143
+Random,0.01,45,0.0154
+Random,0.01,46,0.0143
+Random,0.01,47,0.0141
+Random,0.01,48,0.0141
+Random,0.01,49,0.0137
+Random,0.01,50,0.0125
+Random,0.01,51,0.0145
+Random,0.01,52,0.0139
+Random,0.01,53,0.0139
+Random,0.01,54,0.0121
+Random,0.01,55,0.0145
+Random,0.01,56,0.0139
+Random,0.01,57,0.0156
+Random,0.01,58,0.0133
+Random,0.01,59,0.0139
+Random,0.01,60,0.0145
+Random,0.01,61,0.0129
+Random,0.01,62,0.0131
+Random,0.01,63,0.0146
+Random,0.01,64,0.0127
+Random,0.01,65,0.0131
+Random,0.01,66,0.0141
+Random,0.01,67,0.0152
+Random,0.01,68,0.0135
+Random,0.01,69,0.0131
+Random,0.01,70,0.0146
+Random,0.01,71,0.0139
+Random,0.01,72,0.0145
+Random,0.01,73,0.0143
+Random,0.01,74,0.0145
+Random,0.01,75,0.0139
+Random,0.01,76,0.0141
+Random,0.01,77,0.0146
+Random,0.01,78,0.0145
+Random,0.01,79,0.0135
+Random,0.01,80,0.015
+Random,0.01,81,0.0135
+Random,0.01,82,0.0141
+Random,0.01,83,0.0137
+Random,0.01,84,0.0135
+Random,0.01,85,0.0137
+Random,0.01,86,0.0143
+Random,0.01,87,0.0131
+Random,0.01,88,0.0137
+Random,0.01,89,0.0125
+Random,0.01,90,0.0141
+Random,0.01,91,0.0129
+Random,0.01,92,0.0148
+Random,0.01,93,0.0131
+Random,0.01,94,0.0125
+Random,0.01,95,0.0145
+Random,0.01,96,0.0143
+Random,0.01,97,0.0152
+Random,0.01,98,0.0143
+Random,0.01,99,0.0139
+Random,0.01,100,0.0146
+Random,0.01,101,0.0131
+Random,0.01,102,0.0139
+Random,0.01,103,0.0143
+Random,0.01,104,0.0141
+Random,0.01,105,0.0137
+Random,0.01,106,0.0148
+Random,0.01,107,0.0141
+Random,0.01,108,0.0125
+Random,0.01,109,0.015
+Random,0.01,110,0.015
+Random,0.01,111,0.0131
+Random,0.01,112,0.0141
+Random,0.01,113,0.0133
+Random,0.01,114,0.0139
+Random,0.01,115,0.0135
+Random,0.01,116,0.0133
+Random,0.01,117,0.0135
+Random,0.01,118,0.0137
+Random,0.01,119,0.015
+Random,0.01,120,0.0137
+Random,0.01,121,0.0137
+Random,0.01,122,0.015
+Random,0.01,123,0.0154
+Random,0.01,124,0.0141
+Random,0.01,125,0.0137
+Random,0.01,126,0.0131
+Random,0.01,127,0.0129
+Random,0.01,128,0.0137
+Random,0.01,129,0.0148
+Random,0.01,130,0.0131
+Random,0.01,131,0.0137
+Random,0.01,132,0.0135
+Random,0.01,133,0.0127
+Random,0.01,134,0.0146
+Random,0.01,135,0.015
+Random,0.01,136,0.0146
+Random,0.01,137,0.0137
+Random,0.01,138,0.0131
+Random,0.01,139,0.0135
+Random,0.01,140,0.0148
+Random,0.01,141,0.0145
+Random,0.01,142,0.0137
+Random,0.01,143,0.0137
+Random,0.01,144,0.0133
+Random,0.01,145,0.015
+Random,0.01,146,0.0145
+Random,0.01,147,0.0145
+Random,0.01,148,0.0146
+Random,0.01,149,0.0139
+Random,0.01,150,0.0141
+Random,0.01,151,0.0131
+Random,0.01,152,0.0141
+Random,0.01,153,0.0146
+Random,0.01,154,0.0143
+Random,0.01,155,0.0121
+Random,0.01,156,0.0121
+Random,0.01,157,0.0137
+Random,0.01,158,0.0139
+Random,0.01,159,0.0158
+Random,0.01,160,0.0143
+Random,0.01,161,0.0148
+Random,0.01,162,0.015
+Random,0.01,163,0.0133
+Random,0.01,164,0.0143
+Random,0.01,165,0.0145
+Random,0.01,166,0.0141
+Random,0.01,167,0.0133
+Random,0.01,168,0.0125
+Random,0.01,169,0.0137
+Random,0.01,170,0.0133
+Random,0.01,171,0.0148
+Random,0.01,172,0.0148
+Random,0.01,173,0.0131
+Random,0.01,174,0.0135
+Random,0.01,175,0.0148
+Random,0.01,176,0.0146
+Random,0.01,177,0.0143
+Random,0.01,178,0.0123
+Random,0.01,179,0.0139
+Random,0.01,180,0.0127
+Random,0.01,181,0.0145
+Random,0.01,182,0.0137
+Random,0.01,183,0.0137
+Random,0.01,184,0.0129
+Random,0.01,185,0.0135
+Random,0.01,186,0.0137
+Random,0.01,187,0.0148
+Random,0.01,188,0.0137
+Random,0.01,189,0.0137
+Random,0.01,190,0.0141
+Random,0.01,191,0.0139
+Random,0.01,192,0.0143
+Random,0.01,193,0.0139
+Random,0.01,194,0.0146
+Random,0.01,195,0.0145
+Random,0.01,196,0.015
+Random,0.01,197,0.0139
+Random,0.01,198,0.0139
+Random,0.01,199,0.0145
+Random,0.01,200,0.0148
+Random,0.01,201,0.0145
+Random,0.01,202,0.0148
+Random,0.01,203,0.0146
+Random,0.01,204,0.0137
+Random,0.01,205,0.0143
+Random,0.01,206,0.0127
+Random,0.01,207,0.0119
+Random,0.01,208,0.0137
+Random,0.01,209,0.0158
+Random,0.01,210,0.0148
+Random,0.01,211,0.0141
+Random,0.01,212,0.015
+Random,0.01,213,0.0146
+Random,0.01,214,0.0121
+Random,0.01,215,0.0137
+Random,0.01,216,0.0133
+Random,0.01,217,0.0135
+Random,0.01,218,0.0135
+Random,0.01,219,0.0129
+Random,0.01,220,0.0143
+Random,0.01,221,0.0135
+Random,0.01,222,0.0133
+Random,0.01,223,0.0141
+Random,0.01,224,0.0135
+Random,0.01,225,0.0139
+Random,0.01,226,0.0125
+Random,0.01,227,0.0146
+Random,0.01,228,0.0137
+Random,0.01,229,0.0135
+Random,0.01,230,0.0131
+Random,0.01,231,0.0141
+Random,0.01,232,0.0143
+Random,0.01,233,0.0139
+Random,0.01,234,0.0135
+Random,0.01,235,0.0154
+Random,0.01,236,0.015
+Random,0.01,237,0.0137
+Random,0.01,238,0.0129
+Random,0.01,239,0.0154
+Random,0.01,240,0.0141
+Random,0.01,241,0.0123
+Random,0.01,242,0.0133
+Random,0.01,243,0.0131
+Random,0.01,244,0.0131
+Random,0.01,245,0.0131
+Random,0.01,246,0.0143
+Random,0.01,247,0.0121
+Random,0.01,248,0.0133
+Random,0.01,249,0.0148
+Random,0.01,250,0.0139
+Random,0.01,251,0.0143
+Random,0.01,252,0.0156
+Random,0.01,253,0.0129
+Random,0.01,254,0.0133
+Random,0.01,255,0.0139
+Random,0.01,256,0.015
+Random,0.01,257,0.0148
+Random,0.01,258,0.0139
+Random,0.01,259,0.0141
+Random,0.01,260,0.0123
+Random,0.01,261,0.0141
+Random,0.01,262,0.0143
+Random,0.01,263,0.0141
+Random,0.01,264,0.0137
+Random,0.01,265,0.0133
+Random,0.01,266,0.0143
+Random,0.01,267,0.0146
+Random,0.01,268,0.0146
+Random,0.01,269,0.0129
+Random,0.01,270,0.0145
+Random,0.01,271,0.0135
+Random,0.01,272,0.0137
+Random,0.01,273,0.0139
+Random,0.01,274,0.0137
+Random,0.01,275,0.0146
+Random,0.01,276,0.0143
+Random,0.01,277,0.0145
+Random,0.01,278,0.0133
+Random,0.01,279,0.016
+Random,0.01,280,0.0145
+Random,0.01,281,0.0139
+Random,0.01,282,0.0127
+Random,0.01,283,0.0146
+Random,0.01,284,0.0156
+Random,0.01,285,0.0131
+Random,0.01,286,0.0148
+Random,0.01,287,0.0129
+Random,0.01,288,0.015
+Random,0.01,289,0.0158
+Random,0.01,290,0.0146
+Random,0.01,291,0.0137
+Random,0.01,292,0.0148
+Random,0.01,293,0.0137
+Random,0.01,294,0.0139
+Random,0.01,295,0.0146
+Random,0.01,296,0.0139
+Random,0.01,297,0.0141
+Random,0.01,298,0.0129
+Random,0.01,299,0.0131
+Random,0.01,300,0.0139
+Random,0.03,0,0.5021
+Random,0.03,1,0.3037
+Random,0.03,2,0.2238
+Random,0.03,3,0.1701
+Random,0.03,4,0.1344
+Random,0.03,5,0.1104
+Random,0.03,6,0.1021
+Random,0.03,7,0.083
+Random,0.03,8,0.0756
+Random,0.03,9,0.0652
+Random,0.03,10,0.0551
+Random,0.03,11,0.0508
+Random,0.03,12,0.048
+Random,0.03,13,0.0453
+Random,0.03,14,0.0436
+Random,0.03,15,0.0387
+Random,0.03,16,0.0406
+Random,0.03,17,0.0381
+Random,0.03,18,0.0373
+Random,0.03,19,0.0359
+Random,0.03,20,0.034
+Random,0.03,21,0.0332
+Random,0.03,22,0.0322
+Random,0.03,23,0.0289
+Random,0.03,24,0.0293
+Random,0.03,25,0.0289
+Random,0.03,26,0.0297
+Random,0.03,27,0.0277
+Random,0.03,28,0.0283
+Random,0.03,29,0.0275
+Random,0.03,30,0.026
+Random,0.03,31,0.0279
+Random,0.03,32,0.0289
+Random,0.03,33,0.0275
+Random,0.03,34,0.0266
+Random,0.03,35,0.0266
+Random,0.03,36,0.0262
+Random,0.03,37,0.027
+Random,0.03,38,0.0285
+Random,0.03,39,0.0264
+Random,0.03,40,0.0254
+Random,0.03,41,0.0281
+Random,0.03,42,0.026
+Random,0.03,43,0.0295
+Random,0.03,44,0.0271
+Random,0.03,45,0.0275
+Random,0.03,46,0.0256
+Random,0.03,47,0.0254
+Random,0.03,48,0.0277
+Random,0.03,49,0.027
+Random,0.03,50,0.0279
+Random,0.03,51,0.0262
+Random,0.03,52,0.0281
+Random,0.03,53,0.0273
+Random,0.03,54,0.0262
+Random,0.03,55,0.0262
+Random,0.03,56,0.0275
+Random,0.03,57,0.0266
+Random,0.03,58,0.0273
+Random,0.03,59,0.0287
+Random,0.03,60,0.0289
+Random,0.03,61,0.0273
+Random,0.03,62,0.0268
+Random,0.03,63,0.0271
+Random,0.03,64,0.0264
+Random,0.03,65,0.0266
+Random,0.03,66,0.027
+Random,0.03,67,0.0277
+Random,0.03,68,0.0285
+Random,0.03,69,0.0262
+Random,0.03,70,0.026
+Random,0.03,71,0.0258
+Random,0.03,72,0.0264
+Random,0.03,73,0.0264
+Random,0.03,74,0.0271
+Random,0.03,75,0.026
+Random,0.03,76,0.0268
+Random,0.03,77,0.0275
+Random,0.03,78,0.0252
+Random,0.03,79,0.0273
+Random,0.03,80,0.0266
+Random,0.03,81,0.0285
+Random,0.03,82,0.0268
+Random,0.03,83,0.0281
+Random,0.03,84,0.0264
+Random,0.03,85,0.0283
+Random,0.03,86,0.0273
+Random,0.03,87,0.0273
+Random,0.03,88,0.0279
+Random,0.03,89,0.0271
+Random,0.03,90,0.026
+Random,0.03,91,0.0271
+Random,0.03,92,0.0242
+Random,0.03,93,0.0262
+Random,0.03,94,0.0266
+Random,0.03,95,0.0268
+Random,0.03,96,0.0264
+Random,0.03,97,0.0248
+Random,0.03,98,0.0252
+Random,0.03,99,0.026
+Random,0.03,100,0.025
+Random,0.03,101,0.0262
+Random,0.03,102,0.0234
+Random,0.03,103,0.0258
+Random,0.03,104,0.0254
+Random,0.03,105,0.0262
+Random,0.03,106,0.0252
+Random,0.03,107,0.0258
+Random,0.03,108,0.0254
+Random,0.03,109,0.0273
+Random,0.03,110,0.027
+Random,0.03,111,0.026
+Random,0.03,112,0.0275
+Random,0.03,113,0.0256
+Random,0.03,114,0.0271
+Random,0.03,115,0.0266
+Random,0.03,116,0.0254
+Random,0.03,117,0.0275
+Random,0.03,118,0.0266
+Random,0.03,119,0.0262
+Random,0.03,120,0.0264
+Random,0.03,121,0.0273
+Random,0.03,122,0.0264
+Random,0.03,123,0.0266
+Random,0.03,124,0.0246
+Random,0.03,125,0.0264
+Random,0.03,126,0.0254
+Random,0.03,127,0.027
+Random,0.03,128,0.0275
+Random,0.03,129,0.0275
+Random,0.03,130,0.027
+Random,0.03,131,0.0273
+Random,0.03,132,0.0256
+Random,0.03,133,0.0258
+Random,0.03,134,0.0277
+Random,0.03,135,0.0258
+Random,0.03,136,0.0256
+Random,0.03,137,0.026
+Random,0.03,138,0.0266
+Random,0.03,139,0.0277
+Random,0.03,140,0.0293
+Random,0.03,141,0.026
+Random,0.03,142,0.0252
+Random,0.03,143,0.0289
+Random,0.03,144,0.0266
+Random,0.03,145,0.026
+Random,0.03,146,0.0281
+Random,0.03,147,0.0254
+Random,0.03,148,0.0266
+Random,0.03,149,0.0268
+Random,0.03,150,0.0271
+Random,0.03,151,0.0285
+Random,0.03,152,0.0273
+Random,0.03,153,0.0264
+Random,0.03,154,0.0258
+Random,0.03,155,0.027
+Random,0.03,156,0.027
+Random,0.03,157,0.027
+Random,0.03,158,0.0258
+Random,0.03,159,0.0266
+Random,0.03,160,0.0258
+Random,0.03,161,0.026
+Random,0.03,162,0.027
+Random,0.03,163,0.0275
+Random,0.03,164,0.0271
+Random,0.03,165,0.027
+Random,0.03,166,0.0266
+Random,0.03,167,0.0252
+Random,0.03,168,0.0268
+Random,0.03,169,0.0281
+Random,0.03,170,0.0268
+Random,0.03,171,0.0273
+Random,0.03,172,0.0266
+Random,0.03,173,0.0246
+Random,0.03,174,0.0289
+Random,0.03,175,0.0266
+Random,0.03,176,0.027
+Random,0.03,177,0.0258
+Random,0.03,178,0.0254
+Random,0.03,179,0.0264
+Random,0.03,180,0.0258
+Random,0.03,181,0.026
+Random,0.03,182,0.0256
+Random,0.03,183,0.0252
+Random,0.03,184,0.027
+Random,0.03,185,0.0262
+Random,0.03,186,0.0236
+Random,0.03,187,0.0258
+Random,0.03,188,0.0275
+Random,0.03,189,0.0256
+Random,0.03,190,0.0279
+Random,0.03,191,0.0273
+Random,0.03,192,0.027
+Random,0.03,193,0.0264
+Random,0.03,194,0.0279
+Random,0.03,195,0.0252
+Random,0.03,196,0.0264
+Random,0.03,197,0.0268
+Random,0.03,198,0.0268
+Random,0.03,199,0.0256
+Random,0.03,200,0.0246
+Random,0.03,201,0.0262
+Random,0.03,202,0.0275
+Random,0.03,203,0.0273
+Random,0.03,204,0.0266
+Random,0.03,205,0.0271
+Random,0.03,206,0.0281
+Random,0.03,207,0.0248
+Random,0.03,208,0.0264
+Random,0.03,209,0.0262
+Random,0.03,210,0.025
+Random,0.03,211,0.025
+Random,0.03,212,0.0256
+Random,0.03,213,0.026
+Random,0.03,214,0.027
+Random,0.03,215,0.0273
+Random,0.03,216,0.0273
+Random,0.03,217,0.0299
+Random,0.03,218,0.0266
+Random,0.03,219,0.0262
+Random,0.03,220,0.025
+Random,0.03,221,0.0271
+Random,0.03,222,0.0264
+Random,0.03,223,0.0232
+Random,0.03,224,0.0264
+Random,0.03,225,0.0242
+Random,0.03,226,0.0273
+Random,0.03,227,0.0277
+Random,0.03,228,0.0271
+Random,0.03,229,0.0264
+Random,0.03,230,0.0244
+Random,0.03,231,0.0266
+Random,0.03,232,0.0256
+Random,0.03,233,0.026
+Random,0.03,234,0.0258
+Random,0.03,235,0.0234
+Random,0.03,236,0.0268
+Random,0.03,237,0.0252
+Random,0.03,238,0.0262
+Random,0.03,239,0.0273
+Random,0.03,240,0.0271
+Random,0.03,241,0.0268
+Random,0.03,242,0.0289
+Random,0.03,243,0.0244
+Random,0.03,244,0.025
+Random,0.03,245,0.0262
+Random,0.03,246,0.0258
+Random,0.03,247,0.0262
+Random,0.03,248,0.0268
+Random,0.03,249,0.0266
+Random,0.03,250,0.0279
+Random,0.03,251,0.0244
+Random,0.03,252,0.026
+Random,0.03,253,0.0266
+Random,0.03,254,0.0262
+Random,0.03,255,0.0248
+Random,0.03,256,0.0246
+Random,0.03,257,0.0277
+Random,0.03,258,0.0271
+Random,0.03,259,0.0266
+Random,0.03,260,0.025
+Random,0.03,261,0.0264
+Random,0.03,262,0.0271
+Random,0.03,263,0.0271
+Random,0.03,264,0.0268
+Random,0.03,265,0.0271
+Random,0.03,266,0.0266
+Random,0.03,267,0.0271
+Random,0.03,268,0.0287
+Random,0.03,269,0.0262
+Random,0.03,270,0.0264
+Random,0.03,271,0.0262
+Random,0.03,272,0.0252
+Random,0.03,273,0.0258
+Random,0.03,274,0.027
+Random,0.03,275,0.0277
+Random,0.03,276,0.0262
+Random,0.03,277,0.0262
+Random,0.03,278,0.0273
+Random,0.03,279,0.0268
+Random,0.03,280,0.0271
+Random,0.03,281,0.0266
+Random,0.03,282,0.0268
+Random,0.03,283,0.0289
+Random,0.03,284,0.0266
+Random,0.03,285,0.0264
+Random,0.03,286,0.0268
+Random,0.03,287,0.0268
+Random,0.03,288,0.0262
+Random,0.03,289,0.0256
+Random,0.03,290,0.0283
+Random,0.03,291,0.0256
+Random,0.03,292,0.026
+Random,0.03,293,0.026
+Random,0.03,294,0.0254
+Random,0.03,295,0.0264
+Random,0.03,296,0.026
+Random,0.03,297,0.0264
+Random,0.03,298,0.0256
+Random,0.03,299,0.0256
+Random,0.03,300,0.0266
+Random,0.1,0,0.5068
+Random,0.1,1,0.3254
+Random,0.1,2,0.2381
+Random,0.1,3,0.1842
+Random,0.1,4,0.1414
+Random,0.1,5,0.117
+Random,0.1,6,0.1088
+Random,0.1,7,0.0949
+Random,0.1,8,0.0844
+Random,0.1,9,0.0732
+Random,0.1,10,0.0648
+Random,0.1,11,0.0553
+Random,0.1,12,0.0479
+Random,0.1,13,0.0457
+Random,0.1,14,0.0424
+Random,0.1,15,0.0406
+Random,0.1,16,0.0373
+Random,0.1,17,0.034
+Random,0.1,18,0.0299
+Random,0.1,19,0.027
+Random,0.1,20,0.0242
+Random,0.1,21,0.0207
+Random,0.1,22,0.0205
+Random,0.1,23,0.0193
+Random,0.1,24,0.0174
+Random,0.1,25,0.0166
+Random,0.1,26,0.0156
+Random,0.1,27,0.0148
+Random,0.1,28,0.0148
+Random,0.1,29,0.0117
+Random,0.1,30,0.0109
+Random,0.1,31,0.0096
+Random,0.1,32,0.0078
+Random,0.1,33,0.0086
+Random,0.1,34,0.0086
+Random,0.1,35,0.0074
+Random,0.1,36,0.0076
+Random,0.1,37,0.007
+Random,0.1,38,0.0066
+Random,0.1,39,0.0066
+Random,0.1,40,0.0064
+Random,0.1,41,0.0074
+Random,0.1,42,0.007
+Random,0.1,43,0.0061
+Random,0.1,44,0.007
+Random,0.1,45,0.007
+Random,0.1,46,0.0076
+Random,0.1,47,0.0064
+Random,0.1,48,0.0051
+Random,0.1,49,0.0045
+Random,0.1,50,0.0039
+Random,0.1,51,0.0045
+Random,0.1,52,0.0033
+Random,0.1,53,0.0023
+Random,0.1,54,0.0029
+Random,0.1,55,0.0025
+Random,0.1,56,0.0023
+Random,0.1,57,0.0029
+Random,0.1,58,0.0029
+Random,0.1,59,0.0031
+Random,0.1,60,0.0031
+Random,0.1,61,0.0031
+Random,0.1,62,0.0031
+Random,0.1,63,0.0025
+Random,0.1,64,0.0027
+Random,0.1,65,0.0027
+Random,0.1,66,0.0023
+Random,0.1,67,0.0023
+Random,0.1,68,0.0016
+Random,0.1,69,0.0018
+Random,0.1,70,0.0012
+Random,0.1,71,0.0012
+Random,0.1,72,8e-4
+Random,0.1,73,0.0012
+Random,0.1,74,8e-4
+Random,0.1,75,0.0016
+Random,0.1,76,0.0012
+Random,0.1,77,0.0016
+Random,0.1,78,0.0018
+Random,0.1,79,0.0016
+Random,0.1,80,0.0012
+Random,0.1,81,0.0016
+Random,0.1,82,0.001
+Random,0.1,83,0.0014
+Random,0.1,84,8e-4
+Random,0.1,85,0.001
+Random,0.1,86,8e-4
+Random,0.1,87,4e-4
+Random,0.1,88,0
+Random,0.1,89,0
+Random,0.1,90,0
+Random,0.1,91,0
+Random,0.1,92,0
+Random,0.1,93,0
+Random,0.1,94,0
+Random,0.1,95,0
+Random,0.1,96,0
+Random,0.1,97,0
+Random,0.1,98,0
+Random,0.1,99,0
+Random,0.1,100,0
+Random,0.1,101,0
+Random,0.1,102,0
+Random,0.1,103,0
+Random,0.1,104,0
+Random,0.1,105,0
+Random,0.1,106,0
+Random,0.1,107,0
+Random,0.1,108,0
+Random,0.1,109,0
+Random,0.1,110,0
+Random,0.1,111,0
+Random,0.1,112,0
+Random,0.1,113,0
+Random,0.1,114,0
+Random,0.1,115,0
+Random,0.1,116,0
+Random,0.1,117,0
+Random,0.1,118,0
+Random,0.1,119,0
+Random,0.1,120,0
+Random,0.1,121,0
+Random,0.1,122,0
+Random,0.1,123,0
+Random,0.1,124,0
+Random,0.1,125,0
+Random,0.1,126,0
+Random,0.1,127,0
+Random,0.1,128,0
+Random,0.1,129,0
+Random,0.1,130,0
+Random,0.1,131,0
+Random,0.1,132,0
+Random,0.1,133,0
+Random,0.1,134,0
+Random,0.1,135,0
+Random,0.1,136,0
+Random,0.1,137,0
+Random,0.1,138,0
+Random,0.1,139,0
+Random,0.1,140,0
+Random,0.1,141,0
+Random,0.1,142,0
+Random,0.1,143,0
+Random,0.1,144,0
+Random,0.1,145,0
+Random,0.1,146,0
+Random,0.1,147,0
+Random,0.1,148,0
+Random,0.1,149,0
+Random,0.1,150,0
+Random,0.1,151,0
+Random,0.1,152,0
+Random,0.1,153,0
+Random,0.1,154,0
+Random,0.1,155,0
+Random,0.1,156,0
+Random,0.1,157,0
+Random,0.1,158,0
+Random,0.1,159,0
+Random,0.1,160,0
+Random,0.1,161,0
+Random,0.1,162,0
+Random,0.1,163,0
+Random,0.1,164,0
+Random,0.1,165,0
+Random,0.1,166,0
+Random,0.1,167,0
+Random,0.1,168,0
+Random,0.1,169,0
+Random,0.1,170,0
+Random,0.1,171,0
+Random,0.1,172,0
+Random,0.1,173,0
+Random,0.1,174,0
+Random,0.1,175,0
+Random,0.1,176,0
+Random,0.1,177,0
+Random,0.1,178,0
+Random,0.1,179,0
+Random,0.1,180,0
+Random,0.1,181,0
+Random,0.1,182,0
+Random,0.1,183,0
+Random,0.1,184,0
+Random,0.1,185,0
+Random,0.1,186,0
+Random,0.1,187,0
+Random,0.1,188,0
+Random,0.1,189,0
+Random,0.1,190,0
+Random,0.1,191,0
+Random,0.1,192,0
+Random,0.1,193,0
+Random,0.1,194,0
+Random,0.1,195,0
+Random,0.1,196,0
+Random,0.1,197,0
+Random,0.1,198,0
+Random,0.1,199,0
+Random,0.1,200,0
+Random,0.1,201,0
+Random,0.1,202,0
+Random,0.1,203,0
+Random,0.1,204,0
+Random,0.1,205,0
+Random,0.1,206,0
+Random,0.1,207,0
+Random,0.1,208,0
+Random,0.1,209,0
+Random,0.1,210,0
+Random,0.1,211,0
+Random,0.1,212,0
+Random,0.1,213,0
+Random,0.1,214,0
+Random,0.1,215,0
+Random,0.1,216,0
+Random,0.1,217,0
+Random,0.1,218,0
+Random,0.1,219,0
+Random,0.1,220,0
+Random,0.1,221,0
+Random,0.1,222,0
+Random,0.1,223,0
+Random,0.1,224,0
+Random,0.1,225,0
+Random,0.1,226,0
+Random,0.1,227,0
+Random,0.1,228,0
+Random,0.1,229,0
+Random,0.1,230,0
+Random,0.1,231,0
+Random,0.1,232,0
+Random,0.1,233,0
+Random,0.1,234,0
+Random,0.1,235,0
+Random,0.1,236,0
+Random,0.1,237,0
+Random,0.1,238,0
+Random,0.1,239,0
+Random,0.1,240,0
+Random,0.1,241,0
+Random,0.1,242,0
+Random,0.1,243,0
+Random,0.1,244,0
+Random,0.1,245,0
+Random,0.1,246,0
+Random,0.1,247,0
+Random,0.1,248,0
+Random,0.1,249,0
+Random,0.1,250,0
+Random,0.1,251,0
+Random,0.1,252,0
+Random,0.1,253,0
+Random,0.1,254,0
+Random,0.1,255,0
+Random,0.1,256,0
+Random,0.1,257,0
+Random,0.1,258,0
+Random,0.1,259,0
+Random,0.1,260,0
+Random,0.1,261,0
+Random,0.1,262,0
+Random,0.1,263,0
+Random,0.1,264,0
+Random,0.1,265,0
+Random,0.1,266,0
+Random,0.1,267,0
+Random,0.1,268,0
+Random,0.1,269,0
+Random,0.1,270,0
+Random,0.1,271,0
+Random,0.1,272,0
+Random,0.1,273,0
+Random,0.1,274,0
+Random,0.1,275,0
+Random,0.1,276,0
+Random,0.1,277,0
+Random,0.1,278,0
+Random,0.1,279,0
+Random,0.1,280,0
+Random,0.1,281,0
+Random,0.1,282,0
+Random,0.1,283,0
+Random,0.1,284,0
+Random,0.1,285,0
+Random,0.1,286,0
+Random,0.1,287,0
+Random,0.1,288,0
+Random,0.1,289,0
+Random,0.1,290,0
+Random,0.1,291,0
+Random,0.1,292,0
+Random,0.1,293,0
+Random,0.1,294,0
+Random,0.1,295,0
+Random,0.1,296,0
+Random,0.1,297,0
+Random,0.1,298,0
+Random,0.1,299,0
+Random,0.1,300,0
+Random,0.3,0,0.4957
+Random,0.3,1,0.3303
+Random,0.3,2,0.2646
+Random,0.3,3,0.2162
+Random,0.3,4,0.1979
+Random,0.3,5,0.1832
+Random,0.3,6,0.158
+Random,0.3,7,0.1467
+Random,0.3,8,0.141
+Random,0.3,9,0.1348
+Random,0.3,10,0.1264
+Random,0.3,11,0.1213
+Random,0.3,12,0.1162
+Random,0.3,13,0.1074
+Random,0.3,14,0.1049
+Random,0.3,15,0.0932
+Random,0.3,16,0.0938
+Random,0.3,17,0.0871
+Random,0.3,18,0.0859
+Random,0.3,19,0.0816
+Random,0.3,20,0.0811
+Random,0.3,21,0.0789
+Random,0.3,22,0.0711
+Random,0.3,23,0.0662
+Random,0.3,24,0.0592
+Random,0.3,25,0.0562
+Random,0.3,26,0.0523
+Random,0.3,27,0.0479
+Random,0.3,28,0.0426
+Random,0.3,29,0.0389
+Random,0.3,30,0.0338
+Random,0.3,31,0.0307
+Random,0.3,32,0.0289
+Random,0.3,33,0.0258
+Random,0.3,34,0.0258
+Random,0.3,35,0.0258
+Random,0.3,36,0.0215
+Random,0.3,37,0.0189
+Random,0.3,38,0.0162
+Random,0.3,39,0.0139
+Random,0.3,40,0.0123
+Random,0.3,41,0.0117
+Random,0.3,42,0.0131
+Random,0.3,43,0.0129
+Random,0.3,44,0.0113
+Random,0.3,45,0.0111
+Random,0.3,46,0.0102
+Random,0.3,47,0.0086
+Random,0.3,48,0.0086
+Random,0.3,49,0.0094
+Random,0.3,50,0.0084
+Random,0.3,51,0.0084
+Random,0.3,52,0.0061
+Random,0.3,53,0.0037
+Random,0.3,54,0.0041
+Random,0.3,55,0.0043
+Random,0.3,56,0.0033
+Random,0.3,57,0.0029
+Random,0.3,58,0.0031
+Random,0.3,59,0.0037
+Random,0.3,60,0.0053
+Random,0.3,61,0.0047
+Random,0.3,62,0.0045
+Random,0.3,63,0.0039
+Random,0.3,64,0.0039
+Random,0.3,65,0.0025
+Random,0.3,66,0.0021
+Random,0.3,67,0.0014
+Random,0.3,68,0.0012
+Random,0.3,69,6e-4
+Random,0.3,70,8e-4
+Random,0.3,71,0.0014
+Random,0.3,72,0.0014
+Random,0.3,73,0.0014
+Random,0.3,74,0.0014
+Random,0.3,75,8e-4
+Random,0.3,76,0
+Random,0.3,77,0
+Random,0.3,78,0
+Random,0.3,79,0
+Random,0.3,80,0
+Random,0.3,81,0
+Random,0.3,82,0
+Random,0.3,83,0
+Random,0.3,84,0
+Random,0.3,85,0
+Random,0.3,86,0
+Random,0.3,87,0
+Random,0.3,88,0
+Random,0.3,89,0
+Random,0.3,90,0
+Random,0.3,91,0
+Random,0.3,92,0
+Random,0.3,93,0
+Random,0.3,94,0
+Random,0.3,95,0
+Random,0.3,96,0
+Random,0.3,97,0
+Random,0.3,98,0
+Random,0.3,99,0
+Random,0.3,100,0
+Random,0.3,101,0
+Random,0.3,102,0
+Random,0.3,103,0
+Random,0.3,104,0
+Random,0.3,105,0
+Random,0.3,106,0
+Random,0.3,107,0
+Random,0.3,108,0
+Random,0.3,109,0
+Random,0.3,110,0
+Random,0.3,111,0
+Random,0.3,112,0
+Random,0.3,113,0
+Random,0.3,114,0
+Random,0.3,115,0
+Random,0.3,116,0
+Random,0.3,117,0
+Random,0.3,118,0
+Random,0.3,119,0
+Random,0.3,120,0
+Random,0.3,121,0
+Random,0.3,122,0
+Random,0.3,123,0
+Random,0.3,124,0
+Random,0.3,125,0
+Random,0.3,126,0
+Random,0.3,127,0
+Random,0.3,128,0
+Random,0.3,129,0
+Random,0.3,130,0
+Random,0.3,131,0
+Random,0.3,132,0
+Random,0.3,133,0
+Random,0.3,134,0
+Random,0.3,135,0
+Random,0.3,136,0
+Random,0.3,137,0
+Random,0.3,138,0
+Random,0.3,139,0
+Random,0.3,140,0
+Random,0.3,141,0
+Random,0.3,142,0
+Random,0.3,143,0
+Random,0.3,144,0
+Random,0.3,145,0
+Random,0.3,146,0
+Random,0.3,147,0
+Random,0.3,148,0
+Random,0.3,149,0
+Random,0.3,150,0
+Random,0.3,151,0
+Random,0.3,152,0
+Random,0.3,153,0
+Random,0.3,154,0
+Random,0.3,155,0
+Random,0.3,156,0
+Random,0.3,157,0
+Random,0.3,158,0
+Random,0.3,159,0
+Random,0.3,160,0
+Random,0.3,161,0
+Random,0.3,162,0
+Random,0.3,163,0
+Random,0.3,164,0
+Random,0.3,165,0
+Random,0.3,166,0
+Random,0.3,167,0
+Random,0.3,168,0
+Random,0.3,169,0
+Random,0.3,170,0
+Random,0.3,171,0
+Random,0.3,172,0
+Random,0.3,173,0
+Random,0.3,174,0
+Random,0.3,175,0
+Random,0.3,176,0
+Random,0.3,177,0
+Random,0.3,178,0
+Random,0.3,179,0
+Random,0.3,180,0
+Random,0.3,181,0
+Random,0.3,182,0
+Random,0.3,183,0
+Random,0.3,184,0
+Random,0.3,185,0
+Random,0.3,186,0
+Random,0.3,187,0
+Random,0.3,188,0
+Random,0.3,189,0
+Random,0.3,190,0
+Random,0.3,191,0
+Random,0.3,192,0
+Random,0.3,193,0
+Random,0.3,194,0
+Random,0.3,195,0
+Random,0.3,196,0
+Random,0.3,197,0
+Random,0.3,198,0
+Random,0.3,199,0
+Random,0.3,200,0
+Random,0.3,201,0
+Random,0.3,202,0
+Random,0.3,203,0
+Random,0.3,204,0
+Random,0.3,205,0
+Random,0.3,206,0
+Random,0.3,207,0
+Random,0.3,208,0
+Random,0.3,209,0
+Random,0.3,210,0
+Random,0.3,211,0
+Random,0.3,212,0
+Random,0.3,213,0
+Random,0.3,214,0
+Random,0.3,215,0
+Random,0.3,216,0
+Random,0.3,217,0
+Random,0.3,218,0
+Random,0.3,219,0
+Random,0.3,220,0
+Random,0.3,221,0
+Random,0.3,222,0
+Random,0.3,223,0
+Random,0.3,224,0
+Random,0.3,225,0
+Random,0.3,226,0
+Random,0.3,227,0
+Random,0.3,228,0
+Random,0.3,229,0
+Random,0.3,230,0
+Random,0.3,231,0
+Random,0.3,232,0
+Random,0.3,233,0
+Random,0.3,234,0
+Random,0.3,235,0
+Random,0.3,236,0
+Random,0.3,237,0
+Random,0.3,238,0
+Random,0.3,239,0
+Random,0.3,240,0
+Random,0.3,241,0
+Random,0.3,242,0
+Random,0.3,243,0
+Random,0.3,244,0
+Random,0.3,245,0
+Random,0.3,246,0
+Random,0.3,247,0
+Random,0.3,248,0
+Random,0.3,249,0
+Random,0.3,250,0
+Random,0.3,251,0
+Random,0.3,252,0
+Random,0.3,253,0
+Random,0.3,254,0
+Random,0.3,255,0
+Random,0.3,256,0
+Random,0.3,257,0
+Random,0.3,258,0
+Random,0.3,259,0
+Random,0.3,260,0
+Random,0.3,261,0
+Random,0.3,262,0
+Random,0.3,263,0
+Random,0.3,264,0
+Random,0.3,265,0
+Random,0.3,266,0
+Random,0.3,267,0
+Random,0.3,268,0
+Random,0.3,269,0
+Random,0.3,270,0
+Random,0.3,271,0
+Random,0.3,272,0
+Random,0.3,273,0
+Random,0.3,274,0
+Random,0.3,275,0
+Random,0.3,276,0
+Random,0.3,277,0
+Random,0.3,278,0
+Random,0.3,279,0
+Random,0.3,280,0
+Random,0.3,281,0
+Random,0.3,282,0
+Random,0.3,283,0
+Random,0.3,284,0
+Random,0.3,285,0
+Random,0.3,286,0
+Random,0.3,287,0
+Random,0.3,288,0
+Random,0.3,289,0
+Random,0.3,290,0
+Random,0.3,291,0
+Random,0.3,292,0
+Random,0.3,293,0
+Random,0.3,294,0
+Random,0.3,295,0
+Random,0.3,296,0
+Random,0.3,297,0
+Random,0.3,298,0
+Random,0.3,299,0
+Random,0.3,300,0
+Random,1,0,0.4941
+Random,1,1,0.3654
+Random,1,2,0.3146
+Random,1,3,0.2639
+Random,1,4,0.2348
+Random,1,5,0.2068
+Random,1,6,0.1771
+Random,1,7,0.1609
+Random,1,8,0.1387
+Random,1,9,0.1227
+Random,1,10,0.1096
+Random,1,11,0.0951
+Random,1,12,0.0869
+Random,1,13,0.0797
+Random,1,14,0.0709
+Random,1,15,0.0662
+Random,1,16,0.0568
+Random,1,17,0.0564
+Random,1,18,0.0537
+Random,1,19,0.0496
+Random,1,20,0.0424
+Random,1,21,0.0385
+Random,1,22,0.0354
+Random,1,23,0.032
+Random,1,24,0.0293
+Random,1,25,0.0279
+Random,1,26,0.0254
+Random,1,27,0.0244
+Random,1,28,0.0219
+Random,1,29,0.0203
+Random,1,30,0.018
+Random,1,31,0.018
+Random,1,32,0.0164
+Random,1,33,0.0141
+Random,1,34,0.0137
+Random,1,35,0.0109
+Random,1,36,0.0109
+Random,1,37,0.01
+Random,1,38,0.0098
+Random,1,39,0.0084
+Random,1,40,0.0076
+Random,1,41,0.0072
+Random,1,42,0.0063
+Random,1,43,0.0051
+Random,1,44,0.0057
+Random,1,45,0.0031
+Random,1,46,0.0027
+Random,1,47,0.0021
+Random,1,48,0.0027
+Random,1,49,0.0016
+Random,1,50,0.0014
+Random,1,51,0.002
+Random,1,52,0.0016
+Random,1,53,0.0016
+Random,1,54,0.0012
+Random,1,55,6e-4
+Random,1,56,6e-4
+Random,1,57,2e-4
+Random,1,58,2e-4
+Random,1,59,0
+Random,1,60,0
+Random,1,61,0
+Random,1,62,0
+Random,1,63,0
+Random,1,64,0
+Random,1,65,0
+Random,1,66,0
+Random,1,67,0
+Random,1,68,0
+Random,1,69,0
+Random,1,70,0
+Random,1,71,0
+Random,1,72,0
+Random,1,73,0
+Random,1,74,0
+Random,1,75,0
+Random,1,76,0
+Random,1,77,0
+Random,1,78,0
+Random,1,79,0
+Random,1,80,0
+Random,1,81,0
+Random,1,82,0
+Random,1,83,0
+Random,1,84,0
+Random,1,85,0
+Random,1,86,0
+Random,1,87,0
+Random,1,88,0
+Random,1,89,0
+Random,1,90,0
+Random,1,91,0
+Random,1,92,0
+Random,1,93,0
+Random,1,94,0
+Random,1,95,0
+Random,1,96,0
+Random,1,97,0
+Random,1,98,0
+Random,1,99,0
+Random,1,100,0
+Random,1,101,0
+Random,1,102,0
+Random,1,103,0
+Random,1,104,0
+Random,1,105,0
+Random,1,106,0
+Random,1,107,0
+Random,1,108,0
+Random,1,109,0
+Random,1,110,0
+Random,1,111,0
+Random,1,112,0
+Random,1,113,0
+Random,1,114,0
+Random,1,115,0
+Random,1,116,0
+Random,1,117,0
+Random,1,118,0
+Random,1,119,0
+Random,1,120,0
+Random,1,121,0
+Random,1,122,0
+Random,1,123,0
+Random,1,124,0
+Random,1,125,0
+Random,1,126,0
+Random,1,127,0
+Random,1,128,0
+Random,1,129,0
+Random,1,130,0
+Random,1,131,0
+Random,1,132,0
+Random,1,133,0
+Random,1,134,0
+Random,1,135,0
+Random,1,136,0
+Random,1,137,0
+Random,1,138,0
+Random,1,139,0
+Random,1,140,0
+Random,1,141,0
+Random,1,142,0
+Random,1,143,0
+Random,1,144,0
+Random,1,145,0
+Random,1,146,0
+Random,1,147,0
+Random,1,148,0
+Random,1,149,0
+Random,1,150,0
+Random,1,151,0
+Random,1,152,0
+Random,1,153,0
+Random,1,154,0
+Random,1,155,0
+Random,1,156,0
+Random,1,157,0
+Random,1,158,0
+Random,1,159,0
+Random,1,160,0
+Random,1,161,0
+Random,1,162,0
+Random,1,163,0
+Random,1,164,0
+Random,1,165,0
+Random,1,166,0
+Random,1,167,0
+Random,1,168,0
+Random,1,169,0
+Random,1,170,0
+Random,1,171,0
+Random,1,172,0
+Random,1,173,0
+Random,1,174,0
+Random,1,175,0
+Random,1,176,0
+Random,1,177,0
+Random,1,178,0
+Random,1,179,0
+Random,1,180,0
+Random,1,181,0
+Random,1,182,0
+Random,1,183,0
+Random,1,184,0
+Random,1,185,0
+Random,1,186,0
+Random,1,187,0
+Random,1,188,0
+Random,1,189,0
+Random,1,190,0
+Random,1,191,0
+Random,1,192,0
+Random,1,193,0
+Random,1,194,0
+Random,1,195,0
+Random,1,196,0
+Random,1,197,0
+Random,1,198,0
+Random,1,199,0
+Random,1,200,0
+Random,1,201,0
+Random,1,202,0
+Random,1,203,0
+Random,1,204,0
+Random,1,205,0
+Random,1,206,0
+Random,1,207,0
+Random,1,208,0
+Random,1,209,0
+Random,1,210,0
+Random,1,211,0
+Random,1,212,0
+Random,1,213,0
+Random,1,214,0
+Random,1,215,0
+Random,1,216,0
+Random,1,217,0
+Random,1,218,0
+Random,1,219,0
+Random,1,220,0
+Random,1,221,0
+Random,1,222,0
+Random,1,223,0
+Random,1,224,0
+Random,1,225,0
+Random,1,226,0
+Random,1,227,0
+Random,1,228,0
+Random,1,229,0
+Random,1,230,0
+Random,1,231,0
+Random,1,232,0
+Random,1,233,0
+Random,1,234,0
+Random,1,235,0
+Random,1,236,0
+Random,1,237,0
+Random,1,238,0
+Random,1,239,0
+Random,1,240,0
+Random,1,241,0
+Random,1,242,0
+Random,1,243,0
+Random,1,244,0
+Random,1,245,0
+Random,1,246,0
+Random,1,247,0
+Random,1,248,0
+Random,1,249,0
+Random,1,250,0
+Random,1,251,0
+Random,1,252,0
+Random,1,253,0
+Random,1,254,0
+Random,1,255,0
+Random,1,256,0
+Random,1,257,0
+Random,1,258,0
+Random,1,259,0
+Random,1,260,0
+Random,1,261,0
+Random,1,262,0
+Random,1,263,0
+Random,1,264,0
+Random,1,265,0
+Random,1,266,0
+Random,1,267,0
+Random,1,268,0
+Random,1,269,0
+Random,1,270,0
+Random,1,271,0
+Random,1,272,0
+Random,1,273,0
+Random,1,274,0
+Random,1,275,0
+Random,1,276,0
+Random,1,277,0
+Random,1,278,0
+Random,1,279,0
+Random,1,280,0
+Random,1,281,0
+Random,1,282,0
+Random,1,283,0
+Random,1,284,0
+Random,1,285,0
+Random,1,286,0
+Random,1,287,0
+Random,1,288,0
+Random,1,289,0
+Random,1,290,0
+Random,1,291,0
+Random,1,292,0
+Random,1,293,0
+Random,1,294,0
+Random,1,295,0
+Random,1,296,0
+Random,1,297,0
+Random,1,298,0
+Random,1,299,0
+Random,1,300,0
+Random,3,0,0.5053
+Random,3,1,0.4541
+Random,3,2,0.4123
+Random,3,3,0.3859
+Random,3,4,0.3529
+Random,3,5,0.3297
+Random,3,6,0.3061
+Random,3,7,0.2926
+Random,3,8,0.2719
+Random,3,9,0.2604
+Random,3,10,0.2479
+Random,3,11,0.2271
+Random,3,12,0.2123
+Random,3,13,0.2045
+Random,3,14,0.1906
+Random,3,15,0.1818
+Random,3,16,0.1758
+Random,3,17,0.1654
+Random,3,18,0.1549
+Random,3,19,0.1396
+Random,3,20,0.1283
+Random,3,21,0.1158
+Random,3,22,0.107
+Random,3,23,0.1014
+Random,3,24,0.0939
+Random,3,25,0.0799
+Random,3,26,0.0775
+Random,3,27,0.0779
+Random,3,28,0.074
+Random,3,29,0.0695
+Random,3,30,0.0639
+Random,3,31,0.0621
+Random,3,32,0.0561
+Random,3,33,0.0533
+Random,3,34,0.0502
+Random,3,35,0.0494
+Random,3,36,0.0439
+Random,3,37,0.0416
+Random,3,38,0.0391
+Random,3,39,0.0348
+Random,3,40,0.0307
+Random,3,41,0.0234
+Random,3,42,0.0227
+Random,3,43,0.023
+Random,3,44,0.0211
+Random,3,45,0.0193
+Random,3,46,0.0187
+Random,3,47,0.0197
+Random,3,48,0.0195
+Random,3,49,0.0178
+Random,3,50,0.0178
+Random,3,51,0.016
+Random,3,52,0.0154
+Random,3,53,0.0162
+Random,3,54,0.015
+Random,3,55,0.0131
+Random,3,56,0.0129
+Random,3,57,0.0123
+Random,3,58,0.0139
+Random,3,59,0.0109
+Random,3,60,0.0096
+Random,3,61,0.0082
+Random,3,62,0.008
+Random,3,63,0.008
+Random,3,64,0.0068
+Random,3,65,0.0055
+Random,3,66,0.0045
+Random,3,67,0.0033
+Random,3,68,0.0027
+Random,3,69,0.0021
+Random,3,70,0.0023
+Random,3,71,0.0023
+Random,3,72,0.0012
+Random,3,73,8e-4
+Random,3,74,8e-4
+Random,3,75,8e-4
+Random,3,76,4e-4
+Random,3,77,2e-4
+Random,3,78,6e-4
+Random,3,79,4e-4
+Random,3,80,4e-4
+Random,3,81,4e-4
+Random,3,82,6e-4
+Random,3,83,0.0012
+Random,3,84,0.0012
+Random,3,85,0.001
+Random,3,86,0.001
+Random,3,87,0.001
+Random,3,88,0.0012
+Random,3,89,6e-4
+Random,3,90,6e-4
+Random,3,91,2e-4
+Random,3,92,4e-4
+Random,3,93,6e-4
+Random,3,94,0
+Random,3,95,0
+Random,3,96,0
+Random,3,97,0
+Random,3,98,0
+Random,3,99,0
+Random,3,100,0
+Random,3,101,0
+Random,3,102,0
+Random,3,103,0
+Random,3,104,0
+Random,3,105,0
+Random,3,106,0
+Random,3,107,0
+Random,3,108,0
+Random,3,109,0
+Random,3,110,0
+Random,3,111,0
+Random,3,112,0
+Random,3,113,0
+Random,3,114,0
+Random,3,115,0
+Random,3,116,0
+Random,3,117,0
+Random,3,118,0
+Random,3,119,0
+Random,3,120,0
+Random,3,121,0
+Random,3,122,0
+Random,3,123,0
+Random,3,124,0
+Random,3,125,0
+Random,3,126,0
+Random,3,127,0
+Random,3,128,0
+Random,3,129,0
+Random,3,130,0
+Random,3,131,0
+Random,3,132,0
+Random,3,133,0
+Random,3,134,0
+Random,3,135,0
+Random,3,136,0
+Random,3,137,0
+Random,3,138,0
+Random,3,139,0
+Random,3,140,0
+Random,3,141,0
+Random,3,142,0
+Random,3,143,0
+Random,3,144,0
+Random,3,145,0
+Random,3,146,0
+Random,3,147,0
+Random,3,148,0
+Random,3,149,0
+Random,3,150,0
+Random,3,151,0
+Random,3,152,0
+Random,3,153,0
+Random,3,154,0
+Random,3,155,0
+Random,3,156,0
+Random,3,157,0
+Random,3,158,0
+Random,3,159,0
+Random,3,160,0
+Random,3,161,0
+Random,3,162,0
+Random,3,163,0
+Random,3,164,0
+Random,3,165,0
+Random,3,166,0
+Random,3,167,0
+Random,3,168,0
+Random,3,169,0
+Random,3,170,0
+Random,3,171,0
+Random,3,172,0
+Random,3,173,0
+Random,3,174,0
+Random,3,175,0
+Random,3,176,0
+Random,3,177,0
+Random,3,178,0
+Random,3,179,0
+Random,3,180,0
+Random,3,181,0
+Random,3,182,0
+Random,3,183,0
+Random,3,184,0
+Random,3,185,0
+Random,3,186,0
+Random,3,187,0
+Random,3,188,0
+Random,3,189,0
+Random,3,190,0
+Random,3,191,0
+Random,3,192,0
+Random,3,193,0
+Random,3,194,0
+Random,3,195,0
+Random,3,196,0
+Random,3,197,0
+Random,3,198,0
+Random,3,199,0
+Random,3,200,0
+Random,3,201,0
+Random,3,202,0
+Random,3,203,0
+Random,3,204,0
+Random,3,205,0
+Random,3,206,0
+Random,3,207,0
+Random,3,208,0
+Random,3,209,0
+Random,3,210,0
+Random,3,211,0
+Random,3,212,0
+Random,3,213,0
+Random,3,214,0
+Random,3,215,0
+Random,3,216,0
+Random,3,217,0
+Random,3,218,0
+Random,3,219,0
+Random,3,220,0
+Random,3,221,0
+Random,3,222,0
+Random,3,223,0
+Random,3,224,0
+Random,3,225,0
+Random,3,226,0
+Random,3,227,0
+Random,3,228,0
+Random,3,229,0
+Random,3,230,0
+Random,3,231,0
+Random,3,232,0
+Random,3,233,0
+Random,3,234,0
+Random,3,235,0
+Random,3,236,0
+Random,3,237,0
+Random,3,238,0
+Random,3,239,0
+Random,3,240,0
+Random,3,241,0
+Random,3,242,0
+Random,3,243,0
+Random,3,244,0
+Random,3,245,0
+Random,3,246,0
+Random,3,247,0
+Random,3,248,0
+Random,3,249,0
+Random,3,250,0
+Random,3,251,0
+Random,3,252,0
+Random,3,253,0
+Random,3,254,0
+Random,3,255,0
+Random,3,256,0
+Random,3,257,0
+Random,3,258,0
+Random,3,259,0
+Random,3,260,0
+Random,3,261,0
+Random,3,262,0
+Random,3,263,0
+Random,3,264,0
+Random,3,265,0
+Random,3,266,0
+Random,3,267,0
+Random,3,268,0
+Random,3,269,0
+Random,3,270,0
+Random,3,271,0
+Random,3,272,0
+Random,3,273,0
+Random,3,274,0
+Random,3,275,0
+Random,3,276,0
+Random,3,277,0
+Random,3,278,0
+Random,3,279,0
+Random,3,280,0
+Random,3,281,0
+Random,3,282,0
+Random,3,283,0
+Random,3,284,0
+Random,3,285,0
+Random,3,286,0
+Random,3,287,0
+Random,3,288,0
+Random,3,289,0
+Random,3,290,0
+Random,3,291,0
+Random,3,292,0
+Random,3,293,0
+Random,3,294,0
+Random,3,295,0
+Random,3,296,0
+Random,3,297,0
+Random,3,298,0
+Random,3,299,0
+Random,3,300,0
+Random,10,0,0.4992
+Random,10,1,0.4816
+Random,10,2,0.4646
+Random,10,3,0.466
+Random,10,4,0.4582
+Random,10,5,0.4514
+Random,10,6,0.4498
+Random,10,7,0.4436
+Random,10,8,0.4342
+Random,10,9,0.424
+Random,10,10,0.4166
+Random,10,11,0.4123
+Random,10,12,0.4047
+Random,10,13,0.4098
+Random,10,14,0.4027
+Random,10,15,0.3941
+Random,10,16,0.3846
+Random,10,17,0.384
+Random,10,18,0.3768
+Random,10,19,0.3746
+Random,10,20,0.3613
+Random,10,21,0.3543
+Random,10,22,0.3512
+Random,10,23,0.3514
+Random,10,24,0.348
+Random,10,25,0.333
+Random,10,26,0.3176
+Random,10,27,0.3172
+Random,10,28,0.3072
+Random,10,29,0.3027
+Random,10,30,0.2998
+Random,10,31,0.3033
+Random,10,32,0.2932
+Random,10,33,0.2816
+Random,10,34,0.275
+Random,10,35,0.2734
+Random,10,36,0.2701
+Random,10,37,0.2637
+Random,10,38,0.2488
+Random,10,39,0.2469
+Random,10,40,0.2453
+Random,10,41,0.2361
+Random,10,42,0.2297
+Random,10,43,0.2238
+Random,10,44,0.21
+Random,10,45,0.2043
+Random,10,46,0.1934
+Random,10,47,0.1873
+Random,10,48,0.1779
+Random,10,49,0.1795
+Random,10,50,0.1729
+Random,10,51,0.167
+Random,10,52,0.1719
+Random,10,53,0.1695
+Random,10,54,0.1621
+Random,10,55,0.1572
+Random,10,56,0.1551
+Random,10,57,0.1486
+Random,10,58,0.1418
+Random,10,59,0.1375
+Random,10,60,0.1344
+Random,10,61,0.1301
+Random,10,62,0.1254
+Random,10,63,0.1221
+Random,10,64,0.1184
+Random,10,65,0.1193
+Random,10,66,0.1156
+Random,10,67,0.1182
+Random,10,68,0.1148
+Random,10,69,0.1145
+Random,10,70,0.117
+Random,10,71,0.115
+Random,10,72,0.1168
+Random,10,73,0.1154
+Random,10,74,0.1191
+Random,10,75,0.1225
+Random,10,76,0.1262
+Random,10,77,0.1232
+Random,10,78,0.1213
+Random,10,79,0.1215
+Random,10,80,0.1186
+Random,10,81,0.1184
+Random,10,82,0.1172
+Random,10,83,0.1133
+Random,10,84,0.1152
+Random,10,85,0.1127
+Random,10,86,0.1109
+Random,10,87,0.1043
+Random,10,88,0.101
+Random,10,89,0.1012
+Random,10,90,0.0973
+Random,10,91,0.0953
+Random,10,92,0.0936
+Random,10,93,0.093
+Random,10,94,0.0916
+Random,10,95,0.09
+Random,10,96,0.0902
+Random,10,97,0.0861
+Random,10,98,0.0816
+Random,10,99,0.077
+Random,10,100,0.0773
+Random,10,101,0.0768
+Random,10,102,0.0752
+Random,10,103,0.0736
+Random,10,104,0.0723
+Random,10,105,0.0713
+Random,10,106,0.0686
+Random,10,107,0.0666
+Random,10,108,0.0648
+Random,10,109,0.0594
+Random,10,110,0.0607
+Random,10,111,0.0588
+Random,10,112,0.0561
+Random,10,113,0.0527
+Random,10,114,0.0494
+Random,10,115,0.049
+Random,10,116,0.0506
+Random,10,117,0.0514
+Random,10,118,0.0475
+Random,10,119,0.0455
+Random,10,120,0.0449
+Random,10,121,0.0449
+Random,10,122,0.0443
+Random,10,123,0.0459
+Random,10,124,0.0463
+Random,10,125,0.0486
+Random,10,126,0.0479
+Random,10,127,0.048
+Random,10,128,0.0471
+Random,10,129,0.0477
+Random,10,130,0.0447
+Random,10,131,0.0451
+Random,10,132,0.0412
+Random,10,133,0.0412
+Random,10,134,0.042
+Random,10,135,0.0416
+Random,10,136,0.0418
+Random,10,137,0.0385
+Random,10,138,0.0344
+Random,10,139,0.0326
+Random,10,140,0.0309
+Random,10,141,0.0311
+Random,10,142,0.0334
+Random,10,143,0.0299
+Random,10,144,0.0297
+Random,10,145,0.0283
+Random,10,146,0.0316
+Random,10,147,0.0293
+Random,10,148,0.0295
+Random,10,149,0.0305
+Random,10,150,0.0287
+Random,10,151,0.0289
+Random,10,152,0.0295
+Random,10,153,0.0303
+Random,10,154,0.0297
+Random,10,155,0.0281
+Random,10,156,0.0299
+Random,10,157,0.0264
+Random,10,158,0.0236
+Random,10,159,0.0197
+Random,10,160,0.0205
+Random,10,161,0.0225
+Random,10,162,0.0203
+Random,10,163,0.0203
+Random,10,164,0.0162
+Random,10,165,0.0148
+Random,10,166,0.0154
+Random,10,167,0.016
+Random,10,168,0.0189
+Random,10,169,0.0168
+Random,10,170,0.0168
+Random,10,171,0.0182
+Random,10,172,0.0158
+Random,10,173,0.0172
+Random,10,174,0.0187
+Random,10,175,0.0162
+Random,10,176,0.016
+Random,10,177,0.016
+Random,10,178,0.0184
+Random,10,179,0.017
+Random,10,180,0.0154
+Random,10,181,0.0146
+Random,10,182,0.0154
+Random,10,183,0.016
+Random,10,184,0.0141
+Random,10,185,0.0119
+Random,10,186,0.0131
+Random,10,187,0.0117
+Random,10,188,0.0111
+Random,10,189,0.01
+Random,10,190,0.0105
+Random,10,191,0.01
+Random,10,192,0.0105
+Random,10,193,0.0094
+Random,10,194,0.0088
+Random,10,195,0.0088
+Random,10,196,0.0082
+Random,10,197,0.0088
+Random,10,198,0.008
+Random,10,199,0.0072
+Random,10,200,0.0064
+Random,10,201,0.0068
+Random,10,202,0.0084
+Random,10,203,0.0088
+Random,10,204,0.0078
+Random,10,205,0.0074
+Random,10,206,0.0068
+Random,10,207,0.0061
+Random,10,208,0.0066
+Random,10,209,0.0068
+Random,10,210,0.0068
+Random,10,211,0.0061
+Random,10,212,0.0061
+Random,10,213,0.0059
+Random,10,214,0.0051
+Random,10,215,0.0068
+Random,10,216,0.0063
+Random,10,217,0.0066
+Random,10,218,0.0068
+Random,10,219,0.0066
+Random,10,220,0.0064
+Random,10,221,0.0061
+Random,10,222,0.0063
+Random,10,223,0.0066
+Random,10,224,0.0057
+Random,10,225,0.0055
+Random,10,226,0.0057
+Random,10,227,0.0051
+Random,10,228,0.0057
+Random,10,229,0.0055
+Random,10,230,0.0055
+Random,10,231,0.0049
+Random,10,232,0.0055
+Random,10,233,0.0055
+Random,10,234,0.0053
+Random,10,235,0.0045
+Random,10,236,0.0047
+Random,10,237,0.0051
+Random,10,238,0.0043
+Random,10,239,0.0041
+Random,10,240,0.0037
+Random,10,241,0.0039
+Random,10,242,0.0035
+Random,10,243,0.0035
+Random,10,244,0.0033
+Random,10,245,0.0029
+Random,10,246,0.0033
+Random,10,247,0.0037
+Random,10,248,0.0043
+Random,10,249,0.0051
+Random,10,250,0.0043
+Random,10,251,0.0041
+Random,10,252,0.0041
+Random,10,253,0.0037
+Random,10,254,0.0035
+Random,10,255,0.0033
+Random,10,256,0.0021
+Random,10,257,0.0016
+Random,10,258,0.0018
+Random,10,259,0.0016
+Random,10,260,0.0018
+Random,10,261,0.0021
+Random,10,262,0.0029
+Random,10,263,0.0025
+Random,10,264,0.0027
+Random,10,265,0.0033
+Random,10,266,0.0037
+Random,10,267,0.0037
+Random,10,268,0.0027
+Random,10,269,0.0029
+Random,10,270,0.0031
+Random,10,271,0.0033
+Random,10,272,0.0031
+Random,10,273,0.0029
+Random,10,274,0.0031
+Random,10,275,0.0033
+Random,10,276,0.0029
+Random,10,277,0.0018
+Random,10,278,0.0025
+Random,10,279,0.0018
+Random,10,280,0.0021
+Random,10,281,0.0018
+Random,10,282,0.0014
+Random,10,283,0.0016
+Random,10,284,0.0016
+Random,10,285,8e-4
+Random,10,286,6e-4
+Random,10,287,8e-4
+Random,10,288,6e-4
+Random,10,289,4e-4
+Random,10,290,2e-4
+Random,10,291,0
+Random,10,292,0
+Random,10,293,0
+Random,10,294,0
+Random,10,295,0
+Random,10,296,0
+Random,10,297,0
+Random,10,298,0
+Random,10,299,0
+Random,10,300,0
+Hubs,0.01,0,0.491
+Hubs,0.01,1,0.4094
+Hubs,0.01,2,0.3953
+Hubs,0.01,3,0.3963
+Hubs,0.01,4,0.4012
+Hubs,0.01,5,0.4061
+Hubs,0.01,6,0.4143
+Hubs,0.01,7,0.4291
+Hubs,0.01,8,0.4344
+Hubs,0.01,9,0.4447
+Hubs,0.01,10,0.4502
+Hubs,0.01,11,0.4756
+Hubs,0.01,12,0.4945
+Hubs,0.01,13,0.5094
+Hubs,0.01,14,0.5166
+Hubs,0.01,15,0.5209
+Hubs,0.01,16,0.5324
+Hubs,0.01,17,0.5451
+Hubs,0.01,18,0.5545
+Hubs,0.01,19,0.5701
+Hubs,0.01,20,0.5867
+Hubs,0.01,21,0.5986
+Hubs,0.01,22,0.6129
+Hubs,0.01,23,0.6266
+Hubs,0.01,24,0.6324
+Hubs,0.01,25,0.6525
+Hubs,0.01,26,0.6566
+Hubs,0.01,27,0.6693
+Hubs,0.01,28,0.6814
+Hubs,0.01,29,0.6965
+Hubs,0.01,30,0.7055
+Hubs,0.01,31,0.717
+Hubs,0.01,32,0.7316
+Hubs,0.01,33,0.7488
+Hubs,0.01,34,0.7488
+Hubs,0.01,35,0.7504
+Hubs,0.01,36,0.7662
+Hubs,0.01,37,0.7648
+Hubs,0.01,38,0.7816
+Hubs,0.01,39,0.7812
+Hubs,0.01,40,0.7859
+Hubs,0.01,41,0.8051
+Hubs,0.01,42,0.8205
+Hubs,0.01,43,0.8389
+Hubs,0.01,44,0.8434
+Hubs,0.01,45,0.8486
+Hubs,0.01,46,0.8629
+Hubs,0.01,47,0.8703
+Hubs,0.01,48,0.8787
+Hubs,0.01,49,0.8863
+Hubs,0.01,50,0.892
+Hubs,0.01,51,0.9018
+Hubs,0.01,52,0.9086
+Hubs,0.01,53,0.9139
+Hubs,0.01,54,0.9188
+Hubs,0.01,55,0.9215
+Hubs,0.01,56,0.9184
+Hubs,0.01,57,0.9176
+Hubs,0.01,58,0.9172
+Hubs,0.01,59,0.924
+Hubs,0.01,60,0.9258
+Hubs,0.01,61,0.9209
+Hubs,0.01,62,0.9193
+Hubs,0.01,63,0.917
+Hubs,0.01,64,0.9188
+Hubs,0.01,65,0.9117
+Hubs,0.01,66,0.9127
+Hubs,0.01,67,0.9174
+Hubs,0.01,68,0.9139
+Hubs,0.01,69,0.9232
+Hubs,0.01,70,0.9219
+Hubs,0.01,71,0.9236
+Hubs,0.01,72,0.9203
+Hubs,0.01,73,0.9244
+Hubs,0.01,74,0.9225
+Hubs,0.01,75,0.924
+Hubs,0.01,76,0.926
+Hubs,0.01,77,0.9252
+Hubs,0.01,78,0.9279
+Hubs,0.01,79,0.9254
+Hubs,0.01,80,0.9234
+Hubs,0.01,81,0.9279
+Hubs,0.01,82,0.9291
+Hubs,0.01,83,0.9287
+Hubs,0.01,84,0.9303
+Hubs,0.01,85,0.9324
+Hubs,0.01,86,0.9287
+Hubs,0.01,87,0.925
+Hubs,0.01,88,0.9199
+Hubs,0.01,89,0.9236
+Hubs,0.01,90,0.9266
+Hubs,0.01,91,0.9311
+Hubs,0.01,92,0.934
+Hubs,0.01,93,0.9322
+Hubs,0.01,94,0.9293
+Hubs,0.01,95,0.9299
+Hubs,0.01,96,0.9359
+Hubs,0.01,97,0.9379
+Hubs,0.01,98,0.9381
+Hubs,0.01,99,0.9412
+Hubs,0.01,100,0.9439
+Hubs,0.01,101,0.9486
+Hubs,0.01,102,0.9539
+Hubs,0.01,103,0.9541
+Hubs,0.01,104,0.9584
+Hubs,0.01,105,0.9543
+Hubs,0.01,106,0.9533
+Hubs,0.01,107,0.9553
+Hubs,0.01,108,0.9602
+Hubs,0.01,109,0.9594
+Hubs,0.01,110,0.9613
+Hubs,0.01,111,0.9625
+Hubs,0.01,112,0.9662
+Hubs,0.01,113,0.9654
+Hubs,0.01,114,0.967
+Hubs,0.01,115,0.9684
+Hubs,0.01,116,0.9684
+Hubs,0.01,117,0.9658
+Hubs,0.01,118,0.9605
+Hubs,0.01,119,0.9613
+Hubs,0.01,120,0.9564
+Hubs,0.01,121,0.9578
+Hubs,0.01,122,0.9578
+Hubs,0.01,123,0.9574
+Hubs,0.01,124,0.9578
+Hubs,0.01,125,0.9617
+Hubs,0.01,126,0.9592
+Hubs,0.01,127,0.9572
+Hubs,0.01,128,0.9576
+Hubs,0.01,129,0.9584
+Hubs,0.01,130,0.9602
+Hubs,0.01,131,0.9602
+Hubs,0.01,132,0.9586
+Hubs,0.01,133,0.9564
+Hubs,0.01,134,0.9537
+Hubs,0.01,135,0.9488
+Hubs,0.01,136,0.9486
+Hubs,0.01,137,0.9504
+Hubs,0.01,138,0.9541
+Hubs,0.01,139,0.9568
+Hubs,0.01,140,0.952
+Hubs,0.01,141,0.9547
+Hubs,0.01,142,0.9512
+Hubs,0.01,143,0.958
+Hubs,0.01,144,0.9555
+Hubs,0.01,145,0.9572
+Hubs,0.01,146,0.9584
+Hubs,0.01,147,0.9562
+Hubs,0.01,148,0.9594
+Hubs,0.01,149,0.9615
+Hubs,0.01,150,0.9625
+Hubs,0.01,151,0.9641
+Hubs,0.01,152,0.9594
+Hubs,0.01,153,0.9584
+Hubs,0.01,154,0.9555
+Hubs,0.01,155,0.9537
+Hubs,0.01,156,0.957
+Hubs,0.01,157,0.9535
+Hubs,0.01,158,0.9545
+Hubs,0.01,159,0.9564
+Hubs,0.01,160,0.9531
+Hubs,0.01,161,0.9592
+Hubs,0.01,162,0.9592
+Hubs,0.01,163,0.9566
+Hubs,0.01,164,0.9594
+Hubs,0.01,165,0.9594
+Hubs,0.01,166,0.9625
+Hubs,0.01,167,0.9619
+Hubs,0.01,168,0.9641
+Hubs,0.01,169,0.9627
+Hubs,0.01,170,0.9637
+Hubs,0.01,171,0.9654
+Hubs,0.01,172,0.9672
+Hubs,0.01,173,0.967
+Hubs,0.01,174,0.9662
+Hubs,0.01,175,0.967
+Hubs,0.01,176,0.9701
+Hubs,0.01,177,0.9711
+Hubs,0.01,178,0.9705
+Hubs,0.01,179,0.9686
+Hubs,0.01,180,0.9684
+Hubs,0.01,181,0.9672
+Hubs,0.01,182,0.9633
+Hubs,0.01,183,0.9668
+Hubs,0.01,184,0.9631
+Hubs,0.01,185,0.9631
+Hubs,0.01,186,0.9686
+Hubs,0.01,187,0.9682
+Hubs,0.01,188,0.9684
+Hubs,0.01,189,0.9711
+Hubs,0.01,190,0.9695
+Hubs,0.01,191,0.9707
+Hubs,0.01,192,0.9715
+Hubs,0.01,193,0.9727
+Hubs,0.01,194,0.9752
+Hubs,0.01,195,0.9764
+Hubs,0.01,196,0.9787
+Hubs,0.01,197,0.9789
+Hubs,0.01,198,0.9785
+Hubs,0.01,199,0.982
+Hubs,0.01,200,0.9832
+Hubs,0.01,201,0.9842
+Hubs,0.01,202,0.9861
+Hubs,0.01,203,0.9875
+Hubs,0.01,204,0.9887
+Hubs,0.01,205,0.9881
+Hubs,0.01,206,0.9881
+Hubs,0.01,207,0.9898
+Hubs,0.01,208,0.9869
+Hubs,0.01,209,0.9893
+Hubs,0.01,210,0.9904
+Hubs,0.01,211,0.9926
+Hubs,0.01,212,0.993
+Hubs,0.01,213,0.9934
+Hubs,0.01,214,0.9928
+Hubs,0.01,215,0.9936
+Hubs,0.01,216,0.9943
+Hubs,0.01,217,0.9951
+Hubs,0.01,218,0.9934
+Hubs,0.01,219,0.9938
+Hubs,0.01,220,0.9939
+Hubs,0.01,221,0.9932
+Hubs,0.01,222,0.9938
+Hubs,0.01,223,0.9934
+Hubs,0.01,224,0.9945
+Hubs,0.01,225,0.9953
+Hubs,0.01,226,0.9947
+Hubs,0.01,227,0.9947
+Hubs,0.01,228,0.9947
+Hubs,0.01,229,0.9951
+Hubs,0.01,230,0.9965
+Hubs,0.01,231,0.9949
+Hubs,0.01,232,0.9955
+Hubs,0.01,233,0.9947
+Hubs,0.01,234,0.9945
+Hubs,0.01,235,0.9934
+Hubs,0.01,236,0.9949
+Hubs,0.01,237,0.9939
+Hubs,0.01,238,0.9943
+Hubs,0.01,239,0.9947
+Hubs,0.01,240,0.9955
+Hubs,0.01,241,0.9947
+Hubs,0.01,242,0.9959
+Hubs,0.01,243,0.9957
+Hubs,0.01,244,0.9953
+Hubs,0.01,245,0.9967
+Hubs,0.01,246,0.9959
+Hubs,0.01,247,0.9951
+Hubs,0.01,248,0.9949
+Hubs,0.01,249,0.9961
+Hubs,0.01,250,0.9959
+Hubs,0.01,251,0.9955
+Hubs,0.01,252,0.9965
+Hubs,0.01,253,0.9955
+Hubs,0.01,254,0.9961
+Hubs,0.01,255,0.9955
+Hubs,0.01,256,0.9951
+Hubs,0.01,257,0.9943
+Hubs,0.01,258,0.9936
+Hubs,0.01,259,0.9949
+Hubs,0.01,260,0.9945
+Hubs,0.01,261,0.9934
+Hubs,0.01,262,0.9945
+Hubs,0.01,263,0.9951
+Hubs,0.01,264,0.9945
+Hubs,0.01,265,0.9943
+Hubs,0.01,266,0.9953
+Hubs,0.01,267,0.9947
+Hubs,0.01,268,0.9945
+Hubs,0.01,269,0.9959
+Hubs,0.01,270,0.9953
+Hubs,0.01,271,0.9947
+Hubs,0.01,272,0.9949
+Hubs,0.01,273,0.9955
+Hubs,0.01,274,0.9953
+Hubs,0.01,275,0.9953
+Hubs,0.01,276,0.9949
+Hubs,0.01,277,0.9949
+Hubs,0.01,278,0.9959
+Hubs,0.01,279,0.9953
+Hubs,0.01,280,0.9965
+Hubs,0.01,281,0.9957
+Hubs,0.01,282,0.9949
+Hubs,0.01,283,0.9953
+Hubs,0.01,284,0.9955
+Hubs,0.01,285,0.9963
+Hubs,0.01,286,0.9965
+Hubs,0.01,287,0.9953
+Hubs,0.01,288,0.9953
+Hubs,0.01,289,0.9965
+Hubs,0.01,290,0.9965
+Hubs,0.01,291,0.9965
+Hubs,0.01,292,0.9963
+Hubs,0.01,293,0.9951
+Hubs,0.01,294,0.9961
+Hubs,0.01,295,0.9959
+Hubs,0.01,296,0.9963
+Hubs,0.01,297,0.9963
+Hubs,0.01,298,0.9965
+Hubs,0.01,299,0.9951
+Hubs,0.01,300,0.9959
+Hubs,0.03,0,0.4992
+Hubs,0.03,1,0.4016
+Hubs,0.03,2,0.3689
+Hubs,0.03,3,0.3527
+Hubs,0.03,4,0.3494
+Hubs,0.03,5,0.3508
+Hubs,0.03,6,0.3629
+Hubs,0.03,7,0.3752
+Hubs,0.03,8,0.4002
+Hubs,0.03,9,0.4092
+Hubs,0.03,10,0.4244
+Hubs,0.03,11,0.4303
+Hubs,0.03,12,0.4541
+Hubs,0.03,13,0.4557
+Hubs,0.03,14,0.476
+Hubs,0.03,15,0.4789
+Hubs,0.03,16,0.4924
+Hubs,0.03,17,0.5111
+Hubs,0.03,18,0.5223
+Hubs,0.03,19,0.5414
+Hubs,0.03,20,0.5584
+Hubs,0.03,21,0.5754
+Hubs,0.03,22,0.5834
+Hubs,0.03,23,0.6092
+Hubs,0.03,24,0.6213
+Hubs,0.03,25,0.632
+Hubs,0.03,26,0.6316
+Hubs,0.03,27,0.6441
+Hubs,0.03,28,0.6537
+Hubs,0.03,29,0.6684
+Hubs,0.03,30,0.6793
+Hubs,0.03,31,0.6957
+Hubs,0.03,32,0.7049
+Hubs,0.03,33,0.7189
+Hubs,0.03,34,0.7166
+Hubs,0.03,35,0.7277
+Hubs,0.03,36,0.7383
+Hubs,0.03,37,0.7514
+Hubs,0.03,38,0.752
+Hubs,0.03,39,0.758
+Hubs,0.03,40,0.7641
+Hubs,0.03,41,0.7631
+Hubs,0.03,42,0.7697
+Hubs,0.03,43,0.7754
+Hubs,0.03,44,0.785
+Hubs,0.03,45,0.7998
+Hubs,0.03,46,0.8043
+Hubs,0.03,47,0.8178
+Hubs,0.03,48,0.8213
+Hubs,0.03,49,0.8332
+Hubs,0.03,50,0.832
+Hubs,0.03,51,0.8396
+Hubs,0.03,52,0.8457
+Hubs,0.03,53,0.8527
+Hubs,0.03,54,0.8602
+Hubs,0.03,55,0.8703
+Hubs,0.03,56,0.8748
+Hubs,0.03,57,0.8771
+Hubs,0.03,58,0.8922
+Hubs,0.03,59,0.8961
+Hubs,0.03,60,0.8924
+Hubs,0.03,61,0.8939
+Hubs,0.03,62,0.8947
+Hubs,0.03,63,0.8975
+Hubs,0.03,64,0.9051
+Hubs,0.03,65,0.9061
+Hubs,0.03,66,0.9139
+Hubs,0.03,67,0.9154
+Hubs,0.03,68,0.9143
+Hubs,0.03,69,0.9125
+Hubs,0.03,70,0.9168
+Hubs,0.03,71,0.9225
+Hubs,0.03,72,0.9254
+Hubs,0.03,73,0.9318
+Hubs,0.03,74,0.9379
+Hubs,0.03,75,0.9412
+Hubs,0.03,76,0.9418
+Hubs,0.03,77,0.9486
+Hubs,0.03,78,0.9543
+Hubs,0.03,79,0.957
+Hubs,0.03,80,0.9645
+Hubs,0.03,81,0.9592
+Hubs,0.03,82,0.967
+Hubs,0.03,83,0.9666
+Hubs,0.03,84,0.9666
+Hubs,0.03,85,0.9697
+Hubs,0.03,86,0.9725
+Hubs,0.03,87,0.9746
+Hubs,0.03,88,0.9744
+Hubs,0.03,89,0.9766
+Hubs,0.03,90,0.9781
+Hubs,0.03,91,0.9799
+Hubs,0.03,92,0.9822
+Hubs,0.03,93,0.983
+Hubs,0.03,94,0.9795
+Hubs,0.03,95,0.9824
+Hubs,0.03,96,0.9859
+Hubs,0.03,97,0.9877
+Hubs,0.03,98,0.9869
+Hubs,0.03,99,0.9891
+Hubs,0.03,100,0.9889
+Hubs,0.03,101,0.9889
+Hubs,0.03,102,0.9898
+Hubs,0.03,103,0.9889
+Hubs,0.03,104,0.9914
+Hubs,0.03,105,0.992
+Hubs,0.03,106,0.991
+Hubs,0.03,107,0.9926
+Hubs,0.03,108,0.9922
+Hubs,0.03,109,0.9924
+Hubs,0.03,110,0.9924
+Hubs,0.03,111,0.9924
+Hubs,0.03,112,0.9938
+Hubs,0.03,113,0.9928
+Hubs,0.03,114,0.9934
+Hubs,0.03,115,0.9939
+Hubs,0.03,116,0.9936
+Hubs,0.03,117,0.9939
+Hubs,0.03,118,0.9938
+Hubs,0.03,119,0.9947
+Hubs,0.03,120,0.9938
+Hubs,0.03,121,0.9947
+Hubs,0.03,122,0.9951
+Hubs,0.03,123,0.9951
+Hubs,0.03,124,0.9951
+Hubs,0.03,125,0.9945
+Hubs,0.03,126,0.9945
+Hubs,0.03,127,0.9953
+Hubs,0.03,128,0.9959
+Hubs,0.03,129,0.9951
+Hubs,0.03,130,0.9957
+Hubs,0.03,131,0.9961
+Hubs,0.03,132,0.9973
+Hubs,0.03,133,0.9969
+Hubs,0.03,134,0.9965
+Hubs,0.03,135,0.9971
+Hubs,0.03,136,0.9953
+Hubs,0.03,137,0.9963
+Hubs,0.03,138,0.9953
+Hubs,0.03,139,0.9953
+Hubs,0.03,140,0.9957
+Hubs,0.03,141,0.9955
+Hubs,0.03,142,0.9949
+Hubs,0.03,143,0.9949
+Hubs,0.03,144,0.9961
+Hubs,0.03,145,0.9961
+Hubs,0.03,146,0.9957
+Hubs,0.03,147,0.9969
+Hubs,0.03,148,0.9955
+Hubs,0.03,149,0.9963
+Hubs,0.03,150,0.9959
+Hubs,0.03,151,0.9965
+Hubs,0.03,152,0.9965
+Hubs,0.03,153,0.9963
+Hubs,0.03,154,0.9959
+Hubs,0.03,155,0.9953
+Hubs,0.03,156,0.9951
+Hubs,0.03,157,0.9955
+Hubs,0.03,158,0.9945
+Hubs,0.03,159,0.9949
+Hubs,0.03,160,0.9963
+Hubs,0.03,161,0.9951
+Hubs,0.03,162,0.9941
+Hubs,0.03,163,0.9945
+Hubs,0.03,164,0.9938
+Hubs,0.03,165,0.9936
+Hubs,0.03,166,0.9957
+Hubs,0.03,167,0.9959
+Hubs,0.03,168,0.9967
+Hubs,0.03,169,0.9963
+Hubs,0.03,170,0.9965
+Hubs,0.03,171,0.9975
+Hubs,0.03,172,0.9982
+Hubs,0.03,173,0.9984
+Hubs,0.03,174,0.998
+Hubs,0.03,175,0.9982
+Hubs,0.03,176,0.9984
+Hubs,0.03,177,0.9986
+Hubs,0.03,178,0.9986
+Hubs,0.03,179,0.999
+Hubs,0.03,180,0.9984
+Hubs,0.03,181,0.9984
+Hubs,0.03,182,0.999
+Hubs,0.03,183,0.9988
+Hubs,0.03,184,0.9986
+Hubs,0.03,185,0.9994
+Hubs,0.03,186,0.9994
+Hubs,0.03,187,0.9994
+Hubs,0.03,188,0.999
+Hubs,0.03,189,0.9996
+Hubs,0.03,190,0.9992
+Hubs,0.03,191,0.9996
+Hubs,0.03,192,0.9998
+Hubs,0.03,193,0.9996
+Hubs,0.03,194,0.9998
+Hubs,0.03,195,0.9998
+Hubs,0.03,196,0.9996
+Hubs,0.03,197,0.9994
+Hubs,0.03,198,0.9992
+Hubs,0.03,199,0.9998
+Hubs,0.03,200,0.9996
+Hubs,0.03,201,0.999
+Hubs,0.03,202,0.9994
+Hubs,0.03,203,0.9994
+Hubs,0.03,204,0.9994
+Hubs,0.03,205,0.9994
+Hubs,0.03,206,0.9992
+Hubs,0.03,207,0.9994
+Hubs,0.03,208,0.9994
+Hubs,0.03,209,0.9996
+Hubs,0.03,210,0.9992
+Hubs,0.03,211,0.9994
+Hubs,0.03,212,0.9992
+Hubs,0.03,213,0.9996
+Hubs,0.03,214,0.9996
+Hubs,0.03,215,0.9996
+Hubs,0.03,216,0.9994
+Hubs,0.03,217,0.9992
+Hubs,0.03,218,0.9992
+Hubs,0.03,219,0.9994
+Hubs,0.03,220,0.9996
+Hubs,0.03,221,0.999
+Hubs,0.03,222,0.9996
+Hubs,0.03,223,0.9994
+Hubs,0.03,224,0.9996
+Hubs,0.03,225,0.9996
+Hubs,0.03,226,0.9998
+Hubs,0.03,227,0.9996
+Hubs,0.03,228,0.9996
+Hubs,0.03,229,0.9992
+Hubs,0.03,230,0.9998
+Hubs,0.03,231,0.9994
+Hubs,0.03,232,0.9992
+Hubs,0.03,233,0.9994
+Hubs,0.03,234,0.9992
+Hubs,0.03,235,0.9994
+Hubs,0.03,236,0.9996
+Hubs,0.03,237,0.9998
+Hubs,0.03,238,0.9998
+Hubs,0.03,239,0.9998
+Hubs,0.03,240,0.9992
+Hubs,0.03,241,0.9996
+Hubs,0.03,242,0.9994
+Hubs,0.03,243,0.9994
+Hubs,0.03,244,0.999
+Hubs,0.03,245,0.9994
+Hubs,0.03,246,0.9992
+Hubs,0.03,247,0.9994
+Hubs,0.03,248,0.9992
+Hubs,0.03,249,0.9992
+Hubs,0.03,250,0.9994
+Hubs,0.03,251,0.9994
+Hubs,0.03,252,0.9998
+Hubs,0.03,253,0.9992
+Hubs,0.03,254,0.9992
+Hubs,0.03,255,0.9994
+Hubs,0.03,256,0.999
+Hubs,0.03,257,0.999
+Hubs,0.03,258,0.9994
+Hubs,0.03,259,0.999
+Hubs,0.03,260,0.999
+Hubs,0.03,261,0.9994
+Hubs,0.03,262,0.9994
+Hubs,0.03,263,0.9994
+Hubs,0.03,264,0.9992
+Hubs,0.03,265,0.9994
+Hubs,0.03,266,0.9994
+Hubs,0.03,267,0.9994
+Hubs,0.03,268,0.9994
+Hubs,0.03,269,0.9994
+Hubs,0.03,270,0.9996
+Hubs,0.03,271,0.9998
+Hubs,0.03,272,0.9996
+Hubs,0.03,273,0.9994
+Hubs,0.03,274,0.9994
+Hubs,0.03,275,0.9992
+Hubs,0.03,276,0.9996
+Hubs,0.03,277,0.9994
+Hubs,0.03,278,0.9992
+Hubs,0.03,279,0.999
+Hubs,0.03,280,0.9994
+Hubs,0.03,281,0.9988
+Hubs,0.03,282,0.9992
+Hubs,0.03,283,0.9992
+Hubs,0.03,284,0.9994
+Hubs,0.03,285,0.999
+Hubs,0.03,286,0.9996
+Hubs,0.03,287,0.9992
+Hubs,0.03,288,0.999
+Hubs,0.03,289,0.9988
+Hubs,0.03,290,0.999
+Hubs,0.03,291,0.9988
+Hubs,0.03,292,1
+Hubs,0.03,293,1
+Hubs,0.03,294,1
+Hubs,0.03,295,1
+Hubs,0.03,296,1
+Hubs,0.03,297,1
+Hubs,0.03,298,1
+Hubs,0.03,299,1
+Hubs,0.03,300,1
+Hubs,0.1,0,0.5023
+Hubs,0.1,1,0.3855
+Hubs,0.1,2,0.3424
+Hubs,0.1,3,0.3316
+Hubs,0.1,4,0.3258
+Hubs,0.1,5,0.3416
+Hubs,0.1,6,0.3611
+Hubs,0.1,7,0.3633
+Hubs,0.1,8,0.3699
+Hubs,0.1,9,0.3949
+Hubs,0.1,10,0.4162
+Hubs,0.1,11,0.4225
+Hubs,0.1,12,0.4557
+Hubs,0.1,13,0.4643
+Hubs,0.1,14,0.4854
+Hubs,0.1,15,0.4992
+Hubs,0.1,16,0.516
+Hubs,0.1,17,0.5293
+Hubs,0.1,18,0.5438
+Hubs,0.1,19,0.558
+Hubs,0.1,20,0.5711
+Hubs,0.1,21,0.5848
+Hubs,0.1,22,0.5969
+Hubs,0.1,23,0.6164
+Hubs,0.1,24,0.6359
+Hubs,0.1,25,0.651
+Hubs,0.1,26,0.6629
+Hubs,0.1,27,0.6705
+Hubs,0.1,28,0.6854
+Hubs,0.1,29,0.6893
+Hubs,0.1,30,0.6955
+Hubs,0.1,31,0.7084
+Hubs,0.1,32,0.7205
+Hubs,0.1,33,0.733
+Hubs,0.1,34,0.7404
+Hubs,0.1,35,0.7479
+Hubs,0.1,36,0.7697
+Hubs,0.1,37,0.7732
+Hubs,0.1,38,0.7896
+Hubs,0.1,39,0.8043
+Hubs,0.1,40,0.8084
+Hubs,0.1,41,0.8158
+Hubs,0.1,42,0.8258
+Hubs,0.1,43,0.8359
+Hubs,0.1,44,0.8389
+Hubs,0.1,45,0.8434
+Hubs,0.1,46,0.8525
+Hubs,0.1,47,0.8605
+Hubs,0.1,48,0.8619
+Hubs,0.1,49,0.8719
+Hubs,0.1,50,0.8797
+Hubs,0.1,51,0.8887
+Hubs,0.1,52,0.8957
+Hubs,0.1,53,0.9016
+Hubs,0.1,54,0.9102
+Hubs,0.1,55,0.918
+Hubs,0.1,56,0.9268
+Hubs,0.1,57,0.9264
+Hubs,0.1,58,0.9256
+Hubs,0.1,59,0.9291
+Hubs,0.1,60,0.9338
+Hubs,0.1,61,0.9393
+Hubs,0.1,62,0.9398
+Hubs,0.1,63,0.9363
+Hubs,0.1,64,0.9383
+Hubs,0.1,65,0.9418
+Hubs,0.1,66,0.9436
+Hubs,0.1,67,0.9467
+Hubs,0.1,68,0.9504
+Hubs,0.1,69,0.9506
+Hubs,0.1,70,0.9486
+Hubs,0.1,71,0.9494
+Hubs,0.1,72,0.9498
+Hubs,0.1,73,0.9486
+Hubs,0.1,74,0.9488
+Hubs,0.1,75,0.9543
+Hubs,0.1,76,0.9588
+Hubs,0.1,77,0.9572
+Hubs,0.1,78,0.9609
+Hubs,0.1,79,0.9576
+Hubs,0.1,80,0.959
+Hubs,0.1,81,0.9652
+Hubs,0.1,82,0.9654
+Hubs,0.1,83,0.9662
+Hubs,0.1,84,0.9693
+Hubs,0.1,85,0.9684
+Hubs,0.1,86,0.9734
+Hubs,0.1,87,0.9756
+Hubs,0.1,88,0.9773
+Hubs,0.1,89,0.9762
+Hubs,0.1,90,0.9781
+Hubs,0.1,91,0.9793
+Hubs,0.1,92,0.9807
+Hubs,0.1,93,0.983
+Hubs,0.1,94,0.984
+Hubs,0.1,95,0.9836
+Hubs,0.1,96,0.9832
+Hubs,0.1,97,0.984
+Hubs,0.1,98,0.984
+Hubs,0.1,99,0.9832
+Hubs,0.1,100,0.9854
+Hubs,0.1,101,0.9805
+Hubs,0.1,102,0.9828
+Hubs,0.1,103,0.9859
+Hubs,0.1,104,0.9855
+Hubs,0.1,105,0.9855
+Hubs,0.1,106,0.9844
+Hubs,0.1,107,0.9838
+Hubs,0.1,108,0.9848
+Hubs,0.1,109,0.9846
+Hubs,0.1,110,0.9846
+Hubs,0.1,111,0.9842
+Hubs,0.1,112,0.9832
+Hubs,0.1,113,0.9818
+Hubs,0.1,114,0.9824
+Hubs,0.1,115,0.9801
+Hubs,0.1,116,0.9832
+Hubs,0.1,117,0.9844
+Hubs,0.1,118,0.985
+Hubs,0.1,119,0.9838
+Hubs,0.1,120,0.9861
+Hubs,0.1,121,0.9879
+Hubs,0.1,122,0.9859
+Hubs,0.1,123,0.9873
+Hubs,0.1,124,0.9877
+Hubs,0.1,125,0.9887
+Hubs,0.1,126,0.9898
+Hubs,0.1,127,0.9889
+Hubs,0.1,128,0.9891
+Hubs,0.1,129,0.9906
+Hubs,0.1,130,0.9898
+Hubs,0.1,131,0.9912
+Hubs,0.1,132,0.9922
+Hubs,0.1,133,0.9918
+Hubs,0.1,134,0.9932
+Hubs,0.1,135,0.992
+Hubs,0.1,136,0.9922
+Hubs,0.1,137,0.992
+Hubs,0.1,138,0.9928
+Hubs,0.1,139,0.9912
+Hubs,0.1,140,0.993
+Hubs,0.1,141,0.9945
+Hubs,0.1,142,0.9947
+Hubs,0.1,143,0.9945
+Hubs,0.1,144,0.9947
+Hubs,0.1,145,0.9938
+Hubs,0.1,146,0.9939
+Hubs,0.1,147,0.993
+Hubs,0.1,148,0.9936
+Hubs,0.1,149,0.9934
+Hubs,0.1,150,0.9928
+Hubs,0.1,151,0.9934
+Hubs,0.1,152,0.9943
+Hubs,0.1,153,0.9938
+Hubs,0.1,154,0.9941
+Hubs,0.1,155,0.9939
+Hubs,0.1,156,0.9938
+Hubs,0.1,157,0.9947
+Hubs,0.1,158,0.9941
+Hubs,0.1,159,0.9955
+Hubs,0.1,160,0.9957
+Hubs,0.1,161,0.9959
+Hubs,0.1,162,0.9969
+Hubs,0.1,163,0.9971
+Hubs,0.1,164,0.9969
+Hubs,0.1,165,0.9977
+Hubs,0.1,166,0.998
+Hubs,0.1,167,0.9979
+Hubs,0.1,168,0.998
+Hubs,0.1,169,0.998
+Hubs,0.1,170,0.9979
+Hubs,0.1,171,0.9982
+Hubs,0.1,172,0.9979
+Hubs,0.1,173,0.9979
+Hubs,0.1,174,0.9988
+Hubs,0.1,175,0.9984
+Hubs,0.1,176,0.9988
+Hubs,0.1,177,0.9988
+Hubs,0.1,178,0.9988
+Hubs,0.1,179,0.9988
+Hubs,0.1,180,0.998
+Hubs,0.1,181,0.998
+Hubs,0.1,182,0.9973
+Hubs,0.1,183,0.9984
+Hubs,0.1,184,0.9988
+Hubs,0.1,185,0.9992
+Hubs,0.1,186,0.9994
+Hubs,0.1,187,0.9994
+Hubs,0.1,188,0.9996
+Hubs,0.1,189,0.9992
+Hubs,0.1,190,0.9994
+Hubs,0.1,191,0.9998
+Hubs,0.1,192,1
+Hubs,0.1,193,1
+Hubs,0.1,194,1
+Hubs,0.1,195,1
+Hubs,0.1,196,1
+Hubs,0.1,197,1
+Hubs,0.1,198,1
+Hubs,0.1,199,1
+Hubs,0.1,200,1
+Hubs,0.1,201,1
+Hubs,0.1,202,1
+Hubs,0.1,203,1
+Hubs,0.1,204,1
+Hubs,0.1,205,1
+Hubs,0.1,206,1
+Hubs,0.1,207,1
+Hubs,0.1,208,1
+Hubs,0.1,209,1
+Hubs,0.1,210,1
+Hubs,0.1,211,1
+Hubs,0.1,212,1
+Hubs,0.1,213,1
+Hubs,0.1,214,1
+Hubs,0.1,215,1
+Hubs,0.1,216,1
+Hubs,0.1,217,1
+Hubs,0.1,218,1
+Hubs,0.1,219,1
+Hubs,0.1,220,1
+Hubs,0.1,221,1
+Hubs,0.1,222,1
+Hubs,0.1,223,1
+Hubs,0.1,224,1
+Hubs,0.1,225,1
+Hubs,0.1,226,1
+Hubs,0.1,227,1
+Hubs,0.1,228,1
+Hubs,0.1,229,1
+Hubs,0.1,230,1
+Hubs,0.1,231,1
+Hubs,0.1,232,1
+Hubs,0.1,233,1
+Hubs,0.1,234,1
+Hubs,0.1,235,1
+Hubs,0.1,236,1
+Hubs,0.1,237,1
+Hubs,0.1,238,1
+Hubs,0.1,239,1
+Hubs,0.1,240,1
+Hubs,0.1,241,1
+Hubs,0.1,242,1
+Hubs,0.1,243,1
+Hubs,0.1,244,1
+Hubs,0.1,245,1
+Hubs,0.1,246,1
+Hubs,0.1,247,1
+Hubs,0.1,248,1
+Hubs,0.1,249,1
+Hubs,0.1,250,1
+Hubs,0.1,251,1
+Hubs,0.1,252,1
+Hubs,0.1,253,1
+Hubs,0.1,254,1
+Hubs,0.1,255,1
+Hubs,0.1,256,1
+Hubs,0.1,257,1
+Hubs,0.1,258,1
+Hubs,0.1,259,1
+Hubs,0.1,260,1
+Hubs,0.1,261,1
+Hubs,0.1,262,1
+Hubs,0.1,263,1
+Hubs,0.1,264,1
+Hubs,0.1,265,1
+Hubs,0.1,266,1
+Hubs,0.1,267,1
+Hubs,0.1,268,1
+Hubs,0.1,269,1
+Hubs,0.1,270,1
+Hubs,0.1,271,1
+Hubs,0.1,272,1
+Hubs,0.1,273,1
+Hubs,0.1,274,1
+Hubs,0.1,275,1
+Hubs,0.1,276,1
+Hubs,0.1,277,1
+Hubs,0.1,278,1
+Hubs,0.1,279,1
+Hubs,0.1,280,1
+Hubs,0.1,281,1
+Hubs,0.1,282,1
+Hubs,0.1,283,1
+Hubs,0.1,284,1
+Hubs,0.1,285,1
+Hubs,0.1,286,1
+Hubs,0.1,287,1
+Hubs,0.1,288,1
+Hubs,0.1,289,1
+Hubs,0.1,290,1
+Hubs,0.1,291,1
+Hubs,0.1,292,1
+Hubs,0.1,293,1
+Hubs,0.1,294,1
+Hubs,0.1,295,1
+Hubs,0.1,296,1
+Hubs,0.1,297,1
+Hubs,0.1,298,1
+Hubs,0.1,299,1
+Hubs,0.1,300,1
+Hubs,0.3,0,0.5084
+Hubs,0.3,1,0.4352
+Hubs,0.3,2,0.4113
+Hubs,0.3,3,0.4113
+Hubs,0.3,4,0.4232
+Hubs,0.3,5,0.4189
+Hubs,0.3,6,0.4291
+Hubs,0.3,7,0.443
+Hubs,0.3,8,0.4768
+Hubs,0.3,9,0.4891
+Hubs,0.3,10,0.5016
+Hubs,0.3,11,0.5176
+Hubs,0.3,12,0.5361
+Hubs,0.3,13,0.5512
+Hubs,0.3,14,0.5752
+Hubs,0.3,15,0.5875
+Hubs,0.3,16,0.6084
+Hubs,0.3,17,0.6105
+Hubs,0.3,18,0.6209
+Hubs,0.3,19,0.6436
+Hubs,0.3,20,0.6736
+Hubs,0.3,21,0.6793
+Hubs,0.3,22,0.6854
+Hubs,0.3,23,0.6984
+Hubs,0.3,24,0.7166
+Hubs,0.3,25,0.7307
+Hubs,0.3,26,0.7391
+Hubs,0.3,27,0.7525
+Hubs,0.3,28,0.765
+Hubs,0.3,29,0.7691
+Hubs,0.3,30,0.7775
+Hubs,0.3,31,0.7902
+Hubs,0.3,32,0.7891
+Hubs,0.3,33,0.7842
+Hubs,0.3,34,0.7914
+Hubs,0.3,35,0.7969
+Hubs,0.3,36,0.7994
+Hubs,0.3,37,0.7943
+Hubs,0.3,38,0.7973
+Hubs,0.3,39,0.8045
+Hubs,0.3,40,0.8172
+Hubs,0.3,41,0.8236
+Hubs,0.3,42,0.8258
+Hubs,0.3,43,0.8297
+Hubs,0.3,44,0.8289
+Hubs,0.3,45,0.8291
+Hubs,0.3,46,0.8367
+Hubs,0.3,47,0.8375
+Hubs,0.3,48,0.8469
+Hubs,0.3,49,0.8539
+Hubs,0.3,50,0.8625
+Hubs,0.3,51,0.8631
+Hubs,0.3,52,0.8727
+Hubs,0.3,53,0.8781
+Hubs,0.3,54,0.8836
+Hubs,0.3,55,0.8869
+Hubs,0.3,56,0.89
+Hubs,0.3,57,0.8963
+Hubs,0.3,58,0.891
+Hubs,0.3,59,0.899
+Hubs,0.3,60,0.9016
+Hubs,0.3,61,0.9064
+Hubs,0.3,62,0.9094
+Hubs,0.3,63,0.9137
+Hubs,0.3,64,0.9186
+Hubs,0.3,65,0.9195
+Hubs,0.3,66,0.9246
+Hubs,0.3,67,0.9242
+Hubs,0.3,68,0.9316
+Hubs,0.3,69,0.9295
+Hubs,0.3,70,0.9322
+Hubs,0.3,71,0.9312
+Hubs,0.3,72,0.9338
+Hubs,0.3,73,0.9375
+Hubs,0.3,74,0.9422
+Hubs,0.3,75,0.9455
+Hubs,0.3,76,0.9449
+Hubs,0.3,77,0.9436
+Hubs,0.3,78,0.9432
+Hubs,0.3,79,0.9459
+Hubs,0.3,80,0.9457
+Hubs,0.3,81,0.9455
+Hubs,0.3,82,0.9506
+Hubs,0.3,83,0.9486
+Hubs,0.3,84,0.9504
+Hubs,0.3,85,0.9488
+Hubs,0.3,86,0.9521
+Hubs,0.3,87,0.9527
+Hubs,0.3,88,0.9535
+Hubs,0.3,89,0.9539
+Hubs,0.3,90,0.9541
+Hubs,0.3,91,0.9539
+Hubs,0.3,92,0.9592
+Hubs,0.3,93,0.957
+Hubs,0.3,94,0.96
+Hubs,0.3,95,0.9611
+Hubs,0.3,96,0.9625
+Hubs,0.3,97,0.965
+Hubs,0.3,98,0.9641
+Hubs,0.3,99,0.9656
+Hubs,0.3,100,0.9633
+Hubs,0.3,101,0.9637
+Hubs,0.3,102,0.9643
+Hubs,0.3,103,0.966
+Hubs,0.3,104,0.9646
+Hubs,0.3,105,0.9648
+Hubs,0.3,106,0.9637
+Hubs,0.3,107,0.9633
+Hubs,0.3,108,0.9627
+Hubs,0.3,109,0.9629
+Hubs,0.3,110,0.9615
+Hubs,0.3,111,0.9611
+Hubs,0.3,112,0.9609
+Hubs,0.3,113,0.9621
+Hubs,0.3,114,0.9637
+Hubs,0.3,115,0.9611
+Hubs,0.3,116,0.9578
+Hubs,0.3,117,0.9615
+Hubs,0.3,118,0.9637
+Hubs,0.3,119,0.9646
+Hubs,0.3,120,0.9588
+Hubs,0.3,121,0.9576
+Hubs,0.3,122,0.9576
+Hubs,0.3,123,0.9604
+Hubs,0.3,124,0.9615
+Hubs,0.3,125,0.9623
+Hubs,0.3,126,0.9596
+Hubs,0.3,127,0.9605
+Hubs,0.3,128,0.9604
+Hubs,0.3,129,0.959
+Hubs,0.3,130,0.9598
+Hubs,0.3,131,0.9584
+Hubs,0.3,132,0.9625
+Hubs,0.3,133,0.9672
+Hubs,0.3,134,0.9727
+Hubs,0.3,135,0.9758
+Hubs,0.3,136,0.9766
+Hubs,0.3,137,0.9764
+Hubs,0.3,138,0.9789
+Hubs,0.3,139,0.9795
+Hubs,0.3,140,0.9809
+Hubs,0.3,141,0.984
+Hubs,0.3,142,0.984
+Hubs,0.3,143,0.9848
+Hubs,0.3,144,0.9859
+Hubs,0.3,145,0.9863
+Hubs,0.3,146,0.9859
+Hubs,0.3,147,0.985
+Hubs,0.3,148,0.9852
+Hubs,0.3,149,0.9854
+Hubs,0.3,150,0.9824
+Hubs,0.3,151,0.9854
+Hubs,0.3,152,0.985
+Hubs,0.3,153,0.9867
+Hubs,0.3,154,0.9893
+Hubs,0.3,155,0.9879
+Hubs,0.3,156,0.9867
+Hubs,0.3,157,0.9867
+Hubs,0.3,158,0.9875
+Hubs,0.3,159,0.9916
+Hubs,0.3,160,0.9912
+Hubs,0.3,161,0.9912
+Hubs,0.3,162,0.9904
+Hubs,0.3,163,0.99
+Hubs,0.3,164,0.9881
+Hubs,0.3,165,0.9889
+Hubs,0.3,166,0.9875
+Hubs,0.3,167,0.9891
+Hubs,0.3,168,0.9885
+Hubs,0.3,169,0.9898
+Hubs,0.3,170,0.9893
+Hubs,0.3,171,0.9867
+Hubs,0.3,172,0.9871
+Hubs,0.3,173,0.9887
+Hubs,0.3,174,0.9879
+Hubs,0.3,175,0.9885
+Hubs,0.3,176,0.9871
+Hubs,0.3,177,0.9885
+Hubs,0.3,178,0.9887
+Hubs,0.3,179,0.9893
+Hubs,0.3,180,0.9889
+Hubs,0.3,181,0.9895
+Hubs,0.3,182,0.9885
+Hubs,0.3,183,0.9891
+Hubs,0.3,184,0.9877
+Hubs,0.3,185,0.9871
+Hubs,0.3,186,0.9871
+Hubs,0.3,187,0.9875
+Hubs,0.3,188,0.9883
+Hubs,0.3,189,0.9889
+Hubs,0.3,190,0.9877
+Hubs,0.3,191,0.9867
+Hubs,0.3,192,0.9871
+Hubs,0.3,193,0.9873
+Hubs,0.3,194,0.9883
+Hubs,0.3,195,0.9883
+Hubs,0.3,196,0.99
+Hubs,0.3,197,0.9924
+Hubs,0.3,198,0.9926
+Hubs,0.3,199,0.9926
+Hubs,0.3,200,0.9934
+Hubs,0.3,201,0.993
+Hubs,0.3,202,0.9934
+Hubs,0.3,203,0.9955
+Hubs,0.3,204,0.9949
+Hubs,0.3,205,0.9947
+Hubs,0.3,206,0.9959
+Hubs,0.3,207,0.9967
+Hubs,0.3,208,0.9975
+Hubs,0.3,209,0.9975
+Hubs,0.3,210,0.9979
+Hubs,0.3,211,0.998
+Hubs,0.3,212,0.9992
+Hubs,0.3,213,0.9994
+Hubs,0.3,214,1
+Hubs,0.3,215,1
+Hubs,0.3,216,1
+Hubs,0.3,217,1
+Hubs,0.3,218,1
+Hubs,0.3,219,1
+Hubs,0.3,220,1
+Hubs,0.3,221,1
+Hubs,0.3,222,1
+Hubs,0.3,223,1
+Hubs,0.3,224,1
+Hubs,0.3,225,1
+Hubs,0.3,226,1
+Hubs,0.3,227,1
+Hubs,0.3,228,1
+Hubs,0.3,229,1
+Hubs,0.3,230,1
+Hubs,0.3,231,1
+Hubs,0.3,232,1
+Hubs,0.3,233,1
+Hubs,0.3,234,1
+Hubs,0.3,235,1
+Hubs,0.3,236,1
+Hubs,0.3,237,1
+Hubs,0.3,238,1
+Hubs,0.3,239,1
+Hubs,0.3,240,1
+Hubs,0.3,241,1
+Hubs,0.3,242,1
+Hubs,0.3,243,1
+Hubs,0.3,244,1
+Hubs,0.3,245,1
+Hubs,0.3,246,1
+Hubs,0.3,247,1
+Hubs,0.3,248,1
+Hubs,0.3,249,1
+Hubs,0.3,250,1
+Hubs,0.3,251,1
+Hubs,0.3,252,1
+Hubs,0.3,253,1
+Hubs,0.3,254,1
+Hubs,0.3,255,1
+Hubs,0.3,256,1
+Hubs,0.3,257,1
+Hubs,0.3,258,1
+Hubs,0.3,259,1
+Hubs,0.3,260,1
+Hubs,0.3,261,1
+Hubs,0.3,262,1
+Hubs,0.3,263,1
+Hubs,0.3,264,1
+Hubs,0.3,265,1
+Hubs,0.3,266,1
+Hubs,0.3,267,1
+Hubs,0.3,268,1
+Hubs,0.3,269,1
+Hubs,0.3,270,1
+Hubs,0.3,271,1
+Hubs,0.3,272,1
+Hubs,0.3,273,1
+Hubs,0.3,274,1
+Hubs,0.3,275,1
+Hubs,0.3,276,1
+Hubs,0.3,277,1
+Hubs,0.3,278,1
+Hubs,0.3,279,1
+Hubs,0.3,280,1
+Hubs,0.3,281,1
+Hubs,0.3,282,1
+Hubs,0.3,283,1
+Hubs,0.3,284,1
+Hubs,0.3,285,1
+Hubs,0.3,286,1
+Hubs,0.3,287,1
+Hubs,0.3,288,1
+Hubs,0.3,289,1
+Hubs,0.3,290,1
+Hubs,0.3,291,1
+Hubs,0.3,292,1
+Hubs,0.3,293,1
+Hubs,0.3,294,1
+Hubs,0.3,295,1
+Hubs,0.3,296,1
+Hubs,0.3,297,1
+Hubs,0.3,298,1
+Hubs,0.3,299,1
+Hubs,0.3,300,1
+Hubs,1,0,0.493
+Hubs,1,1,0.4039
+Hubs,1,2,0.3742
+Hubs,1,3,0.358
+Hubs,1,4,0.3615
+Hubs,1,5,0.3686
+Hubs,1,6,0.3752
+Hubs,1,7,0.3928
+Hubs,1,8,0.4055
+Hubs,1,9,0.4168
+Hubs,1,10,0.4264
+Hubs,1,11,0.4385
+Hubs,1,12,0.4488
+Hubs,1,13,0.4582
+Hubs,1,14,0.4713
+Hubs,1,15,0.4799
+Hubs,1,16,0.4896
+Hubs,1,17,0.5205
+Hubs,1,18,0.5348
+Hubs,1,19,0.5562
+Hubs,1,20,0.5732
+Hubs,1,21,0.583
+Hubs,1,22,0.5992
+Hubs,1,23,0.61
+Hubs,1,24,0.6299
+Hubs,1,25,0.6455
+Hubs,1,26,0.6543
+Hubs,1,27,0.6596
+Hubs,1,28,0.6754
+Hubs,1,29,0.6828
+Hubs,1,30,0.6818
+Hubs,1,31,0.6916
+Hubs,1,32,0.7025
+Hubs,1,33,0.7156
+Hubs,1,34,0.7217
+Hubs,1,35,0.7344
+Hubs,1,36,0.7473
+Hubs,1,37,0.7564
+Hubs,1,38,0.7619
+Hubs,1,39,0.766
+Hubs,1,40,0.767
+Hubs,1,41,0.7812
+Hubs,1,42,0.7881
+Hubs,1,43,0.79
+Hubs,1,44,0.7906
+Hubs,1,45,0.7945
+Hubs,1,46,0.7943
+Hubs,1,47,0.7986
+Hubs,1,48,0.799
+Hubs,1,49,0.8016
+Hubs,1,50,0.8021
+Hubs,1,51,0.8053
+Hubs,1,52,0.8164
+Hubs,1,53,0.8262
+Hubs,1,54,0.824
+Hubs,1,55,0.8287
+Hubs,1,56,0.8279
+Hubs,1,57,0.8365
+Hubs,1,58,0.8367
+Hubs,1,59,0.8496
+Hubs,1,60,0.8533
+Hubs,1,61,0.8535
+Hubs,1,62,0.8523
+Hubs,1,63,0.8459
+Hubs,1,64,0.8516
+Hubs,1,65,0.8559
+Hubs,1,66,0.8557
+Hubs,1,67,0.8605
+Hubs,1,68,0.8688
+Hubs,1,69,0.8705
+Hubs,1,70,0.8777
+Hubs,1,71,0.8816
+Hubs,1,72,0.8883
+Hubs,1,73,0.891
+Hubs,1,74,0.8967
+Hubs,1,75,0.8986
+Hubs,1,76,0.9051
+Hubs,1,77,0.9111
+Hubs,1,78,0.916
+Hubs,1,79,0.917
+Hubs,1,80,0.9193
+Hubs,1,81,0.9232
+Hubs,1,82,0.9275
+Hubs,1,83,0.9307
+Hubs,1,84,0.9285
+Hubs,1,85,0.9264
+Hubs,1,86,0.9291
+Hubs,1,87,0.9297
+Hubs,1,88,0.9225
+Hubs,1,89,0.9207
+Hubs,1,90,0.9186
+Hubs,1,91,0.9189
+Hubs,1,92,0.9189
+Hubs,1,93,0.916
+Hubs,1,94,0.9162
+Hubs,1,95,0.9219
+Hubs,1,96,0.9213
+Hubs,1,97,0.9219
+Hubs,1,98,0.9227
+Hubs,1,99,0.9227
+Hubs,1,100,0.9234
+Hubs,1,101,0.923
+Hubs,1,102,0.9244
+Hubs,1,103,0.9303
+Hubs,1,104,0.9299
+Hubs,1,105,0.9344
+Hubs,1,106,0.9379
+Hubs,1,107,0.9318
+Hubs,1,108,0.9311
+Hubs,1,109,0.9324
+Hubs,1,110,0.9279
+Hubs,1,111,0.926
+Hubs,1,112,0.9264
+Hubs,1,113,0.9191
+Hubs,1,114,0.9203
+Hubs,1,115,0.9219
+Hubs,1,116,0.9178
+Hubs,1,117,0.9199
+Hubs,1,118,0.9207
+Hubs,1,119,0.9232
+Hubs,1,120,0.924
+Hubs,1,121,0.9217
+Hubs,1,122,0.9197
+Hubs,1,123,0.9195
+Hubs,1,124,0.9227
+Hubs,1,125,0.9279
+Hubs,1,126,0.9273
+Hubs,1,127,0.9285
+Hubs,1,128,0.9309
+Hubs,1,129,0.9355
+Hubs,1,130,0.935
+Hubs,1,131,0.9334
+Hubs,1,132,0.9285
+Hubs,1,133,0.9336
+Hubs,1,134,0.9371
+Hubs,1,135,0.9367
+Hubs,1,136,0.9393
+Hubs,1,137,0.9412
+Hubs,1,138,0.9393
+Hubs,1,139,0.9426
+Hubs,1,140,0.9436
+Hubs,1,141,0.9469
+Hubs,1,142,0.9459
+Hubs,1,143,0.9471
+Hubs,1,144,0.9492
+Hubs,1,145,0.9484
+Hubs,1,146,0.9492
+Hubs,1,147,0.9523
+Hubs,1,148,0.9502
+Hubs,1,149,0.9512
+Hubs,1,150,0.9494
+Hubs,1,151,0.9514
+Hubs,1,152,0.949
+Hubs,1,153,0.9527
+Hubs,1,154,0.9529
+Hubs,1,155,0.951
+Hubs,1,156,0.9516
+Hubs,1,157,0.9523
+Hubs,1,158,0.9484
+Hubs,1,159,0.9441
+Hubs,1,160,0.9436
+Hubs,1,161,0.943
+Hubs,1,162,0.948
+Hubs,1,163,0.9471
+Hubs,1,164,0.9414
+Hubs,1,165,0.9426
+Hubs,1,166,0.942
+Hubs,1,167,0.9447
+Hubs,1,168,0.9457
+Hubs,1,169,0.9434
+Hubs,1,170,0.942
+Hubs,1,171,0.9461
+Hubs,1,172,0.9398
+Hubs,1,173,0.9361
+Hubs,1,174,0.9402
+Hubs,1,175,0.9387
+Hubs,1,176,0.9416
+Hubs,1,177,0.9385
+Hubs,1,178,0.9414
+Hubs,1,179,0.9393
+Hubs,1,180,0.9371
+Hubs,1,181,0.9336
+Hubs,1,182,0.935
+Hubs,1,183,0.9352
+Hubs,1,184,0.9342
+Hubs,1,185,0.9355
+Hubs,1,186,0.9318
+Hubs,1,187,0.9246
+Hubs,1,188,0.9268
+Hubs,1,189,0.9248
+Hubs,1,190,0.9262
+Hubs,1,191,0.924
+Hubs,1,192,0.9219
+Hubs,1,193,0.9203
+Hubs,1,194,0.9172
+Hubs,1,195,0.9156
+Hubs,1,196,0.9176
+Hubs,1,197,0.9178
+Hubs,1,198,0.9152
+Hubs,1,199,0.916
+Hubs,1,200,0.9197
+Hubs,1,201,0.9188
+Hubs,1,202,0.9146
+Hubs,1,203,0.9141
+Hubs,1,204,0.9168
+Hubs,1,205,0.9135
+Hubs,1,206,0.9123
+Hubs,1,207,0.9127
+Hubs,1,208,0.9156
+Hubs,1,209,0.9109
+Hubs,1,210,0.9133
+Hubs,1,211,0.9078
+Hubs,1,212,0.9062
+Hubs,1,213,0.9111
+Hubs,1,214,0.9115
+Hubs,1,215,0.9121
+Hubs,1,216,0.9133
+Hubs,1,217,0.9125
+Hubs,1,218,0.9172
+Hubs,1,219,0.9207
+Hubs,1,220,0.917
+Hubs,1,221,0.9172
+Hubs,1,222,0.9227
+Hubs,1,223,0.9264
+Hubs,1,224,0.9299
+Hubs,1,225,0.9346
+Hubs,1,226,0.932
+Hubs,1,227,0.9389
+Hubs,1,228,0.9385
+Hubs,1,229,0.9416
+Hubs,1,230,0.9428
+Hubs,1,231,0.9457
+Hubs,1,232,0.9467
+Hubs,1,233,0.9477
+Hubs,1,234,0.9469
+Hubs,1,235,0.9518
+Hubs,1,236,0.9562
+Hubs,1,237,0.9578
+Hubs,1,238,0.9623
+Hubs,1,239,0.9615
+Hubs,1,240,0.9611
+Hubs,1,241,0.9615
+Hubs,1,242,0.9584
+Hubs,1,243,0.9596
+Hubs,1,244,0.9611
+Hubs,1,245,0.9646
+Hubs,1,246,0.9686
+Hubs,1,247,0.9713
+Hubs,1,248,0.9695
+Hubs,1,249,0.9713
+Hubs,1,250,0.9738
+Hubs,1,251,0.976
+Hubs,1,252,0.977
+Hubs,1,253,0.9785
+Hubs,1,254,0.9783
+Hubs,1,255,0.9795
+Hubs,1,256,0.9789
+Hubs,1,257,0.9785
+Hubs,1,258,0.9822
+Hubs,1,259,0.9822
+Hubs,1,260,0.984
+Hubs,1,261,0.9855
+Hubs,1,262,0.9875
+Hubs,1,263,0.9887
+Hubs,1,264,0.9891
+Hubs,1,265,0.99
+Hubs,1,266,0.9893
+Hubs,1,267,0.9914
+Hubs,1,268,0.9938
+Hubs,1,269,0.9943
+Hubs,1,270,0.9941
+Hubs,1,271,0.9945
+Hubs,1,272,0.9941
+Hubs,1,273,0.9943
+Hubs,1,274,0.9941
+Hubs,1,275,0.9945
+Hubs,1,276,0.9939
+Hubs,1,277,0.9945
+Hubs,1,278,0.9945
+Hubs,1,279,0.9957
+Hubs,1,280,0.9965
+Hubs,1,281,0.9971
+Hubs,1,282,0.9984
+Hubs,1,283,0.998
+Hubs,1,284,0.9977
+Hubs,1,285,0.9977
+Hubs,1,286,0.9986
+Hubs,1,287,0.9979
+Hubs,1,288,0.9973
+Hubs,1,289,0.9963
+Hubs,1,290,0.9961
+Hubs,1,291,0.9967
+Hubs,1,292,0.9984
+Hubs,1,293,0.9988
+Hubs,1,294,0.998
+Hubs,1,295,0.9984
+Hubs,1,296,0.9996
+Hubs,1,297,0.9998
+Hubs,1,298,0.9998
+Hubs,1,299,1
+Hubs,1,300,1
+Hubs,3,0,0.492
+Hubs,3,1,0.4268
+Hubs,3,2,0.3992
+Hubs,3,3,0.3906
+Hubs,3,4,0.3854
+Hubs,3,5,0.3799
+Hubs,3,6,0.3822
+Hubs,3,7,0.383
+Hubs,3,8,0.3867
+Hubs,3,9,0.3916
+Hubs,3,10,0.4086
+Hubs,3,11,0.4225
+Hubs,3,12,0.4322
+Hubs,3,13,0.4359
+Hubs,3,14,0.4574
+Hubs,3,15,0.4744
+Hubs,3,16,0.4805
+Hubs,3,17,0.4826
+Hubs,3,18,0.4943
+Hubs,3,19,0.4918
+Hubs,3,20,0.4988
+Hubs,3,21,0.5117
+Hubs,3,22,0.5201
+Hubs,3,23,0.5285
+Hubs,3,24,0.5367
+Hubs,3,25,0.5385
+Hubs,3,26,0.5449
+Hubs,3,27,0.5562
+Hubs,3,28,0.5639
+Hubs,3,29,0.5736
+Hubs,3,30,0.5756
+Hubs,3,31,0.5904
+Hubs,3,32,0.5953
+Hubs,3,33,0.6033
+Hubs,3,34,0.6217
+Hubs,3,35,0.6314
+Hubs,3,36,0.6318
+Hubs,3,37,0.6402
+Hubs,3,38,0.6555
+Hubs,3,39,0.6652
+Hubs,3,40,0.6814
+Hubs,3,41,0.6893
+Hubs,3,42,0.6939
+Hubs,3,43,0.7016
+Hubs,3,44,0.7176
+Hubs,3,45,0.7176
+Hubs,3,46,0.7244
+Hubs,3,47,0.7336
+Hubs,3,48,0.7424
+Hubs,3,49,0.7416
+Hubs,3,50,0.7461
+Hubs,3,51,0.7545
+Hubs,3,52,0.7623
+Hubs,3,53,0.7645
+Hubs,3,54,0.7719
+Hubs,3,55,0.7824
+Hubs,3,56,0.7885
+Hubs,3,57,0.7941
+Hubs,3,58,0.8008
+Hubs,3,59,0.8062
+Hubs,3,60,0.8078
+Hubs,3,61,0.8178
+Hubs,3,62,0.8135
+Hubs,3,63,0.8244
+Hubs,3,64,0.8295
+Hubs,3,65,0.8357
+Hubs,3,66,0.8354
+Hubs,3,67,0.8346
+Hubs,3,68,0.8381
+Hubs,3,69,0.8422
+Hubs,3,70,0.8477
+Hubs,3,71,0.8469
+Hubs,3,72,0.8459
+Hubs,3,73,0.8445
+Hubs,3,74,0.8545
+Hubs,3,75,0.8551
+Hubs,3,76,0.8451
+Hubs,3,77,0.8387
+Hubs,3,78,0.8447
+Hubs,3,79,0.8518
+Hubs,3,80,0.8488
+Hubs,3,81,0.8408
+Hubs,3,82,0.8434
+Hubs,3,83,0.8482
+Hubs,3,84,0.8479
+Hubs,3,85,0.8564
+Hubs,3,86,0.8621
+Hubs,3,87,0.8729
+Hubs,3,88,0.8803
+Hubs,3,89,0.8842
+Hubs,3,90,0.8908
+Hubs,3,91,0.8945
+Hubs,3,92,0.899
+Hubs,3,93,0.899
+Hubs,3,94,0.9039
+Hubs,3,95,0.9074
+Hubs,3,96,0.9057
+Hubs,3,97,0.907
+Hubs,3,98,0.9119
+Hubs,3,99,0.9168
+Hubs,3,100,0.9242
+Hubs,3,101,0.9291
+Hubs,3,102,0.9338
+Hubs,3,103,0.9453
+Hubs,3,104,0.9404
+Hubs,3,105,0.9406
+Hubs,3,106,0.9396
+Hubs,3,107,0.9412
+Hubs,3,108,0.9424
+Hubs,3,109,0.9457
+Hubs,3,110,0.9477
+Hubs,3,111,0.9484
+Hubs,3,112,0.952
+Hubs,3,113,0.9543
+Hubs,3,114,0.9598
+Hubs,3,115,0.9664
+Hubs,3,116,0.9695
+Hubs,3,117,0.9689
+Hubs,3,118,0.9711
+Hubs,3,119,0.974
+Hubs,3,120,0.9768
+Hubs,3,121,0.9768
+Hubs,3,122,0.9797
+Hubs,3,123,0.9809
+Hubs,3,124,0.9836
+Hubs,3,125,0.9846
+Hubs,3,126,0.9873
+Hubs,3,127,0.9879
+Hubs,3,128,0.9873
+Hubs,3,129,0.9869
+Hubs,3,130,0.9832
+Hubs,3,131,0.9846
+Hubs,3,132,0.985
+Hubs,3,133,0.9854
+Hubs,3,134,0.9852
+Hubs,3,135,0.9836
+Hubs,3,136,0.9838
+Hubs,3,137,0.9844
+Hubs,3,138,0.9854
+Hubs,3,139,0.9863
+Hubs,3,140,0.9855
+Hubs,3,141,0.9857
+Hubs,3,142,0.9867
+Hubs,3,143,0.9875
+Hubs,3,144,0.9889
+Hubs,3,145,0.9885
+Hubs,3,146,0.9887
+Hubs,3,147,0.9865
+Hubs,3,148,0.9857
+Hubs,3,149,0.9883
+Hubs,3,150,0.9877
+Hubs,3,151,0.9887
+Hubs,3,152,0.9893
+Hubs,3,153,0.9904
+Hubs,3,154,0.9902
+Hubs,3,155,0.9906
+Hubs,3,156,0.99
+Hubs,3,157,0.9875
+Hubs,3,158,0.9867
+Hubs,3,159,0.9857
+Hubs,3,160,0.9838
+Hubs,3,161,0.9814
+Hubs,3,162,0.9812
+Hubs,3,163,0.9801
+Hubs,3,164,0.9826
+Hubs,3,165,0.9824
+Hubs,3,166,0.9824
+Hubs,3,167,0.9807
+Hubs,3,168,0.9816
+Hubs,3,169,0.9816
+Hubs,3,170,0.9801
+Hubs,3,171,0.9777
+Hubs,3,172,0.9771
+Hubs,3,173,0.9791
+Hubs,3,174,0.9801
+Hubs,3,175,0.9805
+Hubs,3,176,0.9811
+Hubs,3,177,0.9818
+Hubs,3,178,0.9822
+Hubs,3,179,0.9832
+Hubs,3,180,0.9832
+Hubs,3,181,0.9832
+Hubs,3,182,0.9854
+Hubs,3,183,0.9871
+Hubs,3,184,0.9859
+Hubs,3,185,0.9848
+Hubs,3,186,0.9844
+Hubs,3,187,0.9842
+Hubs,3,188,0.9861
+Hubs,3,189,0.9857
+Hubs,3,190,0.9818
+Hubs,3,191,0.983
+Hubs,3,192,0.9824
+Hubs,3,193,0.9812
+Hubs,3,194,0.9812
+Hubs,3,195,0.982
+Hubs,3,196,0.9814
+Hubs,3,197,0.9828
+Hubs,3,198,0.9852
+Hubs,3,199,0.9871
+Hubs,3,200,0.9867
+Hubs,3,201,0.9875
+Hubs,3,202,0.9889
+Hubs,3,203,0.9879
+Hubs,3,204,0.9861
+Hubs,3,205,0.9889
+Hubs,3,206,0.9877
+Hubs,3,207,0.9887
+Hubs,3,208,0.99
+Hubs,3,209,0.992
+Hubs,3,210,0.9918
+Hubs,3,211,0.9928
+Hubs,3,212,0.9939
+Hubs,3,213,0.9932
+Hubs,3,214,0.9938
+Hubs,3,215,0.9945
+Hubs,3,216,0.9943
+Hubs,3,217,0.9957
+Hubs,3,218,0.9965
+Hubs,3,219,0.9975
+Hubs,3,220,0.9955
+Hubs,3,221,0.9961
+Hubs,3,222,0.9961
+Hubs,3,223,0.9963
+Hubs,3,224,0.9953
+Hubs,3,225,0.9957
+Hubs,3,226,0.9953
+Hubs,3,227,0.9957
+Hubs,3,228,0.9955
+Hubs,3,229,0.9957
+Hubs,3,230,0.9961
+Hubs,3,231,0.9955
+Hubs,3,232,0.9965
+Hubs,3,233,0.9959
+Hubs,3,234,0.9959
+Hubs,3,235,0.9967
+Hubs,3,236,0.9959
+Hubs,3,237,0.9965
+Hubs,3,238,0.9965
+Hubs,3,239,0.9955
+Hubs,3,240,0.9951
+Hubs,3,241,0.9953
+Hubs,3,242,0.9965
+Hubs,3,243,0.9963
+Hubs,3,244,0.9963
+Hubs,3,245,0.9969
+Hubs,3,246,0.9971
+Hubs,3,247,0.9973
+Hubs,3,248,0.9969
+Hubs,3,249,0.9973
+Hubs,3,250,0.9975
+Hubs,3,251,0.998
+Hubs,3,252,0.9977
+Hubs,3,253,0.9979
+Hubs,3,254,0.9979
+Hubs,3,255,0.998
+Hubs,3,256,0.9982
+Hubs,3,257,0.9988
+Hubs,3,258,0.9992
+Hubs,3,259,0.9994
+Hubs,3,260,0.9992
+Hubs,3,261,0.9996
+Hubs,3,262,0.9986
+Hubs,3,263,0.9988
+Hubs,3,264,0.9988
+Hubs,3,265,0.9992
+Hubs,3,266,0.999
+Hubs,3,267,0.9988
+Hubs,3,268,0.9992
+Hubs,3,269,0.999
+Hubs,3,270,0.999
+Hubs,3,271,0.9992
+Hubs,3,272,0.9986
+Hubs,3,273,0.9988
+Hubs,3,274,0.9994
+Hubs,3,275,0.9996
+Hubs,3,276,0.9998
+Hubs,3,277,0.9998
+Hubs,3,278,1
+Hubs,3,279,1
+Hubs,3,280,1
+Hubs,3,281,1
+Hubs,3,282,1
+Hubs,3,283,1
+Hubs,3,284,1
+Hubs,3,285,1
+Hubs,3,286,1
+Hubs,3,287,1
+Hubs,3,288,1
+Hubs,3,289,1
+Hubs,3,290,1
+Hubs,3,291,1
+Hubs,3,292,1
+Hubs,3,293,1
+Hubs,3,294,1
+Hubs,3,295,1
+Hubs,3,296,1
+Hubs,3,297,1
+Hubs,3,298,1
+Hubs,3,299,1
+Hubs,3,300,1
+Hubs,10,0,0.4918
+Hubs,10,1,0.4775
+Hubs,10,2,0.4797
+Hubs,10,3,0.4701
+Hubs,10,4,0.4619
+Hubs,10,5,0.4643
+Hubs,10,6,0.4645
+Hubs,10,7,0.458
+Hubs,10,8,0.4602
+Hubs,10,9,0.4631
+Hubs,10,10,0.473
+Hubs,10,11,0.4684
+Hubs,10,12,0.4641
+Hubs,10,13,0.4643
+Hubs,10,14,0.4633
+Hubs,10,15,0.466
+Hubs,10,16,0.4629
+Hubs,10,17,0.4682
+Hubs,10,18,0.4838
+Hubs,10,19,0.4832
+Hubs,10,20,0.4848
+Hubs,10,21,0.491
+Hubs,10,22,0.5002
+Hubs,10,23,0.5002
+Hubs,10,24,0.5189
+Hubs,10,25,0.5268
+Hubs,10,26,0.5297
+Hubs,10,27,0.5324
+Hubs,10,28,0.5367
+Hubs,10,29,0.5363
+Hubs,10,30,0.5451
+Hubs,10,31,0.5545
+Hubs,10,32,0.5559
+Hubs,10,33,0.5703
+Hubs,10,34,0.5533
+Hubs,10,35,0.5609
+Hubs,10,36,0.5695
+Hubs,10,37,0.5641
+Hubs,10,38,0.5662
+Hubs,10,39,0.5666
+Hubs,10,40,0.5662
+Hubs,10,41,0.5664
+Hubs,10,42,0.5609
+Hubs,10,43,0.5637
+Hubs,10,44,0.559
+Hubs,10,45,0.5631
+Hubs,10,46,0.5611
+Hubs,10,47,0.5572
+Hubs,10,48,0.5541
+Hubs,10,49,0.5562
+Hubs,10,50,0.5508
+Hubs,10,51,0.5477
+Hubs,10,52,0.5418
+Hubs,10,53,0.5416
+Hubs,10,54,0.5486
+Hubs,10,55,0.5486
+Hubs,10,56,0.5463
+Hubs,10,57,0.5494
+Hubs,10,58,0.5574
+Hubs,10,59,0.5598
+Hubs,10,60,0.5537
+Hubs,10,61,0.565
+Hubs,10,62,0.5723
+Hubs,10,63,0.583
+Hubs,10,64,0.5811
+Hubs,10,65,0.5832
+Hubs,10,66,0.582
+Hubs,10,67,0.5904
+Hubs,10,68,0.5857
+Hubs,10,69,0.5906
+Hubs,10,70,0.5977
+Hubs,10,71,0.5906
+Hubs,10,72,0.5926
+Hubs,10,73,0.5975
+Hubs,10,74,0.601
+Hubs,10,75,0.5957
+Hubs,10,76,0.6135
+Hubs,10,77,0.6186
+Hubs,10,78,0.6336
+Hubs,10,79,0.6398
+Hubs,10,80,0.6389
+Hubs,10,81,0.6457
+Hubs,10,82,0.6467
+Hubs,10,83,0.6506
+Hubs,10,84,0.657
+Hubs,10,85,0.6688
+Hubs,10,86,0.6838
+Hubs,10,87,0.6949
+Hubs,10,88,0.7037
+Hubs,10,89,0.7084
+Hubs,10,90,0.7154
+Hubs,10,91,0.7135
+Hubs,10,92,0.716
+Hubs,10,93,0.7146
+Hubs,10,94,0.7129
+Hubs,10,95,0.7172
+Hubs,10,96,0.71
+Hubs,10,97,0.7092
+Hubs,10,98,0.7084
+Hubs,10,99,0.7074
+Hubs,10,100,0.7068
+Hubs,10,101,0.7117
+Hubs,10,102,0.7074
+Hubs,10,103,0.7035
+Hubs,10,104,0.7066
+Hubs,10,105,0.7117
+Hubs,10,106,0.7135
+Hubs,10,107,0.7152
+Hubs,10,108,0.7215
+Hubs,10,109,0.7295
+Hubs,10,110,0.7322
+Hubs,10,111,0.7412
+Hubs,10,112,0.7387
+Hubs,10,113,0.7436
+Hubs,10,114,0.7352
+Hubs,10,115,0.7281
+Hubs,10,116,0.724
+Hubs,10,117,0.723
+Hubs,10,118,0.7229
+Hubs,10,119,0.7209
+Hubs,10,120,0.7215
+Hubs,10,121,0.7281
+Hubs,10,122,0.7363
+Hubs,10,123,0.7377
+Hubs,10,124,0.7348
+Hubs,10,125,0.7371
+Hubs,10,126,0.7346
+Hubs,10,127,0.7273
+Hubs,10,128,0.7287
+Hubs,10,129,0.7287
+Hubs,10,130,0.7299
+Hubs,10,131,0.7412
+Hubs,10,132,0.7396
+Hubs,10,133,0.7459
+Hubs,10,134,0.7477
+Hubs,10,135,0.7469
+Hubs,10,136,0.7432
+Hubs,10,137,0.7395
+Hubs,10,138,0.7406
+Hubs,10,139,0.7383
+Hubs,10,140,0.7355
+Hubs,10,141,0.7375
+Hubs,10,142,0.7361
+Hubs,10,143,0.734
+Hubs,10,144,0.7326
+Hubs,10,145,0.7363
+Hubs,10,146,0.7311
+Hubs,10,147,0.727
+Hubs,10,148,0.7312
+Hubs,10,149,0.733
+Hubs,10,150,0.7305
+Hubs,10,151,0.7303
+Hubs,10,152,0.727
+Hubs,10,153,0.7326
+Hubs,10,154,0.7268
+Hubs,10,155,0.7229
+Hubs,10,156,0.7211
+Hubs,10,157,0.7174
+Hubs,10,158,0.7219
+Hubs,10,159,0.725
+Hubs,10,160,0.7279
+Hubs,10,161,0.7191
+Hubs,10,162,0.7316
+Hubs,10,163,0.7436
+Hubs,10,164,0.7428
+Hubs,10,165,0.7535
+Hubs,10,166,0.7537
+Hubs,10,167,0.7545
+Hubs,10,168,0.7609
+Hubs,10,169,0.7621
+Hubs,10,170,0.7652
+Hubs,10,171,0.7596
+Hubs,10,172,0.7582
+Hubs,10,173,0.7641
+Hubs,10,174,0.767
+Hubs,10,175,0.7785
+Hubs,10,176,0.7871
+Hubs,10,177,0.785
+Hubs,10,178,0.7871
+Hubs,10,179,0.7895
+Hubs,10,180,0.7885
+Hubs,10,181,0.7879
+Hubs,10,182,0.7967
+Hubs,10,183,0.7984
+Hubs,10,184,0.7953
+Hubs,10,185,0.8012
+Hubs,10,186,0.7979
+Hubs,10,187,0.8018
+Hubs,10,188,0.8029
+Hubs,10,189,0.8023
+Hubs,10,190,0.7986
+Hubs,10,191,0.8053
+Hubs,10,192,0.8102
+Hubs,10,193,0.8148
+Hubs,10,194,0.8102
+Hubs,10,195,0.816
+Hubs,10,196,0.8211
+Hubs,10,197,0.8141
+Hubs,10,198,0.8068
+Hubs,10,199,0.8205
+Hubs,10,200,0.8238
+Hubs,10,201,0.8229
+Hubs,10,202,0.8211
+Hubs,10,203,0.8197
+Hubs,10,204,0.8148
+Hubs,10,205,0.8195
+Hubs,10,206,0.8232
+Hubs,10,207,0.8168
+Hubs,10,208,0.8168
+Hubs,10,209,0.8229
+Hubs,10,210,0.8242
+Hubs,10,211,0.8234
+Hubs,10,212,0.827
+Hubs,10,213,0.8332
+Hubs,10,214,0.8451
+Hubs,10,215,0.8447
+Hubs,10,216,0.8445
+Hubs,10,217,0.8404
+Hubs,10,218,0.8377
+Hubs,10,219,0.8443
+Hubs,10,220,0.8594
+Hubs,10,221,0.8619
+Hubs,10,222,0.8674
+Hubs,10,223,0.8627
+Hubs,10,224,0.8643
+Hubs,10,225,0.8654
+Hubs,10,226,0.875
+Hubs,10,227,0.8693
+Hubs,10,228,0.8768
+Hubs,10,229,0.8797
+Hubs,10,230,0.8824
+Hubs,10,231,0.8826
+Hubs,10,232,0.8875
+Hubs,10,233,0.892
+Hubs,10,234,0.8877
+Hubs,10,235,0.8881
+Hubs,10,236,0.8891
+Hubs,10,237,0.8916
+Hubs,10,238,0.8951
+Hubs,10,239,0.8932
+Hubs,10,240,0.8994
+Hubs,10,241,0.9025
+Hubs,10,242,0.8994
+Hubs,10,243,0.9012
+Hubs,10,244,0.8963
+Hubs,10,245,0.899
+Hubs,10,246,0.9027
+Hubs,10,247,0.9002
+Hubs,10,248,0.8965
+Hubs,10,249,0.8955
+Hubs,10,250,0.8963
+Hubs,10,251,0.8986
+Hubs,10,252,0.9018
+Hubs,10,253,0.898
+Hubs,10,254,0.9012
+Hubs,10,255,0.9051
+Hubs,10,256,0.9078
+Hubs,10,257,0.9053
+Hubs,10,258,0.9014
+Hubs,10,259,0.9055
+Hubs,10,260,0.9029
+Hubs,10,261,0.9062
+Hubs,10,262,0.9131
+Hubs,10,263,0.9176
+Hubs,10,264,0.927
+Hubs,10,265,0.9293
+Hubs,10,266,0.9334
+Hubs,10,267,0.9387
+Hubs,10,268,0.9402
+Hubs,10,269,0.9434
+Hubs,10,270,0.9492
+Hubs,10,271,0.9514
+Hubs,10,272,0.9508
+Hubs,10,273,0.9564
+Hubs,10,274,0.9549
+Hubs,10,275,0.9553
+Hubs,10,276,0.9576
+Hubs,10,277,0.9625
+Hubs,10,278,0.9615
+Hubs,10,279,0.9561
+Hubs,10,280,0.9572
+Hubs,10,281,0.959
+Hubs,10,282,0.9615
+Hubs,10,283,0.9666
+Hubs,10,284,0.9672
+Hubs,10,285,0.9699
+Hubs,10,286,0.9699
+Hubs,10,287,0.9721
+Hubs,10,288,0.9756
+Hubs,10,289,0.9756
+Hubs,10,290,0.9777
+Hubs,10,291,0.9779
+Hubs,10,292,0.9791
+Hubs,10,293,0.9771
+Hubs,10,294,0.9766
+Hubs,10,295,0.9762
+Hubs,10,296,0.9762
+Hubs,10,297,0.9734
+Hubs,10,298,0.9725
+Hubs,10,299,0.9721
+Hubs,10,300,0.9703
