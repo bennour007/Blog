@@ -10,6 +10,8 @@ code-summary: "Show the code"
 code-annotations: hover
 reference-location: margin
 cap-location: margin
+image: featured.jpg
+image-alt: "Pieter Bruegel the Elder 1560, Children’s Games"
 ---
 
 It's not really news if you knew that I have strong opinions against the current models of social media platforms. The current model which relies on the commercialisation of attention and virality is simply unethical in my opinion. I have been avoiding using any kind of social media for a few years now, just for the sake of my own sanity. 
@@ -393,9 +395,7 @@ plot_network <- function(network, title, subtitle) {
 }
 ```
 
-::: {.column-margin}
-In all three networks, players have about 4 friends on average, so the networks differ in shape, not in size.
-:::
+
 
 
 ::: {.panel-tabset}
